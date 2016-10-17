@@ -160,7 +160,7 @@ You'll also notice I wrap all my code inside an IIFE, `(function () {...})();`, 
 
 ### Passing parameters
 
-You may have noticed that I haven't passed in any parameters to any of the above code examples, this is because the was `addEventListener` was added to JavaScript was _nearly_ done well, but missed a vital piece of functionality, so we need to look closer and understand what's happening. You might think you can do this:
+You may have noticed that I haven't passed in any parameters to any of the above code examples, this is because the way `addEventListener` was added to JavaScript was _nearly_ done well, but missed a vital piece of functionality, so we need to look closer and understand what's happening. You might think you can do this:
 
 {% highlight javascript %}
 element.addEventListener('click', toggleMenu(param1, param2), false);
