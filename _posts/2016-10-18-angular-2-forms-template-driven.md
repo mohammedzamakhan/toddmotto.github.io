@@ -206,6 +206,8 @@ However, this will actually throw an error as we _need_ a `name=""` attribute fo
 </form>
 {% endhighlight %}
 
+This is needed because the `ngModel` "talks to" the form, and binds the form value based on the `name` attribute's value. In this case `name="name"`.
+
 Output from this at runtime:
 
 {% highlight html %}
