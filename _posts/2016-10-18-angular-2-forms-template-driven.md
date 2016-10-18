@@ -87,7 +87,7 @@ export interface User {
 
 ### ngModule and template-driven forms
 
-Before we even hit template-driven forms, we need to hit our `@NgModule` with the correct import of the `FormsModule`:
+Before we even dive into template-driven forms, we need to tell our `@NgModule` to use the `FormsModule` from `@angular/forms`:
 
 {% highlight javascript %}
 import { FormsModule } from '@angular/forms';
