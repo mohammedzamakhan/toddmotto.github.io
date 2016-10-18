@@ -358,7 +358,7 @@ To wire up a submit event, all we need to do is add a `ngSubmit` event directive
 Notice how we just passed `f` into the `onSubmit()`? This allows us to pull down various pieces of information from our respective method on our component class:
 
 {% highlight javascript %}
-export class SignupFormAltComponent {
+export class SignupFormComponent {
   user: User = {...};
   onSubmit({ value, valid }: { value: User, valid: boolean }) {
     console.log(value, valid);
