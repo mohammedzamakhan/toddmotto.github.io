@@ -171,13 +171,28 @@ Let's see what that would output for us when using `f.value`:
 {% raw %}{{ f.value | json }}{% endraw %} // {}
 {% endhighlight %}
 
+> There is a lot going on under the hood with `ngForm` which for the most part you do not need to know about to use template-driven forms but if you want more information, you can read [about it here](https://angular.io/docs/ts/latest/api/forms/index/NgForm-directive.html)
+
 Here we get an empty Object as our form value has no models, so nothing will be logged out. This is where we create nested bindings inside the same form so Angular can look out for them. Now we're ready to bind some models, but first there are a few different `ngModel` flavours we can roll with - so let's break them down.
 
 #### ngModel, [ngModel] and [(ngModel)]
 
 Three different `ngModel` syntaxes, are we going insane? Nah, this is awesome sauce, trust me. Let's dive into each one.
 
-- ngModel = cannot set existing values from the bound component class, but will bind based on the `name="foo"` attribute, example:
+- ngModel = cannot set existing values from the bound component class, example:
+
+{% highlight html %}
+<form novalidate #f="ngForm">
+  ...
+    <input
+     type="text"
+     placeholder="Your full name"
+     ngModel>
+  ...
+</form>
+{% endhighlight %}
+
+However, this will actually throw an error as we _need_ a `name=""` attribute for all our form fields:
 
 {% highlight html %}
 <form novalidate #f="ngForm">
