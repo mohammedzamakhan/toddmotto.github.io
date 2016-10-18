@@ -27,7 +27,7 @@ Before we begin, let's clarify what "template-driven" forms mean from a high lev
 
 #### Template-driven
 
-When we talk about "template-driven" forms, we'll actually be talking about the kind of forms we're used to with Angular 1.x, whereby we bind Directives and behaviour to our templates, and let Angular roll with it. Examples of these Directives we'd use are `ngModel` and perhaps `required`, `minlength` and so forth. On a high-level, this is what template-driven forms achieve for us - by specifying Directives to bind our models, values, validation and so on, we are letting the template do the work under the scenes.
+When we talk about "template-driven" forms, we'll actually be talking about the kind of forms we're used to with Angular 1.x, whereby we bind directives and behaviour to our templates, and let Angular roll with it. Examples of these directives we'd use are `ngModel` and perhaps `required`, `minlength` and so forth. On a high-level, this is what template-driven forms achieve for us - by specifying directives to bind our models, values, validation and so on, we are letting the template do the work under the scenes.
 
 ### Form base and interface
 
