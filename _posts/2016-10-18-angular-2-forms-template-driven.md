@@ -179,7 +179,7 @@ Here we get an empty Object as our form value has no models, so nothing will be 
 
 Three different `ngModel` syntaxes, are we going insane? Nah, this is awesome sauce, trust me. Let's dive into each one.
 
-- ngModel = cannot set existing values from the bound component class, example:
+- _ngModel_ = if no binding or value is assigned, `ngModel` will look for a `name` attribute and assign that value as a new Object key to the global `ngForm` Object:
 
 {% highlight html %}
 <form novalidate #f="ngForm">
@@ -206,7 +206,7 @@ However, this will actually throw an error as we _need_ a `name=""` attribute fo
 </form>
 {% endhighlight %}
 
-This is needed because the `ngModel` "talks to" the form, and binds the form value based on the `name` attribute's value. In this case `name="name"`.
+> Tip: `ngModel` "talks to" the form, and binds the form value based on the `name` attribute's value. In this case `name="name"`. Therefore it is needed.
 
 Output from this at runtime:
 
@@ -216,7 +216,7 @@ Output from this at runtime:
 
 Woo! Our first binding. But what if we want to set initial data?
 
-- [ngModel] = one-way binding syntax, can set initial data from the bound component class, but will bind based on the `name="foo"` attribute, example:
+- _[ngModel]_ = one-way binding syntax, can set initial data from the bound component class, but will bind based on the `name="foo"` attribute, example:
 
 Some initial data for our `user` Object:
 
@@ -258,7 +258,7 @@ So this allows us to set some initial data from `this.user.name`, which automagi
 
 It's important to note that `[ngModel]` is in fact a model setter. This is ideally the approach you'd want to take instead of two-way binding.
 
-- [(ngModel)] = two-way binding syntax, can set initial data from the bound component class, but also update it:
+- _[(ngModel)]_ = two-way binding syntax, can set initial data from the bound component class, but also update it:
 
 {% highlight html %}
 <form #f="ngForm">
