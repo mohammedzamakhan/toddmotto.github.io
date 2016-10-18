@@ -21,7 +21,7 @@
   &__link {
     display: block;
   }
-  
+
 
   &__title {
     text-align: center;
@@ -66,14 +66,14 @@
         right: 100%;
         display: block;
         opacity: .3;
-        padding-right: 10px;        
+        padding-right: 10px;
         @media only screen and (max-width: 500px) {
           padding-right: 4px;
         }
         font-size: 65%;
         top: 4px;
         h3 & {
-          top: 8px;        
+          top: 8px;
           @media only screen and (max-width: 500px) {
             padding-right: 10px;
           }
@@ -86,7 +86,7 @@
         height: 25px;
         width: 18px;
         h3 & {
-          width: 22px; 
+          width: 22px;
         }
       }
     }
@@ -97,7 +97,7 @@
   // margin: 0 0 80px;
   &.single {
     // margin: 0 5%;
-    
+
 
 
     p {
@@ -111,7 +111,7 @@
         font-size: 18px;
         line-height: 32px;
         text-align: center;
-        margin-bottom: 48px;        
+        margin-bottom: 48px;
         @media screen and (max-width: 850px) {
           font-size: 16px;
           line-height: 24px;
@@ -124,7 +124,7 @@
         &:hover {
           color: #384454;
         }
-      }      
+      }
     }
 
     blockquote {
@@ -149,6 +149,9 @@
       @media only screen and (max-width: 500px) {
         margin-left: -24px;
         margin-right: -24px;
+      }
+      code {
+        background: darken(#e8f3ea, 5%);
       }
       &::before {
           content : "\"";
@@ -220,7 +223,7 @@
         font: {
           size: 30px;
           weight: 700;
-        }       
+        }
       }
     }
 
@@ -288,7 +291,7 @@
     position: relative;
     background-color: white;
     padding: 0 10px;
-    &__divider {      
+    &__divider {
       height: 1px;
       background-color: #f3f3f3;
       width: 100%;
