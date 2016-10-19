@@ -526,7 +526,28 @@ ngOnInit() {
 
 The refactoring is self-explanatory, but let's roll over it quickly.
 
-Instead of using `new FormGroup()` for example, we're injecting `FormBuilder` as `fb`, and creating a new `this.fb.group()`. The structure of these are identical to creating the controls and groups by themselves, it's just syntax sugar.
+Instead of using `new FormGroup()` for example, we're injecting `FormBuilder` as `fb`, and creating a new `this.fb.group()`. The structure of these are identical to creating the controls and groups by themselves, it's just syntax sugar. Which leaves us with a component class that looks like this:
+
+{% highlight javascript %}
+@Component({...})
+export class SignupFormComponent implements OnInit {
+  user: FormGroup;
+  constructor(private fb: FormBuilder) {}
+  ngOnInit() {
+    this.user = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      account: this.fb.group({
+        email: ['', Validators.required],
+        confirm: ['', Validators.required]
+      })
+    });
+  }
+  onSubmit({ value, valid }: { value: User, valid: boolean }) {
+    console.log(value, valid);
+  }
+}
+
+{% endhighlight %}
 
 ### Final code
 
