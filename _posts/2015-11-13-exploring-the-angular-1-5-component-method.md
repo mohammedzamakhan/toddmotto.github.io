@@ -15,6 +15,8 @@ Angular 1.5 introduced the `.component()` helper method, which is much simpler t
 
 Let's compare the differences in syntax and the super neat abstraction that `.component()` gives us over using the `.directive()` method.
 
+> Build an Angular 1.5 component architecture app, end-to-end with Firebase. Check out my [Angular 1.x Pro](https://ultimateangular.com/courses/#angular-1) course.
+
 ### Update: use component() now in Angular 1.3+
 
 I've back-ported the Angular 1.5 `.component()` functionality to Angular 1.3 and above! [Read the article](/angular-component-method-back-ported-to-1.3) and grab the _latest_ [source code on GitHub](https://github.com/toddmotto/angular-component).
