@@ -96,7 +96,7 @@ export interface User {
 
 ### ngModule and reactive forms
 
-Before we even dive into reactive forms, we need to tell our `@NgModule` to use the `FormsModule` from `@angular/forms`:
+Before we even dive into reactive forms, we need to tell our `@NgModule` to use the `ReactiveFormsModule` from `@angular/forms`:
 
 {% highlight javascript %}
 import { ReactiveFormsModule } from '@angular/forms';
@@ -135,7 +135,7 @@ export class SignupFormComponent {
 }
 {% endhighlight %}
 
-So, this is a typical component base that we need to get going. So what now? Well, to begin with, we don't need to actually create any initial "data", however, we do need to start understanding `FormControl, `FormGroup`, and finally move onto the amazing `FormBuilder`.
+So, this is a typical component base that we need to get going. So what now? Well, to begin with, we don't need to actually create any initial "data", however, we do need to start understanding `FormControl`, `FormGroup`, and finally move onto the amazing `FormBuilder`.
 
 #### FormControl and FormGroup
 
@@ -536,10 +536,10 @@ We're all done for this tutorial. Keep an eye out for custom validation and more
 
 Here's the fully working final code from what we've covered for `FormGroup` and `FormControl`:
 
-<!-- <iframe src="//embed.plnkr.co/oicEbx5HQj3T208GCuU7?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="450"></iframe> -->
+<iframe src="//embed.plnkr.co/PXnKOy2uDcUpcGlyBBxZ?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="450"></iframe>
 
 #### FormBuilder code
 
 Here's the fully working final code from what we've covered for `FormBuilder`:
 
-<!-- <iframe src="//embed.plnkr.co/oicEbx5HQj3T208GCuU7?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="450"></iframe> -->
+<iframe src="//embed.plnkr.co/2PqF2yCRBA0BM4yuVqHa?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="450"></iframe>
