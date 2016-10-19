@@ -345,7 +345,7 @@ ngOnInit() {
 
 This is now a replacement for adding `<input required>` to the DOM, which means we never have to touch it. Interally, when using `required` directives in template-driven forms, Angular will actually create this stuff under-the-hood for us, so that's the main difference between the two implementations.
 
-However, we are going to create ` [disabled]` binding just like in the template-driven approach to disable the submit when the form is invalid:
+However, we are going to create `[disabled]` binding just like in the template-driven approach to disable the submit when the form is invalid:
 
 {% highlight html %}
 <form novalidate (ngSubmit)="onSubmit(user)" [formGroup]="user">
