@@ -36,7 +36,7 @@ When we talk about "reactive" forms (also known as model-driven), we'll be _avoi
 
 #### Template-driven forms
 
-If you're yet to dive into "template-driven" forms, check out [my previous post](/angular-2-forms-reactive-template-driven) on it.
+If you're yet to dive into "template-driven" forms, check out [my previous post](/angular-2-forms-template-driven) on it.
 
 ### Form base and interface
 
