@@ -6,7 +6,7 @@ class: speaking
 
 Please note: I am not accepting new speaking requests until January 2017 onwards. Thank you :) 
 
-I regularly speak at conferences in Europe and America, if you'd like me to join yours, please email me through <a href="//voux.io/contact" target="_blank">Voux's contact form</a> and we can discuss further.
+I regularly speak at conferences in Europe and America, if you'd like me to join yours, please email me, todd[at]toddmotto[dotcom] and we can discuss further.
 
 <div class="speaking__grid">
   <ul>
