@@ -38,17 +38,6 @@
               var cache;
               var fetched = false;
 
-              function debounce(fn, delay) {
-                var timer = null;
-                return function () {
-                  var context = this, args = arguments;
-                  clearTimeout(timer);
-                  timer = setTimeout(function () {
-                    fn.apply(context, args);
-                  }, delay);
-                };
-              }
-
               function compile(tmpl) {
                 var node = document.createElement('div');
                 node.innerHTML = tmpl;
@@ -204,9 +193,7 @@
               }
 
               searchInput.addEventListener('focus', handleSearch, false);
-              searchInput.addEventListener('input', function () {
-                debounce(handleSearch, fetched ? 0 : 250)();
-              }, false);
+              searchInput.addEventListener('input', handleSearch, false);
               search.addEventListener('submit', function handleSubmit(event) { event.preventDefault() }, false);
               document.addEventListener('click', handleOffClick, false);
 
