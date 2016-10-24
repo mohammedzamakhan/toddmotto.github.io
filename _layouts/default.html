@@ -181,7 +181,7 @@
               }
 
               function handleSearch() {
-                var searchValue = this.value;
+                var searchValue = searchInput.value;
                 if (!searchValue) {
                   destroyResults();
                   return;
@@ -204,7 +204,9 @@
               }
 
               searchInput.addEventListener('focus', handleSearch, false);
-              searchInput.addEventListener('input', debounce(handleSearch, 250), false);
+              searchInput.addEventListener('input', function () {
+                debounce(handleSearch, fetched ? 0 : 250)();
+              }, false);
               search.addEventListener('submit', function handleSubmit(event) { event.preventDefault() }, false);
               document.addEventListener('click', handleOffClick, false);
 
