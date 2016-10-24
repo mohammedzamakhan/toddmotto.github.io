@@ -457,7 +457,8 @@ table {
   }
 }
 
-/* form */.search {
+/* form */
+.search {
   position: relative;
   max-width: 788px;
   margin: 0 auto 25px;
@@ -471,7 +472,7 @@ table {
     left: 0;
     right: 0;
     max-height: 200px;
-    overflow: scroll;
+    overflow-y: scroll;
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     li {
@@ -484,6 +485,9 @@ table {
           background: #f9f9f9;
         }
       }
+    }
+    &:empty {
+      display: none;
     }
   }
 }
