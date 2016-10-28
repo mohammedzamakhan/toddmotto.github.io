@@ -44,7 +44,7 @@ export class SignupFormComponent implements OnInit {
 }
 {% endhighlight %}
 
-If the above makes no sense, [go here](/angular-2-forms-reactive) then drop back! When our `FormBuilder`, i.e. the `fb` injected `FormBuilder` instantiates new groups through `this.fb.group()`, each of those is techncially a `new FormGroup()`. So when we refer to "FormGroups", this is what we're talking about from here on out.
+If the above makes no sense, [go here](/angular-2-forms-reactive) then drop back! When our `FormBuilder`, i.e. the `fb` injected `FormBuilder` instantiates new groups through `this.fb.group()`, each of those is technically a `new FormGroup()`. So when we refer to "FormGroups", this is what we're talking about from here on out.
 
 ### FormBuilder/FormGroup source code
 
