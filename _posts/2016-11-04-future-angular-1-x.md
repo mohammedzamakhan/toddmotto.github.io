@@ -5,21 +5,31 @@ title: The future for Angular 1.x, what next?
 path: 2016-11-04-future-angular-1-x.md
 ---
 
-Angular 2 is upon us, and with the new approach the Angular team are taking with semantic versioning (SemVer), Angular 3 will shortly be upon us. Then Angular 4, 5, 6 or whatever the future holds at that point in the distant future. Where does this leave the majority of web applications, years worth of software investment, developer skills and future migration? If you're building with Angular 1.x, I want to lay down some thoughts, approaches, considerations on what to do now, as well as some background on Angular 2, any future migration and ideas. If you're running an engineering team, and are stuck on what's next - I'm hoping this will help answer questions I frequently get asked.
+Angular 2 is upon us, and with the new approach the Angular team are taking with semantic versioning (SemVer), Angular 3 will shortly be upon us. Then Angular 4, 5, 6 or whatever the future holds at that point in the distant future. Where does this leave the majority of web applications, years worth of software investment, developer skills and future migration?
+
+If you're building with Angular 1.x, I want to lay down some thoughts, approaches, considerations on what to do now, as well as some background on Angular 2, any future migration and ideas. If you're running an engineering team, and are stuck on what's next - I'm hoping this will help answer questions I frequently get asked.
 
 ### Angular 2: a new framework
 
-First of all, I want to start by saying that Angular 2 is an entirely new framework. This is an obvious realisation once you've transitioned from say, Angular 1.4, to Angular 2 and should be treated as such. Of course there are various syntactical similarities that are carried across, but there are vast differences conceptually that are in Angular 2. Angular 2 is extremely powerful, and absolutely fantastic to develop with. I fully advocate building applications with it and see it being potentially the biggest framework that's ever lived over the next few years. Backend developers are moving to Angular, which was part of the Angular 1.x success we saw. When it comes to Angular 2, there are more hurdles than you'd think with migration processes, however these are somewhat easily addressed with correct strategies that we'll talk about soon.
+First of all, I want to start by saying that Angular 2 is an entirely new framework. This is an obvious realisation once you've transitioned from say, Angular 1.4, to Angular 2 and should be treated as such. Of course there are various syntactical similarities that are carried across, but there are vast differences conceptually that are in Angular 2.
+
+Angular 2 is extremely powerful, and absolutely fantastic to develop with. I fully advocate building applications with it and see it being potentially the biggest framework that's ever lived over the next few years. Backend developers are moving to Angular, which was part of the Angular 1.x success we saw. When it comes to Angular 2, there are more hurdles than you'd think with migration processes, however these are somewhat easily addressed with correct strategies that we'll talk about soon.
 
 #### A modern web
 
-The hurdles are not Angular 2. The hurdles are how do we architect and build applications for the "modern web". I'm talking about APIs such as WebWorkers, new language overhaul with ES2015+, Web Component specifications and much more. Combined with this, a shift to component architecture. The mindset and mentality we bring to developing applications has changed, and we establish new ways of doing things that make their way into frameworks as new features. So you might be thinking "why even bother moving to Angular 2?". What reasons should drive my considerations to moving there? The web has changed immensely since the inception of "AngularJS" (now known as just "Angular" when talking Angular 2+) but that's not the full story. Mobile applications have taken over the world, and desktop software mirroring the functionality we often see in mobile apps has also become increasingly important. Consider a new product that is built for the web, how do we allow users to access that content across multiple platforms and devices?
+The hurdles are not Angular 2. The hurdles are how do we architect and build applications for the "modern web". I'm talking about APIs such as WebWorkers, new language overhaul with ES2015+, Web Component specifications and much more. Combined with this, a shift to component architecture.
+
+The mindset and mentality we bring to developing applications has changed, and we establish new ways of doing things that make their way into frameworks as new features. So you might be thinking "why even bother moving to Angular 2?". What reasons should drive my considerations to moving there? The web has changed immensely since the inception of "AngularJS" (now known as just "Angular" when talking Angular 2+) but that's not the full story. Mobile applications have taken over the world, and desktop software mirroring the functionality we often see in mobile apps has also become increasingly important.
+
+Consider a new product that is built for the web, how do we allow users to access that content across multiple platforms and devices?
 
 #### Platform distribution
 
 The obvious answer used to be: we'll build a web app, separate mobile app, and separate desktop client - each with a completely separate codebase. This is still a viable approach for many organisations, but we have tools at our disposal now such as [NativeScript](https://nativescript.org) and [Electron](http://electron.atom.io) to allow us to distribute the same* codebase across multiple environments. NativeScript is an impeccable engineering feat, and the comment stands regardless of whether I worked for Telerik or not (the company that open sourced and builds NativeScript). NativeScript will allow you to write an Angular 2 application as you normally would, but to render Angular 2 on another platform you need the rendering layer for that platform - it compiles down to native code, zero web views and immense performance.
 
 The folks over at [Ionic](http://ionicframework.com) have been/are also doing a fantastic job at bringing Angular 1.x and Angular 2 to mobile, the strategies just differ as Ionic uses web over compiling to native.
+
+The team working on [Angular Universal](https://universal.angular.io) have been doing a fantastic job too. What's Angular Universal? Server-side rendering of Angular 2 apps, with front-end hydration once the currently requested view is rendered as a whole, Angular 2 can pick up where the server left off - this was never possible in Angular 1.x.
 
 > *Essentially, you'll switch out the view layer to use NativeScript components instead.
 
