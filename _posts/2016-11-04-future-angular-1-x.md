@@ -27,11 +27,12 @@ Consider a new product that is built for the web, how do we allow users to acces
 
 The obvious answer used to be: we'll build a web app, separate mobile app, and separate desktop client - each with a completely separate codebase. This is still a viable approach for many organisations, but we have tools at our disposal now such as [NativeScript](https://nativescript.org) and [Electron](http://electron.atom.io) to allow us to distribute the same* codebase across multiple environments. NativeScript is an impeccable engineering feat, and the comment stands regardless of whether I worked for Telerik or not (the company that open sourced and builds NativeScript). NativeScript will allow you to write an Angular 2 application as you normally would, but to render Angular 2 on another platform you need the rendering layer for that platform - it compiles down to native code, zero web views and immense performance.
 
+> *Essentially, you'll switch out the view layer to use NativeScript components instead.
+
 The folks over at [Ionic](http://ionicframework.com) have been/are also doing a fantastic job at bringing Angular 1.x and Angular 2 to mobile, the strategies just differ as Ionic uses web over compiling to native.
 
 The team working on [Angular Universal](https://universal.angular.io) have been doing a fantastic job too. What's Angular Universal? Server-side rendering of Angular 2 apps, with front-end hydration once the currently requested view is rendered as a whole, Angular 2 can pick up where the server left off - this was never possible in Angular 1.x.
 
-> *Essentially, you'll switch out the view layer to use NativeScript components instead.
 
 These reasons are why it is critical and good practice to use component classes and contain as much "business logic" in there as possible, rather than relying on template bindings. Similarly with Electron, understanding this feat is one reason to consider an upgrade, whether in the short or long term.
 
