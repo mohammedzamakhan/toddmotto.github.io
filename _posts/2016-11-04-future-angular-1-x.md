@@ -89,7 +89,7 @@ Jumping into learning Angular 2 now has huge benefits, you'll not only understan
 
 #### Migration guides
 
-Right now, I am working on an unofficial [Angular 2 migration guide](ngmigrate.telerik.com) called ngMigrate. There's a collection of concepts, such as Directives, Filters, Modules, that all exist in Angular 1.x, yet also appear in Angular 2. The role of the migration guide is to ease developers into Angular 2 based off Angular 1.x knowledge.
+Right now, I am working on an unofficial [Angular 2 migration guide](http://ngmigrate.telerik.com) called ngMigrate. There's a collection of concepts, such as Directives, Filters, Modules, that all exist in Angular 1.x, yet also appear in Angular 2. The role of the migration guide is to ease developers into Angular 2 based off Angular 1.x knowledge.
 
 #### Angular's upgrade path
 
