@@ -29,6 +29,7 @@ Some questions are geared towards letting the interviewee decide approaches and 
 * _How do you get data into a component?_
 * _How do you get data out of a component?_
 * _What benefits does unidirectional dataflow bring?_
+* _What are common problems with multidirectional dataflow?_
 * _Have you ever used `$ngRedux` or a similar implementation?_
 * _What benefits does a Redux approach with Angular 1.x bring?_
 
