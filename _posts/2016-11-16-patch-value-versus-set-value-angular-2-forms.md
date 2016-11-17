@@ -191,7 +191,7 @@ this.form = this.fb.group({
 });
 {% endhighlight %}
 
-All we have here is really in Object representation is:
+All we have here really in Object representation is:
 
 {% highlight javascript %}
 {
