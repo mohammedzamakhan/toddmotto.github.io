@@ -9,6 +9,8 @@ Angular 1.x has changed a lot with 1.5 introducing `.component()`, and with this
 
 Some questions are geared towards letting the interviewee decide approaches and answer based on their experience/opinions. For instance, "when would you use X over Y" is a better question than "why is X a better approach than Y?". This allows you to dig deeper and also have better conversations during the interview - as well as quickly gauge whether the developer is right for you.
 
+> Answers are not included, and won't be. Some are very subjective, some I'd encourage you to learn yourself. If you do not know the answers, then you can research the ones you do not know and learn. Reciting will not get you through a job interview :)
+
 ### Components
 
 * _What is a "component"?_

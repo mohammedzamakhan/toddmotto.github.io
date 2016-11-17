@@ -64,7 +64,7 @@ First off, here's [Google's versioning and release](http://angularjs.blogspot.co
 Now, if you're confused, think of it this way - in Angular 1.x we had this:
 
 * Angular 1.0 - major version
-* Angular 1.1 - major version
+* Angular 1.1 - major version (well, more a preview of Angular 1.2)
 * Angular 1.2 - major version
 * Angular 1.3 - major version (dropped IE8 support)
 * Angular 1.4 - major version
