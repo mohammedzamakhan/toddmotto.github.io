@@ -214,7 +214,7 @@ this.router.events
   });
 {% endhighlight %}
 
-After this, we want two more operators:
+Doing this allows us to essentially dive into the `children` property of the routes config to fetch the corresponding page title(s). After this, we want two more operators:
 
 {% highlight javascript %}
 this.router.events
