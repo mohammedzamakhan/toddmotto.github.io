@@ -356,6 +356,17 @@ this.form.setValue({
 
 Hopefully this answered a few questions on the differences between the two implementations.
 
+### FormControl patchValue / setValue
+
+By diving through the source code we've also learned that you can call these methods directly to update particular `FormControl` instances, for example:
+
+{% highlight javascript %}
+this.survey.controls['account'].patchValue(survey.account);
+this.survey.controls['account'].setValue(survey.account);
+{% endhighlight %}
+
+These are in the Angular 2 docs, but the source code often makes more sense of what's really happening.
+
 ### Source code
 
 If you'd like to dig through the source code yourself, [check it out here](https://github.com/angular/angular/blob/8f5dd1f11e6ca1888fdbd3231c06d6df00aba5cc/modules/%40angular/forms/src/model.ts).
