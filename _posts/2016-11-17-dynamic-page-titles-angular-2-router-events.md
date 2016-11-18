@@ -116,7 +116,11 @@ That's it. Now back to our component!
 
 ### Routing events
 
-The Angular router is great for setting up basics, but it's also extremely powerful in supporting routing events, through Observables. To subscribe to the router's events, we can do this:
+The Angular router is great for setting up basics, but it's also extremely powerful in supporting routing events, through Observables.
+
+> Note: we're using the `AppComponent` because it's the root component, therefore will always be subscribing to all route changes.
+
+To subscribe to the router's events, we can do this:
 
 {% highlight javascript %}
 ngOnInit() {
