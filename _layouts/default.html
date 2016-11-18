@@ -31,6 +31,7 @@
         </form>
       </div>
       <div class="card">
+        {% if page.url != '/angular-1-x' and page.url != '/angular-2' and page.url != '/javascript'  %}
         <div class="courses">
           <a class="courses__out" href="https://ultimateangular.com?utm_source=toddmotto.com" target="_blank">
             <div class="courses__a1"></div>
@@ -47,6 +48,7 @@
             </button>
           </a>
         </div>
+        {% endif %}
         <div class="card__content">
           {{ content }}
         </div>
