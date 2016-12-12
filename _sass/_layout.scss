@@ -81,7 +81,15 @@ $site-max-width: 788px;
   text-align: center;
   position: relative;
   border-radius: 2px 2px 0 0;
-
+  &--bottom {
+    margin: 25px -65px 0;
+    @media screen and (max-width: 850px) {
+      margin: 25px -40px 0;
+    }
+    @media screen and (max-width: 500px) {
+      margin: 25px -25px 0;
+    }
+  }
   &__a1 {
     background-image: url(/img/ua/angular-1.png);
     background-repeat: no-repeat;

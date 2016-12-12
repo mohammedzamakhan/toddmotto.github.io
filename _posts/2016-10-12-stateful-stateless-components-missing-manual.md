@@ -287,7 +287,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   `],
   template: `
   <div>
-    <span [ngClass]="{ complete: item.complete }">{{ item.label }}</span>
+    <span [ngClass]="{ complete: item.complete }">{% raw %}{{ item.label }}{% endraw %}</span>
     <button
       type="button"
       (click)="onChange.emit({ todo: item });">Done</button>
@@ -426,7 +426,7 @@ const todo = {
   },
   template: `
     <div>
-      <span ng-class="{ complete: $ctrl.item.complete }">{{ $ctrl.item.label }}</span>
+      <span ng-class="{ complete: $ctrl.item.complete }">{% raw %}{{ $ctrl.item.label }}{% endraw %}</span>
       <button
         type="button"
         ng-click="$ctrl.onChange({ $event: { todo: $ctrl.item } });">Done</button>
