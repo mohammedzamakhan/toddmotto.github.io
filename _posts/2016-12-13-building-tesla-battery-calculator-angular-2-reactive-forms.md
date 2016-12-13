@@ -45,6 +45,7 @@ We'll be building the above app step by step, so you can follow along with the t
 - <a href="#formgroup-valuechange-subscription">FormGroup valueChange subscription</a>
 - <a href="#deploying-with-ahead-of-time-compilation">Deploying with Ahead-of-Time compilation</a>
   - <a href="#deploying-to-github-pages">Deploying to GitHub pages</a>
+  - <a href="#source-code">Source code</a>
 
 ### Setup and Angular CLI
 
