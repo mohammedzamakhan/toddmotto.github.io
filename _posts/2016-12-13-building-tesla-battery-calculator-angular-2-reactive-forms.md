@@ -1448,7 +1448,7 @@ export const RADIO_CONTROL_ACCESSOR = {
       <div class="tesla-wheels__container cf">
         <label 
           *ngFor="let size of sizes;"
-          class="tesla-wheels__item tesla-wheels__item--{{ size }}"
+          class="tesla-wheels__item tesla-wheels__item--{% raw %}{{ size }}{% endraw %}"
           [class.tesla-wheels__item--active]="value === size"
           [class.tesla-wheels__item--focused]="focused === size">
           <input 
@@ -1460,7 +1460,7 @@ export const RADIO_CONTROL_ACCESSOR = {
             (focus)="onFocus(size)"
             [checked]="value === size">
           <p>
-            {{ size }}"
+            {% raw %}{{ size }}{% endraw %}"
           </p>
         </label>
       </div>
