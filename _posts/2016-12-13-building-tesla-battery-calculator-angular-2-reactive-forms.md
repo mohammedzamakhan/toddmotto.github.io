@@ -1710,8 +1710,19 @@ Angular CLI to the rescue. Ready to deploy what you've just built?
 
 Make sure you've _pushed all your changes_ to `master`, then run it:
 
-{% highlight javascript %}
+{% highlight bash %}
 ng github-pages:deploy
+{% endhighlight %}
+
+It should give you something like this:
+
+{% highlight bash %}
+Child html-webpack-plugin for "index.html":
+    Asset       Size          Chunks       Chunk Names
+    index.html  2.75 kB       0
+    chunk    {0} index.html 286 bytes [entry] [rendered]
+Deployed! Visit https://toddmotto.github.io/angular-tesla-range-calculator/
+Github pages might take a few minutes to show the deployed site.
 {% endhighlight %}
 
 Visit the URL the CLI gives you and enjoy.
