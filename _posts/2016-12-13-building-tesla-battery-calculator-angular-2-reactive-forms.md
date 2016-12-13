@@ -5,7 +5,7 @@ title: Building Tesla&#39;s battery range calculator with Angular 2 reactive for
 path: 2016-12-13-building-tesla-range-calculator-angular-2-reactive-forms.md
 ---
 
-In this epic tutorial, we're going to build some advanced Angular 2 components that rebuild [Tesla's battery range calculator](tesla.com/en_GB/models#battery-options) and then compile it to [AoT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) and deploy on GitHub pages. We'll be using the [reactive forms](/angular-2-forms-reactive) API as well and building custom form controls and use some stateful and stateless component practices, as well as change detection strategies.
+In this epic tutorial, we're going to build some advanced Angular 2 components that rebuild [Tesla's battery range calculator](https://tesla.com/en_GB/models#battery-options) and then compile it to [AoT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) and deploy on GitHub pages. We'll be using the [reactive forms](/angular-2-forms-reactive) API as well and building custom form controls and use some stateful and stateless component practices, as well as change detection strategies.
 
 This is the final project `gif` of what we're about to build:
 
