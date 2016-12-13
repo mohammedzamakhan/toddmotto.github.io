@@ -459,7 +459,7 @@ Upon saving this file, things will look a lot nicer. Right - back to the compone
 
 ### Car component
 
-Go ahead and create a `/tesla-car/` directory inside a new _`/components`_ directory (where we'll keep out "stateless" components):
+Go ahead and create a `/tesla-car/` directory inside a new _`/components`_ directory (where we'll keep our "stateless" components):
 
 {% highlight bash %}
 **/src/app/tesla-battery/components/tesla-car/
