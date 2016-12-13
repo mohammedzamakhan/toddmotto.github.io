@@ -49,7 +49,7 @@ We'll be building the above app step by step, so you can follow along with the t
 
 ### Setup and Angular CLI
 
-Head over the the [Angular CLI](https://cli.angular.io/) website and familiarise yourself with it. We'll be running our local server and deploying with it.
+Head over to the [Angular CLI](https://cli.angular.io/) website and familiarise yourself with it. We'll be running our local server and deploying with it.
 
 #### New GitHub repo
 
