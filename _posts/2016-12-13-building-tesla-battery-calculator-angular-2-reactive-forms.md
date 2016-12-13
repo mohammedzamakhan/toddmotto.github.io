@@ -1702,7 +1702,7 @@ You should have a fully working Tesla range calculator:
 
 ### Deploying with Ahead-of-Time compilation
 
-AoT means Angular will precompile everything (including our templates) and give us the bare minimum Angular 2 needs for our application. I'm getting around `313 KB` for this entire project, including images, fonts.
+AoT means Angular will precompile everything (including our templates) and give us the bare minimum Angular 2 needs for our application. I'm getting around `313 KB` for this entire project, including images, fonts. `184 KB` of that is Angular 2 code!
 
 #### Deploying to GitHub pages
 
