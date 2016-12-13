@@ -69,7 +69,7 @@ Then (note the same name as the repo):
 
 {% highlight bash %}
 cd <somewhere-you-want-your-project> # e.g. /Users/toddmotto/git
-ng create angular-tesla-range-calculator
+ng new angular-tesla-range-calculator
 {% endhighlight %}
 
 It'll take a few moments to download the required dependencies for the project. Then we can add the project to the remote:
