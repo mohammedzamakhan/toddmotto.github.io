@@ -51,6 +51,8 @@ We'll be building the above app step by step, so you can follow along with the t
 
 Head over to the [Angular CLI](https://cli.angular.io/) website and familiarise yourself with it. We'll be running our local server and deploying with it.
 
+> Versions: this tutorial uses CLI version `1.0.0-beta.22-1` and Angular `2.2.3`
+
 #### New GitHub repo
 
 First step, you'll need a GitHub account if you actually want to deploy this to a GitHub pages instance. Go to GitHub and create your own repo called `angular-tesla-range-calculator`.
