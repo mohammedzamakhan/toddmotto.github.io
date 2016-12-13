@@ -4,13 +4,15 @@ layout: page
 class: about
 ---
 
-I'm Todd, a 26 year old front-end engineer from England, UK, working as a Developer Advocate at [Telerik](http://telerik.com). Founder of [Ultimate Angular](//ultimateangular.com), a project to bring the Angular 1.x and Angular 2 ecosystem to developers through online courses, in-person workshops and training. I'm also a [Developer Expert](//developers.google.com/experts/people/todd-motto) at Google, [conference speaker](//speakerdeck.com/toddmotto) and [open source](//github.com/toddmotto) lover.
+I'm Todd, a 26 year old front-end engineer from England, UK. I run [Ultimate Angular](//ultimateangular.com) (which just won "Best Angular product for Education" award!), teaching developers and teams how to build become Angular experts through online courses.
+
+Ultimate Angular focuses on the Angular 1.x and Angular 2 ecosystem, to get you from zero to hero in a few lunch breaks. I'm also a [Developer Expert](//developers.google.com/experts/people/todd-motto) at Google, [conference speaker](//speakerdeck.com/toddmotto) and [open source](//github.com/toddmotto) lover.
+
+I've been fortunate enough to travel the world speaking and teaching Angular and JavaScript. I've taught workshops for Google, Virgin Media, Salesforce, General Assembly employees and many more.
 
 <div class="about__talk">
   <img src="img/about.jpg">
 </div>
-
-I've been fortunate enough to travel the world speaking and teaching Angular and JavaScript. I've taught workshops for Google, Virgin Media, Salesforce, General Assembly employees and many more.
 
 Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source Project of the Year finalist), partnered with Intel and Rolling Stone to bring an HTML5 experience to life. Many other brands have recognised and used/shared my ideas/code: Rolling Stone, Intel, Adobe, NASA, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, TechPro.
 
@@ -18,6 +20,7 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 
 | Date | Comments |
 | ---- | ---- |
+| 08.12.2016 | Visited Ghent, Belgium for the first time |
 | 04.10.2016 | Launched [Ultimate Angular](https://ultimateangular.com) training courses |
 | 07.08.2016 | Visited Sofia, Bulgaria for the first time |
 | 01.07.2016 | Visited Barcelona, Spain for the first time |
@@ -28,7 +31,6 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 | 22.02.2016 | Joined [Telerik](http://telerik.com) as Developer Advocate |
 | 18.02.2016 | First ever keynote presentation at [ng-nl](http://ng-nl.org) (Amsterdam, Holland) |
 | 29.12.2015 | Visited Brussels, Belgium for the first time |
-| 11.11.2015 | Launched [Voux](//voux.io) JavaScript training/workshops |
 | 13.10.2015 | Angular workshop, Falsy Values (Warsaw, Poland) |
 | 12.10.2015 | Angular: The Performance Parts (Warsaw, Poland) [slides](https://speakerdeck.com/toddmotto/angularjs-the-performance-parts) |
 | 12.10.2015 | Visited Poland for the first time |
@@ -63,11 +65,9 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 
 ### Contact
 
-Want to ask a general question? Use my [GitHub AMA](//github.com/toddmotto/ama) for that!
+Want to ask a general question? Either [tweet me](//twitter.com/toddmotto) or use my [GitHub AMA](//github.com/toddmotto/ama) for anything longer.
 
-I most likely will not respond to individual code queries due to the volume and time constraints, please defer to StackOverflow (sorry)!
-
-[Tweeting me](//twitter.com/toddmotto) is the fastest way to get hold of me.
+I most likely will not respond to individual code queries due to the volume and time constraints, please defer to StackOverflow for your help (sorry)!
 
 To chat to me about something else such as a JavaScript/Angular training, speaking or workshop event, please email me: todd[at]toddmotto[dotcom].
 

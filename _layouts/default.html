@@ -4,25 +4,16 @@
   <body>
     {% include header.html %}
     <main class="content">
-      <form class="search">
-        <input type="text" placeholder="Search (beta)...">
-        <ul></ul>
-      </form>
+      <div class="action-bar">
+        <form class="search">
+          <input type="text" placeholder="Search posts">
+          <ul></ul>
+        </form>
+      </div>
       <div class="card">
-        <div class="courses">
-          <a class="courses__out" href="https://ultimateangular.com?utm_source=toddmotto.com" target="_blank">
-            <img class="courses__logo" src="{{ site.baseurl }}/img/courses-logo.png" alt="">
-            <h3>
-              Master Angular 1.x and Angular 2 with me online
-            </h3>
-            <p>
-              Limited Angular 2 preorders now available.<br>Master the latest Angular 1.5 components, or preorder the most in-depth Angular 2 courses.
-            </p>
-            <button type="button">
-              See the courses
-            </button>
-          </a>
-        </div>
+        {% if page.url != '/angular-1-x' and page.url != '/angular-2' and page.url != '/javascript'  %}
+        {% include courses.html position="top" %}
+        {% endif %}
         <div class="card__content">
           {{ content }}
         </div>

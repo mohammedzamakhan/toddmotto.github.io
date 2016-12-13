@@ -4,9 +4,9 @@ layout: page
 class: speaking
 ---
 
-Please note: I am not accepting new speaking requests until January 2017 onwards. Thank you :) 
-
 I regularly speak at conferences in Europe and America, if you'd like me to join yours, please email me, todd[at]toddmotto[dotcom] and we can discuss further.
+
+_Please note:_ I am not accepting new speaking requests until April 2017 onwards. Thank you :)
 
 <div class="speaking__grid">
   <ul>
@@ -37,8 +37,6 @@ I regularly speak at conferences in Europe and America, if you'd like me to join
   </ul>
 </div>
 
-I'm available for keynote and regular speaking slots, and to maximise exposure and impact of the talk do prefer if sessions are recorded.
-
 ### Upcoming events
 
 I'm a Developer Advocate at Telerik, which means some of the below events may be that I'm manning the sponsorship forts for Kendo or NativeScript to talk to developers about our Angular 1/2 and React integrations. However, the majority of the below will be speaking slots so check out the speaker pages if you're thinking of saying hi!
@@ -46,7 +44,7 @@ I'm a Developer Advocate at Telerik, which means some of the below events may be
 <div class="speaking__list">
   <ul>
     <li>
-      <a href="https://ng-be.org">NG-BE</a>, Ghent (Belgium), <span>09.12.2016</span>
+      None yet, please ask about events later than April 2017.
     </li>
   </ul>
 </div>
@@ -57,6 +55,9 @@ Events I've spoken at. Check my [YouTube Channel](https://www.youtube.com/channe
 
 <div class="speaking__list">
   <ul>
+    <li>
+      <a href="https://ng-be.org">NG-BE</a>, Ghent (Belgium), <span>09.12.2016</span>
+    </li>
     <li>
       <a href="https://voxxeddays.com/thessaloniki/">Voxxed Thessaloniki</a>, Thessaloniki (Greece), <span>21.10.2016</span>
     </li>

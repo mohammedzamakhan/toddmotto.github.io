@@ -6,10 +6,11 @@
 $white: #fff;
 $blue: #2996d6;
 $purple: #d82c99;
-$text-color: #444;
+$brand: #7953b5;
+$text-color: #3a4250;
 $text-color-light: #999;
 $border-color: #E6E6E6;
-$green: #57ad68;
+$green: $brand;
 
 
 /* ==========================================================================
@@ -166,7 +167,7 @@ h1, h2, h3, h4, h5 {
   margin: 16px 0;
 }
 h1, .alpha {
-  font-size: 40px;
+  font-size: 32px;
   line-height: 48px;
   margin: 56px 0 48px 0;
 }
