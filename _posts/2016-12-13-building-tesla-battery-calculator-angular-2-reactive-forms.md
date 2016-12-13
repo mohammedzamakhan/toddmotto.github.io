@@ -17,11 +17,40 @@ We'll be building the above app step by step, so you can follow along with the t
 
 > Straight to the source code? [Go here](https://github.com/toddmotto/angular-tesla-range-calculator)!
 
+### Table of contents
+
+- <a href="#setup-and-angular-cli">Setup and Angular CLI</a>
+  - <a href="#new-github-repo">New GitHub repo</a>
+  - <a href="#new-cli-project">CLI installation</a>
+  - <a href="#serving-the-project">Serving the project</a>
+- <a href="#project-imagesassets">Project images/assets</a>
+- <a href="#root-and-sub-modules">Root and sub-modules</a>
+  - <a href="#root-ngmodule">Root @NgModule</a>
+  - <a href="#tesla-sub-module">Tesla Sub-module</a>
+- <a href="#injectable-data-service">Injectable data service</a>
+- <a href="#container-and-presentational-components">Container and presentational components</a>
+  - <a href="#formgroup-setup">FormGroup setup</a>
+  - <a href="#wiring-into-the-app-component">Wiring into the app component</a>
+- <a href="#car-component">Car component</a>
+  - <a href="#rendering-the-car">Rendering the car</a>
+- <a href="#stats-component">Stats component</a>
+  - <a href="#stats-and-datastructure-models">Stats and datastructure models</a>
+  - <a href="#private-stats-calculation">Private stats calculation</a>
+- <a href="#re-usable-counter-component">Re-usable counter component</a>
+  - <a href="#counter-and-controlvalueaccessor">Counter and ControlValueAccessor</a>
+  - <a href="#displaying-the-counters">Displaying the counters</a>
+- <a href="#aircon-and-heating-controls">Aircon and Heating controls</a>
+  - <a href="#conditional-airconheating-limits">Conditional aircon/heating limits</a>
+- <a href="#wheel-size-component">Wheel size component</a>
+- <a href="#formgroup-valuechange-subscription">FormGroup valueChange subscription</a>
+- <a href="#deploying-with-ahead-of-time-compilation">Deploying with Ahead-of-Time compilation</a>
+  - <a href="#deploying-to-github-pages">Deploying to GitHub pages</a>
+
 ### Setup and Angular CLI
 
 Head over the the [Angular CLI](https://cli.angular.io/) website and familiarise yourself with it. We'll be running our local server and deploying with it.
 
-#### New CLI project
+#### New GitHub repo
 
 First step, you'll need a GitHub account if you actually want to deploy this to a GitHub pages instance. Go to GitHub and create your own repo called `angular-tesla-range-calculator`.
 
@@ -118,7 +147,7 @@ export class AppModule {}
 
 This will error if we save the file as our module doesn't exist just yet, so let's create it.
 
-#### Sub-module
+#### Tesla Sub-module
 
 From the above code example, you can see we're importing our `tesla-battery` module, so next up we want to create a new folder:
 
@@ -165,7 +194,7 @@ export class TeslaBatteryModule {}
 
 We'll be populating this with new components as we go.
 
-#### Data service
+#### Injectable data service
 
 The data from Tesla's website is actually hard-coded `*.json` files that live on the server, I ripped them apart and created a new datastructure that made it easier to access properties once our values change.
 
