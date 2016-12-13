@@ -34,7 +34,7 @@
       }
     }
     font: {
-      family: $font--garamond--semi;
+      family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
     }
     @media screen and (max-width: 600px) {
       font-size: 28px;
@@ -56,9 +56,9 @@
 }
 
 .linkjuice {
-      color: #444;
+      color: #3a4250;
       &:hover {
-        color: #57ad68;
+        color: $brand;
       }
       position: relative;
       &-icon {
@@ -181,7 +181,7 @@
     }
 
     blockquote {
-      background: #e8f3ea;
+      background: #f8f3ff;
       padding: 32px 64px 32px 64px;
       @media only screen and (max-width: 740px) {
         padding: 24px 40px 24px 40px;
@@ -204,8 +204,8 @@
         margin-right: -24px;
       }
       code {
-        color: #2a6235;
-        background: darken(#e8f3ea, 5%);
+        color: #6947a0;
+        background: #ede5fb;
       }
       &::before {
           content : "\"";
@@ -224,7 +224,7 @@
           background-color: $green;
         }
       p {
-        color: #2a6235;
+        color: #6947a0;
         margin: 0;
         font-size: 16px;
         text-align: left;
@@ -287,7 +287,7 @@
       padding-top: 47px;
       text-align: center;
       margin-bottom: 40px;
-      font-family: $font--garamond--semi;
+      font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
     }
 
     ul {
@@ -319,10 +319,10 @@
       font-size: 28px;
       line-height: 32px;
     }
-    font-family: $font--garamond--semi;
+    font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
     color: #384455;
     a {
-      color: #444;
+      color: #3a4250;
       text-decoration: none;
       &:hover {
         color: #888;
@@ -365,8 +365,8 @@
   }
 
   &__edit {
-    font-family: $font--garamond--semi;
-    font-size: 16px;
+    font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    font-size: 13px;
     color: $green;
     line-height: 16px;
   }
@@ -378,7 +378,7 @@
 
 .pagination {
   color: #fff;
-  background: #292c2f;
+  background: #3a4250;
   text-align: center;
   margin: 0 -64px -64px -64px;
   border-radius: 0 0 2px 2px;
@@ -399,7 +399,7 @@
       display: inline-block;
       margin: 0 10px 0 0;
       a {
-        color: #999;
+        color: #6c7b94;
         transition: color 0.2s ease-in-out;
         &:hover {
           color: #fff;
@@ -415,10 +415,11 @@
  * AUTHOR
  */
 .author {
+  border-top: 1px solid #f1f1f1;
   padding: 32px 64px;
   display: table;
-  color: #fff;
-  background: #21242c;
+  color: #21242c;
+  background: #fff;
   margin: 80px -64px 0 -64px;
   @media screen and (max-width: 850px) {
     margin: 48px -40px 0 -40px;
@@ -431,10 +432,9 @@
     position: relative;
   }
   &__pic {
-    min-width: 120px;
-    vertical-align: middle;
     display: table-cell;
-    padding-right: 32px;
+    vertical-align: top;
+    min-width: 120px;
     @media screen and (max-width: 550px) {
       width: 40%;
       text-align: center;
@@ -444,23 +444,21 @@
     img {
       vertical-align: bottom;
       border-radius: 50%;
-      border: 5px solid #35393d;
+      width: 120px;
+      height: 120px;
     }
   }
   &__bio {
-    color: #fff;
-    width: 70%;
-    vertical-align: middle;
+    color: #3a4250;
+    font-size: 15px;
     display: table-cell;
-    padding: 0;
+    vertical-align: middle;
+    padding: 0 0 0 24px;
+    width: 100%;
     @media screen and (max-width: 550px) {
       min-width: 100%;
       text-align: center;
       padding: 0;
-    }
-    h3 {
-      margin: 0 0 10px 0;
-      font-size: 24px;
     }
     p {
       margin: 0 0 20px 0;
@@ -474,8 +472,9 @@
 .signup {
   padding: 64px 0;
   margin: 0 -64px;
-  background: #2d313a;
-  color: #fff;
+  background: #fff;
+  color: #3a4250;
+  border-bottom: 1px solid #f1f1f1;
   text-align: center;
   @media screen and (max-width: 850px) {
     padding: 30px 40px;

@@ -5,47 +5,14 @@
     {% include header.html %}
     <main class="content">
       <div class="action-bar">
-        <div class="category-list">
-          <a href="/angular-1-x.html" class="category__buckets">
-            <h2 class="category__bucket__title a1">
-              <img src="/img/categories/angular-1.svg" alt="">
-              Angular 1.x
-            </h2>
-          </a>
-          <a href="/angular-2.html" class="category__buckets">
-            <h2 class="category__bucket__title a2">
-              <img src="/img/categories/angular-2.svg" alt="">
-              Angular 2
-            </h2>
-          </a>
-          <a href="/javascript.html" class="category__buckets">
-            <h2 class="category__bucket__title js">
-              <img src="/img/categories/js.svg" alt="">
-              JavaScript
-            </h2>
-          </a>
-        </div>
         <form class="search">
-          <input type="text" placeholder="Search (beta)...">
+          <input type="text" placeholder="Search posts">
           <ul></ul>
         </form>
       </div>
       <div class="card">
         {% if page.url != '/angular-1-x' and page.url != '/angular-2' and page.url != '/javascript'  %}
-        <div class="courses">
-          <a class="courses__out" href="https://ultimateangular.com?utm_source=toddmotto.com" target="_blank">
-            <img class="courses__logo" src="{{ site.baseurl }}/img/courses-logo.png" alt="">
-            <h3>
-              Master Angular 1.x and Angular 2 with me online
-            </h3>
-            <p>
-              Limited Angular 2 preorders now available.<br>Master the latest Angular 1.5 components, or preorder the most in-depth Angular 2 courses.
-            </p>
-            <button type="button">
-              See the courses
-            </button>
-          </a>
-        </div>
+        {% include courses.html position="top" %}
         {% endif %}
         <div class="card__content">
           {{ content }}
