@@ -902,7 +902,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 // NUMBER_CONTROL_ACCESSOR constant to allow us to use the "TeslaCounterComponent" as 
 // a custom provider to the component and enforce the ControlValueAccessor interface
-export const NUMBER_CONTROL_ACCESSOR = {
+const NUMBER_CONTROL_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
   // forwardRef allows us to grab the TypeScript class
   // at a later (safer) point as classes aren't hoisted
@@ -1217,7 +1217,7 @@ Once you're done, populate your `tesla-climate.component.ts` component with this
 import { Component, Input, ChangeDetectionStrategy, forwardRef } from '@angular/core';
 import { FormControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-export const CHECKBOX_VALUE_ACCESSOR = {
+const CHECKBOX_VALUE_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => TeslaClimateComponent),
   multi: true
@@ -1463,7 +1463,7 @@ Once you're done, populate your `tesla-wheels.component.ts` component with this,
 import { Component, Input, ChangeDetectionStrategy, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-export const RADIO_CONTROL_ACCESSOR = {
+const RADIO_CONTROL_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => TeslaWheelsComponent),
   multi: true
