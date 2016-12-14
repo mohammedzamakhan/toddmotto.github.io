@@ -11,6 +11,8 @@ The [Angular 2 quickstart](https://angular.io/docs/ts/latest/quickstart.html) gu
 
 So let's walk through the bare essentials in a sensible order to get started and actually teach you what's happening with all the boilerplate setup we get, as well as how to create your first Angular 2 component and Bootstrap your app!
 
+> Note: this article is extremely outdated as WebPack has taken over System.js. For easier Angular 2 setups, check the [Angular CLI](http://cli.angular.io)
+
 ### TypeScript
 
 For the purposes of the tutorial, we're going to be using TypeScript.
