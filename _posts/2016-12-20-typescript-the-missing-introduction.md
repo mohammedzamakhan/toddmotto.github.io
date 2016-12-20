@@ -56,13 +56,13 @@ Traditionally, developers will often think about a language being a "compiled la
 
 In a language like Golang, for example, you have a command line tool called `go build` which allows you to compile your `.go` file into a lower-level representation of the code, which can then be executed and run:
 
-{% highlight bash %}
+```bash
 # We manually compile our .go file into something we can run
 # using the command line tool "go build"
 go build ultimate-angular.go
 # ...then we execute it!
 ./ultimate-angular
-{% endhighlight %}
+```
 
 As authors of JavaScript (ignoring our love of new-fangled build tools and module loaders for a moment), we don't have such a fundamental compilation step in our workflow.
 

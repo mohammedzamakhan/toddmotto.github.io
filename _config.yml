@@ -16,6 +16,7 @@ sass:
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 # Gems
 gems: [jekyll-paginate]
