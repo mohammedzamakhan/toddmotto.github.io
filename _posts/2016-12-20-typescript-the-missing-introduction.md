@@ -113,7 +113,7 @@ The TypeScript compiler is at the core of how TypeScript is able to help us when
 
 It is a similar process to the one shown in the Golang example above, except that the TypeScript compiler just provides hints based on how we have written our program, and doesn't turn it into a lower-level executable - it produces pure JavaScript.
 
-{% highlight javascript %}
+{% highlight bash %}
 # One option for passing our source .ts file through the TypeScript
 # compiler is to use the command line tool "tsc"
 tsc ultimate-angular.ts
@@ -206,7 +206,7 @@ name = sum;
 
 If we let TypeScript take a look at this code for us, we will now get an error `Type 'number' is not assignable to type 'string'` for our `name = sum` assignment, and we are appropriately warned against shipping _potentially_ problematic code to be executed by our users.
 
-> Importantly, we can choose to ignore errors from the TypeScript compiler if we want to, because is just a tool which gives us feedback on our JavaScript code before we ship it to our users.
+> Importantly, we can choose to ignore errors from the TypeScript compiler if we want to, because it is just a tool which gives us feedback on our JavaScript code before we ship it to our users.
 
 The final JavaScript code that the TypeScript compiler will output for us will look exactly the same as our original source above:
 
@@ -257,7 +257,7 @@ For this reason, we ideally want to convert our programs into a data structure w
 
 This data structure is exactly what an AST is!
 
-An AST could be represented in a number different ways, but let's take a look a quick example using our old buddy JSON.
+An AST could be represented in a number of different ways, but let's take a look at a quick example using our old buddy JSON.
 
 If we have this incredibly basic source code:
 
@@ -352,7 +352,7 @@ Phew! We have covered a lot in this post.
 
 We cut through all of the academic distractions to decide on practical definitions for a lot of the terminology that surrounds any discussion on compilers and types.
 
-We looked at compiled vs interpreted languages, run time vs compile time, dynamic vs static typing, and how Abstract Syntax Trees given us a more optimal way to build tooling for our programs.
+We looked at compiled vs interpreted languages, run time vs compile time, dynamic vs static typing, and how Abstract Syntax Trees give us a more optimal way to build tooling for our programs.
 
 Importantly, we provided a way of thinking about TypeScript as a tool for our _JavaScript_ development, and how it in turn can be built upon to offer even more amazing utilities, such as renaming symbols as a way of refactoring code.
 
