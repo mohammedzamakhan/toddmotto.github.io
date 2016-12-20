@@ -56,13 +56,13 @@ Traditionally, developers will often think about a language being a "compiled la
 
 In a language like Golang, for example, you have a command line tool called `go build` which allows you to compile your `.go` file into a lower-level representation of the code, which can then be executed and run:
 
-```bash
+{% highlight bash %}
 # We manually compile our .go file into something we can run
 # using the command line tool "go build"
 go build ultimate-angular.go
 # ...then we execute it!
 ./ultimate-angular
-```
+{% endhighlight %}
 
 As authors of JavaScript (ignoring our love of new-fangled build tools and module loaders for a moment), we don't have such a fundamental compilation step in our workflow.
 
@@ -80,12 +80,12 @@ Now, if we return to thinking about JavaScript and whether or not it is interpre
 
 Take this code as an example:
 
-```js
+{% highlight javascript %}
 hello();
 function hello() {
   console.log('Hello!');
 }
-```
+{% endhighlight %}
 
 This is perfectly valid JavaScript which will print the word "Hello!", but we have used the `hello()` function before we have even defined it! A simple line-by-line execution of this program would just not be possible, because `hello()` on line 1 does not have any meaning until we reach its declaration on line 2.
 
@@ -113,14 +113,14 @@ The TypeScript compiler is at the core of how TypeScript is able to help us when
 
 It is a similar process to the one shown in the Golang example above, except that the TypeScript compiler just provides hints based on how we have written our program, and doesn't turn it into a lower-level executable - it produces pure JavaScript.
 
-```bash
+{% highlight javascript %}
 # One option for passing our source .ts file through the TypeScript
 # compiler is to use the command line tool "tsc"
 tsc ultimate-angular.ts
 
 # ...this will produce a .js file of the same name
 # i.e. ultimate-angular.js
-```
+{% endhighlight %}
 
 There are many great posts about the different options for integrating the TypeScript compiler into your existing workflow, including the [official documentation](http://www.typescriptlang.org/docs). It is beyond the scope of this article to go into those options here.
 
@@ -132,10 +132,10 @@ Let's start by taking a step back and refreshing our memory on how much we _alre
 
 We have the following program:
 
-```js
+{% highlight javascript %}
 var name = 'James';
 var sum = 1 + 2;
-```
+{% endhighlight %}
 
 How would we describe this code to somebody?
 
@@ -160,12 +160,12 @@ Now, let's think a bit more deeply about our "name and sum" JavaScript program a
 
 We could take our `name` variable which is currently assigned the **string** 'James', and reassign it to the current value of our second variable `sum`, which is the **number** `3`.
 
-```js
+{% highlight javascript %}
 var name = 'James';
 var sum = 1 + 2;
 
 name = sum;
-```
+{% endhighlight %}
 
 The `name` variable started out "holding" a string, but now it holds a number. This highlights a fundamental quality of variables and types in JavaScript:
 
@@ -177,9 +177,9 @@ For our purposes, this also just so happens to be the very definition of a **"dy
 
 By contrast, we can think of a **"statically typed language"** as being one in which we can (and very likely have to) associate type information with a particular variable:
 
-```js
+{% highlight javascript %}
 var name: string = 'James';
-```
+{% endhighlight %}
 
 In this code, we are better able to explicitly declare our _intentions_ for the `name` variable - we want it to always be used as a string.
 
@@ -197,12 +197,12 @@ We have started to see why it is often said that TypeScript is just JavaScript +
 
 Let's take a look at our program again, and add another explicit annotation, this time for our `sum` variable:
 
-```js
+{% highlight javascript %}
 var name: string = 'James';
 var sum: number = 1 + 2;
 
 name = sum;
-```
+{% endhighlight %}
 
 If we let TypeScript take a look at this code for us, we will now get an error `Type 'number' is not assignable to type 'string'` for our `name = sum` assignment, and we are appropriately warned against shipping _potentially_ problematic code to be executed by our users.
 
@@ -210,12 +210,12 @@ If we let TypeScript take a look at this code for us, we will now get an error `
 
 The final JavaScript code that the TypeScript compiler will output for us will look exactly the same as our original source above:
 
-```js
+{% highlight javascript %}
 var name = 'James';
 var sum = 1 + 2;
 
 name = sum;
-```
+{% endhighlight %}
 
 The type annotations are all removed for us automatically, and we can now run our code.
 
@@ -261,13 +261,13 @@ An AST could be represented in a number different ways, but let's take a look a 
 
 If we have this incredibly basic source code:
 
-```js
+{% highlight javascript %}
 var a = 1;
-```
+{% endhighlight %}
 
 The (simplified) output of the TypeScript Compiler's **Parser** phase will be the following AST:
 
-```json
+{% highlight json %}
 {
   "pos": 0,
   "end": 10,
@@ -304,7 +304,7 @@ The (simplified) output of the TypeScript Compiler's **Parser** phase will be th
     }
   ]
 }
-```
+{% endhighlight %}
 
 Each of our tokens (the `var` keyword, the `a` variable, the `=` operator, the value `1`, and the `;`) is represented as a _node_ in our AST.
 
@@ -322,11 +322,11 @@ It is beyond the scope of this article to dive into how the Language Server work
 
 Let's say that we have the following source code:
 
-```js
+{% highlight javascript %}
 // The name of the author is James
 var first_name = 'James';
 console.log(first_name);
-```
+{% endhighlight %}
 
 After a _thorough_ code review and appropriate bikeshedding, it is decided that we should switch our variable naming convention to use camel case instead of the snake case we are currently using.
 
