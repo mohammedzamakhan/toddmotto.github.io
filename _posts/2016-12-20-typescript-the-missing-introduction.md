@@ -306,7 +306,7 @@ The (simplified) output of the TypeScript Compiler's **Parser** phase will be th
 }
 {% endhighlight %}
 
-Each of our tokens (the `var` keyword, the `a` variable, the `=` operator, the value `1`, and the `;`) is represented as a _node_ in our AST.
+The objects in our in our AST are called _nodes_.
 
 #### Example: Renaming symbols in VS Code
 
