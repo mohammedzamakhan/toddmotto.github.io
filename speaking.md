@@ -44,7 +44,10 @@ I'm a Developer Advocate at Telerik, which means some of the below events may be
 <div class="speaking__list">
   <ul>
     <li>
-      None yet, please ask about events later than April 2017.
+      <a href="https://conf.crater.io">Crater Remote Conf</a>, Online, <span>08.02.2017</span>
+    </li>
+    <li>
+      Please ask about events later than April 2017.
     </li>
   </ul>
 </div>
