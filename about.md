@@ -21,6 +21,7 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 | Date | Comments |
 | ---- | ---- |
 | 08.12.2016 | Visited Ghent, Belgium for the first time |
+| 22.11.2016 | Ultimate Angular wins "Best Angular Product for Education" |
 | 04.10.2016 | Launched [Ultimate Angular](https://ultimateangular.com) training courses |
 | 07.08.2016 | Visited Sofia, Bulgaria for the first time |
 | 01.07.2016 | Visited Barcelona, Spain for the first time |

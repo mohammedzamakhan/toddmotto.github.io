@@ -39,12 +39,15 @@ _Please note:_ I am not accepting new speaking requests until April 2017 onwards
 
 ### Upcoming events
 
-I'm a Developer Advocate at Telerik, which means some of the below events may be that I'm manning the sponsorship forts for Kendo or NativeScript to talk to developers about our Angular 1/2 and React integrations. However, the majority of the below will be speaking slots so check out the speaker pages if you're thinking of saying hi!
+Upcoming events I'll be speaking at.
 
 <div class="speaking__list">
   <ul>
     <li>
-      None yet, please ask about events later than April 2017.
+      <a href="https://conf.crater.io">Crater Remote Conf</a>, Online, <span>08.02.2017</span>
+    </li>
+    <li>
+      Please ask about events later than April 2017.
     </li>
   </ul>
 </div>

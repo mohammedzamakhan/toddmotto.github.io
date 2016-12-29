@@ -9,7 +9,7 @@ tags:
 - JavaScript
 ---
 
-It's safe to say that the `this` keyword is probably one of the misunderstood parts of JavaScript. Admittedly, I used to throw the `this` keyword around until my script worked and it confused the hell out of me (and still does many other JS developers) around the world. Only when I learned about lexical scope, how functions are invoked, scope context, a few context changing methods - I really understood it.
+It's probably safe to say that the `this` keyword is one of the most misunderstood parts of JavaScript. Admittedly, I used to throw the `this` keyword around until my script worked and it confused the hell out of me (and still confuses many other JS developers). It wasn't until I learned about lexical scope, how functions are invoked, scope context, and a few context changing methods that I really understood it.
 
 Before you dive into this article, here's a few very important points to takeaway and remember about the `this` keyword:
 
@@ -161,7 +161,7 @@ Using any of the above will allow you to change the context of a function, which
 
 #### Using `.call()`, `.apply()` and `.bind()`
 
-"Functions are first class Objects" you'll often hear, this means they can also have their own methods!
+You will often hear that "Functions are first class Objects," which means that they can also have their own methods!
 
 The `.call()` method allows you to change the scope with a specific syntax [ref](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call):
 
@@ -298,7 +298,7 @@ element.addEventListener('click', someMethod.bind(obj), false); // bind
 
 ### "Jumping scope"
 
-I call this jumping scope, but essentially it's just some slang for accessing a lexical scope reference (also a bit easier to remember...).
+I call this jumping scope, but essentially it's just some slang for accessing a lexical scope reference (also a bit easier to remember).
 
 There are many times when we need to access lexical scope. Lexical scope is where variables and functions are still accessible to us in parent scopes.
 
