@@ -24,9 +24,11 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 | 22.11.2016 | Ultimate Angular wins "Best Angular Product for Education" |
 | 04.10.2016 | Launched [Ultimate Angular](https://ultimateangular.com) training courses |
 | 07.08.2016 | Visited Sofia, Bulgaria for the first time |
+| 01.08.2016 | Opening keynote presentation at AngularCamp |
 | 01.07.2016 | Visited Barcelona, Spain for the first time |
 | 25.05.2016 | Visited Copenhagen, Denmark for the first time |
-| 30.04.2016 | Visited Lugano, Switzerland for the first time |
+| 30.04.2016 | First opening keynote presentation at Voxxed Ticino |
+| 29.04.2016 | Visited Lugano, Switzerland for the first time |
 | 13.03.2016 | 15,000ft sky dive ([video](https://www.youtube.com/watch?v=iFYYkTlJDWg)) |
 | 23.02.2016 | Visited Austin, TX for the first time |
 | 22.02.2016 | Joined [Telerik](http://telerik.com) as Developer Advocate |
@@ -39,7 +41,7 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 | 04.08.2015 | Visited Amsterdam, The Netherlands for the first time |
 | 06.04.2015 | New York Public Library use my Angular style-guide in [v1.3 app migration](http://www.nypl.org/blog/2015/04/06/upgrading-angularjs-1-3) |
 | 16.02.2015 | Director of Web Development role at [Mozio, Inc.](//mozio.com) |
-| 14.11.2014 | Launched [ngAir](http://ng-air.github.io), an Angular hangout/podcast |
+| 14.11.2014 | Created and launched [AngularAir](http://angularair.com), a hangout/podcast |
 | 28.10.2014 | Visited Boston, USA for the first time |
 | 28.10.2014 | Angular, the bridge between today and tomorrow's web (Boston, USA): [video](https://www.youtube.com/watch?v=Po2JDV6Iebc) |
 | 27.10.2014 | Angular workshop, Future of Web Apps (Boston, USA) |
