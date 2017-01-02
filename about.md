@@ -22,13 +22,13 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 | ---- | ---- |
 | 08.12.2016 | Visited Ghent, Belgium for the first time |
 | 22.11.2016 | Ultimate Angular wins "Best Angular Product for Education" |
-| 04.10.2016 | Launched [Ultimate Angular](https://ultimateangular.com) training courses |
 | 07.08.2016 | Visited Sofia, Bulgaria for the first time |
 | 01.08.2016 | Opening keynote presentation at AngularCamp |
 | 01.07.2016 | Visited Barcelona, Spain for the first time |
 | 25.05.2016 | Visited Copenhagen, Denmark for the first time |
 | 30.04.2016 | First opening keynote presentation at Voxxed Ticino |
 | 29.04.2016 | Visited Lugano, Switzerland for the first time |
+| 04.04.2016 | Launched [Ultimate Angular](https://ultimateangular.com) training courses |
 | 13.03.2016 | 15,000ft sky dive ([video](https://www.youtube.com/watch?v=iFYYkTlJDWg)) |
 | 23.02.2016 | Visited Austin, TX for the first time |
 | 22.02.2016 | Joined [Telerik](http://telerik.com) as Developer Advocate |
