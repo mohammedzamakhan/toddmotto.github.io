@@ -129,7 +129,7 @@ a {
  * WRAPPER
  */
 .wrapper {
-  max-width: 800px;
+  max-width: $content-width;
   margin: 0 auto;
   padding: 0 64px; }
 
@@ -145,7 +145,7 @@ a {
       padding: 45px 15px; } }
 
 .card {
-  max-width: 800px;
+  max-width: $content-width;
   margin: 0 auto;
   background: white;}
   .card__content {
