@@ -41,4 +41,4 @@ This will start serving the project from `localhost:4000`, with livereload funct
 
 ### Notes
 
-Despite being open sourced, all and content remain copyright of Todd Motto. Please don't steal!
+Despite being open sourced, all code and content remain copyright of Todd Motto. Please don't steal!
