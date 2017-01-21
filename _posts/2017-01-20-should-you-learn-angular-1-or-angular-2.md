@@ -15,7 +15,7 @@ Here are a few questions that I get asked a lot:
 - _"Should I learn Angular 2 yet?"_
 - _"Should I learn Angular 1 and 2?"_
 
-First thing to remember, there is no "official" answer. However, there are large factors that come into play when you are considering which framework to learn next or get better at. This next section is my aim to offer some advice on how to answer that question for yourself - as nobody else can for you.
+First thing to remember, there is no "official" answer (though the short and concise answer is always aim to use latest stable versions of any tools you're using). However, there are large factors that come into play when you are considering which framework to learn next or get better at. This next section is my aim to offer some advice on how to answer that question for yourself - as nobody else can for you.
 
 ### Your codebase and team
 
