@@ -4,7 +4,7 @@ layout: page
 class: about
 ---
 
-I'm Todd, a 26 year old front-end engineer from England, UK. I run [Ultimate Angular](//ultimateangular.com) (which just won "Best Angular product for Education" award!), teaching developers and teams how to build become Angular experts through online courses.
+I'm Todd, a 26 year old front-end engineer from England, UK. I run [Ultimate Angular](//ultimateangular.com) (which just won "Best Angular product for Education" award!), teaching developers and teams how to become Angular experts through online courses.
 
 Ultimate Angular focuses on the Angular 1.x and Angular 2 ecosystem, to get you from zero to hero in a few lunch breaks. I'm also a [Developer Expert](//developers.google.com/experts/people/todd-motto) at Google, [conference speaker](//speakerdeck.com/toddmotto) and [open source](//github.com/toddmotto) lover.
 
