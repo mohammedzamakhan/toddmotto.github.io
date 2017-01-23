@@ -50,7 +50,7 @@ Upcoming events I'll be speaking at.
       <a href="https://ng-nl.org">NG-NL</a> (keynote), Amsterdam (Netherlands), <span>15-16.03.2017</span>
     </li>
     <li>
-      <a href="https://www.ng-conf.org/workshops/">ng-conf</a> (workshop), Amsterdam (Netherlands), <span>03.04.2017</span>
+      <a href="https://www.ng-conf.org/workshops/">ng-conf</a> (workshop), Salt Lake City (Utah, USA), <span>03.04.2017</span>
     </li>
   </ul>
 </div>
