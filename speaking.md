@@ -47,7 +47,10 @@ Upcoming events I'll be speaking at.
       <a href="https://conf.crater.io">Crater Remote Conf</a>, Online, <span>08.02.2017</span>
     </li>
     <li>
-      <a href="https://ng-nl.org">NG-NL (keynote)</a>, Amsterdam (Netherlands), <span>15-16.03.2017</span>
+      <a href="https://ng-nl.org">NG-NL</a> (keynote), Amsterdam (Netherlands), <span>15-16.03.2017</span>
+    </li>
+    <li>
+      <a href="https://www.ng-conf.org/workshops/">ng-conf</a> (workshop), Amsterdam (Netherlands), <span>03.04.2017</span>
     </li>
   </ul>
 </div>
