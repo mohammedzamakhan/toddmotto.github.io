@@ -93,7 +93,7 @@ From here, we can see the compiled code knows about `http` being equal to the `H
 __metadata('design:paramtypes', [Http])
 ```
 
-So essentially, the `@Component` decorator is transformed into plain ES5, and some additional `metadata` is supplied to the `__decorate` assignment. Which in turn tells Angular to lookup the `Http` token and supply it as a first parameter to the Component's `constructor` - assigning it to `this.http`:
+So essentially, the `@Component` decorator is transformed into plain ES5, and some additional `metadata` is supplied through the `__decorate` assignment. Which in turn tells Angular to lookup the `Http` token and supply it as a first parameter to the Component's `constructor` - assigning it to `this.http`:
 
 ```js
 function ExampleComponent(http) {
