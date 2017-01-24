@@ -4,9 +4,9 @@ layout: page
 class: speaking
 ---
 
-I regularly speak at conferences in Europe and America, if you'd like me to join yours, please email me, todd[at]toddmotto[dotcom] and we can discuss further.
+I regularly speak at conferences in Europe and America, if you'd like me to join yours, please email me, todd@toddmotto.com and we can discuss further.
 
-_Please note:_ I am not accepting new speaking requests until April 2017 onwards. Thank you :)
+_Please note:_ I prefer to speak at Angular-specific conferences. Thank you :)
 
 <div class="speaking__grid">
   <ul>
@@ -47,7 +47,10 @@ Upcoming events I'll be speaking at.
       <a href="https://conf.crater.io">Crater Remote Conf</a>, Online, <span>08.02.2017</span>
     </li>
     <li>
-      Please ask about events later than April 2017.
+      <a href="https://ng-nl.org">NG-NL</a> (keynote), Amsterdam (Netherlands), <span>15-16.03.2017</span>
+    </li>
+    <li>
+      <a href="https://www.ng-conf.org/workshops/">ng-conf</a> (workshop), Salt Lake City (Utah, USA), <span>03.04.2017</span>
     </li>
   </ul>
 </div>
