@@ -37,7 +37,7 @@ SomeController.$inject = ['$scope'];
 
 You can check out my [old post](https://toddmotto.com/angular-js-dependency-injection-annotation-process/) on the DI annotation process for more on that if you like.
 
-This was a great approach - but it came with some limitations. Typically we'd create various modules when building out applications, as well as importing external modules, such as feature modules or libraries (such as `ui-router`). Different modules couldn't have controllers/services/etc with the same names, which would then cause conflicts during the compile phase (as dependencies with the same names would clash, thus overriding eachother).
+This was a great approach - but it came with some limitations. Typically we'd create various modules when building our applications, as well as importing external modules, such as feature modules or libraries (such as `ui-router`). Different modules couldn't have controllers/services/etc with the same names, which would then cause conflicts during the compile phase (as dependencies with the same names would clash, thus overriding eachother).
 
 Fortunately for us, Angular's new dependency injection has been completely remastered and rewritten, and it comes with much more power and flexibility.
 
