@@ -164,7 +164,7 @@ When using Angular decorators, the decorated class stores metadata about itself 
 
 If no Angular decorator has been used on a class there is no way for Angular to read what dependencies it requires. This is why we need to use `@Injectable()`. 
 
-If our service injects providers we must `@Injectable()`, which providers no extra functionality, to tell Angular to store that metadata it needs.
+If our service injects providers we must add `@Injectable()`, which providers no extra functionality, to tell Angular to store that metadata it needs.
 
 Therefore, if our service looks like this:
 
