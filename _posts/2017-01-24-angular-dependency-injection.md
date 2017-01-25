@@ -417,7 +417,6 @@ export const ROUTER_CONFIG: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule,
     RouterModule.forRoot(ROUTER_CONFIG),
   ],
   bootstrap: [
