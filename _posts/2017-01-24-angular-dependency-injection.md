@@ -212,7 +212,7 @@ At this point, Angular is aware of the `Http` token and can supply it to `http`.
 
 ### Tokens and Dependency Injection
 
-Now we know *how* Angular knows what to inject, we can learn how it resolves our dependencies and instantiates them.
+Now that we know *how* Angular knows what to inject, we can learn how it resolves our dependencies and instantiates them.
 
 #### Registering a provider
 
