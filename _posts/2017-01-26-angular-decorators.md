@@ -70,7 +70,7 @@ export class ExampleModule {
 }
 ```
 
-Notice how we both classes by themselves are effectively the same. No code is needed within the class to tell Angular that it is a component or a module. All we need to do is decorate it, and Angular will do the rest.
+Notice how both classes by themselves are effectively the same. No code is needed within the class to tell Angular that it is a component or a module. All we need to do is decorate it, and Angular will do the rest.
 
 #### Property Decorators
 
