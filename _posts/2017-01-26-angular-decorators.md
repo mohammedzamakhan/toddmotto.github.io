@@ -155,7 +155,7 @@ Parameter decorators are quite interesting. You may have come across these when 
 
 > For a deep dig into Dependency Injection (DI), tokens, `@Inject` and `@Injectable`, check out [my previous article](/angular-dependency-injection).
 
-Parameter decorators allow us to decorate parameters in our class constructors. An example of this is `@Inject` that let's us tell Angular what we want that parameter to be initiated with:
+Parameter decorators allow us to decorate parameters in our class constructors. An example of this is `@Inject` that lets us tell Angular what we want that parameter to be initiated with:
 
 <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx" style="opacity: 0.3">Component</span><span class="p" style="opacity: 0.3">,</span> <span class="nx">Inject</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">MyService</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'./my-service'</span><span class="p">;</span>
