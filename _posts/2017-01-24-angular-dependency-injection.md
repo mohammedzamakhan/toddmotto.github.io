@@ -37,7 +37,7 @@ SomeController.$inject = ['$scope'];
 
 You can check out my [old post](https://toddmotto.com/angular-js-dependency-injection-annotation-process/) on the DI annotation process for more on that if you like.
 
-This was a great approach - but it came with some limitations. Typically we'd create various modules when building out applications, as well as importing external modules, such as feature modules or libraries (such as `ui-router`). Different modules couldn't have controllers/services/etc with the same names, which would then cause conflicts during the compile phase (as dependencies with the same names would clash, thus overriding eachother).
+This was a great approach - but it came with some limitations. Typically we'd create various modules when building our applications, as well as importing external modules, such as feature modules or libraries (such as `ui-router`). Different modules couldn't have controllers/services/etc with the same names, which would then cause conflicts during the compile phase (as dependencies with the same names would clash, thus overriding each other).
 
 Fortunately for us, Angular's new dependency injection has been completely remastered and rewritten, and it comes with much more power and flexibility.
 
@@ -164,7 +164,7 @@ When using Angular decorators, the decorated class stores metadata about itself 
 
 If no Angular decorator has been used on a class there is no way for Angular to read what dependencies it requires. This is why we need to use `@Injectable()`. 
 
-If our service injects providers we must `@Injectable()`, which providers no extra functionality, to tell Angular to store that metadata it needs.
+If our service injects providers we must add `@Injectable()`, which providers no extra functionality, to tell Angular to store that metadata it needs.
 
 Therefore, if our service looks like this:
 
@@ -212,7 +212,7 @@ At this point, Angular is aware of the `Http` token and can supply it to `http`.
 
 ### Tokens and Dependency Injection
 
-Now we know *how* Angular knows what to inject, we can learn how it resolves our dependencies and instantiates them.
+Now that we know *how* Angular knows what to inject, we can learn how it resolves our dependencies and instantiates them.
 
 #### Registering a provider
 
@@ -417,7 +417,6 @@ export const ROUTER_CONFIG: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule,
     RouterModule.forRoot(ROUTER_CONFIG),
   ],
   bootstrap: [
