@@ -237,7 +237,7 @@ Let's change our code above to execute the `Console` function with a value to ma
 </code></pre>
 </div>
 
-If we ran this code now, we'd only get `'Hey!'` outputted to the console. That's because our decorator hasn't returned a function for the class to the given to. The output of `@Console('Hey!')` is `void`.
+If we ran this code now, we'd only get `'Hey!'` outputted to the console. That's because our decorator hasn't returned a function for the class to be given to. The output of `@Console('Hey!')` is `void`.
 
 We would need to adapt our `Console` decorator to return a function closure for the class to be given to. That way we can both receive a value from the decorator (in our case, the string `Hey!`) and also the class that it's applied to:
 
