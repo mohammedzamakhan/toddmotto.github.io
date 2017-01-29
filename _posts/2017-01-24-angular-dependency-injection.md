@@ -118,7 +118,7 @@ import { Http } from '@angular/http';
   template: '<div>I am a component</div>'
 })
 class ExampleComponent {
-  constructor(private @Inject(Http) http) {
+  constructor(@Inject(Http) private http) {
     // use `this.http` which is the Http provider
   }
 }
@@ -148,7 +148,7 @@ const myToken = new OpaqueToken('myValue');
 
 @Component(...)
 class ExampleComponent {
-  constructor(private @Inject(myToken) token) {
+  constructor(@Inject(myToken) private token) {
     // use the provider for `token`
   }
 }
