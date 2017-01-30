@@ -16,17 +16,18 @@ Uncompiled [Jekyll](//jekyllrb.com) source code for [toddmotto.com](//toddmotto.
 
 ### Installing dependencies
 
-This project makes use of `gulp`. First, you'll need to make sure you have `gulp` installed:
+This project makes use of `gulp` and `yarn`. First, you'll need to make sure you have them both installed:
 
 ```
-npm install --global gulp
+npm install --g gulp
+npm install --g yarn
 ```
 
-Next, you'll need to `npm install` the other dev-dependencies, run this from the `toddmotto.github.io` root folder:
+Next, you'll need to `yarn install` the other dev-dependencies, run this from the `toddmotto.github.io` root folder:
 
 ```
 cd toddmotto.github.io
-npm install
+yarn install
 ```
 
 ### Running the server
@@ -34,7 +35,7 @@ npm install
 Gulp is setup to make it easier to run all the tasks, to run the project simply run:
 
 ```
-npm start
+yarn start
 ```
 
 This will start serving the project from `localhost:4000`, with livereload functionality.
