@@ -66,7 +66,7 @@ Each root component lives within a module, and these are defined using `@NgModul
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component.ts';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
