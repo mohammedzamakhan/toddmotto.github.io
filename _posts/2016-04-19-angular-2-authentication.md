@@ -48,7 +48,7 @@ One question that frequents when implementing auth in Angular apps is "where doe
 
 {% highlight javascript %}
 // services/auth.service.ts
-import {Injectable} from 'angular2/core';
+import { Injectable } from '@angular/core';
 
 // We want to avoid any 'name not found'
 // warnings from TypeScript
@@ -84,8 +84,8 @@ Well, that was simple. Now we can inject the Service wherever we want! For insta
 
 {% highlight javascript %}
 // components/toolbar.component.ts
-import {Component} from 'angular2/core';
-import {AuthService} from '../services/auth.service';
+import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'toolbar',
@@ -128,8 +128,8 @@ After we [configure the module](https://github.com/auth0/angular2-jwt#sending-au
 
 {% highlight javascript %}
 // components/user-list.component.ts
-import {Component, OnInit} from 'angular2/core';
-import {AuthHttp} from 'angular2-jwt';
+import { Component, OnInit } from '@angular/core';
+import { AuthHttp } from 'angular2-jwt';
 import 'rxjs/add/operator/map';
 
 interface User {
@@ -151,7 +151,7 @@ interface User {
   `
 })
 export class UserListComponent implements OnInit {
-  users: Array<User>;
+  users: User[];
   constructor(private authHttp: AuthHttp) {}
   ngOnInit() {
     this.authHttp.get('//my-app.com/api/users')
@@ -205,8 +205,8 @@ app.get('/api/users', authCheck, function(req, res) {
   res.json(users);
 });
 
-app.listen(3001);
-console.log('Listening on http://localhost:3001');
+app.listen(4000);
+console.log('Listening on http://localhost:4000');
 {% endhighlight %}
 
 The middleware is what guards our data. We set it up on the `authCheck` variable using the secret key provided by Auth0, and then we apply it to the `/api/users` endpoint by passing it into `app.get` as the second argument. If the JWT that gets attached in our `AuthHttp` request is valid, it will pass through this middleware and our `users` Array will be returned.
@@ -225,8 +225,8 @@ We can check expiry with `angular2-jwt` module's `tokenNotExpired` function and 
 
 {% highlight javascript %}
 // components/user-list.component.ts
-import {CanActivate} from 'angular2/router';
-import {tokenNotExpired} from 'angular2-jwt';
+import { CanActivate } from '@angular/router';
+import { tokenNotExpired } from 'angular2-jwt';
   ...
 @CanActivate(() => tokenNotExpired())
 export class UserListComponent {
@@ -234,32 +234,37 @@ export class UserListComponent {
 }
 {% endhighlight %}
 
-### Conditional rendering with `ngIf`
+### Conditional rendering with ngIf
 
 We can create a `loggedIn` method for our `AuthService` that can be used to conditionally hide and show various elements. For example, we would only want to show the _Login_ button when the user is not currently authenticated, and on the flip side, we'd only want to see _Logout_ when there's an unexpired JWT in `localStorage`.
 
 {% highlight javascript %}
 // services/auth.service.ts
-import {tokenNotExpired} from 'angular2-jwt';
-...
-loggedIn() {
+import { tokenNotExpired } from 'angular2-jwt';
+// ...
+loggedIn(): boolean {
   return tokenNotExpired();
 }
-...
+// ...
 {% endhighlight %}
 
 This will return `true` or `false` depending on whether the JWT in `localStorage` is expired or not. Now let's apply it to our Angular 2 template:
 
 {% highlight javascript %}
 // components/toolbar.component.ts
-import {Component} from 'angular2/core';
-import {AuthService} from './services/auth.service';
+import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
+
 @Component({
   selector: 'toolbar',
   template: `
     <div class="toolbar">
-      <button (click)="auth.login()" *ngIf="!auth.loggedIn()">Login</button>
-      <button (click)="auth.logout()" *ngIf="auth.loggedIn()">Logout</button>
+      <button (click)="auth.login()" *ngIf="!auth.loggedIn()">
+        Login
+      </button>
+      <button (click)="auth.logout()" *ngIf="auth.loggedIn()">
+        Logout
+      </button>
     </div>
   `
 })
@@ -271,4 +276,4 @@ We've already composed a `logout` method on the `AuthService`, and all that it r
 
 ### Wrapping up
 
-Hopefully you've had some decent insight into Angular 2 authentication with JSON Web Tokens, Auth0 and Node! It's been a pretty simple journey using Auth0 for all of this and it was awesome implementing it inside Angular 2!
+Hopefully you've had some decent insight into Angular 2 authentication with JSON Web Tokens, Auth0 and Node. It's been a pretty simple journey using Auth0 for all of this and it was awesome implementing it inside Angular 2!
