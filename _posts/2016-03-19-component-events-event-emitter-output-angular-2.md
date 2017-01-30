@@ -1,329 +1,307 @@
 ---
 layout: post
 permalink: /component-events-event-emitter-output-angular-2
-title: Component events with EventEmitter and "Output" in Angular 2
+title: "Component events with EventEmitter and @Output in Angular 2+"
 path: 2016-03-19-component-events-event-emitter-output-angular-2.md
 tags:
 - Angular 2
 ---
 
-Angular 2 Components have a far better way of notifying parent Components that something has happened via events. There is no longer two-way data binding in Angular 2 in the same way we knew it in Angular 1.x, it's designed around a uni-directional data flow system that adopts a much more reasonable approach to application development. Let's finalise the basics of parent-child and child-parent communication.
+Angular components have a far better way of notifying parent components that something has changed, via events. There's no longer two-way data binding in Angular in the same way we knew it in Angular 1.x, it's designed around a uni-directional data flow system that adopts a much more reasonable approach to application development.
 
-This tutorial will cover local Component events using the `EventEmitter` API and `@Output` decorator, which follows nicely from the previous article on [passing data in Angular 2 Components](/passing-data-angular-2-components-input). For the purposes of this article we'll be continuing to use the Counter Component we built in the [first article](/creating-your-first-angular-2-component) - so familiarise yourself with this first.
+Let's finalise the basics of parent-child and child-parent communication by introducing `EventEmitter` and `@Output`.
+
+### Series
+
+1. [Bootstrapping your first Angular 2+ app](/bootstrap-angular-2-hello-world)
+2. [Creating your first Angular 2+ component](/creating-your-first-angular-2-component)
+3. [Passing data into Angular 2+ components with @Input](/passing-data-angular-2-components-input)
+4. Component events with EventEmitter and @Output in Angular 2+
+
+### Introduction
+
+This tutorial will cover stateless component events using the `EventEmitter` API and `@Output` decorator. These hand in hand allow us to emit change or any custom event names from a custom component in Angular.
+
+This post follows from the previous article on [passing data in Angular components with @Input](/passing-data-angular-2-components-input).
 
 ### Angular 1.x
 
-For those coming from an Angular 1.x background, this concept could look a little like this with the `.directive()` API and `$rootScope` events:
+For those coming from an Angular 1.x background, this concept could look a little like this with the `.component()` API and callback binding using `'&'`:
 
-{% highlight javascript %}
-function counter($rootScope) {
-  return {
-    scope: {},
-    bindToController: {
-      counterValue: '='
-    },
-    controller() {
-      this.counterValue = this.counterValue || 0;
-      this.increment = function () {
-        this.counterValue++;
-        $rootScope.$emit('counterValueChange', {
-          value: this.counterValue
-        });
-      }
-      this.decrement = function () {
-        this.counterValue--;
-        $rootScope.$emit('counterValueChange', {
-          value: this.counterValue
-        });
-      }
-    },
-    template: `
-      <div class="counter">
-        <div class="counter__container">
-          <button ng-click="$ctrl.decrement();" class="counter__button">
-            -
-          </button>
-          <input type="text" class="counter__input" ng-model="$ctrl.counterValue">
-          <button ng-click="$ctrl.increment();" class="counter__button">
-            +
-          </button>
-        </div>
-      </div>
-    `
-  };
-}
+```js
+const counter = {
+  bindings: {
+    count: '<',
+    onChange: '&'
+  },
+  template: `
+    <div class="counter">
+      <button ng-click="$ctrl.decrement()">
+        Decrement
+      </button>
+      <input type="text" ng-model="$ctrl.count">
+      <button ng-click="$ctrl.increment()">
+        Increment
+      </button>
+    </div>
+  `,
+  controller() {
+    this.$onInit = () => {
+      this.count = this.count || 0;
+    };
+    this.increment = () => {
+      this.count++;
+      this.onChange(this.value);
+    };
+    this.decrement = () => {
+      this.count--;
+      this.onChange(this.value);
+    };
+  }
+};
+
 angular
   .module('app')
-  .directive('counter', counter);
-{% endhighlight %}
+  .component('counter', counter);
+```
 
-The key ingredient using `$rootScope.$emit('counterValueChange', {});` which fires an event, where we could use `$rootScope.$on('counterValueChange')` to listen to the event and run a callback once it's fired.
+The key ingredient here is using the callback `onChange: '&'` syntax. This means we're expecting a function to be passed down from the parent component, and we can call it when our count changes (via `this.onChange()`) - which essentially is callback registered in the parent that we call in the child and pass new data into, such as this:
 
-Let's investigate the Angular 2 way.
+```html
+<div class="parent">
+  <counter
+    value="$ctrl.someValue"
+    on-change="$ctrl.valueChanged($event)">
+  </counter>
+</div>
+```
 
-### Parent "Listener"
+Once the child component calls `$ctrl.valueChanged`, the data is passed into it and we are able to access that new piece of data through the `$event` object.
 
-Let's take our parent Component we know well by now and setup a function called `myValueChange` on the `class` that we want to invoke when we bind it to our `CounterComponent`'s API':
+### Stateful (parent) component binding
 
-{% highlight javascript %}
-// app.component.ts
-import {Component} from 'angular2/core';
-import {CounterComponent} from './counter.component';
+Much like in the previous tutorial where we setup an `@Input` decorator to accept an input binding, we can do the same and listen in the parent for when a value changes inside our child component.
+
+To do this, we'll head back to our parent component that's rendering out our `<counter>`:
+
+```js
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  styles: [`
-    .app {
-      display: block;
-      text-align: center;
-      padding: 25px;
-      background: #f5f5f5;
-    }
-  `],
+  selector: 'app-root',
   template: `
     <div class="app">
-      <counter [counterValue]="myValue"></counter>
+      Parent: {% raw %}{{ myCount }}{% endraw %}
+      <counter
+        [count]="myCount"
+        (change)="countChange($event)">
+      </counter>
     </div>
-  `,
-  directives: [CounterComponent]
+  `
 })
 export class AppComponent {
-  public myValue:number = 2;
-  myValueChange(event) {
-    console.log(event);
+  myCount: number = 10;
+  countChange(event) {
+    
   }
 }
-{% endhighlight %}
+```
 
-On the `class AppComponent` we've declared `myValueChange` which accepts `event` as an argument. Next we need to create a custom attribute name on the `<counter>` Component to hook this function into, let's call it `counterChange`:
+I've made a few additions here:
 
-{% highlight javascript %}
-// app.component.ts
-import {Component} from 'angular2/core';
-import {CounterComponent} from './counter.component';
+* Changed `initialCount` to `myCount`, we are no longer setting an "initialCount", therefore the count state will be managed in the parent once the child component makes a change to it
+* Created a custom `change` property to the `<counter>` template, using `()` event binding syntax, like we learned when we created our first component this signifies some kind of event (such as a `click` when used on a native element Node).
+* Logged the `myCount` property in the parent
+* Added a `countChange() {}` method to the class, and passed it into the `(change)` event listener
+
+This sets up our finalised uni-directional dataflow. The data flows down from the `AppComponent` class, into the `<counter>`, the counter can then change the values - and once the value has changed we expect `countChange()` to be called. We now need to wire this up.
+
+### @Output decorator
+
+Much like using `Input`, we can import `Output` and decorate a new `change` property inside our `CounterComponent`:
+
+```js
+import { Component, Input, Output } from '@angular/core';
+
+@Component({...})
+export class CounterComponent {
+  
+  @Input()
+  count: number = 0;
+  
+  @Output()
+  change;
+
+  // ...
+  
+}
+```
+
+This will configure the metadata necessary to tell Angular this property is to be treated as an output binding. However, it needs to sit alongside something called the `EventEmitter`.
+
+### EventEmitter
+
+This is the interesting part. The be able to use our `Output`, we need to import and bind a new instance of the `EventEmitter` to it:
+
+```js
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
+@Component({...})
+export class CounterComponent {
+  
+  // ...
+  
+  @Output()
+  change = new EventEmitter();
+
+  // ...
+  
+}
+```
+
+Using TypeScript to the fullest we'd do something like this to signify the _type_ of event value we are emitting, and our `change` output is of type `EventEmitter`. In our case we are emitting a `number` type:
+
+```js
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
+@Component({...})
+export class CounterComponent {
+  
+  // ...
+  
+  @Output()
+  change: EventEmitter<number> = new EventEmitter<number>();
+
+  // ...
+  
+}
+```
+
+### Invoking the EventEmitter instance
+
+So what's happening here? We've created a `change` property, and bound a new instance of `EventEmitter` to it - what next?
+
+Much like the Angular 1.x example I showed at the beginning, we can simply call our `this.change` method - however because it references an instance of `EventEmitter`, we have to call `.emit()` to emit an event to the parent:
+
+```js
+@Component({...})
+export class CounterComponent {
+  
+  @Input()
+  count: number = 0;
+  
+  @Output()
+  change: EventEmitter<number> = new EventEmitter<number>();
+  
+  increment() {
+    this.count++;
+    this.change.emit(this.count);
+  }
+  
+  decrement() {
+    this.count--;
+    this.change.emit(this.count);
+  }
+  
+}
+```
+
+This will then emit a change to our `(change)` listener we setup in the parent, to which our `countChange($event)` callback will be invoked, and the data associated with the event will be given to us via the `$event` property.
+
+### Stateful callback assignment
+
+Here's what we'll need to do, re-assign `this.myCount` with the `event` that's passed back. I'll explain why below:
+
+```js
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  styles: [`
-    .app {
-      display: block;
-      text-align: center;
-      padding: 25px;
-      background: #f5f5f5;
-    }
-  `],
+  selector: 'app-root',
   template: `
     <div class="app">
-      <counter [counterValue]="myValue" (counterChange)="myValueChange($event);"></counter>
+      Parent: {% raw %}{{ myCount }}{% endraw %}
+      <counter
+        [count]="myCount"
+        (change)="countChange($event)">
+      </counter>
     </div>
-  `,
-  directives: [CounterComponent]
-})
-export class AppComponent {
-  public myValue:number = 2;
-  myValueChange(event) {
-    console.log(event);
-  }
-}
-{% endhighlight %}
-
-Note how we've used `(counterChange)` with parentheses around it, this tells Angular that this is an event binding, similar to `(click)`. Now we need to mirror this API inside the `CounterComponent`.
-
-### @Output and EventEmitter
-
-This is where we need to use Angular 2's `@Output()` decorator. We import `Output` from the Angular core, and inside the `class `CounterComponent` add the goodness:
-
-{% highlight javascript %}
-// counter.component.ts
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
-
-@Component({
-  selector: 'counter',
-  styles: [`
-    // omitted
-  `],
-  template: `
-    // omitted
   `
 })
-export class CounterComponent {
-  @Input() counterValue = 0;
-  @Output() counterChange = new EventEmitter();
-  increment() {
-    this.counterValue++;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
-  }
-  decrement() {
-    this.counterValue--;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
-  }
-}
-{% endhighlight %}
-
-Note how `@Output counterChange` is set to a `new` instance of `EventEmitter`, this `@Output` decorator makes the `counterChange` property available as an event binding like we saw in the above template `(counterChange)`.
-
-### EventEmitter API
-
-Nearly there, we would like to tell the parent Component that the `counterChange` event has happened when the child Component actually updates the value, which as we know happens on a `click` event. Let's emit an event there, as it seems a logical place to do so:
-
-{% highlight javascript %}
-// counter.component.ts
-...
-export class CounterComponent {
-  @Input() counterValue = 0;
-  @Output() counterChange = new EventEmitter();
-  increment() {
-    this.counterValue++;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
-  }
-  decrement() {
-    this.counterValue--;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
-  }
-}
-{% endhighlight %}
-
-Note that I'm emitting an Object with a property of `value`, you don't have to do this however it looks nicer when using the event in a callback in the parent (`event.value` being more explicit).
-
-Our parent Component can now fetch the `$event` Object, as we've passed it into the template using `(counterChange)="myValueChange($event);"`.
-
-{% highlight javascript %}
-// app.component.ts
-...
 export class AppComponent {
-  public myValue:number = 2;
-  myValueChange(event) {
-    // result: { value: <number> }
-    console.log(event);
+  myCount: number = 10;
+  countChange(event) {
+    this.myCount = event;
   }
 }
-{% endhighlight %}
+```
 
-And that's it! Let's take a look at the rendered Component, you can also dig through the source files in Plunker:
+Why do we do this? This creates a pure uni-directional dataflow. The data comes from `AppComponent`, flows into `<counter>`, the counter makes a change, and emits that change back to the parent on our command - via the `EventEmitter` we setup. Once we've got that data back up, we merge those changes back into our parent (stateful) component.
 
-<iframe src="//embed.plnkr.co/Zz0DERCJqHcHUnLhHBrm" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+The reason we're doing this is to demonstrate that `Parent: {% raw %}{{ myCount }}{% endraw %}` updates at the same time our `Output` informs the parent.
 
-### Without @Output decorator
+### Bonus: custom property names
 
-Like with `@Input` and `inputs: []` in the previous article, we have the same capabilities with `@Output`. The `@Component` decorator is rather awesome, and provides us an `outputs` property, which is an Array of `@Output` equivalents that we wish to use inside the particular Component. Refactoring the above code we can do this:
+Much [like we learned](/passing-data-angular-2-components-input#bonus-custom-property-names) with `@Input()` and creating custom property names, we can also do the same with `@Output()`.
 
-{% highlight javascript %}
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
+Let's assume that we change the `(change)` binding to `(update)`:
 
+```js
 @Component({
-  selector: 'counter',
-  styles: [`
-    // omitted for brevity
-  `],
+  selector: 'app-root',
   template: `
-    // omitted for brevity
-  `,
-  outputs: ['counterChange']
-})
-export class CounterComponent {
-  @Input() counterValue = 0;
-  public counterChange = new EventEmitter();
-  increment() {
-    this.counterValue++;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
-  }
-  decrement() {
-    this.counterValue--;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
-  }
-}
-{% endhighlight %}
-
-Here's a working version of that:
-
-<iframe src="//embed.plnkr.co/3N3pPMfm4aPSHNz6YgE1" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
-
-### Custom public property naming
-
-One thing we might want to keep internally inside `CounterComponent` is a property name such as `counterChange`, however expose a different property name to be able to listen to. Let's say I want to expose `change` as the property name that the event is bound to, so we'd use `<counter (change)="myValueChange($event);"></counter>` instead of `<counter (counterChange)="myValueChange($event);"></counter>`, we can do that by passing a custom String into the `@Output` decorator:
-
-{% highlight javascript %}
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
-
-@Component({
-  selector: 'counter',
-  styles: [`
-    // omitted
-  `],
-  template: `
-    // omitted
+    <div class="app">
+      Parent: {% raw %}{{ myCount }}{% endraw %}
+      <counter
+        [count]="myCount"
+        (update)="countChange($event)">
+      </counter>
+    </div>
   `
 })
-export class CounterComponent {
-  @Input('init') counterValue = 0;
-  @Output('change') counterChange = new EventEmitter();
-  increment() {
-    this.counterValue++;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
-  }
-  decrement() {
-    this.counterValue--;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
+export class AppComponent {
+  myCount: number = 10;
+  countChange(event) {
+    this.myCount = event;
   }
 }
-{% endhighlight %}
+```
 
-Demo:
+We can hook up our custom property name, whilst preserving the internal `@Output` property name:
 
-<iframe src="//embed.plnkr.co/6cTWAR1urPZiIBdx81k8" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
-
-We can also achieve the same thing with the `outputs: []` property by setting the value of `['counterChange:change']`:
-
-{% highlight javascript %}
-import {Component} from 'angular2/core';
-
-@Component({
-  selector: 'counter',
-  styles: [`
-    // omitted for brevity
-  `],
-  template: `
-    // omitted for brevity
-  `,
-  outputs: ['counterChange:change']
-})
+```js
+@Component({...})
 export class CounterComponent {
-  public counterValue = 0;
+  
+  // ...
+  
+  @Output('update')
+  change: EventEmitter<number> = new EventEmitter<number>();
+  
   increment() {
-    this.counterValue++;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
+    this.count++;
+    this.change.emit(this.count);
   }
+  
   decrement() {
-    this.counterValue--;
-    this.counterChange.emit({
-      value: this.counterValue
-    })
+    this.count--;
+    this.change.emit(this.count);
   }
+  
 }
-{% endhighlight %}
+```
 
-The rule for this one is `internalProp:externalProp`, in this case `counterChange:change`.
+Essentially, we're just telling Angular here to lookup `update` as the property to be bound to, and we can continue using `this.change` internally.
 
-Altogether the `CounterComponent` has the following properties for `@Input` and `@Output` based on the above custom property setups:
+### Plunker
 
-{% highlight html %}
-<counter [init]="myValue" (change)="myValueChange($event);"></counter>
-{% endhighlight %}
+Everything we've done here is readily available in a Plunker for you to have a look through. 
+
+You can try the version _without_ the `this.myCount` callback assignment here to see how the local state change doesn't update the parent:
+
+<iframe src="//embed.plnkr.co/ZO9AbAE2780IURxwicN5?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+
+...And try the version that _does_ update the parent here:
+
+<iframe src="//embed.plnkr.co/i7A9Igg8NkcnDJf2bohx?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+
+Happy coding!
