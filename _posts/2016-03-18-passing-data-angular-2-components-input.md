@@ -26,7 +26,7 @@ This tutorial will cover passing data into a component, and we'll be using the C
 
 ### Angular 1.x
 
-For those coming from an Angular 1.x background, this concept looks a little like this with the [.component API](/exploring-the-angular-1-5-component-method/):
+For those coming from an Angular 1.x background, this concept looks a little like this with the [.component method](/exploring-the-angular-1-5-component-method/):
 
 ```js
 const counter = {
