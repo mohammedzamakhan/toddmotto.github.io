@@ -70,7 +70,7 @@ export class ExampleModule {
 }
 ```
 
-Notice how we both classes by themselves are effectively the same. No code is needed within the class to tell Angular that it is a component or a module. All we need to do is decorate it, and Angular will do the rest.
+Notice how both classes by themselves are effectively the same. No code is needed within the class to tell Angular that it is a component or a module. All we need to do is decorate it, and Angular will do the rest.
 
 #### Property Decorators
 
@@ -155,7 +155,7 @@ Parameter decorators are quite interesting. You may have come across these when 
 
 > For a deep dig into Dependency Injection (DI), tokens, `@Inject` and `@Injectable`, check out [my previous article](/angular-dependency-injection).
 
-Parameter decorators allow us to decorate parameters in our class constructors. An example of this is `@Inject` that let's us tell Angular what we want that parameter to be initiated with:
+Parameter decorators allow us to decorate parameters in our class constructors. An example of this is `@Inject` that lets us tell Angular what we want that parameter to be initiated with:
 
 <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx" style="opacity: 0.3">Component</span><span class="p" style="opacity: 0.3">,</span> <span class="nx">Inject</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">MyService</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'./my-service'</span><span class="p">;</span>
@@ -237,7 +237,7 @@ Let's change our code above to execute the `Console` function with a value to ma
 </code></pre>
 </div>
 
-If we ran this code now, we'd only get `'Hey!'` outputted to the console. That's because our decorator hasn't returned a function for the class to the given to. The output of `@Console('Hey!')` is `void`.
+If we ran this code now, we'd only get `'Hey!'` outputted to the console. That's because our decorator hasn't returned a function for the class to be given to. The output of `@Console('Hey!')` is `void`.
 
 We would need to adapt our `Console` decorator to return a function closure for the class to be given to. That way we can both receive a value from the decorator (in our case, the string `Hey!`) and also the class that it's applied to:
 
@@ -271,7 +271,7 @@ This is the basis for how the decorators in Angular work. They first of all take
 
 Every type of decorator shares the same core functionality. From a purely decorative point of view, `@Component` and `@Directive` both work in the same way, as do `@Input` and `@Output`. Angular does this by using a factory for each type of decorator.
 
-Let's look the most common decorator in Angular, the `@Component`.
+Let's look at the most common decorator in Angular, the `@Component`.
 
 We're not going to dive into the *actual* code that Angular uses to create these decorators because we only need to understand them on a higher level.
 
