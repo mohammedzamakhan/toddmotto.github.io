@@ -313,6 +313,37 @@ export class CounterComponent {
 
 > Angular also supports an external template for a component should you wish to separate them out into individual files. You can specify this via `templateUrl` and point to the file.
 
+### @NgModule registration
+
+Now we've created our new Angular component, we must add it to our `@NgModule` definition:
+
+```js
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+// import our new component!
+import { CounterComponent } from './counter.component.ts';
+
+import { AppComponent } from './app.component.ts';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    // register it inside the declarations array
+    CounterComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  bootstrap: [
+    AppComponent
+  ]
+})
+export class AppModule {}
+```
+
+This important step allows us to use the `CounterComponent` in our application, such as `<counter>`.
+
 ### Plunker
 
 Everything we've done here is readily available in a Plunker for you to have a look through:
