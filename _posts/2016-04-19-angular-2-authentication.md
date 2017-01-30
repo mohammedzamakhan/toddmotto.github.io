@@ -42,7 +42,7 @@ Now we simply drop in the lock script into our `index.html` file somewhere in th
 </html>
 {% endhighlight %}
 
-### Angular 2 Authentication Service
+### Angular Authentication Service
 
 One question that frequents when implementing auth in Angular apps is "where does the logic go?". Sometimes our apps will only have one location where the login is managed and other times there will be multiple locations. So we're going to just be creating one Service to keep things simple. Now using Angular 2, we're going to be creating an `AuthService` and mark it as `@Injectable()` so we can dependency inject it wherever we want:
 
@@ -210,29 +210,6 @@ console.log('Listening on http://localhost:4000');
 {% endhighlight %}
 
 The middleware is what guards our data. We set it up on the `authCheck` variable using the secret key provided by Auth0, and then we apply it to the `/api/users` endpoint by passing it into `app.get` as the second argument. If the JWT that gets attached in our `AuthHttp` request is valid, it will pass through this middleware and our `users` Array will be returned.
-
-### Protecting Client-Side Routes
-
-Our sensitive data is safe on the server side, so users who aren't properly authenticated won't be able to get data that they shouldn't have access to. However, we should still puts some checks in place on the front end to prevent navigation to the client side routes that are meant only for authenticated users.
-
-JWT authentication is stateless. This means that there isn't really any notion of the user being "authenticated" in the way we're used to thinking about authentication. Because of this, the only real indication that a user is "logged in" is if they have a valid JWT that isn't expired.
-
-Unfortunately we can't really check whether the JWT is valid on the front end because the client would need to know the secret key used to sign it, and we definitely don't want to expose that. Instead, we can use the JWT's expiry as an indication of validity. If the JWT is determined to be invalid when it reaches the server, the protected data won't be returned anyway, so the expiry status works just fine as an indication of authentication on the front end.
-
-The tokens that Auth0 issues are valid for 10 hours by default, and this setting can be modified in the [management area](https://manage.auth0.com). The expiry time shows up in the token's payload as `exp`, which we can see if we debug it at [jwt.io](https://jwt.io).
-
-We can check expiry with `angular2-jwt` module's `tokenNotExpired` function and use it along with the `CanActivate` lifecycle hook from Angular 2's Component Router to protect various routes. Let's say we want our `UserListComponent` to only be accessible to authenticated users. Let's also assume we've got some `RouteConfig` set up on a parent component. All we need to do is check `tokenNotExpired` in the hook:
-
-{% highlight javascript %}
-// components/user-list.component.ts
-import { CanActivate } from '@angular/router';
-import { tokenNotExpired } from 'angular2-jwt';
-  ...
-@CanActivate(() => tokenNotExpired())
-export class UserListComponent {
-  ...
-}
-{% endhighlight %}
 
 ### Conditional rendering with ngIf
 
