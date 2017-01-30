@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /transclusion-in-angular-2-with-ng-content
-title: Transclusion in Angular 2
+title: Transclusion in Angular 2 with ng-content
 path: 2016-03-22-transclusion-in-angular-2-with-ng-content.md
 tags:
 - Angular 2
@@ -17,7 +17,7 @@ This is now done in Angular 2 through modern web APIs such as Shadow DOM and kno
 
 For those coming from an Angular 1.x background, transclusion looks a little like this with the `.directive()` API (if you know this already please pass Go and collect £200):
 
-##### Single-slot transclusion
+#### Single-slot transclusion
 
 In Angular 1.x, we can designate a single slot to transclude content into:
 
@@ -56,7 +56,7 @@ The compiled HTML output would then evaluate to:
 </my-component>
 {% endhighlight %}
 
-##### Multi-slot transclusion
+#### Multi-slot transclusion
 
 We can also define multiple entry points in Angular 1.5+ using an Object as the value:
 
@@ -115,17 +115,17 @@ Evaluated DOM output:
 
 So now we know what we're looking at from an Angular 1.x perspective, we can easily migrate this concept to Angular 2. However, if you've not used Angular 1.x, fear not as this concept is easily demonstrated above on how to inject content into another element or Component.
 
-##### Web Components <content>
+#### Web Components <content>
 
 In Web Components, we _had_ the `<content>` element, which was [recently deprecated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/content), which acted as a Shadow DOM insertion point. Angular 2 allows Shadow DOM through the use of [ViewEncapsulation](/emulated-native-shadow-dom-angular-2-view-encapsulation). Early alpha versions of Angular 2 adopted the `<content>` element, however due to the nature of a bunch of Web Component helper elements being deprecated, it was changed to `<ng-content>`.
 
-##### Single-slot content Projection
+#### Single-slot content Projection
 
 In Angular 2's single-slot content projection, the boilerplate is so much nicer and more descriptive. We simply use the `<ng-content>` element in our Component and that's it:
 
 {% highlight javascript %}
 // my-component.component.ts
-import {Component} from 'angular2/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-component',
@@ -138,12 +138,11 @@ import {Component} from 'angular2/core';
 export class MyComponent {}
 {% endhighlight %}
 
-Now to use the element we import `{MyComponent}`, include it as a dependency in `directives: []` and project some content between those `<my-content>` tags:
+Now to use the element we import `MyComponent`, and project some content between those `<my-content>` tags:
 
 {% highlight javascript %}
 // app.component.ts
-import {Component} from 'angular2/core';
-import {MyComponent} from './my-component.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -153,10 +152,7 @@ import {MyComponent} from './my-component.component';
         This is my transcluded content!
       </my-component>
     </div>
-  `,
-  directives: [
-    MyComponent
-  ]
+  `
 })
 export class AppComponent {}
 {% endhighlight %}
@@ -175,13 +171,13 @@ DOM output:
 
 Live output:
 
-<iframe src="//embed.plnkr.co/TCusCR4NHGbJy9gBN7ZV" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+<iframe src="//embed.plnkr.co/TCusCR4NHGbJy9gBN7ZV?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
 
-##### Multi-slot content projection
+#### Multi-slot content projection
 
 Multi-slot is just as easy as you'd think as well. Much like multi-slot in Angular 1.x, we use named slots again. However the only difference is instead of aliasing the DOM reference against a custom `transclude: {}` property, we talk to the DOM node directly.
 
-Let's assume the following markup inside out Angular 2 `my-app` Component:
+Let's assume the following markup inside our `my-app` Component:
 
 {% highlight javascript %}
 // app.component.ts
@@ -198,14 +194,13 @@ Let's assume the following markup inside out Angular 2 `my-app` Component:
         </my-component-content>
       </my-component>
     </div>
-  `,
-  directives: [
-    MyComponent
-  ]
+  `
 })
 {% endhighlight %}
 
-Here we're using custom elements, which are not created as separate components, merely just node references. Let's grab those references and tell Angular to inject where appropriate. The only change we need to make from Angular 1.x thinking is adding a dedicated `select=""` attribute to the `<ng-content>` element:
+Here we're assuming we have `my-component-title` and `my-component-content` available as custom components. Now we can grab references to the components and tell Angular to inject where appropriate.
+
+The only change we need to make from Angular 1.x thinking is adding a dedicated `select=""` attribute to the `<ng-content>` element:
 
 {% highlight javascript %}
 // my-component.component.ts
@@ -253,7 +248,7 @@ DOM output:
 
 Live output:
 
-<iframe src="//embed.plnkr.co/NbwoKx6yFQ2uFp2wWnj1" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+<iframe src="//embed.plnkr.co/NbwoKx6yFQ2uFp2wWnj1?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
 
 We don't have to use a custom element approach as above when declaring content to be projected, we can use regular elements and target them the way we talk to elements with `document.querySelector`:
 
@@ -272,10 +267,7 @@ We don't have to use a custom element approach as above when declaring content t
         </div>
       </my-component>
     </div>
-  `,
-  directives: [
-    MyComponent
-  ]
+  `
 })
 {% endhighlight %}
 
