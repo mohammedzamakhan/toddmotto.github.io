@@ -9,35 +9,36 @@ I often get asked what colour schemes I'm using, stuff for videos, workshops, sl
 
 ### Editor / Terminal
 
-As a Developer Advocate, I don't have a typical engineering job, therefore my workflow isn't as likely refined as someone who's heads down engineering. However, prior to Dev Rel, I was a full-time engineer for around 6-7 years and used the same workflow/setup.
+I don't have a typical engineering job as such as I [build courses](https://ultimateangular.com) and projects for teaching people Angular, therefore my workflow isn't as likely refined as someone who's heads down engineering full-time. However, prior to going solo on Ultimate Angular, I was a full-time engineer for around 6-7 years and used a similar workflow/setup:
 
-* [Atom Editor](https://atom.io) with default colour scheme
+* [VSCode Editor](https://code.visualstudio.com)
+  * Plugin: [angular2-inline](https://marketplace.visualstudio.com/items?itemName=natewallace.angular2-inline)
+  * Plugin: [vscode-icons](https://github.com/vscode-icons/vscode-icons)
 * [Operator Mono](http://www.typography.com/blog/introducing-operator) font
 
-Atom stylesheet config:
+VSCode `settings.json` config:
 
-{% highlight css %}
-atom-text-editor::shadow {
-  .entity.other.attribute-name {
-    font-style: italic;
-  }
-}
-atom-workspace,
-atom-text-editor {
-  font-family: 'Operator Mono';
-  font-weight: 400;
-  line-height: 1.7;
-}
-atom-panel.tool-panel {
-  font-size: 1em;
+{% highlight json %}
+{
+  "window.zoomLevel": 1,
+  "editor.fontFamily": "Operator Mono",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "100",
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "smooth",
+  "typescript.check.tscVersion": false,
+  "explorer.openEditors.visible": 0,
+  "files.exclude": {
+    "**/.awcache": true,
+    "**/node_modules": true,
+    "**/.gitignore": true,
+    "**/.editorconfig": true,
+  },
 }
 {% endhighlight %}
 
-* TypeScript packages
-* Terminal package
-* I do use [iTerm 2](https://www.iterm2.com/), however the Terminal package for Atom I find I switch between the two depending on how many processes are running.
-* For Git stuff I use [SourceTree](https://www.sourcetreeapp.com/) because I suck at command-line Git
-
+* I use the VSCode integrated terminal over iTerm now.
+* For Git stuff I use [SourceTree](https://www.sourcetreeapp.com/) because I suck at command-line Git :)
 
 That's literally it, I'm all for keeping it simple.
 
@@ -49,20 +50,20 @@ That's literally it, I'm all for keeping it simple.
 
 ### Desk and computer
 
-* Laptops/Desktops: MacBook Pro 15" retina x 2, MacBook 12", iMac 27"
+* Laptops/Desktops: MacBook Pro 15" retina x 2, MacBook 12", iMac 27" (I use only one MacBook with an external monitor)
+* Monitor: [34" curved LG](https://www.amazon.co.uk/dp/B01BFH1AIM/ref=pe_385721_137066351_TE_dp_1) 21:9 ultrawide (this has completely changed my working style, 100% recommend)
 * Dock: I do own a [Henge Dock](https://www.hengedocks.com/) but it sucks and I never use it
 * Sound system: [Bose 50](https://www.amazon.co.uk/dp/B00UF6XF2E/ref=pe_1909131_77697001_tnp_email_TE_AMZLdp_1) multimedia system on my desk, remote working noise #ftw
 * Desk: [VariDesk Pro 54](http://uk.varidesk.com/en-gb/product/pro-desk-54) standing desk (huge workflow/comfort changer)
-* Monitor: [34" curved LG](https://www.amazon.co.uk/dp/B01BFH1AIM/ref=pe_385721_137066351_TE_dp_1) 21:9 ultrawide (this has completely changed my working style, 100% recommend)
 
 ### Screencasts
 
-* Microphone: Currently using the [Yeti](http://www.bluemic.com/products/yeti/) with popshield
-* [Screenflow 2](http://www.telestream.net/screenflow/overview.htm) for recording and editing videos
+* Microphone: Currently using the [Yeti](http://www.bluemic.com/products/yeti/) with a popshield
+* [Screenflow](http://www.telestream.net/screenflow/overview.htm) for recording and editing videos
 
 ### Other
 
 * Spotify is my life long companion in getting stuff done :)
-* Slack for procrastinating my life away
+* Slack for procrastinating my life away ;)
 
 That's my entire setup! I keep it simple and easy.
