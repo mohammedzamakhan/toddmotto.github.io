@@ -1,264 +1,223 @@
 ---
 layout: post
 permalink: /passing-data-angular-2-components-input
-title: Passing data into Angular 2 Components with "Input"
+title: "Passing data into Angular 2+ components with @Input"
 path: 2016-03-18-passing-data-angular-2-components-input.md
 tags:
 - Angular 2
 ---
 
-Static Components can be great, however most Components have the need for data to be passed in and out of them. Usually we would pass data into a Component, the Component would go to work, and let the parent Component know something has changed, passing back the changed value.
+In a component-driven application architecture we typically use [stateful and stateless](/stateful-stateless-components) components. A key concept is having some form of "stateful" component that delegates down into a "stateless" child, or children, component(s).
 
-This tutorial will cover passing data into a Component. For the purposes of this article we'll be using the Counter Component we built in the previous one, so if you've not dived in and learned how to create a Component in Angular 2, [check that out here](/creating-your-first-angular-2-component) or play with the below Plunker, as we'll be using the same source code to continue building.
+We do this through something called property binding in Angular, which we learned about in the previous article when we bound to an `<input>` element to display a count. To bind data to Angular components, we need to create a custom property bind, which is done via "input" binding to pass data from one component to another (typically parent to child).
 
-<iframe src="//embed.plnkr.co/JqDECa0EdvvASzIS3Pvl?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+This custom input binding is created via the `@Input()` decorator! Let's explore.
+
+### Series
+
+1. [Bootstrapping your first Angular 2+ app](/bootstrap-angular-2-hello-world)
+2. [Creating your first Angular 2+ component](/creating-your-first-angular-2-component)
+3. Passing data into Angular 2+ components with @Input
+4. [Component events with EventEmitter and @Output in Angular 2+](/component-events-event-emitter-output-angular-2)
+
+### Introduction
+
+This tutorial will cover passing data into a component, and we'll be using the Counter component we built in the previous article. If you've not dived in and learned how to create a component in Angular, [check that out here](/creating-your-first-angular-2-component), as we'll be using the same source code to continue building.
 
 ### Angular 1.x
 
-For those coming from an Angular 1.x background, this concept looks a little like this with the `.directive()` API:
+For those coming from an Angular 1.x background, this concept looks a little like this with the [.component API](/exploring-the-angular-1-5-component-method/):
 
-{% highlight javascript %}
-function counter() {
-  return {
-    scope: {},
-    bindToController: {
-      counterValue: '='
-    },
-    controller() {
-      this.counterValue = this.counterValue || 0;
-      this.increment = function () {
-        this.counterValue++;
-      }
-      this.decrement = function () {
-        this.counterValue--;
-      }
-    },
-    template: `
-      <div class="counter">
-        <div class="counter__container">
-          <button ng-click="$ctrl.decrement();" class="counter__button">
-            -
-          </button>
-          <input type="text" class="counter__input" ng-model="$ctrl.counterValue">
-          <button ng-click="$ctrl.increment();" class="counter__button">
-            +
-          </button>
-        </div>
-      </div>
-    `
-  };
-}
+```js
+const counter = {
+  bindings: {
+    count: '<'
+  },
+  template: `
+    <div class="counter">
+      <button ng-click="$ctrl.decrement()">
+        Decrement
+      </button>
+      <input type="text" ng-model="$ctrl.count">
+      <button ng-click="$ctrl.increment()">
+        Increment
+      </button>
+    </div>
+  `,
+  controller() {
+    this.$onInit = () => {
+      this.count = this.count || 0;
+    };
+    this.increment = () => {
+      this.count++;
+    };
+    this.decrement = () => {
+      this.count--;
+    };
+  }
+};
+
 angular
   .module('app')
-  .directive('counter', counter);
-{% endhighlight %}
+  .component('counter', counter);
+```
 
-The key ingredient using `bindToController` to pass `counterValue` in.
+The key ingredient here is using the `bindings` object to declare `count` as an input [one-way binding](/one-way-data-binding-in-angular-1-5/). The old school way was using `scope` and perhaps `bindToController` with the `.directive()` method.
 
-Let's investigate the Angular 2 way.
+### Stateful (parent) component binding
 
-### Parent Data
+Using the same concept above with `bindings`, which relies on parent data, we need to tell Angular what is coming into our component. We'll create a stateful parent component, where we can set some initial data to be delegated down into our `CounterComponent`.
 
-Using the same concept above with `bindToController`, which relies on parent data, we need to tell Angular 2 what is coming into our Component. We'll need a parent Component (like we already have from the previous article called `AppComponent`), where we can set some initial data:
+In the [previous article](/creating-your-first-angular-2-component), we registered our `CounterComponent` in our `@NgModule` which allows us to use it inside our module's registered components.
 
-{% highlight javascript %}
+Jumping to our `AppComponent`, this means we can declare it as a custom element _inside_ the `template`:
+
+```js
 // app.component.ts
-import {Component} from 'angular2/core';
-import {CounterComponent} from './counter.component';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  styles: [`
-    .app {
-      display: block;
-      text-align: center;
-      padding: 25px;
-      background: #f5f5f5;
-    }
-  `],
+  selector: 'app-root',
   template: `
     <div class="app">
       <counter></counter>
     </div>
-  `,
-  directives: [CounterComponent]
+  `
 })
 export class AppComponent {
-  public myValue:number = 2;
+  initialCount: number = 10;
 }
-{% endhighlight %}
+```
 
-On the `class AppComponent` we've declared `myValue` with the type `number` and value of `2`. Next we need to create a custom attribute name on the `<counter>` Component to pass this initial data into, let's call it `counterValue`:
+So what about `initialCount`? We need to bind it to our component!
 
-{% highlight javascript %}
-// app.component.ts
-import {Component} from 'angular2/core';
-import {CounterComponent} from './counter.component';
+We learned about property binding in the previous article, and the same applies with our own custom components. The difference lies in we have to _tell_ Angular the name of the property binding. This will make more sense momentarily, but let's create a binding called `count` on our component and pass _through_ our `initialCount` value:
 
+```js
 @Component({
-  selector: 'my-app',
-  styles: [`
-    .app {
-      display: block;
-      text-align: center;
-      padding: 25px;
-      background: #f5f5f5;
-    }
-  `],
+  selector: 'app-root',
   template: `
     <div class="app">
-      <counter [counterValue]="myValue"></counter>
+      <counter [count]="initialCount"></counter>
     </div>
-  `,
-  directives: [CounterComponent]
+  `
 })
 export class AppComponent {
-  public myValue:number = 2;
+  initialCount: number = 10;
 }
-{% endhighlight %}
+```
 
-Note how we've used `[counterValue]` with square brackets around it, this tells Angular what property to bind to. This value corresponds with the internal `counterValue` property inside our `CounterComponent`:
+To recap quickly, we're creating a custom property called `count`, and supplying the value of `initialCount`, which can be any number.
 
-{% highlight javascript %}
-// counter.component.ts
-...
+
+### @Input decorator, stateless component
+
+Now we're creating a stateless, or "dumb" component, to pass our data _into_, which we can mutate locally and get data back _out_. We'll be getting new data back out of the component in the next article.
+
+Let's jump into our `CounterComponent` (some `@Component` metadata has been removed for brevity):
+
+```js
+import { Component } from '@angular/core';
+
+@Component({...})
 export class CounterComponent {
-  public counterValue:number = 0;
+
+  count: number = 0;
+  
   increment() {
-    this.counterValue++;
+    this.count++;
   }
+  
   decrement() {
-    this.counterValue--;
+    this.count--;
   }
+  
 }
-...
-{% endhighlight %}
+```
 
-### @Input decorator for property bindings
+There is one key thing we need to do here. At the moment we have a fully isolated component in terms of data, but we need to be able to pass data into this component.
 
-Let's focus on `public counterValue:number = 0;` now, it's currently an inner value of the `CounterComponent`, however we would ideally like to set the initial data and keep a bound reference from the parent. This is where we need to use Angular 2's `@Input()` decorator. We import `Input` from the Angular core, and inside the `class CounterComponent` it's a simple switch out:
+To do this, we can import the `Input` decorator from the Angular core, and simply decorate the `count` property:
 
-{% highlight javascript %}
-import {Component, Input} from 'angular2/core';
+```js
+import { Component, Input } from '@angular/core';
 
+@Component({...})
+export class CounterComponent {
+
+  @Input()
+  count: number = 0;
+  
+  increment() {
+    this.count++;
+  }
+  
+  decrement() {
+    this.count--;
+  }
+  
+}
+```
+
+This decorator tells Angular to treat `count` as an input binding, much like the Angular 1.x `'<'` syntax if you're coming from an Angular 1.x background. This syntax is easier and shorter, as we only manage our bindings in a single place, rather than a `bindings` object like we saw at the beginning of this tutorial.
+
+> Tip: you can see `number = 0`, we're keeping this as an optional default value, so if no input binding is supplied, the component will be initialised with a count of `0`.
+
+And that's all you need to do!
+
+### Bonus: custom property names
+
+It may be that you'd want your "public" property names to differ from the internal input names. Here's what we might want to do:
+
+```js
 @Component({
-  selector: 'counter',
-  styles: [`
-    // omitted for brevity
-  `],
+  selector: 'app-root',
   template: `
-    // omitted for brevity
+    <div class="app">
+      <counter [init]="initialCount"></counter>
+    </div>
   `
 })
-export class CounterComponent {
-  @Input() counterValue = 0;
-  increment() {
-    this.counterValue++;
-  }
-  decrement() {
-    this.counterValue--;
-  }
+export class AppComponent {
+  initialCount: number = 10;
 }
-{% endhighlight %}
+```
 
-Note how `@Input counterValue` sets a default value of `0`, which means if no data is passed in then this value will be used instead.
+You can see I've changed `[count]` to `[init]`, so how does this now affect our internal input binding inside the `CounterComponent`? Currently, this will break:
 
-And that's it! Let's take a look at the rendered Component, you can also dig through the source files in Plunker:
-
-<iframe src="//embed.plnkr.co/zFzyTcAJAJ1UAhDr1U3k?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
-
-### Without @Input decorator
-
-Let's dive a little deeper. Using `@Input` is a preferred approach, however we don't _have_ to use it. The `@Component` decorator is rather awesome, and provides us an `inputs` property, which is an Array of `@Input` equivalents that we wish to use inside the particular Component. Refactoring the above code we can do this:
-
-{% highlight javascript %}
-import {Component} from 'angular2/core';
-
-@Component({
-  selector: 'counter',
-  styles: [`
-    // omitted for brevity
-  `],
-  template: `
-    // omitted for brevity
-  `,
-  inputs: ['counterValue']
-})
+```js
+@Component({...})
 export class CounterComponent {
-  public counterValue = 0;
-  increment() {
-    this.counterValue++;
-  }
-  decrement() {
-    this.counterValue--;
-  }
+
+  @Input()
+  count: number = 0;
+  
+  // ...
+  
 }
-{% endhighlight %}
+```
 
-Here's a working version of that:
+Why? Because `count` is no longer being bound to, we're trying to bind to an `init` property instead. To keep the internal property name(s) different to the public names, we can do this:
 
-<iframe src="//embed.plnkr.co/v9P0NYUT9l5zxNq9pED3?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
-
-### Custom public property naming
-
-One thing we might want to keep internally inside `CounterComponent` is a property name such as `counterValue`, however expose a different property name to be able to bind to. Let's say I want to expose `init` as the property name to bind to, so we'd use `<counter [init]=""></counter>` instead of `<counter [counterValue]=""></counter>`, we can do that by passing a custom String into the `@Input` decorator:
-
-{% highlight javascript %}
-import {Component, Input} from 'angular2/core';
-
-@Component({
-  selector: 'counter',
-  styles: [`
-    // omitted for brevity
-  `],
-  template: `
-    // omitted for brevity
-  `
-})
+```js
+@Component({...})
 export class CounterComponent {
-  @Input('init') counterValue = 0;
-  increment() {
-    this.counterValue++;
-  }
-  decrement() {
-    this.counterValue--;
-  }
+
+  @Input('init')
+  count: number = 0;
+  
+  // ...
+  
 }
-{% endhighlight %}
+```
 
-Demo:
+We simply pass a string into the `@Input()` decorator with the name of the property we want to bind to. That's it, and we can use `this.count` as usual inside `CounterComponent`.
 
-<iframe src="//embed.plnkr.co/QtrBJ1SOYdXiuO49R91u?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+### Plunker
 
-We can also achieve the same thing with the `inputs: []` property by setting the value of `['counterValue:init']`:
+Everything we've done here is readily available in a Plunker for you to have a look through:
 
-{% highlight javascript %}
-import {Component} from 'angular2/core';
-
-@Component({
-  selector: 'counter',
-  styles: [`
-    // omitted for brevity
-  `],
-  template: `
-    // omitted for brevity
-  `,
-  inputs: ['counterValue:init']
-})
-export class CounterComponent {
-  public counterValue = 0;
-  increment() {
-    this.counterValue++;
-  }
-  decrement() {
-    this.counterValue--;
-  }
-}
-{% endhighlight %}
-
-The rule for this one is `internalProp:externalProp`, in this case `counterValue:init`. Demo:
-
-<iframe src="//embed.plnkr.co/I6zaiA8kVcY06tTZSUyE?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
+<iframe src="//embed.plnkr.co/hsx0gnjiaNLeWGNu0Tzb?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
 
 ### Next steps
 
