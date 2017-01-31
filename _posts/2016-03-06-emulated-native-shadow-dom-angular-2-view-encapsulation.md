@@ -24,7 +24,7 @@ Let's see how Shadow DOM is applied in Angular 2 using the `styles` property to 
 Let's setup a basic Component and add some styles to understand what happens when Angular 2 bootstraps our application:
 
 {% highlight javascript %}
-import {Component} from 'angular2/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -43,7 +43,7 @@ import {Component} from 'angular2/core';
   `
 })
 export class AppComponent {
-  public title = 'Hello!';
+  title = 'Hello!';
 }
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ Let's dive into each `ViewEncapsulation` mode to see what each of them gives us.
 Using the `Emulated` property gives us emulated Shadow DOM/encapsulation which is the _default_ behaviour for Angular 2 Components. Even though it's a default, we'll add it to a live example anyway to see what happens. Let's import `ViewEncapsulation` from the Angular 2 core and set the `encapsulation` property:
 
 {% highlight javascript %}
-import {Component, ViewEncapsulation} from 'angular2/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -106,7 +106,7 @@ import {Component, ViewEncapsulation} from 'angular2/core';
   `
 })
 export class AppComponent {
-  public title = 'Hello!';
+  title = 'Hello!';
 }
 {% endhighlight %}
 
@@ -154,7 +154,7 @@ It means that CSS we write globally will inherit, however styles defined using t
 This is where native technology takes over, using the `Native` property will use Shadow DOM! Let's switch out the property name from the previous example:
 
 {% highlight javascript %}
-import {Component, ViewEncapsulation} from 'angular2/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -174,7 +174,7 @@ import {Component, ViewEncapsulation} from 'angular2/core';
   `
 })
 export class AppComponent {
-  public title = 'Hello!';
+  title = 'Hello!';
 }
 {% endhighlight %}
 
@@ -213,7 +213,7 @@ It means that CSS we write globally _will not_ inherit, however styles defined u
 We can tell Angular that we don't want _any_ encapsulation, not `Emulated` or `Native` by using the `None` property:
 
 {% highlight javascript %}
-import {Component, ViewEncapsulation} from 'angular2/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -234,7 +234,7 @@ import {Component, ViewEncapsulation} from 'angular2/core';
   `
 })
 export class AppComponent {
-  public title = 'Hello!';
+  title = 'Hello!';
 }
 {% endhighlight %}
 
@@ -251,7 +251,7 @@ It means that CSS we write globally will inherit, however styles defined using t
 Angular 2 moves even closer to the Web Components spec through the use of the `:host {}` selector, both with `Native` or `Emulated` styles. A quick example of using the `:host {}` selector:
 
 {% highlight javascript %}
-import {Component, ViewEncapsulation} from 'angular2/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -273,7 +273,7 @@ import {Component, ViewEncapsulation} from 'angular2/core';
   `
 })
 export class AppComponent {
-  public title = 'Hello!';
+  title = 'Hello!';
 }
 {% endhighlight %}
 
