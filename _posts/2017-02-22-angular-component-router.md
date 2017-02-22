@@ -5,7 +5,7 @@ title: "Getting started with Angular&#39;s component Router"
 path: 2017-02-22-angular-component-router.md
 ---
 
-The Angular router acts as the main hub of any application, it loads the relevant components relevant to the route requested, as well as dealing with fetching the relevant data for that particular route. This allows us to control different routes, data and the components that render the data (as well as many additional features).
+Angular's component router acts as the main hub of any application, it loads the relevant components relevant to the route requested, as well as dealing with fetching the relevant data for that particular route. This allows us to control different routes, data and the components that render the data (as well as many additional features).
  
 So let's explore some of the main building blocks for the Angular router, following the table of contents below.
 
