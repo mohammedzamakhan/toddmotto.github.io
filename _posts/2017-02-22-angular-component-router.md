@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /angular-component-router
-title: "Getting started guide for Angular&#39;s component Router"
+title: "Getting started with Angular&#39;s component Router"
 path: 2017-02-22-angular-component-router.md
 ---
 
