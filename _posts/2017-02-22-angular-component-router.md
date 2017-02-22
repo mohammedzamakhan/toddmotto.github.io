@@ -12,7 +12,7 @@ So let's explore some of the main building blocks for the Angular router, follow
 ### Table of contents
 
 - [Installing the router](#installing-the-router)
-- [Base href](#base-href)
+  - [Base href](#base-href)
 - [Using the router](#using-the-router)
   - [RouterModule.forRoot](#routermoduleforroot)
   - [RouterModule.forChild](#routermoduleforchild)
