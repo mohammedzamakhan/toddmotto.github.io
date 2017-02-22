@@ -264,7 +264,8 @@ The `count` will return a live collection length, equivalent of `contacts.length
   <li *ngFor="let contact of contacts | async; let i = index; let c = count;">
     <contact-card 
       [contact]="contact"
-      (update)="onUpdate($event, index)">
+      [collectionLength]="c"
+      (update)="onUpdate($event, i)">
     </contact-card>
   </li>
 </ul>

@@ -138,7 +138,7 @@ import { Component } from '@angular/core';
 export class MyComponent {}
 {% endhighlight %}
 
-Now to use the element we import `MyComponent`, and project some content between those `<my-content>` tags:
+Now to use the element we import `MyComponent`, and project some content between those `<my-component>` tags:
 
 {% highlight javascript %}
 // app.component.ts
