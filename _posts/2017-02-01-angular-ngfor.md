@@ -419,11 +419,13 @@ Let's start from the basic `ngFor` example:
 And demonstrate the `<template>` equivalent:
 
 ```html
-<template ngFor let-contact [ngForOf]="contacts | async">
-  <li>
-    <contact-card [contact]="contact"></contact-card>
-  </li>
-</template>
+<ul>
+  <template ngFor let-contact [ngForOf]="contacts | async">
+    <li>
+      <contact-card [contact]="contact"></contact-card>
+    </li>
+  </template>
+</ul>
 ```
 
 That's a lot different! What's happening here?
