@@ -46,7 +46,7 @@ First of all, a "wrapper" is created. This deals with communicating with the act
 
 It's also responsible for change detection - methods are created on this class for each `@Input` that a component has, and checks their value and updates it if necessary. 
 
-The wrapper also deals with triggering various lifecycle hooks that are defined on the original component class, such as `ngOnInit` and `ngChanges`.
+The wrapper also deals with triggering various lifecycle hooks that are defined on the original component class, such as `ngOnInit` and `ngOnChanges`.
 
 #### The View
  
