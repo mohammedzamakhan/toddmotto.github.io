@@ -7,19 +7,19 @@ tags:
 - Angular 2
 ---
 
-Transclusion is an Angular 1.x term, lost in the rewrite of Angular 2, so let's bring it back for this article just concept clarity. The word "transclusion" may be gone, but the concepts remain.
+Transclusion is an AngularJS (1.x) term, lost in the rewrite of Angular (v2+), so let's bring it back for this article just concept clarity. The word "transclusion" may be gone, but the concepts remain.
 
-Essentially, transclusion in Angular 1.x is/was taking content such as a text node or HTML, and injecting it into a template at a specific entry point.
+Essentially, transclusion in AngularJS is/was taking content such as a text node or HTML, and injecting it into a template at a specific entry point.
 
-This is now done in Angular 2 through modern web APIs such as Shadow DOM and known as "Content Projection". Let's explore!
+This is now done in Angular through modern web APIs such as Shadow DOM and known as "Content Projection". Let's explore!
 
-### Angular 1.x transclusion
+### AngularJS transclusion
 
-For those coming from an Angular 1.x background, transclusion looks a little like this with the `.directive()` API (if you know this already please pass Go and collect £200):
+For those coming from an AngularJS background, transclusion looks a little like this with the `.directive()` API (if you know this already please pass Go and collect £200):
 
 #### Single-slot transclusion
 
-In Angular 1.x, we can designate a single slot to transclude content into:
+In AngularJS, we can designate a single slot to transclude content into:
 
 {% highlight javascript %}
 function myComponent() {
@@ -58,7 +58,7 @@ The compiled HTML output would then evaluate to:
 
 #### Multi-slot transclusion
 
-We can also define multiple entry points in Angular 1.5+ using an Object as the value:
+We can also define multiple entry points in AngularJS 1.5+ using an Object as the value:
 
 {% highlight javascript %}
 function myComponent() {
@@ -111,17 +111,17 @@ Evaluated DOM output:
 </my-component>
 {% endhighlight %}
 
-### Angular 2 Content Projection
+### Angular Content Projection
 
-So now we know what we're looking at from an Angular 1.x perspective, we can easily migrate this concept to Angular 2. However, if you've not used Angular 1.x, fear not as this concept is easily demonstrated above on how to inject content into another element or Component.
+So now we know what we're looking at from an AngularJS perspective, we can easily migrate this concept to Angular. However, if you've not used AngularJS, fear not as this concept is easily demonstrated above on how to inject content into another element or Component.
 
 #### Web Components <content>
 
-In Web Components, we _had_ the `<content>` element, which was [recently deprecated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/content), which acted as a Shadow DOM insertion point. Angular 2 allows Shadow DOM through the use of [ViewEncapsulation](/emulated-native-shadow-dom-angular-2-view-encapsulation). Early alpha versions of Angular 2 adopted the `<content>` element, however due to the nature of a bunch of Web Component helper elements being deprecated, it was changed to `<ng-content>`.
+In Web Components, we _had_ the `<content>` element, which was [recently deprecated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/content), which acted as a Shadow DOM insertion point. Angular allows Shadow DOM through the use of [ViewEncapsulation](/emulated-native-shadow-dom-angular-2-view-encapsulation). Early alpha versions of Angular adopted the `<content>` element, however due to the nature of a bunch of Web Component helper elements being deprecated, it was changed to `<ng-content>`.
 
 #### Single-slot content Projection
 
-In Angular 2's single-slot content projection, the boilerplate is so much nicer and more descriptive. We simply use the `<ng-content>` element in our Component and that's it:
+In Angular's single-slot content projection, the boilerplate is so much nicer and more descriptive. We simply use the `<ng-content>` element in our Component and that's it:
 
 {% highlight javascript %}
 // my-component.component.ts
@@ -175,7 +175,7 @@ Live output:
 
 #### Multi-slot content projection
 
-Multi-slot is just as easy as you'd think as well. Much like multi-slot in Angular 1.x, we use named slots again. However the only difference is instead of aliasing the DOM reference against a custom `transclude: {}` property, we talk to the DOM node directly.
+Multi-slot is just as easy as you'd think as well. Much like multi-slot in AngularJS, we use named slots again. However the only difference is instead of aliasing the DOM reference against a custom `transclude: {}` property, we talk to the DOM node directly.
 
 Let's assume the following markup inside our `my-app` Component:
 
@@ -200,7 +200,7 @@ Let's assume the following markup inside our `my-app` Component:
 
 Here we're assuming we have `my-component-title` and `my-component-content` available as custom components. Now we can grab references to the components and tell Angular to inject where appropriate.
 
-The only change we need to make from Angular 1.x thinking is adding a dedicated `select=""` attribute to the `<ng-content>` element:
+The only change we need to make from AngularJS thinking is adding a dedicated `select=""` attribute to the `<ng-content>` element:
 
 {% highlight javascript %}
 // my-component.component.ts
