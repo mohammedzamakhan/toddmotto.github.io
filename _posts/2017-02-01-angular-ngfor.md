@@ -18,9 +18,9 @@ We'll also be exploring some other under-the-hood properties of `ngFor`, as well
   - <a href="#using-trackby-for-keys">Using trackBy for keys</a>
   - <a href="#capturing-index-and-count">Capturing “index” and “count”</a>
   - <a href="#accessing-first-last-odd-even">Accessing first, last, odd, even</a>
-- <a href="#lttemplategt-element">&lt;template&gt; element</a>
-  - <a href="#lttemplategt-and-web-components">&lt;template&gt; and Web Components</a>
-  - <a href="#ngfor-and-lttemplategt">ngFor and &lt;template&gt;</a>
+- <a href="#template-element">&lt;template&gt; element</a>
+  - <a href="#template-and-web-components">&lt;template&gt; and Web Components</a>
+  - <a href="#ngfor-and-template">ngFor and &lt;template&gt;</a>
   - <a href="#ngfor-and-embedded-view-templates">ngFor and embedded view templates</a>
   - <a href="#context-and-passing-variables">Context and passing variables</a>
 
