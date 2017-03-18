@@ -7,16 +7,16 @@ tags:
 - Angular 2
 ---
 
-Angular components have a far better way of notifying parent components that something has changed, via events. There's no longer two-way data binding in Angular in the same way we knew it in Angular 1.x, it's designed around a uni-directional data flow system that adopts a much more reasonable approach to application development.
+Angular components have a far better way of notifying parent components that something has changed, via events. There's no longer two-way data binding in Angular in the same way we knew it in AngularJS, it's designed around a uni-directional data flow system that adopts a much more reasonable approach to application development.
 
 Let's finalise the basics of parent-child and child-parent communication by introducing `EventEmitter` and `@Output`.
 
 ### Series
 
-1. [Bootstrapping your first Angular 2+ app](/bootstrap-angular-2-hello-world)
-2. [Creating your first Angular 2+ component](/creating-your-first-angular-2-component)
-3. [Passing data into Angular 2+ components with @Input](/passing-data-angular-2-components-input)
-4. Component events with EventEmitter and @Output in Angular 2+
+1. [Bootstrapping your first Angular app](/bootstrap-angular-2-hello-world)
+2. [Creating your first Angular component](/creating-your-first-angular-2-component)
+3. [Passing data into Angular components with @Input](/passing-data-angular-2-components-input)
+4. Component events with EventEmitter and @Output in Angular
 
 ### Introduction
 
@@ -24,9 +24,9 @@ This tutorial will cover stateless component events using the `EventEmitter` API
 
 This post follows from the previous article on [passing data in Angular components with @Input](/passing-data-angular-2-components-input).
 
-### Angular 1.x
+### AngularJS
 
-For those coming from an Angular 1.x background, this concept could look a little like this with the `.component()` API and callback binding using `'&'`:
+For those coming from an AngularJS background, this concept could look a little like this with the `.component()` API and callback binding using `'&'`:
 
 ```js
 const counter = {
@@ -102,7 +102,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   myCount: number = 10;
   countChange(event) {
-    
+
   }
 }
 ```
@@ -125,15 +125,15 @@ import { Component, Input, Output } from '@angular/core';
 
 @Component({...})
 export class CounterComponent {
-  
+
   @Input()
   count: number = 0;
-  
+
   @Output()
   change;
 
   // ...
-  
+
 }
 ```
 
@@ -148,14 +148,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({...})
 export class CounterComponent {
-  
+
   // ...
-  
+
   @Output()
   change = new EventEmitter();
 
   // ...
-  
+
 }
 ```
 
@@ -166,14 +166,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({...})
 export class CounterComponent {
-  
+
   // ...
-  
+
   @Output()
   change: EventEmitter<number> = new EventEmitter<number>();
 
   // ...
-  
+
 }
 ```
 
@@ -181,28 +181,28 @@ export class CounterComponent {
 
 So what's happening here? We've created a `change` property, and bound a new instance of `EventEmitter` to it - what next?
 
-Much like the Angular 1.x example I showed at the beginning, we can simply call our `this.change` method - however because it references an instance of `EventEmitter`, we have to call `.emit()` to emit an event to the parent:
+Much like the AngularJS example I showed at the beginning, we can simply call our `this.change` method - however because it references an instance of `EventEmitter`, we have to call `.emit()` to emit an event to the parent:
 
 ```js
 @Component({...})
 export class CounterComponent {
-  
+
   @Input()
   count: number = 0;
-  
+
   @Output()
   change: EventEmitter<number> = new EventEmitter<number>();
-  
+
   increment() {
     this.count++;
     this.change.emit(this.count);
   }
-  
+
   decrement() {
     this.count--;
     this.change.emit(this.count);
   }
-  
+
 }
 ```
 
@@ -271,22 +271,22 @@ We can hook up our custom property name, whilst preserving the internal `@Output
 ```js
 @Component({...})
 export class CounterComponent {
-  
+
   // ...
-  
+
   @Output('update')
   change: EventEmitter<number> = new EventEmitter<number>();
-  
+
   increment() {
     this.count++;
     this.change.emit(this.count);
   }
-  
+
   decrement() {
     this.count--;
     this.change.emit(this.count);
   }
-  
+
 }
 ```
 
@@ -294,7 +294,7 @@ Essentially, we're just telling Angular here to lookup `update` as the property 
 
 ### Plunker
 
-Everything we've done here is readily available in a Plunker for you to have a look through. 
+Everything we've done here is readily available in a Plunker for you to have a look through.
 
 You can try the version _without_ the `this.myCount` callback assignment here to see how the local state change doesn't update the parent:
 

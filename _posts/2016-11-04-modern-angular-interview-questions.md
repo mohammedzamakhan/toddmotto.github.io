@@ -5,7 +5,7 @@ title: Modern Angular 1.x essential interview questions
 path: 2016-11-04-modern-angular-interview-questions.md
 ---
 
-Angular 1.x has changed a lot with 1.5 introducing `.component()`, and with this it brings a whole new light to interviewing. At many previous jobs I've interviewed many developers on Angular, JavaScript in general and combining the two. This is my list of what I'd consider "modern Angular 1.x" interview questions, with a focus on component architecture and modern "best practices". Some are easy, some are hard - take your pick!
+AngularJS 1.x has changed a lot with version 1.5 introducing `.component()`, and with this it brings a whole new light to interviewing. At many previous jobs I've interviewed many developers on Angular, JavaScript in general and combining the two. This is my list of what I'd consider "modern AngularJS 1.x" interview questions, with a focus on component architecture and modern "best practices". Some are easy, some are hard - take your pick!
 
 Some questions are geared towards letting the interviewee decide approaches and answer based on their experience/opinions. For instance, "when would you use X over Y" is a better question than "why is X a better approach than Y?". This allows you to dig deeper and also have better conversations during the interview - as well as quickly gauge whether the developer is right for you.
 
@@ -33,18 +33,18 @@ Some questions are geared towards letting the interviewee decide approaches and 
 * _What benefits does unidirectional dataflow bring?_
 * _What are common problems with multidirectional dataflow?_
 * _Have you ever used `$ngRedux` or a similar implementation?_
-* _What benefits does a Redux approach with Angular 1.x bring?_
+* _What benefits does a Redux approach with AngularJS bring?_
 
 ### Performance and debugging
 
 * _What are key areas you can address for faster `$digest` cycles?_
 * _What are the benefits to using one-time binding expressions?_
-* _What can lead to memory leaks in Angular 1.x?_
+* _What can lead to memory leaks in AngularJS?_
 * _How would you speed up an `ng-repeat`?_
 * _How does `track by` work?_
 * _What are `$evalAsync` and `$applyAsync`?_
 * _What are the differences between `$watch` and `$watchCollection`?_
-* _Explain how you would attempt to debug an Angular 1.x performance issue_
+* _Explain how you would attempt to debug an AngularJS performance issue_
 * _What debugging tools are you familiar with?_
 * _What is `strict-di` mode and how does it affect runtime performance?_
 * _What tools have you used to make Angular faster?_
@@ -92,7 +92,7 @@ Some questions are geared towards letting the interviewee decide approaches and 
 
 * _How would you implement form validation using the form's controller?_
 * _What do `dirty`, `pristine`, `touched` and `untouched` mean?_
-* _What limitations do Angular 1.x forms have?_
+* _What limitations do AngularJS forms have?_
 * _What are some of the built-in validators?_
 * _What are `$parsers` and `$formatters`, and when should you use them?
 * _What is the `$validators` pipeline, and when should you use it?
@@ -143,7 +143,7 @@ Some questions are geared towards letting the interviewee decide approaches and 
 
 ### Events
 
-* _When should you use events in Angular 1.x?_
+* _When should you use events in AngularJS?_
 * _What's the difference between `$emit` and `$broadcast`?_
 * _What's the difference between `$scope.$emit` and `$rootScope.$emit`?_
 * _How does event unbinding differ in `$scope` and `$rootScope`?_

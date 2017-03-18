@@ -7,15 +7,15 @@ tags:
 - Angular 2
 ---
 
-As many of you know, I created an Angular 1.x styleguide [back in July 2014](https://github.com/toddmotto/angular-styleguide/commit/47a125d71c50a56515c7b4aadcd31247d74dc723), it's grown in popularity since inception, and has served many teams across the world to be a reference to code consistency. Angular has also changed, and many of the practices used back then aren't relevant today. As of now, the old styleguide is deprecated in favour of the new release.
+As many of you know, I created an AngularJS (1.x) styleguide [back in July 2014](https://github.com/toddmotto/angular-styleguide/commit/47a125d71c50a56515c7b4aadcd31247d74dc723), it's grown in popularity since inception, and has served many teams across the world to be a reference to code consistency. Angular has also changed, and many of the practices used back then aren't relevant today. As of now, the old styleguide is deprecated in favour of the new release.
 
 Read the [new Styleguide on GitHub](https://github.com/toddmotto/angular-styleguide) dedicated to ES2015, component architecture and one-way dataflow practices.
 
 ## What are the goals of the new styleguide?
 
-First off, the styleguide has been overhauled with a new approach - to _not_ compare "good" versus "bad" things to do with Angular. It also doesn't focus on wishy-washy type stuff that we are old enough to decide for ourselves, it's straight to the point and more of an architectural guide with code examples for all the latest standards. Instead, the styleguide focuses purely on what's good practice, and how we can utilise them with ES2015. Most importantly, it focuses on the design patterns associated with Angular (state management suggestions, stateless, stateful and routed components and component routing). It's focusing on the right ingredients, and how to prepare your apps for a new Angular 1.x standard, as well as integrating patterns for upgrading to Angular 2.
+First off, the styleguide has been overhauled with a new approach - to _not_ compare "good" versus "bad" things to do with Angular. It also doesn't focus on wishy-washy type stuff that we are old enough to decide for ourselves, it's straight to the point and more of an architectural guide with code examples for all the latest standards. Instead, the styleguide focuses purely on what's good practice, and how we can utilise them with ES2015. Most importantly, it focuses on the design patterns associated with Angular (state management suggestions, stateless, stateful and routed components and component routing). It's focusing on the right ingredients, and how to prepare your apps for a new AngularJS standard, as well as integrating patterns for upgrading to Angular 2.
 
-Angular 1.x has changed vastly since the original styleguide was created, and many of the recommendations there and best practices have been implemented via Angular updates, and ES6/ES2015 has now become a defacto standard in new projects that allow us to move away from problems we faced. The new styleguide focuses on using ES2015, offering recommendations on tooling to use it today. This means a few things for us, so let's dive in to explore the reasons why this styleguide ignores most of the original styleguide content and why I believe it's crucial for us now.
+AngularJS has changed vastly since the original styleguide was created, and many of the recommendations there and best practices have been implemented via Angular updates, and ES6/ES2015 has now become a defacto standard in new projects that allow us to move away from problems we faced. The new styleguide focuses on using ES2015, offering recommendations on tooling to use it today. This means a few things for us, so let's dive in to explore the reasons why this styleguide ignores most of the original styleguide content and why I believe it's crucial for us now.
 
 Note: all statements below are integrated into the guide, you'll find answers to "how is that done?" there.
 
@@ -43,7 +43,7 @@ Note: all statements below are integrated into the guide, you'll find answers to
 * We can use ES2015 `Class`
   * This allows us to disregard `var ctrl = this;` patterns
   * This also mitigates the desire to use `$scope`
-  * This allows us to shift a lot of our code to Angular 2 style
+  * This allows us to shift a lot of our code to Angular (v2+) style
 * We no longer need to think about `$scope`
   * You don't need `$scope` for handling your view logic, however for `$watch` and events you still need it
 * We no longer need to think about `controllerAs`
@@ -78,9 +78,9 @@ Note: all statements below are integrated into the guide, you'll find answers to
 * We don't need a styleguide on how to write an ES2015 Class and export it
   * `$inject` properties are demonstrated in the guide
 
-### Angular 2
+### Angular (v2+)
 
-All of the best practices for using Angular 2, and planning your application's migration to Angular 2 live inside the styleguide.
+All of the best practices for using Angular, and planning your application's migration to Angular live inside the styleguide.
 
 ### Resources and tooling
 
@@ -88,7 +88,7 @@ The guide also has an initial resources section which points to articles that ex
 
 ### List of things I feel are deprecated
 
-These still exist in Angular 1.x, however I feel they should be treated as deprecated and advise against them.
+These still exist in AngularJS, however I feel they should be treated as deprecated and advise against them.
 
 * Two-way databinding through `{ foo: '=' }` syntax
 * `controllerAs` syntax
@@ -106,7 +106,7 @@ These still exist in Angular 1.x, however I feel they should be treated as depre
   * transclude
   * Why? Use `.component()` because that's the correct tool now
 * The `.factory()` method
-  * Use an ES2015 Class for a Service, like in Angular 2
+  * Use an ES2015 Class for a Service, like in Angular (v2+)
 * The `.controller()` method
   * Use `controller: fn` on components only
 * Using `template: '<my-component>'` with ui-router

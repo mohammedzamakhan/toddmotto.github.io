@@ -7,7 +7,7 @@ tags:
 - Angular
 ---
 
-There were a tonne of interesting changes happening in the `beta` and release candidate phases of Angular 1.5, one of them was the introduction of the [Component method](/exploring-the-angular-1-5-component-method), which saw [one-way bindings](/one-way-data-binding-in-angular-1-5) also introduced. We've also got the power to create stateless components.
+There were a tonne of interesting changes happening in the `beta` and release candidate phases of AngularJS 1.5, one of them was the introduction of the [Component method](/exploring-the-angular-1-5-component-method), which saw [one-way bindings](/one-way-data-binding-in-angular-1-5) also introduced. We've also got the power to create stateless components.
 
 ### What is a stateless component?
 
@@ -41,7 +41,7 @@ angular
   .component('nameComponent', NameComponent);
 {% endhighlight %}
 
-Let's add some data to another Controller and actually render this awesome component. 
+Let's add some data to another Controller and actually render this awesome component.
 
 _Please note: this example is using version `1.5.0-rc.0`_
 
@@ -77,13 +77,13 @@ And now it renders:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/0oarywLe/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Okay, well that's extremely annoying, I need to bind a `controller` and declare the `controllerAs` property to get things to render. 
+Okay, well that's extremely annoying, I need to bind a `controller` and declare the `controllerAs` property to get things to render.
 
 So we ended up adding these empty Controllers to make things "work", which isn't pretty.
 
 ### 1.5 stable saves the day
 
-The ability to not specify a Controller is available in the stable Angular 1.5 release! This means we can do exactly this _without_ a Controller:
+The ability to not specify a Controller is available in the stable AngularJS 1.5 release! This means we can do exactly this _without_ a Controller:
 
 {% highlight javascript %}
 // usage: <name-component></name-component>
@@ -113,7 +113,7 @@ Voila:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/t242uxna/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Components can now just act as stateless templates, and that's awesome and lightweight. 
+Components can now just act as stateless templates, and that's awesome and lightweight.
 
 ### Caveats
 

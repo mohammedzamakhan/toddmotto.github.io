@@ -81,10 +81,10 @@ import { Contact } from './models/contact.interface';
   `
 })
 export class ContactCardComponent {
-  
+
   @Input()
   contact: Contact;
-  
+
 }
 ```
 
@@ -198,7 +198,7 @@ You can check a live output of what we've covered so far here:
 
 #### Using trackBy for keys
 
-If you're coming from an Angular 1.x background, you'll have likely seen "track by" when using an `ng-repeat`, and similarly in React land, using `key` on a collection item.
+If you're coming from an AngularJS background, you'll have likely seen "track by" when using an `ng-repeat`, and similarly in React land, using `key` on a collection item.
 
 So what do these do? They associate the objects, or keys, with the particular DOM nodes, so should anything change or need to be re-rendered, the framework can do this much more efficiently. Angular's `ngFor` defaults to using _object identity_ checking for you, which is fast, but can be _faster_!
 
@@ -262,7 +262,7 @@ The `count` will return a live collection length, equivalent of `contacts.length
 ```html
 <ul>
   <li *ngFor="let contact of contacts | async; let i = index; let c = count;">
-    <contact-card 
+    <contact-card
       [contact]="contact"
       [collectionLength]="c"
       (update)="onUpdate($event, i)">
@@ -311,7 +311,7 @@ For this quick demo, we'll use `ngClass` to add some styles to each `<li>` (note
       'odd-active': o,
       'even-active': e
     }">
-    <contact-card 
+    <contact-card
       [contact]="contact"
       (update)="onUpdate($event, index)">
     </contact-card>
@@ -337,7 +337,7 @@ And some styles:
             'odd-active': o,
             'even-active': e
           }">
-          <contact-card 
+          <contact-card
             [contact]="contact"
             (update)="onUpdate($event, index)">
           </contact-card>
@@ -364,7 +364,7 @@ When using an asterisk (`*`) in our templates, we are informing Angular we're us
 
 #### &lt;template&gt; and Web Components
 
-So, what is the `<template>` element? First, let's take a step back. We'll roll back to showing some Angular 1.x code here, perhaps you've done this before or done something similar in another framework/library:
+So, what is the `<template>` element? First, let's take a step back. We'll roll back to showing some AngularJS code here, perhaps you've done this before or done something similar in another framework/library:
 
 ```html
 <script id="myTemplate" type="text/ng-template">
@@ -374,7 +374,7 @@ So, what is the `<template>` element? First, let's take a step back. We'll roll 
 </script>
 ```
 
-This overrides the `type` on the `<script>` tag, which prevents the JavaScript engine from parsing the contents of the `<script>` tag. This allows us, or a framework such as Angular 1.x, to fetch the contents of the script tag and use it as some form of HTML template.
+This overrides the `type` on the `<script>` tag, which prevents the JavaScript engine from parsing the contents of the `<script>` tag. This allows us, or a framework such as AngularJS, to fetch the contents of the script tag and use it as some form of HTML template.
 
 Web Components introduced something similar to this idea, called the `<template>`:
 

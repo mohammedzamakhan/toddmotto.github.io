@@ -886,13 +886,13 @@ config.$inject = ["$locationProvider", "$stateProvider", "API_DATA", "GUIDE_DATA
 
 ### 9. Documenting a Module, Controller, Directive and Service
 
-In the interest of time, I will actually be documenting an existing Angular 1.5 app.
+In the interest of time, I will actually be documenting an existing AngularJS 1.5 app.
 
-I'm using Todd Motto's (the owner of this blog) [Angular 1.5 Component app][dfa622d3] as a living example. If you haven't had the time to check it out, do so... it's the best example of a .component() based application using UI-Router 1.0 beta using routed components.
+I'm using Todd Motto's (the owner of this blog) [AngularJS 1.5 Component app][dfa622d3] as a living example. If you haven't had the time to check it out, do so... it's the best example of a .component() based application using UI-Router 1.0 beta using routed components.
 
 The examples from this guide are also available directly in the app, under `/docs`. So feel free to fork the app to see it in action, and learn about how you should be building Angular apps in 2016 at the same time!
 
-[dfa622d3]: https://github.com/toddmotto/angular-1-5-components-app "Angular 1.5 Component app"
+[dfa622d3]: https://github.com/toddmotto/angular-1-5-components-app "AngularJS 1.5 Component app"
 
 #### Documenting a Module
 

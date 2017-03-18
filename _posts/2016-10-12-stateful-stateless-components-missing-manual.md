@@ -22,7 +22,7 @@ The goals of this article are to define what stateful and stateless components a
   - <a href="#stateless-todoform-component">Stateless TodoForm component</a>
   - <a href="#stateless-todolist-component">Stateless TodoList component</a>
   - <a href="#final-code">Final code</a>
-- <a href="#angular-1x-version">Angular 1.x version?</a>
+- <a href="#angular-1x-version">AngularJS 1.x version?</a>
   - <a href="#final-code">Final code</a>
 - <a href="#further-reading">Further reading</a>
 
@@ -333,13 +333,13 @@ Altogether now:
 
 <iframe src="//embed.plnkr.co/ygSstbXkJf5vnGz6Fzdu" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="400"></iframe>
 
-### Angular 1.x version?
+### AngularJS 1.x version?
 
 Oh why not...
 
 #### Full 1.x implementation
 
-Here's the [full source code](https://jsfiddle.net/toddmotto/88g1gef4/) for the Angular 1.x version (obviously in a real app we'd use ES6 `import` and `export` statements etc):
+Here's the [full source code](https://jsfiddle.net/toddmotto/88g1gef4/) for the AngularJS 1.x version (obviously in a real app we'd use ES6 `import` and `export` statements etc):
 
 {% highlight javascript %}
 const todos = {

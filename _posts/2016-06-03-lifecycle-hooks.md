@@ -7,7 +7,7 @@ tags:
 - Angular
 ---
 
-Lifecycle hooks are simply functions that get called at specific points of a component's life in our Angular apps. They landed in Angular 1.5 and are to be used alongside the [.component() method](/exploring-the-angular-1-5-component-method/), and have slowly evolved over the last few versions to include some more powerful (and Angular 2 inspired) hooks. Let's explore in-depth how we can actually use them, the roles they play and why you should use them - this is especially important with a component architecture based app.
+Lifecycle hooks are simply functions that get called at specific points of a component's life in our Angular apps. They landed in AngularJS 1.5 and are to be used alongside the [.component() method](/exploring-the-angular-1-5-component-method/), and have slowly evolved over the last few versions to include some more powerful (and Angular v2+ inspired) hooks. Let's explore in-depth how we can actually use them, the roles they play and why you should use them - this is especially important with a component architecture based app.
 
 I've spent some time [polyfilling the `.component()` method](https://github.com/toddmotto/angular-component) and all the lifecycle hooks back to Angular v1.3.0+, so it's been a massive insight as to how we actually use these hooks and their roles in components. Let's dive in.
 
@@ -135,7 +135,7 @@ var myComponent = {
 };
 {% endhighlight %}
 
-Notice, that with Angular 1.5.6 (see the [CHANGELOG](https://github.com/angular/angular.js/blob/master/CHANGELOG.md#156-arrow-stringification-2016-05-27)) the require now supports to omit the required controller name if it is the same used to bind the requiring controller. This feature does not introduce breaking changes and can be used as follows:
+Notice, that with AngularJS 1.5.6 (see the [CHANGELOG](https://github.com/angular/angular.js/blob/master/CHANGELOG.md#156-arrow-stringification-2016-05-27)) the require now supports to omit the required controller name if it is the same used to bind the requiring controller. This feature does not introduce breaking changes and can be used as follows:
 
 {% highlight javascript %}
 var myComponent = {
@@ -504,7 +504,7 @@ So why does it exist? You might need to use _some_ DOM manipulation or custom ev
 
 ### $onChanges
 
-This is a big one (also the most important), and aligns with how we use component architecture and one-way dataflow with Angular 1.5.x. The golden rule to remember is, `$onChanges` is called in the _local_ component controller from changes that occurred in the _parent_ controller. Changes that occur from the parent which are inputted into a component using `bindings: {}` is the secret sauce here.
+This is a big one (also the most important), and aligns with how we use component architecture and one-way dataflow with AngularJS 1.5.x. The golden rule to remember is, `$onChanges` is called in the _local_ component controller from changes that occurred in the _parent_ controller. Changes that occur from the parent which are inputted into a component using `bindings: {}` is the secret sauce here.
 
 ##### What calls $onChanges?
 
@@ -796,7 +796,7 @@ var childComponent = {
 };
 {% endhighlight %}
 
-Okay, bear with me, we're in the final phase. This is where things get... interesting. Instead of just passig back `this.user` into the function, we're going to fake an `$event` Object, which complies with how Angular 2 does this (using `EventEmitter`), and also provides global consistency between your templates to fetch data back through the `$ctrl.updateUser($event);` call we delegate down into the child component. The `$event` argument is a real thing in Angular, you can use it with ng-submit and so on. If you remember this function:
+Okay, bear with me, we're in the final phase. This is where things get... interesting. Instead of just passing back `this.user` into the function, we're going to fake an `$event` Object, which complies with how Angular (v2+) does this (using `EventEmitter`), and also provides global consistency between your templates to fetch data back through the `$ctrl.updateUser($event);` call we delegate down into the child component. The `$event` argument is a real thing in Angular, you can use it with ng-submit and so on. If you remember this function:
 
 {% highlight javascript %}
 this.updateUser = function (event) {
@@ -832,7 +832,7 @@ There's also a free video available from my AngularJS master course on `$onChang
 
 ##### Is two-way binding through "=" syntax dead?
 
-Yes. One-way binding is established as the best way to approach data flow, React, Angular 2 and others all use it. Now it's Angular 1's turn, a little late to the party, but hey, this is insanely powerful and changes the way new Angular 1.x apps are created.
+Yes. One-way binding is established as the best way to approach data flow: React, Angular and others all use it. Now it's AngularJS's turn, a little late to the party, but hey, this is insanely powerful and changes the way new AngularJS apps are created.
 
 <img src="/img/posts/binding-dead.jpg" style="max-width: 100%;">
 
@@ -906,4 +906,4 @@ If you're using `$postLink` to set DOM event listeners or any non-native Angular
 
 ### Conclusion
 
-Angular 1.x app developer just changed forever with one-way dataflow, events and these lifecycle hooks. More posts on component architecture coming soon.
+AngularJS app developer just changed forever with one-way dataflow, events and these lifecycle hooks. More posts on component architecture coming soon.

@@ -8,13 +8,11 @@ tags:
 - Angular 2
 ---
 
-In this article we're going to look at upgrading your first Angular 1.x component, a simple todo app, across to Angular 2 code. We'll compare the API differences, templating syntaxes and hopefully it'll shed some light on upgrading to Angular 2, and well as making it appear less daunting.
+In this article we're going to look at upgrading your first AngularJS (1.x) component, a simple todo app, across to Angular (v2+) code. We'll compare the API differences, templating syntaxes and hopefully it'll shed some light on upgrading to Angular, and well as making it appear less daunting.
 
-_Please note: Angular 2 is still in "alpha" state, so APIs/conventions may be subject to change, however I will aim to keep this article and the working code updated._
+### AngularJS Todo App
 
-### Angular 1.x Todo App
-
-We'll be rewriting this small component in Angular 2, so let's look at the existing functionality:
+We'll be rewriting this small component in Angular, so let's look at the existing functionality:
 
 * Add items to todo list
 * Ability to delete items
@@ -39,7 +37,7 @@ function todo() {
       // set an empty Model for the <input>
       this.label = '';
       // have some dummy data for the todo list
-      // complete property with Boolean values to display 
+      // complete property with Boolean values to display
       // finished todos
       this.todos = [{
         label: 'Learn Angular',
@@ -82,7 +80,7 @@ function todo() {
         event.preventDefault();
       };
     },
-    // instantiate the Controller as "vm" to namespace the 
+    // instantiate the Controller as "vm" to namespace the
     // Class-like Object
     controllerAs: 'vm',
     // our HTML template
@@ -135,7 +133,7 @@ The app is complete below:
 
 One of the design patterns I highly recommend is using the `controllerAs` syntax ([see my article here on it](http://toddmotto.com/digging-into-angulars-controller-as-syntax)) inside the Directive definition, this allows our Controllers to be free of injecting `$scope` and adopt a more "Class-like" way of writing Controllers. We use the `this` keyword to create public methods which then gets bound to the `$scope` automatically by Angular at runtime.
 
-Using `controllerAs`, IMO, is a crucial step to preparing Angular 1.x components for migration to Angular 2, as the way we write components in Angular 2 uses the `this` keyword on an Object definition for our public methods.
+Using `controllerAs`, IMO, is a crucial step to preparing AngularJS components for migration to Angular, as the way we write components in Angular uses the `this` keyword on an Object definition for our public methods.
 
 ### Project setup/bootstrapping
 
@@ -143,9 +141,9 @@ Files to include, and boostrapping the application.
 
 ##### Angular 1.x
 
-We're going to walk through every single part of the setup of Angular 1.x versus Angular 2, from bootstrapping the application to creating the component, so follow closely.
+We're going to walk through every single part of the setup of AngularJS versus Angular, from bootstrapping the application to creating the component, so follow closely.
 
-We have the basic HTML page, including version `1.4.7` of Angular, and manually bootstrapping the application using `angular.bootstrap`.
+We have the basic HTML page, including version `1.4.7` of AngularJS, and manually bootstrapping the application using `angular.bootstrap`.
 
 {% highlight html %}
 <!doctype html>
@@ -165,15 +163,15 @@ We have the basic HTML page, including version `1.4.7` of Angular, and manually 
 
 {% endhighlight %}
 
-##### Angular 2
+##### Angular
 
-We're going to actually create the Angular 2 application component in ES5, there will be no ES6 and TypeScript because this will let you write Angular 2 in the browser with ease, and also the final working example is using ES5 running in JSFiddle.
+We're going to actually create the Angular application component in ES5, there will be no ES6 and TypeScript because this will let you write Angular in the browser with ease, and also the final working example is using ES5 running in JSFiddle.
 
 There will, however, be the TypeScript/ES6 example at the end to demonstrate the full migration from 1.x to ES5, then the final ES6 + TypeScript solution.
 
-First we need to include Angular 2, I'm not going to `npm install` or mess about installing dependencies, how-to steps are on the [angular.io](https://angular.io/docs/ts/latest/quickstart.html) website. Let's get up and running and learn the framework basics and migrate our Angular 1.x app.
+First we need to include Angular, I'm not going to `npm install` or mess about installing dependencies, how-to steps are on the [angular.io](https://angular.io/docs/ts/latest/quickstart.html) website. Let's get up and running and learn the framework basics and migrate our AngularJS app.
 
-First, we need to include Angular 2 in the `<head>`, you'll notice I'm using `angular2.sfx.dev.js` from version `2.0.0-alpha.44`. This `.sfx.` means it's the self-executing bundled version, targeted at ES5 use without System loader polyfills, so we don't need to add `System.js` to our project.
+First, we need to include Angular in the `<head>`; you'll notice I'm using `angular2.sfx.dev.js` from version `2.0.0-alpha.44`. This `.sfx.` means it's the self-executing bundled version, targeted at ES5 use without System loader polyfills, so we don't need to add `System.js` to our project.
 
 {% highlight html %}
 <!doctype html>
@@ -196,9 +194,9 @@ So far everything is super simple, instead of `window.angular` we have `window.n
 
 ### Component definition
 
-Upgrading the Directive to an Angular 2 component.
+Upgrading the Directive to an Angular component.
 
-##### Angular 1.x
+##### AngularJS
 
 Stripping out all the JavaScript Controller logic from the Directive leaves us with something like this:
 
@@ -217,11 +215,11 @@ angular
   .directive('todo', todo);
 {% endhighlight %}
 
-##### Angular 2
+##### Angular
 
-In Angular 2, we create a `Todo` variable, which assigns the result of `ng` to it with corresponding chained definitions (`Component`, `Class`) - these are all new in Angular 2.
+In Angular, we create a `Todo` variable, which assigns the result of `ng` to it with corresponding chained definitions (`Component`, `Class`) - these are all new in Angular.
 
-Inside `.Component()`, we tell Angular to use the `selector: 'todo'`, which is exactly the same as `.directive('todo', todo);` in Angular 1.x. We also tell Angular where to find our template, just like in Angular 1.x we use the `templateUrl` property.
+Inside `.Component()`, we tell Angular to use the `selector: 'todo'`, which is exactly the same as `.directive('todo', todo);` in AngularJS. We also tell Angular where to find our template, just like in AngularJS we use the `templateUrl` property.
 
 Finally, the `.Class()` method is what holds the logic for our component, we kick things off with a `constructor` property that acts as the "constructor" class. So far so good!
 
@@ -242,9 +240,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ### Component logic
 
-Next, it makes sense to move our Controller logic from Angular 1.x across to Angular 2's `.Class()` method. If you've used ReactJS, this will look familiar. This is also why I suggest using `controllerAs` syntax because this process will be extremely simple to do.
+Next, it makes sense to move our Controller logic from AngularJS across to Angular's `.Class()` method. If you've used ReactJS, this will look familiar. This is also why I suggest using `controllerAs` syntax because this process will be extremely simple to do.
 
-##### Angular 1.x
+##### AngularJS
 
 Let's look what we have in our todo component already. Public methods use `this` to bind to the `$scope` Object automatically for us, and we're using `controllerAs: 'vm'` to namespace the instance of the Controller for use in the DOM.
 
@@ -283,9 +281,9 @@ controller: function () {
 controllerAs: 'vm',
 {% endhighlight %}
 
-##### Angular 2
+##### Angular
 
-Now, let's kill the Controller entirely, and move these public methods into the `.Class()` definition inside Angular 2:
+Now, let's kill the Controller entirely, and move these public methods into the `.Class()` definition inside Angular:
 
 {% highlight javascript %}
 .Class({
@@ -323,9 +321,9 @@ Now, let's kill the Controller entirely, and move these public methods into the 
 });
 {% endhighlight %}
 
-Learnings here: "public" methods become properties of the Object passed into the `.Class()` method, and we don't need to refactor any of the code because in Angular 1.x we were using the `controllerAs` syntax alongside the `this` keyword - seamless and easy.
+Learnings here: "public" methods become properties of the Object passed into the `.Class()` method, and we don't need to refactor any of the code because in AngularJS we were using the `controllerAs` syntax alongside the `this` keyword - seamless and easy.
 
-At this stage, the component will work, however the template we have is completely based off Angular 1.x Directives, so we need to update this.
+At this stage, the component will work, however the template we have is completely based off AngularJS Directives, so we need to update this.
 
 ### Template migration
 
@@ -359,14 +357,14 @@ Here's the entire template that we need to migrate to the new syntax:
 Let's be smart and attack this in chunks though, keeping only the functional pieces we need. Starting with the `<form>`:
 
 {% highlight html %}
-<!-- Angular 1.x -->
+<!-- AngularJS -->
 <form ng-submit="vm.onSubmit($event);">
 
 </form>
 
-<!-- Angular 2 -->
+<!-- Angular -->
 <form (submit)="onSubmit($event);">
-  
+
 </form>
 {% endhighlight %}
 
@@ -375,10 +373,10 @@ Key changes here are the new `(submit)` syntax, this indicates that an event is 
 Next up is the two-way binding on the `<input>`:
 
 {% highlight html %}
-<!-- Angular 1.x -->
+<!-- AngularJS -->
 <input ng-model="vm.label" class="todo__input">
 
-<!-- Angular 2 -->
+<!-- Angular -->
 <input [(ng-model)]="label" class="todo__input">
 {% endhighlight %}
 
@@ -399,7 +397,7 @@ This sets up two-way binding on `ng-model`, also dropping the `vm.` prefix. This
 Moving onto the list of todo items. There's quite a lot going on here, the `ng-repeat` over the todo items, a conditional `ng-class` to show items completed (crossed out), a checkbox to mark things as complete, and finally the `ng-click` binding to delete that specific todo item from the list.
 
 {% highlight html %}
-<!-- Angular 1.x -->
+<!-- AngularJS -->
 <ul class="todo__list">
   <li ng-repeat="item in vm.todos" ng-class="{
     'todo__list--complete': item.complete
@@ -412,7 +410,7 @@ Moving onto the list of todo items. There's quite a lot going on here, the `ng-r
   </li>
 </ul>
 
-<!-- Angular 2 -->
+<!-- Angular -->
 <ul class="todo__list">
   <li *ng-for="#item of todos; #i = index" [ng-class]="{
     'todo__list--complete': item.complete
@@ -428,7 +426,7 @@ Moving onto the list of todo items. There's quite a lot going on here, the `ng-r
 
 The differences here are mainly in the `ng-repeat` syntax and moving across to `ng-for`, which uses `#item of Array` syntax. Interestingly enough, `$index` isn't given to us "for free" anymore, we have to request it and assign it to a variable to gain access to it (`#i = $index`) which then allows us to pass that specific Array index into the `deleteItem` method.
 
-Altogether we have our finished Angular 2 component markup migration:
+Altogether we have our finished Angular component markup migration:
 
 {% highlight html %}
 <div class="todo">
@@ -455,7 +453,7 @@ Altogether we have our finished Angular 2 component markup migration:
 </div>
 {% endhighlight %}
 
-Altogether our Angular 2 component will look like so:
+Altogether our Angular component will look like so:
 
 {% highlight javascript %}
 var Todo = ng
@@ -538,7 +536,7 @@ And that's it! The working solution:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/mtv8qhw5/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Check out the [Angular 2 cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html), this is extremely handy when refactoring your templates from Angular 1.x to 2.
+Check out the [Angular cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html), this is extremely handy when refactoring your templates from AngularJS to Angular.
 
 ### ES6 + TypeScript version
 
@@ -602,9 +600,9 @@ We're also not using _any_ browser globals (`window.ng`) which is fantastic, all
 
 Visit [angular.io](https://angular.io) for everything else.
 
-### Steps to take now to prepare for Angular 2
+### Steps to take now to prepare for Angular
 
 * Convert your application to ES6 + TypeScript
 * Refactor any Directives using a [decoupled component](http://www.bennadel.com/blog/2922-decoupling-component-directives-from-layout-in-angularjs.htm) approach
 * Refactor any Controllers to use [controllerAs](http://toddmotto.com/digging-into-angulars-controller-as-syntax) syntax
-* [Angular 2 migration guide - ngMigrate](http://ngmigrate.telerik.com)
+* [Angular migration guide - ngMigrate](http://ngmigrate.telerik.com)

@@ -5,7 +5,7 @@ title: All about $q and Promises in Angular
 path: 2016-08-15-promises-angular-q.md
 ---
 
-You've seen `$q`, maybe used it but haven't uncovered some of the awesome features `$q` provides such as `$q.all()` and `$q.race()`. This article dives into ES2015 Promise API and how it maps across to `$q` for AngularJS. This post is all about `$q`... enjoy!
+You've seen `$q`, maybe used it, but haven't uncovered some of the awesome features `$q` provides, such as `$q.all()` and `$q.race()`. This article dives into ES2015 Promise API and how it maps across to `$q` for AngularJS. This post is all about `$q`... enjoy!
 
 ### Table of contents
 

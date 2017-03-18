@@ -7,7 +7,7 @@ tags:
 - Angular 2
 ---
 
-Angular 2 presents two different methods for creating forms, template-driven (what we were used to in Angular 1.x), or reactive. We're going to explore the absolute fundamentals of the reactive Angular 2 forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
+Angular (v2+) presents two different methods for creating forms, template-driven (what we were used to in AngularJS 1.x), or reactive. We're going to explore the absolute fundamentals of the reactive Angular forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
 
 ### Table of contents
 

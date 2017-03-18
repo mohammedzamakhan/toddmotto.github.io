@@ -7,7 +7,7 @@ tags:
 - Angular 2
 ---
 
-Validation in Angular 2, various approaches, various APIs to use. We're going to use `AbstractControl` to learn how to validate a particular `FormGroup`. I covered `FormGroup`, `FormControl` and `FormBuilder` in my previous [reactives form](/angular-2-forms-reactive) fundamentals article - which I'd recommend checking out before this one if you're new to Angular 2 forms.
+Validation in Angular (v2+), various approaches, various APIs to use. We're going to use `AbstractControl` to learn how to validate a particular `FormGroup`. I covered `FormGroup`, `FormControl` and `FormBuilder` in my previous [reactives form](/angular-2-forms-reactive) fundamentals article - which I'd recommend checking out before this one if you're new to Angular forms.
 
 ### Table of contents
 
@@ -271,7 +271,7 @@ import { emailMatcher } from './email-matcher';
 ...
 {% endhighlight %}
 
-> Note: Angular 2 doesn't have built-in `type=email` validation anymore, however you've just learned how to implement your own with `AbstractControl`, swap it out for `FormControl` when validating on a single `FormControl` :)
+> Note: Angular doesn't have built-in `type=email` validation anymore; however, you've just learned how to implement your own with `AbstractControl`, swap it out for `FormControl` when validating on a single `FormControl` :)
 
 Everything is now hooked up, try out the code below for the working demo :)
 

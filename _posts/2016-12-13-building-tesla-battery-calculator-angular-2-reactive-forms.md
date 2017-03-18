@@ -5,7 +5,7 @@ title: Building Tesla&#39;s battery range calculator with Angular 2 reactive for
 path: 2016-12-13-building-tesla-range-calculator-angular-2-reactive-forms.md
 ---
 
-In this epic tutorial, we're going to build some advanced Angular 2 components that rebuild [Tesla's battery range calculator](https://tesla.com/en_GB/models#battery-options) and then compile it to [AoT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) and deploy on GitHub pages. We'll be using the [reactive forms](/angular-2-forms-reactive) API as well and building custom form controls and use some stateful and stateless component practices, as well as change detection strategies.
+In this epic tutorial, we're going to build some advanced Angular (v2+) components that rebuild [Tesla's battery range calculator](https://tesla.com/en_GB/models#battery-options) and then compile it to [AoT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) and deploy on GitHub pages. We'll be using the [reactive forms](/angular-2-forms-reactive) API as well and building custom form controls and use some stateful and stateless component practices, as well as change detection strategies.
 
 This is the final project `gif` of what we're about to build:
 
@@ -113,7 +113,7 @@ And then just drop all the images in there (and replace the `favicon.ico` in the
 
 First thing we'll do is create our sub-module, a feature specific module for handling our Tesla app.
 
-> Directories: Everything we're going to do with be inside `/src/app/` so any folder references will refer to in there 
+> Directories: Everything we're going to do with be inside `/src/app/` so any folder references will refer to in there
 
 #### Root @NgModule
 
@@ -224,7 +224,7 @@ The `Injectable` is a decorator from Angular that allows us to inject our servic
 
 ### Container and presentational components
 
-This is a new idea I'm currently working with in my Angular 2 apps, separating "container" and "presentational" components, otherwise known as [stateful and stateless components](/stateful-stateless-components) which I've previously written about, I'd urge you to check that out if you're up for further reading.
+This is a new idea I'm currently working with in my Angular apps, separating "container" and "presentational" components, otherwise known as [stateful and stateless components](/stateful-stateless-components) which I've previously written about, I'd urge you to check that out if you're up for further reading.
 
 The idea is that stateful components, which we'll refer to as "container" components in the rest of this tutorial, will live inside our module's `containers` directory. Any stateless components, i.e. presentational components, will just live inside `components`.
 
@@ -306,13 +306,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
       <h1>{% raw %}{{ title }}{% endraw %}</h1>
       <div class="tesla-battery__notice">
         <p>
-          The actual amount of range that you experience will vary based 
-          on your particular use conditions. See how particular use conditions 
+          The actual amount of range that you experience will vary based
+          on your particular use conditions. See how particular use conditions
           may affect your range in our simulation model.
         </p>
         <p>
-          Vehicle range may vary depending on the vehicle configuration, 
-          battery age and condition, driving style and operating, environmental 
+          Vehicle range may vary depending on the vehicle configuration,
+          battery age and condition, driving style and operating, environmental
           and climate conditions.
         </p>
       </div>
@@ -321,7 +321,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./tesla-battery.component.scss']
 })
 export class TeslaBatteryComponent implements OnInit {
-  
+
   title: string = 'Range Per Charge';
   tesla: FormGroup;
 
@@ -475,7 +475,7 @@ tesla-car.component.scss
 This is what will produce our car image and make the wheels spin:
 
 {% highlight javascript %}
-/* 
+/*
  * tesla-car.component.ts
  */
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
@@ -792,14 +792,14 @@ We've already dependency injected the `FormBuilder`, so now it's time to add our
 // tesla-battery.component.ts
 @Component({...})
 export class TeslaBatteryComponent implements OnInit {
-  
+
   title: string = 'Range Per Charge';
   models: any;
   stats: Stat[];
   tesla: FormGroup;
-  
+
   private results: Array<String> = ['60', '60D', '75', '75D', '90D', 'P100D'];
-  
+
   constructor(public fb: FormBuilder, private batteryService: BatteryService) {}
   ...
   ...
@@ -833,7 +833,7 @@ Now into the `ngOnInit`, ensure yours looks like this:
 ngOnInit() {
 
   this.models = this.batteryService.getModelData();
-  
+
   this.tesla = this.fb.group({
     config: this.fb.group({
       speed: 55,
@@ -902,7 +902,7 @@ import { Component, Input, ChangeDetectionStrategy, forwardRef } from '@angular/
 // importing necessary accessors
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-// NUMBER_CONTROL_ACCESSOR constant to allow us to use the "TeslaCounterComponent" as 
+// NUMBER_CONTROL_ACCESSOR constant to allow us to use the "TeslaCounterComponent" as
 // a custom provider to the component and enforce the ControlValueAccessor interface
 const NUMBER_CONTROL_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
@@ -919,7 +919,7 @@ const NUMBER_CONTROL_ACCESSOR = {
     <div class="tesla-counter">
       <p class="tesla-counter__title">{% raw %}{{ title }}{% endraw %}</p>
       <div class="tesla-counter__container cf">
-        <div 
+        <div
           class="tesla-counter__item"
           (keydown)="onKeyUp($event)"
           (blur)="onBlur($event)"
@@ -973,7 +973,7 @@ export class TeslaCounterComponent implements ControlValueAccessor {
     // assigns to our internal model change method
     this.onModelChange = fn;
   }
-  
+
   // called by the reactive form control
   registerOnTouched(fn: Function) {
     // assigns our own "touched" method
@@ -1174,7 +1174,7 @@ Let's jump back into our `tesla-battery.component.ts` and add our custom form co
         <div class="tesla-climate cf">
           <tesla-counter
             [title]="'Outside Temperature'"
-            [unit]="'°'" 
+            [unit]="'°'"
             [step]="10"
             [min]="-10"
             [max]="40"
@@ -1230,14 +1230,14 @@ const CHECKBOX_VALUE_ACCESSOR = {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="tesla-climate">
-      <label 
+      <label
         class="tesla-climate__item"
         [class.tesla-heat]="!limit"
         [class.tesla-climate__item--active]="value"
         [class.tesla-climate__item--focused]="focused === value">
         <p>{% raw %}{{ (limit ? 'ac' : 'heat') }}{% endraw %} {% raw %}{{ value ? 'on' : 'off' }}{% endraw %}</p>
         <i class="tesla-climate__icon"></i>
-      <input 
+      <input
         type="checkbox"
         name="climate"
         [checked]="value"
@@ -1292,7 +1292,7 @@ export class TeslaClimateComponent implements ControlValueAccessor {
 We're pretty much doing the same thing as the previous component, however we're directly writing the `value` property to a `checkbox` as seen here:
 
 {% highlight html %}
-<input 
+<input
   type="checkbox"
   name="climate"
   [checked]="value"
@@ -1418,14 +1418,14 @@ Let's jump back into our `tesla-battery.component.ts` and add our custom form `t
         <div class="tesla-climate cf">
           <tesla-counter
             [title]="'Outside Temperature'"
-            [unit]="'°'" 
+            [unit]="'°'"
             [step]="10"
             [min]="-10"
             [max]="40"
             formControlName="temperature">
           </tesla-counter>
-          <tesla-climate 
-            [limit]="tesla.get('config.temperature').value > 10" 
+          <tesla-climate
+            [limit]="tesla.get('config.temperature').value > 10"
             formControlName="climate">
           </tesla-climate>
         </div>
@@ -1478,12 +1478,12 @@ const RADIO_CONTROL_ACCESSOR = {
     <div class="tesla-wheels">
       <p class="tesla-wheels__title">Wheels</p>
       <div class="tesla-wheels__container cf">
-        <label 
+        <label
           *ngFor="let size of sizes;"
           class="tesla-wheels__item tesla-wheels__item--{% raw %}{{ size }}{% endraw %}"
           [class.tesla-wheels__item--active]="value === size"
           [class.tesla-wheels__item--focused]="focused === size">
-          <input 
+          <input
             type="radio"
             name="wheelsize"
             [attr.value]="size"
@@ -1641,14 +1641,14 @@ This one's an easy addition to our `tesla-battery.component.ts` (ensure it's out
         <div class="tesla-climate cf">
           <tesla-counter
             [title]="'Outside Temperature'"
-            [unit]="'°'" 
+            [unit]="'°'"
             [step]="10"
             [min]="-10"
             [max]="40"
             formControlName="temperature">
           </tesla-counter>
-          <tesla-climate 
-            [limit]="tesla.get('config.temperature').value > 10" 
+          <tesla-climate
+            [limit]="tesla.get('config.temperature').value > 10"
             formControlName="climate">
           </tesla-climate>
         </div>
@@ -1704,7 +1704,7 @@ You should have a fully working Tesla range calculator:
 
 ### Deploying with Ahead-of-Time compilation
 
-AoT means Angular will precompile everything (including our templates) and give us the bare minimum Angular 2 needs for our application. I'm getting around `313 KB` for this entire project, including images, fonts. `184 KB` of that is Angular 2 code!
+AoT means Angular will precompile everything (including our templates) and give us the bare minimum Angular needs for our application. I'm getting around `313 KB` for this entire project, including images, fonts. `184 KB` of that is Angular code!
 
 #### Deploying to GitHub pages
 

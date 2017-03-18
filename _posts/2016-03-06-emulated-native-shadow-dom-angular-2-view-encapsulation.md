@@ -9,15 +9,15 @@ tags:
 
 Shadow DOM has long been a talking point on the web, and the [Polymer project](//www.polymer-project.org/1.0) pushes the proof of concept quite nicely, however, adoption of "raw" Web Components (Shadow DOM is part of the spec) is low. Instead, frameworks have provided "better" ways to achieve results and develop applications.
 
-Angular 2 isn't ignorant to Web Components at all, and provides us the powerful ability to use native Shadow DOM when we choose. We also have the choice to emulate Shadow DOM through Angular 2, achieving somewhat encapsulated Components and styling. If you need an overview on Web Components and Shadow DOM, I'd [check out my article](/web-components-concepts-shadow-dom-imports-templates-custom-elements/) on it!
+Angular (v2+) isn't ignorant to Web Components at all, and provides us the powerful ability to use native Shadow DOM when we choose. We also have the choice to emulate Shadow DOM through Angular, achieving somewhat encapsulated Components and styling. If you need an overview on Web Components and Shadow DOM, I'd [check out my article](/web-components-concepts-shadow-dom-imports-templates-custom-elements/) on it!
 
 ### Problem we're solving
 
-The problem in the way we create web applications lies in the "global-like" architecture that HTML, CSS and JavaScript gives us, for instance an `.active {}` class will be painted to all DOM elements containing the class name `active`, such as `<div class="active"></div>`. The same applies to JavaScript, the code we write is lexically scoped, and usually we create forms of global Objects (such as `window.angular` in Angular 1.x to hook into Angular from any JavaScript scope).
+The problem in the way we create web applications lies in the "global-like" architecture that HTML, CSS and JavaScript gives us, for instance an `.active {}` class will be painted to all DOM elements containing the class name `active`, such as `<div class="active"></div>`. The same applies to JavaScript, the code we write is lexically scoped, and usually we create forms of global Objects (such as `window.angular` in AngularJS 1.x to hook into Angular from any JavaScript scope).
 
 When it comes to Shadow DOM, the tables are turned, as Shadow DOM creates DOM inside DOM, combining multiple DOM trees into a single hierarchy. These chunks of isolated DOM act as a "shield" around all these global entities such as CSS and JavaScript logic and are locally scoped to one another.
 
-Let's see how Shadow DOM is applied in Angular 2 using the `styles` property to add styles to Components, and the `encapsulation` property to manage how we want Angular 2 to contain our Components.
+Let's see how Shadow DOM is applied in Angular using the `styles` property to add styles to Components, and the `encapsulation` property to manage how we want Angular to contain our Components.
 
 ### Style property
 
@@ -75,7 +75,7 @@ Next, let's create some global HTML and CSS and add it to the Plunker. This will
 </html>
 {% endhighlight %}
 
-As you can see from adding this, our `AppComponent` with the `<input>` inside also inherits the `green` global styling. This is because of how Angular 2's default `ViewEncapsulation` mode.
+As you can see from adding this, our `AppComponent` with the `<input>` inside also inherits the `green` global styling. This is because of how Angular's default `ViewEncapsulation` mode.
 
 <iframe src="//embed.plnkr.co/Td3OCsqtpxYNrgHCafL5" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="250"></iframe>
 
@@ -83,7 +83,7 @@ Let's dive into each `ViewEncapsulation` mode to see what each of them gives us.
 
 ### ViewEncapsulation.Emulated
 
-Using the `Emulated` property gives us emulated Shadow DOM/encapsulation which is the _default_ behaviour for Angular 2 Components. Even though it's a default, we'll add it to a live example anyway to see what happens. Let's import `ViewEncapsulation` from the Angular 2 core and set the `encapsulation` property:
+Using the `Emulated` property gives us emulated Shadow DOM/encapsulation which is the _default_ behaviour for Angular Components. Even though it's a default, we'll add it to a live example anyway to see what happens. Let's import `ViewEncapsulation` from the Angular core and set the `encapsulation` property:
 
 {% highlight javascript %}
 import { Component, ViewEncapsulation } from '@angular/core';
@@ -248,7 +248,7 @@ It means that CSS we write globally will inherit, however styles defined using t
 
 ### Web Component footsteps
 
-Angular 2 moves even closer to the Web Components spec through the use of the `:host {}` selector, both with `Native` or `Emulated` styles. A quick example of using the `:host {}` selector:
+Angular moves even closer to the Web Components spec through the use of the `:host {}` selector, both with `Native` or `Emulated` styles. A quick example of using the `:host {}` selector:
 
 {% highlight javascript %}
 import { Component, ViewEncapsulation } from '@angular/core';
@@ -283,4 +283,4 @@ Notice how the red background now spans the full element using the `:host` selec
 
 ##### What does this mean?
 
-It means we can use the `:host` selector to style the declared element, in this case the `:host` is the same element as Angular 2 annotated above in the `ViewEncapsulation.Emulated` overview as `<my-app _nghost-cmy-1="">`. Note the `_nghost-*` attribute, in `Native` mode this attribute is removed and we use native Shadow DOM, in which case just `<my-app>` refers to the host element and therefore is targeted by the `:host {}` selector.
+It means we can use the `:host` selector to style the declared element, in this case the `:host` is the same element as Angular annotated above in the `ViewEncapsulation.Emulated` overview as `<my-app _nghost-cmy-1="">`. Note the `_nghost-*` attribute, in `Native` mode this attribute is removed and we use native Shadow DOM, in which case just `<my-app>` refers to the host element and therefore is targeted by the `:host {}` selector.
