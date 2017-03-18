@@ -104,7 +104,7 @@ const onSubmit = event => {
 
   if (bmi < 18.5) {
     healthMessage = 'considered underweight';
-  } else if (bmi > 18.5 && bmi < 25) {
+  } else if (unit >= 18.5 && unit <= 25) {
     healthMessage = 'a healthy weight';
   } else if (bmi > 25) {
     healthMessage = 'considered overweight';
@@ -144,7 +144,7 @@ const onSubmit = event => {
   // this overrides the "healthMessage" variable based on the expression that passes
   if (bmi < 18.5) {
     healthMessage = 'considered underweight';
-  } else if (bmi > 18.5 && bmi < 25) {
+  } else if (unit >= 18.5 && unit <= 25) {
     healthMessage = 'a healthy weight';
   } else if (bmi > 25) {
     healthMessage = 'considered overweight';
@@ -227,7 +227,7 @@ const getHealthMessage = unit => {
   let healthMessage;
   if (unit < 18.5) {
     healthMessage = 'considered underweight';
-  } else if (unit > 18.5 && unit < 25) {
+  } else if (unit >= 18.5 && unit <= 25) {
     healthMessage = 'a healthy weight';
   } else if (unit > 25) {
     healthMessage = 'considered overweight';
@@ -247,7 +247,7 @@ Putting everything together, we have this:
     let healthMessage;
     if (unit < 18.5) {
       healthMessage = 'considered underweight';
-    } else if (unit > 18.5 && unit < 25) {
+    } else if (unit >= 18.5 && unit <= 25) {
       healthMessage = 'a healthy weight';
     } else if (unit > 25) {
       healthMessage = 'considered overweight';
