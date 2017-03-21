@@ -1,13 +1,15 @@
 ---
 layout: post
 permalink: /angular-ngfor-template-element
-title: "Angular ngFor, &lt;template&gt; and the compiler"
+title: "Angular ngFor, &lt;ng-template&gt; and the compiler"
 path: 2017-02-01-angular-ngfor.md
 ---
 
 Angular `ngFor` is a built-in Directive that allows us to iterate over a collection. This collection is typically an array, however can be "array-like". To demonstrate this, we'll be using `Rx.Observable.of()` to initialise our collection with an Observable instead of a static array.
 
-We'll also be exploring some other under-the-hood properties of `ngFor`, as well as looking at how Angular expands our `ngFor` to a `<template>` element and composes our view.
+We'll also be exploring some other under-the-hood properties of `ngFor`, as well as looking at how Angular expands our `ngFor` to a `<ng-template>` element and composes our view.
+
+> Note: In Angular v4 `<template>` has been deprecated in favour of `<ng-template>` and will be removed in v5. In Angular v2.x releases `<template>` is still valid.
 
 ### Table of contents
 
@@ -168,7 +170,7 @@ One way we could do this is using `ngFor` on the component itself, however for s
 </ul>
 ```
 
-There are a few things happening here, the first you'll notice a `*` character at the beginning of the `ngFor`, we'll come onto what this means in the next section when we look at the `<template>` element. Secondly, we're creating a context called `contact`, using a "for of" loop - just [like in ES6](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/for...of).
+There are a few things happening here, the first you'll notice a `*` character at the beginning of the `ngFor`, we'll come onto what this means in the next section when we look at the `<ng-template>` element. Secondly, we're creating a context called `contact`, using a "for of" loop - just [like in ES6](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/for...of).
 
 The `ngFor` Directive will clone the `<li>` and the _child nodes_. In this case, the `<contact-card>` is a child node, and a card will be "stamped out" in the DOM for each particular item inside our `contacts` collection.
 
@@ -232,7 +234,7 @@ You can check a live output of what we've covered here:
 
 The `ngFor` directive doesn't just stop at iteration, it also provides us a few other niceties. Let's explore `index` and `count`, two public properties exposed to us on each `ngFor` iteration.
 
-Let's create another variable called `i`, which we'll assign the value of `index` to. Angular exposes these values under-the-hood for us, and when we look at the next section with the `<template>` element, we can see how they are composed.
+Let's create another variable called `i`, which we'll assign the value of `index` to. Angular exposes these values under-the-hood for us, and when we look at the next section with the `<ng-template>` element, we can see how they are composed.
 
 To log out the index, we can simply interpolate `i`:
 
@@ -358,13 +360,13 @@ You can check a live output of what we've covered here:
 
 We mentioned earlier in this article that we'd look at understanding what the `*` meant in our templates. This also shares the same syntax as `*ngIf`, which you've likely also seen before.
 
-So in this next section, we'll take a deeper dive on `ngFor`, `*` and the `<template>` element to explain in more detail what's really happening here.
+So in this next section, we'll take a deeper dive on `ngFor`, `*` and the `<ng-template>` element to explain in more detail what's really happening here.
 
-When using an asterisk (`*`) in our templates, we are informing Angular we're using a structural directive, which is also sugar syntax (a nice short hand) for using the `<template>` element.
+When using an asterisk (`*`) in our templates, we are informing Angular we're using a structural directive, which is also sugar syntax (a nice short hand) for using the `<ng-template>` element.
 
 #### &lt;template&gt; and Web Components
 
-So, what is the `<template>` element? First, let's take a step back. We'll roll back to showing some AngularJS code here, perhaps you've done this before or done something similar in another framework/library:
+So, what is the `<ng-template>` element? First, let's take a step back. We'll roll back to showing some AngularJS code here, perhaps you've done this before or done something similar in another framework/library:
 
 ```html
 <script id="myTemplate" type="text/ng-template">
@@ -376,14 +378,14 @@ So, what is the `<template>` element? First, let's take a step back. We'll roll 
 
 This overrides the `type` on the `<script>` tag, which prevents the JavaScript engine from parsing the contents of the `<script>` tag. This allows us, or a framework such as AngularJS, to fetch the contents of the script tag and use it as some form of HTML template.
 
-Web Components introduced something similar to this idea, called the `<template>`:
+Web Components introduced something similar to this idea, called the `<ng-template>`:
 
 ```html
-<template id="myTemplate">
+<ng-template id="myTemplate">
   <div>
     My awesome template!
   </div>
-</template>
+</ng-template>
 ```
 
 To grab our above template and instantiate it, we'd do this in plain JavaScript:
@@ -404,7 +406,7 @@ You may have seen this term floating around Angular in a few ways, such as `_ngh
 
 #### ngFor and &lt;template&gt;
 
-So how does the above `<template>` explanation tell us more about `ngFor` and the `*`? The asterisk is shorthand syntax for using the `<template>` element.
+So how does the above `<ng-template>` explanation tell us more about `ngFor` and the `*`? The asterisk is shorthand syntax for using the `<ng-template>` element.
 
 Let's start from the basic `ngFor` example:
 
@@ -416,15 +418,15 @@ Let's start from the basic `ngFor` example:
 </ul>
 ```
 
-And demonstrate the `<template>` equivalent:
+And demonstrate the `<ng-template>` equivalent:
 
 ```html
 <ul>
-  <template ngFor let-contact [ngForOf]="contacts | async">
+  <ng-template ngFor let-contact [ngForOf]="contacts | async">
     <li>
       <contact-card [contact]="contact"></contact-card>
     </li>
-  </template>
+  </ng-template>
 </ul>
 ```
 
@@ -432,7 +434,7 @@ That's a lot different! What's happening here?
 
 When we use `*ngFor`, we're telling Angular to essentially treat the element the `*` is bound to as a template.
 
-> Note: Angular's `<template>` element is not a true Web Component, it merely mirrors the concepts behind it to allow you to use `<template>` as it's intended in the spec. When we Ahead-of-Time compile, we will see no `<template>` elements. However, this doesn't mean we can't use things like Shadow DOM, as they are still [completely possible](/emulated-native-shadow-dom-angular-2-view-encapsulation).
+> Note: Angular's `<ng-template>` element is not a true Web Component, it merely mirrors the concepts behind it to allow you to use `<ng-template>` as it's intended in the spec. When we Ahead-of-Time compile, we will see no `<ng-template>` elements. However, this doesn't mean we can't use things like Shadow DOM, as they are still [completely possible](/emulated-native-shadow-dom-angular-2-view-encapsulation).
 
 Let's continue, and understand what `ngFor`, `let-contact` and `ngForOf` are doing above.
 
@@ -449,7 +451,7 @@ Here, Angular is using attribute selectors as the value of `selector` to tell th
 
 The directive uses `[ngFor][ngForOf]`, which implies there are two attributes as a chained selector. So, how does `ngFor` work if we're not using `ngForOf`?
 
-Angular's compiler transforms any `<template>` elements and directives used with a asterisk (`*`) into views that are separate from the root component view. This is so each view can be created multiple times.
+Angular's compiler transforms any `<ng-template>` elements and directives used with a asterisk (`*`) into views that are separate from the root component view. This is so each view can be created multiple times.
 
 > During the compile phase, it will take `let contact of contacts` and capitalise the `of`, and create a custom key to create `ngForOf`.
 
@@ -493,14 +495,14 @@ A pseudo-output might look like this:
 
 #### Context and passing variables
 
-The next step is understanding how Angular passes the context to each `<template>`:
+The next step is understanding how Angular passes the context to each `<ng-template>`:
 
 ```html
-<template ngFor let-contact [ngForOf]="contacts | async">
+<ng-template ngFor let-contact [ngForOf]="contacts | async">
   <li>
     <contact-card [contact]="contact"></contact-card>
   </li>
-</template>
+</ng-template>
 ```
 
 So now we've understood `ngFor` and `ngForOf`, how does Angular associate `let-contact` with the individual `contact` that we then property bind to?
@@ -532,16 +534,16 @@ This is how we can then access the `index` and `context` like this:
 
 ```html
 <ul>
-  <template ngFor let-i="index" let-c="count" let-contact [ngForOf]="contacts | async">
+  <ng-template ngFor let-i="index" let-c="count" let-contact [ngForOf]="contacts | async">
     <li>
       <contact-card [contact]="contact"></contact-card>
     </li>
-  </template>
+  </ng-template>
 </ul>
 ```
 
 Note how we're supplying `let-i` and `let-c` _values_ which are exposed from the `NgForRow` instance, unlike `let-contact`.
 
-You can check out the `<template>` version of the things we've covered here:
+You can check out the `<ng-template>` version of the things we've covered here:
 
 <iframe src="//embed.plnkr.co/7FqWhp9u2zzX6qT7uF1H?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="400"></iframe>
