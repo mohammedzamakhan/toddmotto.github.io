@@ -20,9 +20,9 @@ We'll also be exploring some other under-the-hood properties of `ngFor`, as well
   - <a href="#using-trackby-for-keys">Using trackBy for keys</a>
   - <a href="#capturing-index-and-count">Capturing “index” and “count”</a>
   - <a href="#accessing-first-last-odd-even">Accessing first, last, odd, even</a>
-- <a href="#template-element">&lt;template&gt; element</a>
-  - <a href="#template-and-web-components">&lt;template&gt; and Web Components</a>
-  - <a href="#ngfor-and-template">ngFor and &lt;template&gt;</a>
+- <a href="#ng-template-element">&lt;ng-template&gt; element</a>
+  - <a href="#ng-template-and-web-components">&lt;ng-template&gt; and Web Components</a>
+  - <a href="#ngfor-and-ng-template">ngFor and &lt;ng-template&gt;</a>
   - <a href="#ngfor-and-embedded-view-templates">ngFor and embedded view templates</a>
   - <a href="#context-and-passing-variables">Context and passing variables</a>
 
@@ -356,7 +356,7 @@ You can check a live output of what we've covered here:
 
 <iframe src="//embed.plnkr.co/5YvhRZYT8W5mLDY898mV?deferRun" frameborder="0" border="0" cellspacing="0" cellpadding="0" width="100%" height="400"></iframe>
 
-### &lt;template&gt; element
+### &lt;ng-template&gt; element
 
 We mentioned earlier in this article that we'd look at understanding what the `*` meant in our templates. This also shares the same syntax as `*ngIf`, which you've likely also seen before.
 
@@ -364,7 +364,7 @@ So in this next section, we'll take a deeper dive on `ngFor`, `*` and the `<ng-t
 
 When using an asterisk (`*`) in our templates, we are informing Angular we're using a structural directive, which is also sugar syntax (a nice short hand) for using the `<ng-template>` element.
 
-#### &lt;template&gt; and Web Components
+#### &lt;ng-template&gt; and Web Components
 
 So, what is the `<ng-template>` element? First, let's take a step back. We'll roll back to showing some AngularJS code here, perhaps you've done this before or done something similar in another framework/library:
 
@@ -404,7 +404,7 @@ Note how we have `id=host`, which is our "host" Node for the template to be inje
 
 You may have seen this term floating around Angular in a few ways, such as `_nghost` prefixes on Nodes (ng-host) or the `host` property in directives.
 
-#### ngFor and &lt;template&gt;
+#### ngFor and &lt;ng-template&gt;
 
 So how does the above `<ng-template>` explanation tell us more about `ngFor` and the `*`? The asterisk is shorthand syntax for using the `<ng-template>` element.
 
