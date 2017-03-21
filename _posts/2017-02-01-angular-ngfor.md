@@ -378,14 +378,14 @@ So, what is the `<ng-template>` element? First, let's take a step back. We'll ro
 
 This overrides the `type` on the `<script>` tag, which prevents the JavaScript engine from parsing the contents of the `<script>` tag. This allows us, or a framework such as AngularJS, to fetch the contents of the script tag and use it as some form of HTML template.
 
-Web Components introduced something similar to this idea, called the `<ng-template>`:
+Web Components introduced a new spec a few years ago similar to this idea, called `<template>`:
 
 ```html
-<ng-template id="myTemplate">
+<template id="myTemplate">
   <div>
     My awesome template!
   </div>
-</ng-template>
+</template>
 ```
 
 To grab our above template and instantiate it, we'd do this in plain JavaScript:
@@ -406,7 +406,9 @@ You may have seen this term floating around Angular in a few ways, such as `_ngh
 
 #### ngFor and &lt;ng-template&gt;
 
-So how does the above `<ng-template>` explanation tell us more about `ngFor` and the `*`? The asterisk is shorthand syntax for using the `<ng-template>` element.
+First off, `<ng-template>` is Angular's own implementation of the `<template>` tag, allowing us to think about application design in web components and the ideas behind them. It also provides us with more power than the `<template>` element gives us by default, seamlessly fitting into the way Angular compiles our code.
+
+So how does the above `<template>` explanation tell us more about `ngFor` and the `*`? The asterisk is shorthand syntax for using the `<ng-template>` element.
 
 Let's start from the basic `ngFor` example:
 
@@ -434,7 +436,7 @@ That's a lot different! What's happening here?
 
 When we use `*ngFor`, we're telling Angular to essentially treat the element the `*` is bound to as a template.
 
-> Note: Angular's `<ng-template>` element is not a true Web Component, it merely mirrors the concepts behind it to allow you to use `<ng-template>` as it's intended in the spec. When we Ahead-of-Time compile, we will see no `<ng-template>` elements. However, this doesn't mean we can't use things like Shadow DOM, as they are still [completely possible](/emulated-native-shadow-dom-angular-2-view-encapsulation).
+> Angular's `<ng-template>` element is not a true Web Component (unlike `<template>`). It merely mirrors the concepts behind it to allow you to use `<ng-template>` as it's intended in the spec. When we compile our code (JiT or AoT), we will see no `<ng-template>` elements outputted in the DOM. However, this doesn't mean we can't use things like Shadow DOM, as they are still [completely possible](/emulated-native-shadow-dom-angular-2-view-encapsulation).
 
 Let's continue, and understand what `ngFor`, `let-contact` and `ngForOf` are doing above.
 
