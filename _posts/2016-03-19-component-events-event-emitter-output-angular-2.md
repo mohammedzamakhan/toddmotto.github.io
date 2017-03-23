@@ -51,11 +51,11 @@ const counter = {
     };
     this.increment = () => {
       this.count++;
-      this.onChange(this.value);
+      this.onChange(this.count);
     };
     this.decrement = () => {
       this.count--;
-      this.onChange(this.value);
+      this.onChange(this.count);
     };
   }
 };
