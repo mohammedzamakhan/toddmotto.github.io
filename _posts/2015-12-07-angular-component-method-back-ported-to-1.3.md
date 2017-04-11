@@ -11,27 +11,27 @@ tags:
 - Angular
 ---
 
-Angular 1.5 is soon to release the `component()` method which [I wrote about last month](/exploring-the-angular-1-5-component-method). I decided to back-port the functionality from the new feature so anyone running Angular 1.3 and above can start using `component()` right now. It's 100% ported from the upcoming 1.5 release so the API is identical.
+AngularJS 1.5 is soon to release the `component()` method which [I wrote about last month](/exploring-the-angular-1-5-component-method). I decided to back-port the functionality from the new feature so anyone running AngularJS 1.3 and above can start using `component()` right now. It's 100% ported from the upcoming 1.5 release so the API is identical.
 
 Grab the [source code here](https://github.com/toddmotto/angular-component) and use `component()` today.
 
-Here's a live example running `component()` with Angular 1.3.0:
+Here's a live example running `component()` with AngularJS 1.3.0:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/wwzeo0sv/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### Why make this change?
 
-The Angular component code on GitHub will work directly the same as Angular 1.5's implementation, so you can upgrade to using `component()` right now before a major version upgrade, such as jumping from 1.3 to 1.5.
+The Angular component code on GitHub will work directly the same as AngularJS 1.5's implementation, so you can upgrade to using `component()` right now before a major version upgrade, such as jumping from 1.3 to 1.5.
 
-Once you're levelled up with Angular 1.5, you can simply remove the `angular-component.js` script and your app will continue working exactly the same.
+Once you're levelled up with AngularJS 1.5, you can simply remove the `angular-component.js` script and your app will continue working exactly the same.
 
-Angular 2 is getting closer and closer, a minor refactor to using `controllerAs`, `bindToController`, ditching `$scope` and writing in a component style will help you massively when upgrading your application to Angular 2.
+Angular (v2+) is here; a minor refactor to using `controllerAs`, `bindToController`, ditching `$scope` and writing in a component style will help you massively when upgrading your application to Angular.
 
 For anyone interested in how the script works, I'll walk through the code.
 
-### Hacking the Angular core
+### Hacking the AngularJS core
 
-First, I had to hack into the Angular core:
+First, I had to hack into the AngularJS core:
 
 {% highlight javascript %}
 var ng = angular.module;
@@ -48,7 +48,7 @@ function module() {
 angular.module = module;
 {% endhighlight %}
 
-These are the key players in hooking into the Angular core and adding another method. The annotated version:
+These are the key players in hooking into the AngularJS core and adding another method. The annotated version:
 
 {% highlight javascript %}
 // save a reference to angular.module
@@ -157,7 +157,7 @@ function identifierForController(controller, ident) {
 
 ### Patching "bindToController"
 
-The `bindToController` property was introduced in Angular 1.3, however its value was limited to a Boolean until 1.4. If we wanted to use it, we would declare `bindToController: true` on the Directive definition Object. This means we had to use `scope: { prop: '=' }` when accessing inherited members. In Angular 1.4, we could use `scope: {}, bindToController: { prop: '=' }` and move our bindings to the `bindToController` property to be more explicit in saying "I want to bind these to a Controller". This is just syntax sugar, and obviously Angular 1.3 doesn't support an Object as the value of `bindToController`, so this needed to change.
+The `bindToController` property was introduced in AngularJS 1.3, however its value was limited to a Boolean until 1.4. If we wanted to use it, we would declare `bindToController: true` on the Directive definition Object. This means we had to use `scope: { prop: '=' }` when accessing inherited members. In AngularJS 1.4, we could use `scope: {}, bindToController: { prop: '=' }` and move our bindings to the `bindToController` property to be more explicit in saying "I want to bind these to a Controller". This is just syntax sugar, and obviously AngularJS 1.3 doesn't support an Object as the value of `bindToController`, so this needed to change.
 
 Underneath it's identical, and it's also under a wrapper as we use `bindings` inside the `component()` method, so it doesn't really matter how we do the underlying detection and bindings.
 
@@ -179,4 +179,4 @@ The first code snippet says: "If isolate scope is set to `false`, then set `scop
 
 The second (my change) code snippet says: "If isolate scope is set to `false`, then set `scope` to `true` to inherit scope and prevent isolate scope. Otherwise assign my `bindings` property value. Set `bindToController` to the result of `options.bindings` cast to Boolean, using `!!` casting".
 
-Grab the code on [GitHub](https://github.com/toddmotto/angular-component) and start writing Angular 2 style components now. Enjoy!
+Grab the code on [GitHub](https://github.com/toddmotto/angular-component) and start writing Angular-style components now. Enjoy!

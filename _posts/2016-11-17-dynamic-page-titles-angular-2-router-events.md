@@ -7,11 +7,11 @@ tags:
 - Angular 2
 ---
 
-Updating page titles in Angular 1.x was a little problematic and typically was done via a global `$rootScope` property that listened for route change events to fetch the current route and map across a static page title. In Angular 2, the solution is far easier as it provides a single API, however we can actually tie this API into route change events to dynamically update the page titles. 
+Updating page titles in AngularJS (1.x) was a little problematic and typically was done via a global `$rootScope` property that listened for route change events to fetch the current route and map across a static page title. In Angular (v2+), the solution is far easier as it provides a single API, however we can actually tie this API into route change events to dynamically update the page titles.
 
 ### Title Service
 
-In Angular 2, we can request the `Title` from `platform-browser` (we're also going to import the `router` too):
+In Angular, we can request the `Title` from `platform-browser` (we're also going to import the `router` too):
 
 {% highlight javascript %}
 import { Title } from '@angular/platform-browser';
@@ -68,10 +68,10 @@ export class AppComponent implements OnInit {
 }
 {% endhighlight %}
 
-One thing I liked about [ui-router](https://github.com/angular-ui/ui-router) in Angular 1.x was the ability to add a custom `data: {}` Object to each route, which could be inherited down the chain of router states:
+One thing I liked about [ui-router](https://github.com/angular-ui/ui-router) in AngularJS was the ability to add a custom `data: {}` Object to each route, which could be inherited down the chain of router states:
 
 {% highlight javascript %}
-// Angular 1.x + ui-router
+// AngularJS 1.x + ui-router
 .config(function ($stateProvider) {
   $stateProvider
     .state('about', {
@@ -84,7 +84,7 @@ One thing I liked about [ui-router](https://github.com/angular-ui/ui-router) in 
 });
 {% endhighlight %}
 
-In Angular 2 we can do the exact same however we need to add some custom logic around route changes to get it working. First, assume the following routes in a pseudo-calendar application:
+In Angular we can do the exact same however we need to add some custom logic around route changes to get it working. First, assume the following routes in a pseudo-calendar application:
 
 {% highlight javascript %}
 const routes: Routes = [{
@@ -145,7 +145,7 @@ this.router.events
   });
 {% endhighlight %}
 
-This is a fine approach, but because the Angular 2 router is reactive, we'll implement more logic using RxJS, let's import:
+This is a fine approach, but because the Angular router is reactive, we'll implement more logic using RxJS, let's import:
 
 {% highlight javascript %}
 import 'rxjs/add/operator/filter';

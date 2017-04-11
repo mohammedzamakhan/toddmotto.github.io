@@ -11,6 +11,6 @@ For me, this has been an absolute dream job role to aim for ever since I can rem
 
 I'll be working with the other fantastic Developer Relations team members (that I was so lucky to meet in the Developer Summit over in Austin, just fantastic). After just a day of working with the team, I knew I'd made the right job decision, and most importantly at the right company.
 
-There's a lot of things I'm going to be doing this year to help bring Telerik's vision and products (namely Kendo 2 and NativeScript) to JavaScript frameworks. I'll be working on both Angular 1 and 2 integration, React integrations and helping developers learn both the Angular and React frameworks, conference speaking, producing more content and mentoring other developers. I'm so excited for this next chapter in my career!
+There's a lot of things I'm going to be doing this year to help bring Telerik's vision and products (namely Kendo 2 and NativeScript) to JavaScript frameworks. I'll be working on both AngularJS (1.x) and Angular (v2+) integration, React integrations and helping developers learn both the Angular and React frameworks, conference speaking, producing more content and mentoring other developers. I'm so excited for this next chapter in my career!
 
 Lastly, a huge thanks to everyone who has inspired me to become a better person, engineer, speaker and finally get outside my comfort zone to push my skills further - to take a leap of faith in life.

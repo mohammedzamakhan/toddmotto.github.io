@@ -5,13 +5,13 @@ title: "A deep dive on Angular decorators"
 path: 2017-01-26-angular-decorators.md
 ---
 
-Decorators are a core concept when developing with Angular 2 and above. There's also an official [TC39 proposal](https://github.com/tc39/proposal-decorators), currently at Stage-2, so expect decorators to become a core language feature soon in JavaScript as well.
+Decorators are a core concept when developing with Angular (versions 2 and above). There's also an official [TC39 proposal](https://github.com/tc39/proposal-decorators), currently at Stage-2, so expect decorators to become a core language feature soon in JavaScript as well.
 
 Back to Angular, the internal codebase uses decorators extensively and in this post we’re going to look at the different types of decorators, the code they compile to and how they work.
 
 When I was first introduced to TypeScript and decorators, I wondered why we needed them at all, but once you dig a little deeper you can understand the benefits to creating decorators (not only for use in Angular).
 
-Angular 1.x didn't use decorators, opting for a different registration method - such as defining a component for example with the `.component()` method. So why has Angular 2+ chose to use them? Let's explore.
+AngularJS didn't use decorators, opting for a different registration method - such as defining a component for example with the `.component()` method. So why has Angular chose to use them? Let's explore.
 
 ### Table of contents
 
@@ -105,7 +105,7 @@ We'd then pass the input binding via a component property binding:
 
 The property decorator and "magic" happens _within_ the `ExampleComponent` definition.
 
-In Angular 1.x (I'm going to use TypeScript here also, just to declare a property on a class), we had a different mechanism using `scope` or `bindToController` with Directives, and `bindings` within the new [component method](/exploring-the-angular-1-5-component-method/):
+In AngularJS 1.x (I'm going to use TypeScript here also, just to declare a property on a class), we had a different mechanism using `scope` or `bindToController` with Directives, and `bindings` within the new [component method](/exploring-the-angular-1-5-component-method/):
 
 ```js
 const exampleComponent = {
@@ -128,7 +128,7 @@ angular
   .component('exampleComponent', exampleComponent);
 ```
 
-You can see above that we have two separate properties to maintain should we expand, refactor or change our component's API - `bindings` and the property name inside the class. However, in Angular 2+ there is a single property `exampleProperty` which is decorated, which is easier to change, maintain and track as our codebase grows.
+You can see above that we have two separate properties to maintain should we expand, refactor or change our component's API - `bindings` and the property name inside the class. However, in Angular there is a single property `exampleProperty` which is decorated, which is easier to change, maintain and track as our codebase grows.
 
 #### Method Decorators
 
@@ -245,7 +245,7 @@ We would need to adapt our `Console` decorator to return a function closure for 
 function Console(message) {
   // access the "metadata" message
   console.log(message);
-  // return a function closure, which 
+  // return a function closure, which
   // is passed the class as `target`
   return function (target) {
     console.log('Our decorated class', target);
@@ -369,15 +369,15 @@ export class TestComponent {
 ```
 
 At the same time, Angular also uses the reflect API (commonly polyfilled using `reflect-metadata`) to store these annotations, using the class as an array. This means that it can then later on fetch all of the annotations for a specific class just by being pointed to the class.
- 
+
 ### How decorators are applied
- 
+
 So we know now how and why Angular uses decorators, but how are they actually applied to a class?
 
 As mentioned, decorators aren't native to JavaScript just yet - TypeScript currently provides the functionality for us. This means that we can check the compiled code to see what actually happens when we use a decorator.
- 
+
 Take a standard, ES6 class -
- 
+
 ```js
 class ExampleClass {
   constructor() {

@@ -7,7 +7,7 @@ tags:
 - Angular 2
 ---
 
-Setting model values in Angular 2 can be done in a few different ways, however with [reactive forms](/angular-2-forms-reactive) things are extremely easy to do with the new form APIs. In this post we'll dig a little deeper as to the differences between `patchValue` and `setValue` in Angular 2 forms.
+Setting model values in Angular (v2+) can be done in a few different ways, however with [reactive forms](/angular-2-forms-reactive) things are extremely easy to do with the new form APIs. In this post we'll dig a little deeper as to the differences between `patchValue` and `setValue` in Angular forms.
 
 ### Reactive Form Setup
 
@@ -139,7 +139,7 @@ ngOnInit() {
 }
 {% endhighlight %}
 
-So anytime the route params change, we can use our `getSurvey` method, pass in the current param in the URL (the unique `:id`) and go fetch that unique Object. In this case, I've been using AngularFire2 which returns a `FirebaseObjectObservable`, therefore I can pipe it through `switchMap` and get the data through the `subscribe`. 
+So anytime the route params change, we can use our `getSurvey` method, pass in the current param in the URL (the unique `:id`) and go fetch that unique Object. In this case, I've been using AngularFire2 which returns a `FirebaseObjectObservable`, therefore I can pipe it through `switchMap` and get the data through the `subscribe`.
 
 The next question: `patchValue` or `setValue`? Before using an API I've gotten into the good habit of looking through the source code, so let's quickly run over the difference between the two:
 
@@ -367,7 +367,7 @@ this.survey.controls['account'].patchValue(survey.account);
 this.survey.controls['account'].setValue(survey.account);
 {% endhighlight %}
 
-These are in the Angular 2 docs, but the source code often makes more sense of what's really happening.
+These are in the Angular docs, but the source code often makes more sense of what's really happening.
 
 ### Source code
 

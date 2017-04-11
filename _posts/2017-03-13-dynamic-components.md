@@ -5,7 +5,7 @@ title: "Configurable Reactive Forms in Angular with dynamic components"
 path: 2017-03-13-angular-dynamic-components.md
 ---
 
-In this post we're going to explore the creation of dynamic components alongside a Reactive Form setup. If you're new to Reactive Forms, check out on of my [previous posts](/angular-2-forms-reactive) on it before diving in!
+In this post we're going to explore the creation of dynamic components alongside a Reactive Form setup. If you're new to Reactive Forms, check out one of my [previous posts](/angular-2-forms-reactive) before diving in!
 
 This is what we'll be building with fully dynamic components (yes it's not the most complex of forms, but we're diving into the concept of how to dynamically render form components based off a configuration object):
 
@@ -46,7 +46,7 @@ First of all, a "wrapper" is created. This deals with communicating with the act
 
 It's also responsible for change detection - methods are created on this class for each `@Input` that a component has, and checks their value and updates it if necessary. 
 
-The wrapper also deals with triggering various lifecycle hooks that are defined on the original component class, such as `ngOnInit` and `ngChanges`.
+The wrapper also deals with triggering various lifecycle hooks that are defined on the original component class, such as `ngOnInit` and `ngOnChanges`.
 
 #### The View
  

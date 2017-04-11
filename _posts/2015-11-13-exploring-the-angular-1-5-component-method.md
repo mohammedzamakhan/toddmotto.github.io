@@ -11,15 +11,15 @@ tags:
 - Angular
 ---
 
-Angular 1.5 introduced the `.component()` helper method, which is much simpler than the `.directive()` definition and advocates best practices and common default behaviours. Using `.component()` will allow developers to write in an Angular 2 style as well, which will in turn make upgrading to Angular 2 an easier feat.
+AngularJS 1.5 introduced the `.component()` helper method, which is much simpler than the `.directive()` definition and advocates best practices and common default behaviours. Using `.component()` will allow developers to write in an Angular (v2+) style as well, which will in turn make upgrading to Angular an easier feat.
 
 Let's compare the differences in syntax and the super neat abstraction that `.component()` gives us over using the `.directive()` method.
 
-> Build an Angular 1.5 component architecture app, end-to-end with Firebase. Check out my [Angular 1.x Pro](https://ultimateangular.com/courses/#angular-1) course.
+> Build an AngularJS 1.5 component architecture app, end-to-end with Firebase. Check out my [Angular 1.x Pro](https://ultimateangular.com/courses/#angular-1) course.
 
-### Update: use component() now in Angular 1.3+
+### Update: use component() now in AngularJS 1.3+
 
-I've back-ported the Angular 1.5 `.component()` functionality to Angular 1.3 and above! [Read the article](/angular-component-method-back-ported-to-1.3) and grab the _latest_ [source code on GitHub](https://github.com/toddmotto/angular-component).
+I've back-ported the AngularJS 1.5 `.component()` functionality to AngularJS 1.3 and above! [Read the article](/angular-component-method-back-ported-to-1.3) and grab the _latest_ [source code on GitHub](https://github.com/toddmotto/angular-component).
 
 ### .directive() to .component()
 
@@ -35,7 +35,7 @@ module.component(name, options);
 
 The `name` argument is what we want to define our Component as, the `options` argument is a definition Object passed into the component, rather than a function that we know so well in versions 1.4 and below.
 
-I've prebuilt a simple `counter` component for the purposes of this exercise in Angular `1.4.x` which we'll refactor into a version `v1.5.0` build to use `.component()`.
+I've prebuilt a simple `counter` component for the purposes of this exercise in AngularJS `1.4.x` which we'll refactor into a version `v1.5.0` build to use `.component()`.
 
 {% highlight javascript %}
 .directive('counter', function counter() {
@@ -70,7 +70,7 @@ A live embed of the `1.4.x` Directive:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/avdezer7/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-We'll continue building this alongside how we'd build the Angular 1.4 version to compare differences.
+We'll continue building this alongside how we'd build the AngularJS 1.4 version to compare differences.
 
 ### Function to Object, method name change
 
@@ -278,7 +278,7 @@ There's a subtle difference in the `template` property worth noting. Let's add t
 });
 {% endhighlight %}
 
-The `template` property can be defined as a function that is now injected with `$element` and `$attrs` locals. If the `template` property _is_ a function then it needs to return an String representing the HTML to compile:
+The `template` property can be defined as a function that is now injected with `$element` and `$attrs` locals. If the `template` property _is_ a function then it needs to return a String representing the HTML to compile:
 
 {% highlight javascript %}
 {
@@ -299,7 +299,7 @@ The `template` property can be defined as a function that is now injected with `
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/xqauz9aa/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-That's it for our Directive to Component refactor, however there are a few other changes worth exploring before we finish.
+That's it for our Directive to Component refactor; however, there are a few other changes worth exploring before we finish.
 
 ### Inheriting behaviour using "require"
 
@@ -381,7 +381,7 @@ angular
 
 ### Sourcecode for comparison
 
-Throughout the article I've referred to some Angular source code snippets to cross reference against. Here's the source code below:
+Throughout the article I've referred to some AngularJS source code snippets to cross reference against. Here's the source code below:
 
 {% highlight javascript %}
 this.component = function registerComponent(name, options) {
@@ -440,11 +440,11 @@ this.component = function registerComponent(name, options) {
 };
 {% endhighlight %}
 
-Again, please note that Angular 1.5 isn't released just yet, so this article uses an API that _may_ be subject to slight change.
+Again, please note that AngularJS 1.5 isn't released just yet, so this article uses an API that _may_ be subject to slight change.
 
-### Upgrading to Angular 2
+### Upgrading to Angular (v2+)
 
-Writing components in this style will allow you to upgrade your Components using `.component()` into Angular 2 very easily, it'd look something like this in ECMAScript 5 and new template syntax:
+Writing components in this style will allow you to upgrade your Components using `.component()` into Angular very easily, it'd look something like this in ECMAScript 5 and new template syntax:
 
 {% highlight javascript %}
 import {Component} from '@angular/core';
@@ -453,7 +453,7 @@ import {Component} from '@angular/core';
   selector: 'counter',
   template: `
     <div class="todo">
-      <input type="text" [(ng-model)]="count">
+      <input type="text" [(ngModel)]="count">
       <button type="button" (click)="decrement();">-</button>
       <button type="button" (click)="increment();">+</button>
     </div>
@@ -461,7 +461,7 @@ import {Component} from '@angular/core';
 })
 export default class CounterComponent {
   constructor() {
-    
+
   }
   increment() {
     this.count++;

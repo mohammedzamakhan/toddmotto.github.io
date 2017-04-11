@@ -5,7 +5,7 @@ title: $onInit and new "require" Object syntax in Angular components
 path: 2016-02-11-on-init-require-object-syntax-angular-component.md
 ---
 
-The `component()` helper method shipped with so many great features to take us even closer towards Angular 2 syntax and integration. Let's explore the `$onInit` method and the new `require` property's syntax that makes the `component()` method much more powerful. If you've not checked out the `component()` method just yet, check [my write-up on it here](/exploring-the-angular-1-5-component-method).
+The `component()` helper method shipped with so many great features to take us even closer towards Angular (v2+) syntax and integration. Let's explore the `$onInit` method and the new `require` property's syntax that makes the `component()` method much more powerful. If you've not checked out the `component()` method just yet, check [my write-up on it here](/exploring-the-angular-1-5-component-method).
 
 ### $onInit
 
@@ -42,7 +42,7 @@ And a live example:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/toddmotto/f1y8u4yj/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Angular 2 has the `ngOnInit` method, a great lifecycle callback that will help us transition from Angular 1.x. `ngOnInit` is called right after the directive's data-bound properties have been checked for the first time, and before any of its children have been checked. It is invoked only once when the directive is instantiated - much like in this Angular 1.x implementation.
+Angular has the `ngOnInit` method, a great lifecycle callback that will help us transition from AngularJS 1.x. `ngOnInit` is called right after the directive's data-bound properties have been checked for the first time, and before any of its children have been checked. It is invoked only once when the directive is instantiated - much like in this AngularJS 1.x implementation.
 
 ### Using "require" as an Object
 
@@ -110,7 +110,7 @@ angular
   .component('childComponent', {
     require: {},
     controller: function () {
-      
+
     },
     template: `
       <div>

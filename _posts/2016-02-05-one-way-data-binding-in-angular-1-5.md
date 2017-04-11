@@ -7,7 +7,7 @@ tags:
 - Angular 2
 ---
 
-Angular is known for its powerful two-way data-binding, but with the new release of Angular 1.5, we've got one-way data binding (one-directional) binding capabilities inside our Components and Directives. Woohoo! Let's explore to see what it does, and doesn't, give us to develop with.
+Angular is known for its powerful two-way data-binding, but with the new release of AngularJS 1.5, we've got one-way data binding (one-directional) binding capabilities inside our Components and Directives. Woohoo! Let's explore to see what it does, and doesn't, give us to develop with.
 
 ### First impressions
 

@@ -15,18 +15,18 @@ This custom input binding is created via the `@Input()` decorator! Let's explore
 
 ### Series
 
-1. [Bootstrapping your first Angular 2+ app](/bootstrap-angular-2-hello-world)
-2. [Creating your first Angular 2+ component](/creating-your-first-angular-2-component)
-3. Passing data into Angular 2+ components with @Input
-4. [Component events with EventEmitter and @Output in Angular 2+](/component-events-event-emitter-output-angular-2)
+1. [Bootstrapping your first Angular app](/bootstrap-angular-2-hello-world)
+2. [Creating your first Angular component](/creating-your-first-angular-2-component)
+3. Passing data into Angular components with @Input
+4. [Component events with EventEmitter and @Output in Angular](/component-events-event-emitter-output-angular-2)
 
 ### Introduction
 
 This tutorial will cover passing data into a component, and we'll be using the Counter component we built in the previous article. If you've not dived in and learned how to create a component in Angular, [check that out here](/creating-your-first-angular-2-component), as we'll be using the same source code to continue building.
 
-### Angular 1.x
+### AngularJS
 
-For those coming from an Angular 1.x background, this concept looks a little like this with the [.component method](/exploring-the-angular-1-5-component-method/):
+For those coming from an AngularJS background, this concept looks a little like this with the [.component method](/exploring-the-angular-1-5-component-method/):
 
 ```js
 const counter = {
@@ -123,15 +123,15 @@ import { Component } from '@angular/core';
 export class CounterComponent {
 
   count: number = 0;
-  
+
   increment() {
     this.count++;
   }
-  
+
   decrement() {
     this.count--;
   }
-  
+
 }
 ```
 
@@ -147,19 +147,19 @@ export class CounterComponent {
 
   @Input()
   count: number = 0;
-  
+
   increment() {
     this.count++;
   }
-  
+
   decrement() {
     this.count--;
   }
-  
+
 }
 ```
 
-This decorator tells Angular to treat `count` as an input binding, much like the Angular 1.x `'<'` syntax if you're coming from an Angular 1.x background. This syntax is easier and shorter, as we only manage our bindings in a single place, rather than a `bindings` object like we saw at the beginning of this tutorial.
+This decorator tells Angular to treat `count` as an input binding, much like the AngularJS 1.x `'<'` syntax if you're coming from an AngularJS 1.x background. This syntax is easier and shorter, as we only manage our bindings in a single place, rather than a `bindings` object like we saw at the beginning of this tutorial.
 
 > Tip: you can see `number = 0`, we're keeping this as an optional default value, so if no input binding is supplied, the component will be initialised with a count of `0`.
 
@@ -191,9 +191,9 @@ export class CounterComponent {
 
   @Input()
   count: number = 0;
-  
+
   // ...
-  
+
 }
 ```
 
@@ -205,9 +205,9 @@ export class CounterComponent {
 
   @Input('init')
   count: number = 0;
-  
+
   // ...
-  
+
 }
 ```
 

@@ -7,7 +7,7 @@ tags:
 - Angular 2
 ---
 
-Angular 2 presents two different methods for creating forms, template-driven (what we were used to in Angular 1.x), or reactive. We're going to explore the absolute fundamentals of the template-driven Angular 2 forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
+Angular (v2+) presents two different methods for creating forms, template-driven (what we were used to in AngularJS 1.x), or reactive. We're going to explore the absolute fundamentals of the template-driven Angular forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
 
 ### Table of contents
 
@@ -29,7 +29,7 @@ Before we begin, let's clarify what "template-driven" forms mean from a high lev
 
 #### Template-driven
 
-When we talk about "template-driven" forms, we'll actually be talking about the kind of forms we're used to with Angular 1.x, whereby we bind directives and behaviour to our templates, and let Angular roll with it. Examples of these directives we'd use are `ngModel` and perhaps `required`, `minlength` and so forth. On a high-level, this is what template-driven forms achieve for us - by specifying directives to bind our models, values, validation and so on, we are letting the template do the work under the scenes.
+When we talk about "template-driven" forms, we'll actually be talking about the kind of forms we're used to with AngularJS, whereby we bind directives and behaviour to our templates, and let Angular roll with it. Examples of these directives we'd use are `ngModel` and perhaps `required`, `minlength` and so forth. On a high-level, this is what template-driven forms achieve for us - by specifying directives to bind our models, values, validation and so on, we are letting the template do the work under the scenes.
 
 ### Form base and interface
 
@@ -372,7 +372,7 @@ Here we're using Object destructuring to fetch the `value` and `valid` propertie
 
 #### Template-driven error validation
 
-Oh la la, the fancy bits. To roll out some validation is actually very similar to how we'd approach this in Angular 1.x as well (hooking into individual form field validation properties).
+Oh la la, the fancy bits. To roll out some validation is actually very similar to how we'd approach this in AngularJS 1.x as well (hooking into individual form field validation properties).
 
 First off, let's start simple and disable our submit button until the form's valid:
 

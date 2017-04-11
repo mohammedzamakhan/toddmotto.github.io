@@ -20,8 +20,13 @@ Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source 
 
 | Date | Comments |
 | ---- | ---- |
+| 18.03.2017 | Drove a Ferrari 458, Audi R8 V10+, Lamborghini Aventador around Topgear's circuit |
+| 16.03.2017 | Opening keynote at NG-NL |
+| 13.01.2017 | Visited Thailand for the first time |
+| 24.12.2016 | Got engaged to [Rachael](https://twitter.com/RachaellPurser)! |
 | 08.12.2016 | Visited Ghent, Belgium for the first time |
 | 22.11.2016 | Ultimate Angular wins "Best Angular Product for Education" |
+| 28.09.2016 | First AngularConnect talk |
 | 07.08.2016 | Visited Sofia, Bulgaria for the first time |
 | 01.08.2016 | Opening keynote presentation at AngularCamp |
 | 01.07.2016 | Visited Barcelona, Spain for the first time |
