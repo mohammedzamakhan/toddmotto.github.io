@@ -15,6 +15,20 @@ For the purposes of this article, we'll be focusing on some of Angular's reactiv
 
 ### Table of contents
 
+- [Component architecture](#component-architecture)
+- [Container / presentational splits](#container--presentational-splits)
+- [The Container](#the-container)
+- [Service and store](#service-and-store)
+- [Presentational components](#presentational-components)
+  - [The Presentational Form](#the-presentational-form)
+  - [Uni-directional Form logic](#uni-directional-form-logic)
+  - [Topping selector component](#topping-selector-component)
+  - [Pizza name component](#pizza-name-component)
+  - [Validation notes](#validation-notes)
+  - [Pizza button component](#pizza-button-component)
+  - [Pizza list component](#pizza-list-component)
+- [Conclusion](#conclusion)
+
 ### Component architecture
 
 Before we get started, let's look at how we can break down this form into some component building blocks.
