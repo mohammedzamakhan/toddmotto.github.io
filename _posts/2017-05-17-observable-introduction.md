@@ -11,7 +11,7 @@ If you've used RxJS before and want to understand some of the inner workings and
 
 ### What is an Observable?
 
-An Observable is just a function, with a few special characteristics. These are that it takes in an "observer" (an object with "next", "error" and "complete" methods on it), and returns a cancellation function.
+An Observable is just a function, with a few special characteristics. These are that it takes in an "observer" (an object with "next", "error" and "complete" methods on it), and returns cancellation logic. In our examples we will use a simple "unsubscribe" function to handle this further on when we write our own. In RxJS it would be a Subscription object with an `unsubscribe` method on it.
 
 An Observable sets up the observer (we'll learn more about this) and connects it to the "thing" we want to get values from. This "thing" is called a producer, and is a source of values, perhaps from a `click` or `input` event in the DOM. It could even be something more complex such as communication over HTTP.
 
