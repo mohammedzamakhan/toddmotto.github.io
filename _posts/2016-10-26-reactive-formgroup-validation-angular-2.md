@@ -271,8 +271,6 @@ import { emailMatcher } from './email-matcher';
 ...
 {% endhighlight %}
 
-> Note: Angular doesn't have built-in `type=email` validation anymore; however, you've just learned how to implement your own with `AbstractControl`, swap it out for `FormControl` when validating on a single `FormControl` :)
-
 Everything is now hooked up, try out the code below for the working demo :)
 
 ### Final code
