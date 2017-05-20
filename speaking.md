@@ -44,13 +44,7 @@ Upcoming events I'll be speaking at.
 <div class="speaking__list">
   <ul>
     <li>
-      <a href="https://conf.crater.io">Crater Remote Conf</a>, Online, <span>08.02.2017</span>
-    </li>
-    <li>
-      <a href="https://ng-nl.org">NG-NL</a> (keynote), Amsterdam (Netherlands), <span>15-16.03.2017</span>
-    </li>
-    <li>
-      <a href="https://www.ng-conf.org/workshops/">ng-conf</a> (workshop), Salt Lake City (Utah, USA), <span>03.04.2017</span>
+      <a href="https://angularcamp.org">AngularCamp</a>, Barcelona (Spain), <span>06-07.07.2017</span>
     </li>
   </ul>
 </div>
@@ -61,6 +55,15 @@ Events I've spoken at. Check my [YouTube Channel](https://www.youtube.com/channe
 
 <div class="speaking__list">
   <ul>
+    <li>
+      <a href="https://www.ng-conf.org/workshops/">ng-conf</a> (workshop), Salt Lake City (Utah, USA), <span>03.04.2017</span>
+    </li>
+    <li>
+      <a href="https://ng-nl.org">NG-NL</a> (keynote), Amsterdam (Netherlands), <span>15-16.03.2017</span>
+    </li>
+    <li>
+      <a href="https://conf.crater.io">Crater Remote Conf</a>, Online, <span>08.02.2017</span>
+    </li>
     <li>
       <a href="https://ng-be.org">NG-BE</a>, Ghent (Belgium), <span>09.12.2016</span>
     </li>
