@@ -11,32 +11,6 @@
 
 }
 
-// @font-face {
-//     font-family: 'open_sansbold';
-//     src: url('../fonts/opensans-bold-webfont.eot');
-//     src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
-//          url('../fonts/opensans-bold-webfont.woff') format('woff'),
-//          url('../fonts/opensans-bold-webfont.ttf') format('ttf'),
-//          url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-
-// }
-
-// @font-face {
-//     font-family: 'open_sansitalic';
-//     src: url('../fonts/opensans-italic-webfont.eot');
-//     src: url('../fonts/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/opensans-italic-webfont.woff2') format('woff2'),
-//          url('../fonts/opensans-italic-webfont.woff') format('woff'),
-//          url('../fonts/opensans-italic-webfont.tff') format('ttf'),
-//          url('../fonts/opensans-italic-webfont.svg#open_sansitalic') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-
-// }
-
 @font-face {
     font-family: 'open_sansregular';
     src: url('../fonts/opensans-regular-webfont.eot');
@@ -65,3 +39,76 @@
 
 $font--open-sans--reg:    "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font--open-sans--semi:   "open_sanssemibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+#carbonads {
+  display: block;
+  float: right;
+  overflow: hidden;
+  margin: 0 0 2em 2em;
+  padding: 1em;
+  max-width: calc(130px + 2em);
+  border: solid 1px hsl(0, 0%, 95%);
+  background-color: hsl(218, 16%, 98%);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#carbonads a {
+  color: inherit;
+}
+
+#carbonads a:hover {
+  color: inherit;
+}
+
+#carbonads span {
+  display: block;
+  overflow: hidden;
+}
+
+.carbon-img {
+  display: block;
+  margin: 0 auto 1em;
+}
+
+.carbon-text {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.carbon-poweredby {
+  display: block;
+  text-transform: uppercase;
+  font-size: 8px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 759px) {
+  #carbonads {
+    float: none;
+    margin: 0 auto;
+    max-width: 330px;
+  }
+  #carbonads span {
+    position: relative;
+  }
+  #carbonads > span {
+    max-width: none;
+  }
+  .carbon-img {
+    float: left;
+    margin: 0 1em 0 0;
+  }
+  .carbon-text {
+    float: left;
+    margin-bottom: 0;
+    max-width: calc(100% - 130px - 1em);
+    text-align: left;
+  }
+  .carbon-poweredby {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+}
