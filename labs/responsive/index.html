@@ -21,24 +21,14 @@
 					Scrollbar length is automatically detected and appended, for pixel perfect widths.
 				</p>
 				<p class="tweet">
-					<a href="https://twitter.com/share" class="twitter-share-button" 
+					<a href="https://twitter.com/share" class="twitter-share-button"
 					data-text="All-in-one ViewPort resizer by @toddmotto: custom widths, scrollbar detection, super simple responsive development -">Tweet</a>
 				</p>
-				<div class="fb-like" data-href="http://www.toddmotto.com/labs/responsive/" 
+				<div class="fb-like" data-href="http://www.toddmotto.com/labs/responsive/"
 				data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></div>
 			</div>
 		</div>
-		<div id="carbonads-container">
-			<div class="carbonad">
-				<div id="azcarbon"></div>
-				<script>
-				var z = document.createElement('script');
-				z.async = z.src = "//engine.carbonads.com/z/20676/azcarbon_2_1_0_HORIZDARK";
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(z, s);
-				</script>
-			</div>
-		</div>
+		<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
 		<ul id="viewports">
 			<li class="reset active">Reset</li>
 			<li data-width="320">320px</li>
@@ -52,7 +42,7 @@
 			<li data-width="1440">1440px</li>
 		</ul>
 	</div>
-	
+
 	<div id="ajax">
 		<div id="floatingCirclesG">
 			<div class="f_circleG" id="frotateG_01"></div>
@@ -67,32 +57,32 @@
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	
+
 	<script>
 	// ViewPort script
 	(function() {
 		// Create the iFrame
 		var iframe    = document.createElement('iframe');
-		
+
 		// Get the current document height and width
 		var docHeight = $(document).height() - 118;
 		var docWidth  = $(document).width();
-		
+
 		// iFrame attributes
 		iframe.src    = '//toddmotto.com';
 		iframe.className = 'viewport';
 		iframe.height = docHeight;
 		iframe.width  = docWidth;
-		
+
 		// Append to body
 		document.body.appendChild(iframe);
-		
+
 		// New URL submit
 		$('#url').submit(function() {
-		
+
 			// Get the input value (URL)
 			var inputValue = document.getElementById('input').value;
-			
+
 			// If the input doesn't have a value, show error
 			// Else, update the input value with the new source
 			if(!inputValue) {
@@ -107,15 +97,15 @@
 				}
 
 			return false;
-			} 
+			}
 		});
-		
+
 		// New width submit
 		$('#addwidth').submit(function() {
-		
+
 			// Get the input value (Submit)
 			var inputValue = document.getElementById('pixel').value;
-			
+
 			// If the input doesn't have a value, show error
 			// Else, create a new list element and append data-* attribute
 			if(!inputValue) {
@@ -134,24 +124,24 @@
 					document.getElementById('viewports').appendChild(li);
 				}
 				return false;
-			} 
+			}
 		});
-		
+
 		// Scrollbar test
 		var scrollBars = document.createElement('div');
 		scrollBars.className = 'scroll-test';
 		document.body.appendChild(scrollBars);
-		
+
 		// Find the scrollbar width
 		var scrollbarWidth = scrollBars.offsetWidth - scrollBars.clientWidth;
 		document.body.removeChild(scrollBars);
-		
+
 		// Using jQuery on for dynamic element click events
 		$('body').on('click', '#viewports li', function() {
-			
+
 			// For any list item add/remove 'active' class
 			$(this).addClass('active').siblings().removeClass('active');
-			
+
 			// If the class is the reset button, reset the width
 			// Else, animate the viewport and add any scrollbar widths
 			if($(this).hasClass('reset')) {
@@ -162,20 +152,20 @@
 				$(iframe).css({'display': 'block'}).animate({width: fullWidth}, 'slow');
 			}
 		});
-		
+
 		// Onload remove the ajax loader
 		window.onload = function() {
 			document.getElementById('ajax').remove();
 		}
 	})();
-	
+
 	// CSS3 Bouncing entrance
 	$('.forms').addClass('loading');
 	setTimeout(function() {
 		$('.forms').removeClass('loading').addClass('loaded');
 	}, 1200);
 	</script>
-	
+
 	<script>
 	// Google Analytics
 	var _gaq=[['_setAccount','UA-20440416-10'],['_trackPageview']];
@@ -183,7 +173,7 @@
 	g.src='//www.google-analytics.com/ga.js';
 	s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
-	
+
 	<div id="fb-root"></div>
 	<script>
 	// Facebook
@@ -195,7 +185,7 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
-	
+
 	<script>
 	// Twitter
 	!function(d,s,id){
