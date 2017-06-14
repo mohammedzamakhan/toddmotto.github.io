@@ -141,7 +141,7 @@ This will configure the metadata necessary to tell Angular this property is to b
 
 ### EventEmitter
 
-This is the interesting part. The be able to use our `Output`, we need to import and bind a new instance of the `EventEmitter` to it:
+This is the interesting part. To be able to use our `Output`, we need to import and bind a new instance of the `EventEmitter` to it:
 
 ```js
 import { Component, Input, Output, EventEmitter } from '@angular/core';
