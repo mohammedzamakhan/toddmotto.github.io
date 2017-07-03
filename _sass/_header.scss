@@ -5,10 +5,9 @@
   padding: 48px 0;
   z-index: 5;
   color: #fff;
-  background-color: #9D62C7;
-  background-image: -webkit-gradient(linear,left top,right bottom,from(#9D62C7),to(#855cc7));
-  background-image: -webkit-linear-gradient(top left,#9D62C7,#855cc7);
-  background-image: linear-gradient(to bottom right,#9D62C7,#855cc7);
+  background-color: #8022b0;
+  background-image: -webkit-linear-gradient(57deg,rgba(168,25,177,0.9) 0%,rgba(111,19,169,0.8) 100%);
+  background-image: linear-gradient(33deg,rgba(168,25,177,0.9) 0%,rgba(111,19,169,0.8) 100%);
   display: table;
   width: 100%;
   @media screen and (max-width: 725px) {
