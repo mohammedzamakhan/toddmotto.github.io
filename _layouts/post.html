@@ -6,26 +6,38 @@ layout: default
     <h1 class="alpha post__title" itemprop="name headline">
       {{ page.title }}
     </h1>
-    <span class="post__meta">
-    	<time class="post__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-    		{{ page.date | date: "%b %-d, %Y" }}
-    	</time>
-    	{% if page.path %}
-      -
-      <a class="post__edit" href="//github.com/toddmotto/toddmotto.github.io/blob/master/{{ page.path }}">
-        Edit this page on GitHub
-      </a>
-      {% endif %}
-    </span>
     <div class="post__meta__divider"></div>
   </header>
   <section class="post__content">
-    <script async src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
-    {{ content }}
+    <div class="post__detail">
+      {{ content }}
+    </div>
+    <div class="post__sidebar">
+      <div class="post__sidebar-wrap">
+        <div class="post-card__meta">
+          <div class="post-card__tag">
+            <img src="{{ site.baseurl }}/img/tags/{% if page.tag %}{{ page.tag }}{% else %}tag{% endif %}.svg" alt="">
+          </div>
+          {{ page.date | date: "%b %-d, %Y" }}
+        </div>
+        <div class="post-card__meta">
+          <div class="post-card__tag">
+            <img src="{{ site.baseurl }}/img/icons/github-dark.svg" alt="">
+          </div>
+          {% if page.path %}
+          <a class="post-card-edit" href="//github.com/toddmotto/toddmotto.github.io/blob/master/{{ page.path }}">
+            Edit this post
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% include components/notify.html condensed=true %}
+      <script async src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
+      <div class="share">
+        <div class="addthis_sharing_toolbox"></div>
+      </div>
+    </div>
   </section>
-  <div class="share">
-    <div class="addthis_sharing_toolbox"></div>
-  </div>
 </article>
 
 <div class="author">

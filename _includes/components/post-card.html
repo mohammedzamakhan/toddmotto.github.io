@@ -2,7 +2,7 @@
   <a href="{{ post.url | prepend: site.baseurl }}" class="post-card__content" title="Read {{ post.title }}">
     <div class="post-card__meta">
       <div class="post-card__tag">
-      <img src="{{ site.baseurl }}/img/tags/{% if post.tag %}{{ post.tag }}{% else %}tag{% endif %}.svg" alt="">
+        <img src="{{ site.baseurl }}/img/tags/{% if post.tag %}{{ post.tag }}{% else %}tag{% endif %}.svg" alt="">
       </div>
       {{ post.date | date: "%b %-d, %Y" }}
     </div>

@@ -18,11 +18,14 @@ $font--open-sans--reg: 'tt-regular', "Helvetica Neue", Helvetica, Arial, sans-se
 $font--open-sans--semi: 'tt-medium', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 #carbonads {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  display: block;
+  float: right;
   overflow: hidden;
-  padding: 10px;
+  margin: 0 0 2em 2em;
+  padding: 1em;
+  max-width: calc(130px + 2em);
+  border: solid 1px hsl(0, 0%, 95%);
+  background-color: hsl(218, 16%, 98%);
   text-align: center;
   font-size: 12px;
   line-height: 1.5;
@@ -37,7 +40,6 @@ $font--open-sans--semi: 'tt-medium', "Helvetica Neue", Helvetica, Arial, sans-se
 }
 
 #carbonads span {
-  position: relative;
   display: block;
   overflow: hidden;
 }
