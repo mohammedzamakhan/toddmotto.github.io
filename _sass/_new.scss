@@ -44,3 +44,30 @@
     margin: 30px 0;
   }
 }
+
+/*
+ * NAV
+ */
+.nav {
+  font-family: 'tt-medium';
+  &__link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: .5px;
+    display: block;
+    padding: 20px;
+    font-size: 16px;
+    transition: all .2s ease;
+    &--active {
+      background: #2f3644;
+    }
+    img {
+      margin: 0 10px 0 0;
+    }
+    &:hover {
+      color: #fff;
+      background: #2f3644;
+    }
+  }
+}

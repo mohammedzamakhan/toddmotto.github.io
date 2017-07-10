@@ -8,11 +8,11 @@
   top: 0;
   left: 300px;
   right: 0;
-  padding: 15px;
+  padding: 15px 15px 0 0;
   height: 70px;
 }
 .header {
-  padding: 70px 25px;
+  padding: 100px 0;
   color: #fff;
   background: #3a4250;
   z-index: 9999;
@@ -35,6 +35,7 @@
   }
   &__img {
     min-width: 120px;
+    height: 170px;
     text-align: center;
     @media screen and (max-width: 725px) {
       width: 120px;
@@ -65,33 +66,3 @@
     }
   }
 }
-
-/*
- * NAV
- */
-.nav {
-  font-family: 'tt-medium';
-  ul {
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 788px;
-  }
-  li {
-
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: .5px;
-    display: block;
-    padding: 15px 30px;
-    font-size: 16px;
-    @media screen and (max-width: 500px) {
-      padding: 15px 0;
-    }
-    &:hover {
-      color: #9D62C7;
-    }
-  }
-}
-
