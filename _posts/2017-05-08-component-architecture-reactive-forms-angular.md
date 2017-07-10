@@ -3,6 +3,7 @@ layout: post
 permalink: /component-architecture-reactive-forms-angular
 title: "Component architecture recipes for Angular&rsquo;s reactive forms"
 path: 2017-05-08-component-architecture-reactive-forms-angular.md
+tag: angular
 ---
 
 Component architecture is the fundamental building block of applications, and isn't just limited to Angular. Building with components allows for things such as encapsulation, isolation and reusability for a single or set of components. When dealing with forms, using components has typically been a challenge - and I'd like to share some patterns when creating reactive forms with Angular's component based system that make dealing with forms a bit of a breeze.

@@ -3,6 +3,7 @@ layout: post
 permalink: /should-you-learn-angular-1-or-angular-2
 title: "Should you learn Angular 1.x or 2?"
 path: 2017-01-20-should-you-learn-angular-1-or-angular-2.md
+tag: angularjs
 ---
 
 A question that I'm frequently asked, "should I learn Angular 1 or 2?". I hope this post offers some insight, help and guidance into answering that question for you. No one can answer it directly, because it's specific to yourself, so here are some thoughts.

@@ -2,58 +2,57 @@
  * POSTS
  */
 .posts {
-  margin: 0 5%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
 // Post list
 
-.post-single {
-  border-bottom: 1px solid #e7e5e5;
-  padding-bottom: 47px;
-  margin: 48px 0;
-  text-align: center;
-  &:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
+// .post-single {
+//   width: 33%;
+//   margin: 48px 0;
+//   text-align: center;
+//   &:last-child {
+//     border-bottom: none;
+//     padding-bottom: 0;
+//   }
 
-  &__link {
-    display: block;
-  }
+//   &__link {
+//     display: block;
+//   }
 
 
-  &__title {
-    text-align: center;
-    color: #384455;
-    a {
-      color: #384455;
-      transition: color 0.3s;
-      &:hover {
-        color: $green;
-      }
-    }
-    font: {
-      family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
-    }
-    @media screen and (max-width: 600px) {
-      font-size: 28px;
-      line-height: 32px;
-    }
-    margin: 0 0 32px 0;
-  }
+//   &__title {
+//     text-align: center;
+//     color: #384455;
+//     a {
+//       color: #384455;
+//       transition: color 0.3s;
+//       &:hover {
+//         color: $green;
+//       }
+//     }
+//     @media screen and (max-width: 600px) {
+//       font-size: 28px;
+//       line-height: 32px;
+//     }
+//     margin: 0 0 32px 0;
+//   }
 
-  .post__meta {
-    text-align: center;
-  }
+//   .post__meta {
+//     text-align: center;
+//   }
 
-  &__content {
-    color: #282f3a;
-  }
+//   &__content {
+//     color: #282f3a;
+//   }
 
 
 
-}
+// }
 
 .linkjuice {
       color: #3a4250;
@@ -287,7 +286,6 @@
       padding-top: 47px;
       text-align: center;
       margin-bottom: 40px;
-      font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
     }
 
     ul {
@@ -319,7 +317,6 @@
       font-size: 28px;
       line-height: 32px;
     }
-    font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
     color: #384455;
     a {
       color: #3a4250;
@@ -365,7 +362,6 @@
   }
 
   &__edit {
-    font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;;
     font-size: 13px;
     color: $green;
     line-height: 16px;

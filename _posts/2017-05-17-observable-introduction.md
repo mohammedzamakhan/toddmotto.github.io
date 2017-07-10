@@ -3,6 +3,7 @@ layout: post
 permalink: /rxjs-observables-observers-operators
 title: "RxJS: Observables, observers and operators introduction"
 path: 2017-05-17-rxjs-observables-observers-operators.md
+tag: rxjs
 ---
 
 RxJS is an incredible tool for reactive programming, and today we're going to dive a little deeper into what Observables and observers are - as well as learn how to create our own operators.

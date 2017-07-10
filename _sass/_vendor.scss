@@ -1,44 +1,21 @@
 @font-face {
-    font-family: 'cormorant_garamondSBdIt';
-    src: url('../fonts/cormorantgaramond-semibolditalic-webfont.eot');
-    src: url('../fonts/cormorantgaramond-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/cormorantgaramond-semibolditalic-webfont.woff2') format('woff2'),
-         url('../fonts/cormorantgaramond-semibolditalic-webfont.woff') format('woff'),
-         url('../fonts/cormorantgaramond-semibolditalic-webfont.ttf') format('ttf'),
-         url('../fonts/cormorantgaramond-semibolditalic-webfont.svg#cormorant_garamondSBdIt') format('svg');
+    font-family: 'tt-regular';
+    src: url('../fonts/tt-regular-webfont.woff2') format('woff2'),
+         url('../fonts/tt-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'open_sansregular';
-    src: url('../fonts/opensans-regular-webfont.eot');
-    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
-         url('../fonts/opensans-regular-webfont.woff') format('woff'),
-         url('../fonts/opensans-regular-webfont.ttf') format('ttf'),
-         url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-family: 'tt-medium';
+    src: url('../fonts/tt-medium-webfont.woff2') format('woff2'),
+         url('../fonts/tt-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-@font-face {
-    font-family: 'open_sanssemibold';
-    src: url('../fonts/opensans-semibold-webfont.eot');
-    src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/opensans-semibold-webfont.woff2') format('woff2'),
-         url('../fonts/opensans-semibold-webfont.woff') format('woff'),
-         url('../fonts/opensans-semibold-webfont.ttf') format('ttf'),
-         url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-$font--open-sans--reg:    "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font--open-sans--semi:   "open_sanssemibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font--open-sans--reg: 'tt-regular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font--open-sans--semi: 'tt-medium', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 #carbonads {
   display: block;

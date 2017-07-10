@@ -3,6 +3,7 @@ layout: post
 permalink: /angular-ngfor-template-element
 title: "Angular ngFor, &lt;ng-template&gt; and the compiler"
 path: 2017-02-01-angular-ngfor.md
+tag: angular
 ---
 
 Angular `ngFor` is a built-in Directive that allows us to iterate over a collection. This collection is typically an array, however can be "array-like". To demonstrate this, we'll be using `Rx.Observable.of()` to initialise our collection with an Observable instead of a static array.

@@ -3,6 +3,7 @@ layout: post
 permalink: /angular-decorators
 title: "A deep dive on Angular decorators"
 path: 2017-01-26-angular-decorators.md
+tag: angular
 ---
 
 Decorators are a core concept when developing with Angular (versions 2 and above). There's also an official [TC39 proposal](https://github.com/tc39/proposal-decorators), currently at Stage-2, so expect decorators to become a core language feature soon in JavaScript as well.

@@ -3,6 +3,7 @@ layout: post
 permalink: /angular-constructor-ngoninit-lifecycle-hook
 title: "Angular constructor versus ngOnInit"
 path: 2017-03-06-constructor-ngoninit.md
+tag: angular
 ---
 
 Angular has [many lifecycle hooks](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html), as well as a `constructor`. In this post, we'll quickly cover the differences between the `ngOnInit` lifecycle hook which has been the source of some confusion for those getting started with Angular.

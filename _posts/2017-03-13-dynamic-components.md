@@ -3,6 +3,7 @@ layout: post
 permalink: /angular-dynamic-components-forms
 title: "Configurable Reactive Forms in Angular with dynamic components"
 path: 2017-03-13-angular-dynamic-components.md
+tag: angular
 ---
 
 In this post we're going to explore the creation of dynamic components alongside a Reactive Form setup. If you're new to Reactive Forms, check out one of my [previous posts](/angular-2-forms-reactive) before diving in!

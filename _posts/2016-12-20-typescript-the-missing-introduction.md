@@ -3,6 +3,7 @@ layout: post
 permalink: /typescript-the-missing-introduction
 title: "TypeScript: the missing introduction"
 path: 2016-12-20-typescript-the-missing-introduction.md
+tag: typescript
 ---
 
 **The following is a guest post by James Henry ([@MrJamesHenry][6389d359]). I am a member of the ESLint Core Team, and a TypeScript evangelist. I am working with Todd on [UltimateAngular](https://ultimateangular.com/courses) to bring you more award-winning Angular and TypeScript courses.**
