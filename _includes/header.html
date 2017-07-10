@@ -17,7 +17,7 @@
       <img src="{{ site.baseurl }}/img/nav/blog.svg" alt="">
       Blogs
     </a>
-    <a href="/courses" class="nav__link">
+    <a href="/courses" class="nav__link{% if page.url == '/courses' %} nav__link--active{% endif %}">
       <img src="{{ site.baseurl }}/img/nav/video.svg" alt="">
       Online courses
     </a>
@@ -25,7 +25,7 @@
       <img src="{{ site.baseurl }}/img/nav/training.svg" alt="">
       Training
     </a>
-    <a href="/about" class="nav__link">
+    <a href="/about" class="nav__link{% if page.url == '/about' %} nav__link--active{% endif %}">
       <img src="{{ site.baseurl }}/img/nav/about.svg" alt="">
       About
     </a>

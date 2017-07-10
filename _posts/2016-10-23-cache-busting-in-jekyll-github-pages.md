@@ -3,6 +3,7 @@ layout: post
 permalink: /cache-busting-jekyll-github-pages
 title: Cache-busting in Jekyll, GitHub pages
 path: 2016-10-23-cache-busting-jekyll-github-pages.md
+tag: jekyll
 ---
 
 I've always found updating my blog an interesting feat, however with several million users per year (you crazy cats) cache-busting is something I've recently been thinking since rolling out my new blog design. Implementing cache-busting each time I make a change will allow the user's browser to download the latest assets, therefore I get no image/style/layout breakages until a hard refresh.

@@ -59,15 +59,16 @@
     padding: 20px;
     font-size: 16px;
     transition: all .2s ease;
+    background: #3a4250;
     &--active {
-      background: #2f3644;
+      background: darken(#3a4250, 4%);
     }
     img {
       margin: 0 10px 0 0;
     }
     &:hover {
       color: #fff;
-      background: #2f3644;
+      background: darken(#3a4250, 2%);
     }
   }
 }

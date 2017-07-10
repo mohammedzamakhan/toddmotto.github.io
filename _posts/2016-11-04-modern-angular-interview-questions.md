@@ -3,6 +3,7 @@ layout: post
 permalink: /modern-angular-interview-questions
 title: Modern Angular 1.x essential interview questions
 path: 2016-11-04-modern-angular-interview-questions.md
+tag: angular
 ---
 
 AngularJS 1.x has changed a lot with version 1.5 introducing `.component()`, and with this it brings a whole new light to interviewing. At many previous jobs I've interviewed many developers on Angular, JavaScript in general and combining the two. This is my list of what I'd consider "modern AngularJS 1.x" interview questions, with a focus on component architecture and modern "best practices". Some are easy, some are hard - take your pick!

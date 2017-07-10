@@ -8,7 +8,7 @@ url: "https://toddmotto.com" # the base hostname & protocol for your site
 twitter_username: toddmotto
 github_username:  toddmotto
 exclude: ['node_modules']
-paginate: 9
+paginate: 12
 paginate_path: "/page:num/"
 permalink: /:year/:month/:title
 sass:
