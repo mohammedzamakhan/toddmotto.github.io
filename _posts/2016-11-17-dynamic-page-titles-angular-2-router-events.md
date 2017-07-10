@@ -157,7 +157,7 @@ Now we've added `filter`, `map` and `mergeMap` to our router Observable, we can 
 
 {% highlight javascript %}
 this.router.events
-  .filter(event => event instanceof NavigationEnd)
+  .filter((event) => event instanceof NavigationEnd)
   .subscribe((event) => {
     console.log('NavigationEnd:', event);
   });
@@ -167,7 +167,7 @@ Secondly, because we've injected the `Router` class, we can access the `routerSt
 
 {% highlight javascript %}
 this.router.events
-  .filter(event => event instanceof NavigationEnd)
+  .filter((event) => event instanceof NavigationEnd)
   .map(() => this.router.routerState.root)
   .subscribe((event) => {
     console.log('NavigationEnd:', event);
@@ -196,7 +196,7 @@ So let's rework that last example:
 
 {% highlight javascript %}
 this.router.events
-  .filter(event => event instanceof NavigationEnd)
+  .filter((event) => event instanceof NavigationEnd)
   .map(() => this.activatedRoute)
   .subscribe((event) => {
     console.log('NavigationEnd:', event);
@@ -209,9 +209,9 @@ Now comes the interesting part, we'll create a `while` loop to traverse over the
 
 {% highlight javascript %}
 this.router.events
-  .filter(event => event instanceof NavigationEnd)
+  .filter((event) => event instanceof NavigationEnd)
   .map(() => this.activatedRoute)
-  .map(route => {
+  .map((route) => {
     while (route.firstChild) route = route.firstChild;
     return route;
   })
@@ -224,14 +224,14 @@ Doing this allows us to essentially dive into the `children` property of the rou
 
 {% highlight javascript %}
 this.router.events
-  .filter(event => event instanceof NavigationEnd)
+  .filter((event) => event instanceof NavigationEnd)
   .map(() => this.activatedRoute)
-  .map(route => {
+  .map((route) => {
     while (route.firstChild) route = route.firstChild;
     return route;
   })
-  .filter(route => route.outlet === 'primary')
-  .mergeMap(route => route.data)
+  .filter((route) => route.outlet === 'primary')
+  .mergeMap((route) => route.data)
   .subscribe((event) => {
     console.log('NavigationEnd:', event);
   });
@@ -265,14 +265,14 @@ export class AppComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.router.events
-      .filter(event => event instanceof NavigationEnd)
+      .filter((event) => event instanceof NavigationEnd)
       .map(() => this.activatedRoute)
-      .map(route => {
+      .map((route) => {
         while (route.firstChild) route = route.firstChild;
         return route;
       })
-      .filter(route => route.outlet === 'primary')
-      .mergeMap(route => route.data)
+      .filter((route) => route.outlet === 'primary')
+      .mergeMap((route) => route.data)
       .subscribe((event) => this.titleService.setTitle(event['title']));
   }
 }
