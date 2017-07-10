@@ -29,6 +29,10 @@ html, body {
 main {
   display: block; }
 
+body {
+  margin: 70px 0 0 300px;
+}
+
 html,
 body,
 button,
@@ -143,8 +147,8 @@ a {
   padding: 0 64px; }
 
 .content {
-  background: #f1f4f5;
-  padding: 30px 0 65px;
+  background: #fff;
+  padding: 0;
   overflow-x: hidden; }
   @media screen and (max-width: 850px) {
     .content {
@@ -154,7 +158,6 @@ a {
       padding: 45px 15px; } }
 
 .card {
-  max-width: $content-width;
   margin: 0 auto;
   background: white;}
   .card__content {
@@ -192,7 +195,7 @@ a {
   cursor: pointer;
   text-align: center;
   position: relative;
-  border-radius: 2px 2px 0 0; }
+}
   @media screen and (max-width: 850px) {
     .courses {
       padding: 24px 40px 32px; } }
@@ -207,32 +210,6 @@ a {
     @media screen and (max-width: 500px) {
       .courses--bottom {
         margin: 25px -25px 0; } }
-  .courses__a1 {
-    background-image: url(/img/ua/angular-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 120px;
-    top: 30px; }
-    @media only screen and (max-width: 1170px) {
-      .courses__a1 {
-        display: none; } }
-  .courses__a2 {
-    background-image: url(/img/ua/angular-2.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 120px;
-    top: 30px; }
-    @media only screen and (max-width: 1170px) {
-      .courses__a2 {
-        display: none; } }
   .courses h3 {
     margin-top: 14px;
     margin-bottom: 8px;
@@ -582,12 +559,19 @@ table {
 
 /* form */
 .search {
-  position: relative; }
-  .search input {
-    width: 100%;
-    padding: 8px 15px;
-    outline: 0;
-    border: 0; }
+  position: relative;
+}
+.search input {
+  width: 100%;
+  padding: 8px 15px;
+  outline: 0;
+  border: 0;
+  background: #2f3644;
+  color: #fff;
+  &::-webkit-input-placeholder {
+    color: rgba(255,255,255,.7);
+  }
+}
   .search ul {
     position: absolute;
     z-index: 999;
