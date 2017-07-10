@@ -13,6 +13,10 @@
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </div>
   <nav class="nav">
+    <a href="/about" class="nav__link{% if page.url == '/about' %} nav__link--active{% endif %}">
+      <img src="{{ site.baseurl }}/img/nav/about.svg" alt="">
+      About
+    </a>
     <a href="/" class="nav__link{% if page.url == '/' %} nav__link--active{% endif %}">
       <img src="{{ site.baseurl }}/img/nav/blog.svg" alt="">
       Blogs
@@ -25,12 +29,24 @@
       <img src="{{ site.baseurl }}/img/nav/training.svg" alt="">
       Training
     </a>
-    <a href="/about" class="nav__link{% if page.url == '/about' %} nav__link--active{% endif %}">
-      <img src="{{ site.baseurl }}/img/nav/about.svg" alt="">
-      About
-    </a>
   </nav>
-  <script async src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
+  <div class="header__links">
+    <a href="//twitter.com/toddmotto" target="_blank">
+      <img src="{{ site.baseurl }}/img/icons/twitter.svg" alt="Todd Motto on Twitter">
+    </a>
+    <a href="//github.com/toddmotto" target="_blank">
+      <img src="{{ site.baseurl }}/img/icons/github.svg" alt="Todd Motto on GitHub">
+    </a>
+    <a href="//youtube.com/toddmotto" target="_blank">
+      <img src="{{ site.baseurl }}/img/icons/youtube.svg" alt="Todd Motto on YouTube">
+    </a>
+    <a href="//facebook.com/toddmottoblog" target="_blank">
+      <img src="{{ site.baseurl }}/img/icons/fb.svg" alt="Todd Motto on Facebook">
+    </a>
+    <span>
+      &copy; {{ site.time | date: '%Y' }}
+    </span>
+  </div>
 </header>
 <div class="banner">
   <form class="search">

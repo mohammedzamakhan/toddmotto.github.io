@@ -59,4 +59,25 @@
     height: 30px;
     text-align: center;
   }
+  &__links {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    a {
+      margin: 0 10px 0 0;
+      width: 18px;
+      display: inline-block;
+    }
+    span {
+      display: block;
+      margin: 5px 0 0;
+      font-size: 13px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
 }
