@@ -2,24 +2,24 @@
 layout: default
 ---
 <article class="post single">
-  <header class="post__header">
-    <h1 class="alpha post__title" itemprop="name headline">
-      {{ page.title }}
-    </h1>
-    <div class="post__meta__divider"></div>
-  </header>
   <section class="post__content">
     <div class="post__detail">
+    <header class="post__header">
+      <h1 class="alpha post__title" itemprop="name headline">
+        {{ page.title }}
+        <div class="post-card__meta">
+            <div class="post-card__tag">
+              <img src="{{ site.baseurl }}/img/tags/{% if page.tag %}{{ page.tag }}{% else %}tag{% endif %}.svg" alt="">
+            </div>
+            {{ page.date | date: "%b %-d, %Y" }}
+          </div>
+      </h1>
+      <div class="post__meta__divider"></div>
+    </header>
       {{ content }}
     </div>
     <div class="post__sidebar">
-      <div class="post__sidebar-wrap">
-        <div class="post-card__meta">
-          <div class="post-card__tag">
-            <img src="{{ site.baseurl }}/img/tags/{% if page.tag %}{{ page.tag }}{% else %}tag{% endif %}.svg" alt="">
-          </div>
-          {{ page.date | date: "%b %-d, %Y" }}
-        </div>
+      <!--<div class="post__sidebar-wrap">
         <div class="post-card__meta">
           <div class="post-card__tag">
             <img src="{{ site.baseurl }}/img/icons/github-dark.svg" alt="">
@@ -30,7 +30,7 @@ layout: default
           </a>
           {% endif %}
         </div>
-      </div>
+      </div>-->
       {% include components/notify.html condensed=true %}
       <script async src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
       <div class="share">

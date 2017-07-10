@@ -55,7 +55,7 @@
 // }
 
 .linkjuice {
-      color: #3a4250;
+      color: #545e6f;
       &:hover {
         color: $brand;
       }
@@ -162,7 +162,7 @@
   }
 
   &__detail {
-    margin: 0 300px 0 0;
+    margin: 0 325px 0 0;
   }
 
   &__content {
@@ -216,22 +216,6 @@
         color: #6947a0;
         background: #ede5fb;
       }
-      &::before {
-          content : "\"";
-          position: absolute;
-          left: -21px;
-          top: -20px;
-          color: white;
-          line-height: 0;
-          padding: 29px 9px 9px 10px;
-          border-radius: 100%;
-          font: {
-            size: 44px;
-            weight: 700;
-          family: $font--open-sans--semi;
-          }
-          background-color: $green;
-        }
       p {
         color: #6947a0;
         margin: 0;
@@ -250,41 +234,18 @@
     }
 
     pre {
-      border-left: 4px solid $green;
       position: relative;
       overflow: visible;
-       margin: 48px -64px;
-       white-space: pre;
+      margin: 48px -57px;
+      white-space: pre;
       word-wrap: normal;
-      background: #2d313a;
+      background: #2f3644;
       color: #C1C2C3;
       @media screen and (max-width: 850px) {
         margin: 48px -40px;
       }
       @media screen and (max-width: 500px) {
         margin: 32px -24px;
-      }
-      &::before {
-        content : "";
-        background: {
-          color: $green;
-          image: url(/img/icons/code.svg);
-          size: 20px;
-          position: center;
-          repeat: no-repeat;
-        }
-        position: absolute;
-        left: -21px;
-        top: -20px;
-        color: white;
-        line-height: 0;
-        width: 38px;
-        height: 38px;
-        border-radius: 100%;
-        font: {
-          size: 30px;
-          weight: 700;
-        }
       }
     }
 
