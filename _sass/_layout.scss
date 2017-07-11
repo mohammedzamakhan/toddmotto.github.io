@@ -341,20 +341,22 @@ a {
     border-radius: 3px; }
 
 #pagination {
-  overflow: hidden; }
-  #pagination-prev {
-    float: left; }
-  #pagination-next {
-    float: right; }
+  overflow: hidden;
+}
+#pagination-prev {
+  margin: 0 25px 0 0;
+}
+#pagination-next {
+  margin: 0 0 0 25px;
+}
 
-#carbonads-container {
-  margin: 0 15px 0; }
-  @media screen and (max-width: 700px) {
-    #carbonads-container {
-      margin: 0 auto 15px; } }
-
-.carbonad {
-  margin: 0 auto; }
+.pagination {
+  &-item {
+    @media screen and (max-width: 580px) {
+      display: none !important;
+    }
+  }
+}
 
 .twitter-follow-button {
   visibility: hidden; }
