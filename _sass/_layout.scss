@@ -13,6 +13,9 @@ main {
 
 body {
   margin: 70px 0 0 300px;
+  @media screen and (max-width: 850px) {
+    margin: 0;
+  }
 }
 
 html,
@@ -131,24 +134,24 @@ a {
   background: #fff;
   padding: 0;
   overflow-x: hidden; }
-  @media screen and (max-width: 850px) {
-    .content {
-      padding: 50px 40px; } }
-  @media screen and (max-width: 500px) {
-    .content {
-      padding: 45px 15px; } }
+  // @media screen and (max-width: 850px) {
+  //   .content {
+  //     padding: 50px 40px; } }
+  // @media screen and (max-width: 500px) {
+  //   .content {
+  //     padding: 45px 15px; } }
 
 .card {
   margin: 0 auto;
   background: #fff;}
   .card__content {
     padding: 0; }
-    @media screen and (max-width: 850px) {
-      .card__content {
-        padding: 0 40px 40px 40px; } }
-    @media screen and (max-width: 500px) {
-      .card__content {
-        padding: 0 24px 24px 24px; } }
+    // @media screen and (max-width: 850px) {
+    //   .card__content {
+    //     padding: 0 40px 40px 40px; } }
+    // @media screen and (max-width: 500px) {
+    //   .card__content {
+    //     padding: 0 24px 24px 24px; } }
     .card__content table {
       width: auto;
       margin: 0 0 50px; }

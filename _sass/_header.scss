@@ -10,6 +10,11 @@
   right: 0;
   padding: 15px 15px 0 0;
   height: 70px;
+  @media screen and (max-width: 850px) {
+    position: static;
+    padding: 20px;
+    height: auto;
+  }
 }
 .header {
   padding: 30px 0;
@@ -21,10 +26,11 @@
   left: 0;
   bottom: 0;
   width: 300px;
-  @media screen and (max-width: 725px) {
-    text-align: center;
-    min-width: 100%;
-    display: block;
+  @media screen and (max-width: 850px) {
+    position: static;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
   }
   p {
     a {
@@ -38,6 +44,9 @@
     height: 50px;
     position: relative;
     padding: 0 0 0 95px;
+    @media screen and (max-width: 850px) {
+      margin: 20px 0;
+    }
     p {
       margin: 0;
       font-family: 'tt-medium';
@@ -58,6 +67,9 @@
     margin: 35px 0;
     height: 30px;
     text-align: center;
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
   }
   &__links {
     position: absolute;
