@@ -103,6 +103,7 @@
 
   &__ending {
     display: flex;
+    flex-wrap: wrap;
   }
   
   &__sidebar {
@@ -201,7 +202,8 @@
       border-radius: 0 4px 4px 0;
       color: #C1C2C3;
       @media screen and (max-width: 850px) {
-        margin: 48px -40px;
+        margin: 48px -50px;
+        border-radius: 0;
       }
       @media screen and (max-width: 500px) {
         margin: 32px -24px;
@@ -237,9 +239,6 @@
         }
       }
     }
-  }
-  &__header {
-
   }
   &__title {
     @media screen and (max-width: 850px) {
