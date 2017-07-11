@@ -189,6 +189,9 @@ a {
   @media screen and (max-width: 500px) {
     .courses {
       padding: 24px 24px 32px; } }
+      @media screen and (max-width: 420px) {
+    .courses {
+      height: auto; } }
   .courses--bottom {
     margin: 0 -64px; }
     @media screen and (max-width: 850px) {
@@ -212,8 +215,10 @@ a {
   }
   .courses__logo {
     width: 160px;
-    height: 55px;
-  }
+    height: 55px; }
+    @media only screen and (max-width: 420px) {
+    .courses__logo {
+      display: block; } }
   .courses__box {
     width: 250px; }
   .courses p {
@@ -249,6 +254,16 @@ a {
     font-family: 'Helvetica', 'Arial', sans-serif;
     text-align: left;
     cursor: pointer; }
+    @media only screen and (max-width: 1020px) {
+      .courses button {
+        float: right;
+        margin-top: 8px;
+        position: static; } }
+        @media only screen and (max-width: 420px) {
+        .courses button {
+          float: none;
+          position: static;
+          margin: 24px 0 10px; } }
     .courses button span {
       font-size: 16px;
       font-weight: 400;
