@@ -3,11 +3,15 @@ layout: post
 permalink: /mastering-the-module-pattern/
 title: Mastering the Module Pattern
 path: 2014-01-29-mastering-the-module-pattern.md
-tags:
-- Modules
-- MVVM
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 I'm a massive fan of JavaScript's Module Pattern and I'd like to share some use cases and differences in the pattern, and why they're important. The Module Pattern is what we'd call a "[design pattern](http://code.tutsplus.com/tutorials/understanding-design-patterns-in-javascript--net-25930),"and it's extremely useful for a vast amount of reasons. My main attraction to the Module Pattern (and its variant, the Revealing Module Pattern) is it makes scoping a breeze and doesn't overcomplicate program design. 
 

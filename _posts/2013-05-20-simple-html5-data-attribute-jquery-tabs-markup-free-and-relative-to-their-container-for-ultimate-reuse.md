@@ -3,10 +3,15 @@ layout: post
 permalink: /simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse/
 title: Simple HTML5 data-* jQuery tabs, markup free and relative to their container for ultimate re-use
 path: 2013-05-20-simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse.md
-tags:
-- HTML5
-- JavaScript
+tag: html5
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 One of my favourite additions to the HTML5 spec is data-&#42; attributes, they're useful for such an array of things. I love integrating them into jQuery/JavaScript and seeing what difference to HTML they make.
 

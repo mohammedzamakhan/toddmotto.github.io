@@ -3,12 +3,15 @@ layout: post
 permalink: /directive-to-directive-communication-with-require/
 title: Directive to Directive communication with "require"
 path: 2015-12-14-directive-to-directive-communication-with-require.md
-tags:
-- Communication
-- Directives
-- Controllers
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Communication between Directives can be done in various ways. When dealing with Directives that have a hierarchical relationship we can use Directive Controllers to talk between them.
 

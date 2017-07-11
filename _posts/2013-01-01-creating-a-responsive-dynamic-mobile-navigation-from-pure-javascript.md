@@ -5,12 +5,15 @@ layout: post
 permalink: /creating-a-responsive-dynamic-mobile-navigation-from-pure-javascript/
 disqus: http://www.toddmotto.com/creating-a-responsive-dynamic-mobile-navigation-from-pure-javascript
 path: 2013-01-01-creating-a-responsive-dynamic-mobile-navigation-from-pure-javascript.md
-tags:
-- Mobile
-- Performance
-- jQuery
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Here’s how to create a select menu from an existing menu using JavaScript. The select menu will be comprised of an existing menu, which dynamically creates a select menu and populates it with menu items.
 

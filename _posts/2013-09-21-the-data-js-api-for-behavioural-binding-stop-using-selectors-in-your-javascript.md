@@ -3,10 +3,15 @@ layout: post
 permalink: /the-data-js-api-for-behavioural-binding-stop-using-selectors-in-your-javascript/
 title: The [data-js] API for behavioural-binding; stop using selectors in your JavaScript
 path: 2013-09-21-the-data-js-api-for-behavioural-binding-stop-using-selectors-in-your-javascript.md
-tags:
-- Opinion
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Selectors in JavaScript are bad. The bridge between the DOM communicating with JavaScript is a tough one to cross and in no way modular, but there are ways around this. Today I want to introduce something I can only call _behavioural-binding_. JavaScript is a beautiful language, it's very dynamic, and that's exactly what selectors _aren't_. Selectors are a sin, and here's why behavioural-binding is key.
 

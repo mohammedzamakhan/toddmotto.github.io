@@ -3,13 +3,15 @@ layout: post
 permalink: /minimal-angular-module-syntax-approach-using-an-iife/
 title: Minimal Angular module/syntax approach using an IIFE
 path: 2014-06-17-minimal-angular-module-syntax-approach-using-an-iife.md
-tags:
-- Syntax
-- Clean code
-- Style
-- Angular
-- JavaScript
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Since day one using Angular, I've always debated on _how_ I should be extending modules. This post talks through some common Angular patterns, from variable to chaining and a variant.
 

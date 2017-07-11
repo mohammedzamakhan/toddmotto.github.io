@@ -3,9 +3,7 @@ layout: post
 permalink: /building-out-an-html5-experience-with-intels-html5-hub-for-rolling-stone-magazine/
 title: Building out an HTML5 experience with Intels HTML5 Hub, for Rolling Stone magazine
 path: 2013-09-10-building-out-an-html5-experience-with-intels-html5-hub-for-rolling-stone-magazine.md
-tags:
-- Personal
-- JavaScript
+tag: html5
 ---
 
 Back in June this year, I was approached by Intel and Rolling Stone magazine to create the first online HTML5 experience for the new [HTML5 Hub](http://html5hub.com) project. HTML5 Hub is a platform for showcasing, talking, and building out original experiences on the web with HTML5. Backed by Intel, I was thrilled to have been invited as a Founding Contributor to the Hub.

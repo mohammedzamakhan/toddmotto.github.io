@@ -3,13 +3,15 @@ layout: post
 permalink: /moving-from-ng-model-parsers-to-ng-model-validates-ng-messages/
 title: Moving from ngModel.$parsers /ng-if to ngModel.$validators /ngMessages
 path: 2015-10-18-moving-from-ng-model-parsers-to-ng-model-validates-ng-messages.md
-tags:
-- Validation
-- Forms
-- Parsers
-- Formatters
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Implementing custom Model validation is typically done by extending the built-in `$error` Object bound to AngularJS form models, such as a simple `<input>`.
 

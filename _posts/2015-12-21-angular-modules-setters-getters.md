@@ -3,11 +3,15 @@ layout: post
 permalink: /angular-modules-setters-getters/
 title: Angular modules, setters, getters and bootstrapping
 path: 2015-12-21-angular-modules-setters-getters.md
-tags:
-- Modules
-- Bootstrap
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 The first place you'll usually start in any Angular application or module library, is creating a module. Let's walk through the syntax differences between creating a module (a setter) and talking to an existing module (using a getter).
 

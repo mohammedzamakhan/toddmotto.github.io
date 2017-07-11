@@ -3,9 +3,15 @@ layout: post
 permalink: /passing-data-angular-2-components-input
 title: "Passing data into Angular 2+ components with @Input"
 path: 2016-03-18-passing-data-angular-2-components-input.md
-tags:
-- Angular 2
+tag: angular
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 In a component-driven application architecture we typically use [stateful and stateless](/stateful-stateless-components) components. A key concept is having some form of "stateful" component that delegates down into a "stateless" child, or children, component(s).
 
@@ -14,7 +20,7 @@ We do this through something called property binding in Angular, which we learne
 This custom input binding is created via the `@Input()` decorator! Let's explore.
 
 ### Series
-
+{:.no_toc}
 1. [Bootstrapping your first Angular app](/bootstrap-angular-2-hello-world)
 2. [Creating your first Angular component](/creating-your-first-angular-2-component)
 3. Passing data into Angular components with @Input

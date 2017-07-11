@@ -5,11 +5,15 @@ layout: post
 permalink: /thoughts-on-progressive-and-relative-images/
 disqus: http://www.toddmotto.com/thoughts-on-progressive-and-relative-images
 path: 2012-07-02-thoughts-on-progressive-and-relative-images.md
-tags:
-- Opinion
-- JavaScript
-- jQuery
+tag: css3
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Image quality and size have been high on my thinking list recently, with responsive media queries (CSS3) coming into popularity and the introduction of the new high resolution viewing devices. This post outlines my thoughts on moving forward with relative images – into a higher resolution web. 
 

@@ -3,7 +3,15 @@ layout: post
 permalink: /on-init-require-object-syntax-angular-component/
 title: $onInit and new "require" Object syntax in Angular components
 path: 2016-02-11-on-init-require-object-syntax-angular-component.md
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 The `component()` helper method shipped with so many great features to take us even closer towards Angular (v2+) syntax and integration. Let's explore the `$onInit` method and the new `require` property's syntax that makes the `component()` method much more powerful. If you've not checked out the `component()` method just yet, check [my write-up on it here](/exploring-the-angular-1-5-component-method).
 

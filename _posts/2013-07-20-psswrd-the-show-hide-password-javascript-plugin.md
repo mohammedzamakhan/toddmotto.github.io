@@ -3,10 +3,15 @@ layout: post
 permalink: /psswrd-the-show-hide-password-javascript-plugin/
 title: Psswrd, the show/hide password JavaScript plugin
 path: 2013-07-20-psswrd-the-show-hide-password-javascript-plugin.md
-tags:
-- Library
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Show/hide toggling for password inputs. Psswrd is a neat little script I've put together to aid in better user experience when users are completing your forms or actioning things inside web apps. For instance, instead of another irritating 'confirm password' field, we provide a 'show password' for them to double-check before signing up, logging in, filling out various 'secret questions', or whatever else you can think of.
 

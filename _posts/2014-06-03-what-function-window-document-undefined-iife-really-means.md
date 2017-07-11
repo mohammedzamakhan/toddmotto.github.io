@@ -3,12 +3,15 @@ layout: post
 permalink: /what-function-window-document-undefined-iife-really-means/
 title: What (function (window, document, undefined) {})(window, document); really means
 path: 2014-06-03-what-function-window-document-undefined-iife-really-means.md
-tags:
-- Scope
-- this
-- Performance
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Interestingly enough I get asked about the IIFE (immediately-invoked function expression) a lot, which takes the following setup:
 

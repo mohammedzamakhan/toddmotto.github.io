@@ -3,12 +3,15 @@ layout: post
 permalink: /digging-into-angulars-controller-as-syntax/
 title: Digging into Angular’s “Controller as” syntax
 path: 2014-05-26-digging-into-angulars-controller-as-syntax.md
-tags:
-- ControllerAs
-- Controllers
-- Angular
-- JavaScript
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 AngularJS Controllers have recently gone under some changes (version 1.2 to be precise). What this means for scopes, Controllers and Angular development is some very subtle but powerful changes. One of those changes I believe is improved architecture, clearer scoping and smarter Controllers.
 

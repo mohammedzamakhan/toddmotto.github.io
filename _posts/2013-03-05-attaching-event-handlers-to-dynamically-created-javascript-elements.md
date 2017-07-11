@@ -3,10 +3,15 @@ layout: post
 permalink: /attaching-event-handlers-to-dynamically-created-javascript-elements/
 title: Attaching event handlers to dynamically created JavaScript elements
 path: 2013-03-05-attaching-event-handlers-to-dynamically-created-javascript-elements.md
-tags:
-- Events
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 When working with JavaScript, you can sometimes need to create new elements on-the-fly, and from that, you'll need to do something with that new element. It might be a click, which more often than not will need to execute a function.
 

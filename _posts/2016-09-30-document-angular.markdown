@@ -3,11 +3,19 @@ layout: "post"
 permalink: /documenting-angular-dgeni
 title: "Documenting your Angular app using Dgeni in 10 easy steps"
 path: 2016-09-30-document-angular-dgeni.md
+tag: angularjs
 ---
 
-**The following is a guest post by [@sebastpelletier][7489a839]. Don't hate on me, as my hair styling techniques are not as good as Todd's ;)**
+The following is a guest post by [@sebastpelletier][7489a839]. Don't hate on me, as my hair styling techniques are not as good as Todd's ;)
 
   [7489a839]: https://twitter.com/sebastpelletier "@sebastpelletier"
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Having worked on Enterprise-grade solutions, documentation is always an issue. It's either outdated, deprecated or worse, there's no documentation! Generating documentation of your Angular application is easy using Dgeni, which is ironically not well documented for a documentation generator.
 

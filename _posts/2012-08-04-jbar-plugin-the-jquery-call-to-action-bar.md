@@ -5,11 +5,15 @@ layout: post
 permalink: /jbar-plugin-the-jquery-call-to-action-bar/
 disqus: http://www.toddmotto.com/jbar-plugin-the-jquery-call-to-action-bar
 path: 2012-08-04-jbar-plugin-the-jquery-call-to-action-bar.md
-tags:
-- jQuery
-- Library
-- JavaScript
+tag: js
 --- 
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 jBar is a simple and lightweight jQuery notification bar that’s been revisited and rewritten (18.11.2012) as an official plugin, which serves up loads of easy customisable options. The jBar allows you to create a simple call to action and bring it forward for the user to see at the top of your website. The user can then toggle the visibility of the bar by clicking the ribbon.
 

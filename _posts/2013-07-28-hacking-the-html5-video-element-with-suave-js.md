@@ -3,11 +3,15 @@ layout: post
 permalink: /hacking-the-html5-video-element-with-suave-js/
 title: Hacking the HTML5 &lt;video&gt; element with Suave.js
 path: 2013-07-28-hacking-the-html5-video-element-with-suave-js.md
-tags:
-- Library
-- HTML5
-- JavaScript
+tag: html5
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Suave, for elegant HTML5 videos (how they should have been). Suave was built to re-engineer the unstructured mess the HTML5 &lt;video&gt; tag presents. Suave cleverly takes all the strain of nested &lt;source&gt; tags and file types away from you allowing you to code an HTML5 video in just one line (it's also <1KB).
 

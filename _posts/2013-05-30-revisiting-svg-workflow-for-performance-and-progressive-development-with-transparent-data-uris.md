@@ -3,11 +3,15 @@ layout: post
 permalink: /revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris/
 title: Revisiting SVG workflow for performance and progressive development with transparent data URIs
 path: 2013-05-30-revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris.md
-tags:
-- SVG
-- Performance
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 A few months ago I covered a range of [SVG techniques](//toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script) that proved to be a great progression for developers looking to 'get into' SVG development. For those who are new to web development or SVG in general, give it a good read and then drop back to this article to help take you to the next phase.
 

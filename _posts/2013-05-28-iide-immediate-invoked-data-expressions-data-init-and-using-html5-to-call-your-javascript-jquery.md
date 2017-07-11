@@ -3,10 +3,15 @@ layout: post
 permalink: /iide-immediate-invoked-data-expressions-data-init-and-using-html5-to-call-your-javascript-jquery/
 title: IIDE, Immediate-Invoked-Data-Expressions, data-init and using HTML5 to call your JavaScript/jQuery
 path: 2013-05-28-iide-immediate-invoked-data-expressions-data-init-and-using-html5-to-call-your-javascript-jquery.md
-tags:
-- Opinion
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 There's something that's been at the back of my mind ever since I've started writing JavaScript and jQuery, and I think I've finally got it down on paper - so I'm going to introduce a new method of writing your JavaScript which utilises some HTML5 technology.
 

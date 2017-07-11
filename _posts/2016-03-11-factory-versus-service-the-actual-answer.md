@@ -3,7 +3,15 @@ layout: post
 permalink: /factory-versus-service
 title: Angular .service() or .factory(), the actual answer
 path: 2016-03-11-factory-versus-service-the-actual-answer.md
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 I was giving a workshop earlier this week, and as the workshop came to a close and people were leaving, an attendee asked if I could explain the difference between a factory and service. Everyone seemed to pause and stop packing up their things, and sat back down to listen to the additional 15 minute showdown on the API differences. So in my words this the answer to `.factory()` and `.service()`.
 

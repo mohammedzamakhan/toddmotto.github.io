@@ -3,11 +3,15 @@ layout: post
 permalink: /is-it-time-to-drop-jquery-essentials-to-learning-javascript-from-a-jquery-background/
 title: Is it time to drop jQuery&#63; Essentials to learning JavaScript from a jQuery background
 path: 2013-06-25-is-it-time-to-drop-jquery-essentials-to-learning-javascript-from-a-jquery-background.md
-tags:
-- jQuery
-- Opinion
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 jQuery has been a godsend to pretty much all of us front-end developers since its release, its intuitive methods, easy functions make light work of JavaScript's loosely typed language. JavaScript is hard, it's hard to get into, it's much harder than jQuery. But the time is nearly here, going native is going to be the future of front-end - HTML5.
 

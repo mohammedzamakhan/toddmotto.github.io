@@ -3,12 +3,15 @@ layout: post
 permalink: /super-fast-angular-ng-model-options-limit-digest-cycles/
 title: Superfast Angular&#58; use ngModelOptions to limit &dollar;digest cycles
 path: 2015-10-24-super-fast-angular-ng-model-options-limit-digest-cycles.md
-tags:
-- Performance
-- ngModelOptions
-- Digest
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 The `$digest` cycle is the critical entity for keeping our Angular applications fast: the faster the cycle, the faster the two-way data binding. JavaScript has a single thread of execution, which means if our `$digest` cycle is packed full of data to be dirty-checked, the user is going to see lag in the UI whilst (for instance) typing inside an `<input>`.
 

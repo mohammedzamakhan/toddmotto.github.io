@@ -3,21 +3,17 @@ layout: post
 permalink: /promises-angular-q
 title: All about $q and Promises in Angular
 path: 2016-08-15-promises-angular-q.md
+tag: angularjs
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 You've seen `$q`, maybe used it, but haven't uncovered some of the awesome features `$q` provides, such as `$q.all()` and `$q.race()`. This article dives into ES2015 Promise API and how it maps across to `$q` for AngularJS. This post is all about `$q`... enjoy!
-
-### Table of contents
-
-- <a href="#what-is-a-promise">What is a Promise?</a>
-- <a href="#es2015-promises">ES2015 Promises</a>
-- <a href="#q-constructor">$q constructor</a>
-- <a href="#when-to-use-q">When to use $q</a>
-- <a href="#qdefer">$q.defer()</a>
-- <a href="#qwhen--qresolve">$q.when()/$q.resolve()</a>
-- <a href="#qreject">$q.reject()</a>
-- <a href="#qall">$q.all()</a>
-- <a href="#qrace">$q.race()</a>
 
 ### What is a Promise?
 

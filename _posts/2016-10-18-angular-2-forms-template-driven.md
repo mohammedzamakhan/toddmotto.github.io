@@ -3,8 +3,7 @@ layout: post
 permalink: /angular-2-forms-template-driven
 title: Angular 2 form fundamentals&#58; template-driven forms
 path: 2016-10-18-angular-2-forms-template-driven.md
-tags:
-- Angular 2
+tag: angular
 ---
 
 <div class="toc" markdown="1">

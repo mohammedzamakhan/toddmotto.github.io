@@ -3,11 +3,15 @@ layout: post
 permalink: /data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript/
 title: data-js selectors, enhancing HTML5 development by separating CSS from JavaScript
 path: 2013-04-19-data-js-selectors-enhancing-html5-development-by-separating-css-from-javascript.md
-tags:
-- HTML5
-- CSS3
-- JavaScript
+tag: html5
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 I've started introducing a new concept into my JavaScript workflow and I really think it's worth sharing:
 

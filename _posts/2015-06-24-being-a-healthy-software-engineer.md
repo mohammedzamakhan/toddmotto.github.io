@@ -3,12 +3,16 @@ layout: post
 permalink: /being-a-healthy-software-engineer/
 title: Being a healthy software engineer
 path: 2015-06-24-being-a-healthy-software-engineer.md
-tags:
-- Personal
-- Health
 ---
 
-A post a little off topic today, but after a few tweets of mine a few people have suggested a write up on what changes I've made and how they've affected me.
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
+ post a little off topic today, but after a few tweets of mine a few people have suggested a write up on what changes I've made and how they've affected me.
 
 From the top, a little less than a year ago I was a little overweight, weighing 15stone 3lbs (96.6kg), today I'm 11stone 12lbs (75kg) and feeling the best I've felt in years.
 

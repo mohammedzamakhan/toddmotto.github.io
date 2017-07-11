@@ -3,22 +3,19 @@ layout: post
 permalink: /pure-versus-impure-functions
 title: Pure versus impure functions
 path: 2016-10-11-pure-versus-impure-functions.md
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Understanding pure and impure functions is a simple transition into cleaner, more role-based and testable code. In this post we'll explore pure and impure functions by looking at a simple Body Mass Index (BMI) calculator that estimates your "healthy weight" by some simple input factors of height and weight. BMI isn't considered the most reliable tool for checking your weight, but that's not the point of this article ;)
 
 Note: if you're not familiar with `kg` and `cm` units, use something like `70` for `kg` and `180` for `cm` to try it out.
-
-### Table of contents
-
-- <a href="#terminology">Terminology</a>
-  - <a href="#impure-functions">Impure functions</a>
-  - <a href="#pure-functions">Pure functions</a>
-- <a href="#html-and-submit-event">HTML and submit event</a>
-- <a href="#impure-implementation">Impure implementation</a>
-- <a href="#pure-implementation">Pure implementation</a>
-  - <a href="#going-pure">Going pure</a>
-  - <a href="#final-solution">Final solution</a>
 
 ### Terminology
 

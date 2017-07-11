@@ -3,11 +3,15 @@ layout: post
 permalink: /stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/
 title: Stop toggling classes with JS, use behaviour driven DOM manipulation with data-states
 path: 2013-12-17-stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states.md
-tags:
-- Opinions
-- Classnames
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Using a class to manipulate the DOM? What about this idea. Using classes have many issues, the main one for me is that adding classes to elements to change their state crosses the behaviour and styling paradigm. Behaviour is separate to style and as our web becomes richer with functionality, the line between styling and state is a challenge, and also at times messy.
 

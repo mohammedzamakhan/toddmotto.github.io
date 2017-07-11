@@ -5,6 +5,13 @@ title: Things I use, desk, software, setups
 path: 2016-10-06-things-i-use.md
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 I often get asked what colour schemes I'm using, stuff for videos, workshops, slides and so forth. So this is essentially a quick write up on that stuff.
 
 ### Editor / Terminal

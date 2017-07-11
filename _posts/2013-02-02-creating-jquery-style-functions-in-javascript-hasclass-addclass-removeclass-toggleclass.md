@@ -5,13 +5,17 @@ layout: post
 permalink: /creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass/
 disqus: http://www.toddmotto.com/creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass
 path: 2013-02-02-creating-jquery-style-functions-in-javascript-hasclass-addclass-removeclass-toggleclass.md
-tags:
-- Classnames
-- jQuery
-- JavaScript
+tag: js
 ---
 
-#### UPDATE: Check out [Apollo.js](/apollo-js-standalone-class-manipulation-api-for-html5-and-legacy-dom/), the latest version of these scripts integrated with HTML APIs, the most powerful class API on the web!
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
+> Check out [Apollo.js](/apollo-js-standalone-class-manipulation-api-for-html5-and-legacy-dom/), the latest version of these scripts integrated with HTML APIs, the most powerful class API on the web!
 
 jQuery is a pretty cool framework, it has it’s uses, it’s pretty reliable, but remember: it’s written with JavaScript. It’s not a language by itself, it’s not a magical tool, nor the answer to our prayers. It doesn’t make front-end animation/AJAX/DOM manipulating easy, it makes you think less and miss out on vital knowledgable. What happened before jQuery?
 

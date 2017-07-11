@@ -3,9 +3,15 @@ layout: post
 permalink: /transclusion-in-angular-2-with-ng-content
 title: Transclusion in Angular 2 with ng-content
 path: 2016-03-22-transclusion-in-angular-2-with-ng-content.md
-tags:
-- Angular 2
+tag: angular
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Transclusion is an AngularJS (1.x) term, lost in the rewrite of Angular (v2+), so let's bring it back for this article just concept clarity. The word "transclusion" may be gone, but the concepts remain.
 

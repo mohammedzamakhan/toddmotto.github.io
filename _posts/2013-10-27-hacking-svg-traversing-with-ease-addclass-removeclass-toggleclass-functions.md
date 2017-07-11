@@ -3,15 +3,19 @@ layout: post
 permalink: /hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions/
 title: Hacking SVG, traversing with ease - addClass, removeClass, toggleClass functions
 path: 2013-10-27-hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions.md
-tags:
-- SVG
-- Classnames
-- JavaScript
+tag: js
 ---
 
 ### Update: I've turned this into a small JavaScript module named [Lunar](https://github.com/toddmotto/lunar) and pushed to GitHub, please use that code instead as it doesn't extend native DOM APIs and also has accompanying unit tests :)
 
 ----
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 I encountered how painful traversing inline SVG can be when working on a recent project, simple DOM APIs such as adding, removing and toggling classes just aren't there, or supported by tools such as jQuery (yes, I even tried jQuery).
 

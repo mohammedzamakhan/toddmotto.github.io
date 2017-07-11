@@ -3,13 +3,15 @@ layout: post
 permalink: /killing-it-with-angular-directives-structure-and-mvvm/
 title: Killing it with Angular Directives&#59; Structure and MVVM
 path: 2015-04-17-killing-it-with-angular-directives-structure-and-mvvm.md
-tags:
-- MVVM
-- Clean code
-- Directives
-- Components
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 In this post I'm going to outline my approach on writing Directives for Angular 1.x releases. There's a lot of confusion around how and why and where to do things with Directives, but they are actually very simple once you grasp the concepts and separation ideas. This post isn't going to cover nesting Directives/data flow into them from parent scopes etc, but will cover my ideal way of creating/structuring and separating all concerns in the Directive, and how to use `controller` and `link` properties correctly.
 

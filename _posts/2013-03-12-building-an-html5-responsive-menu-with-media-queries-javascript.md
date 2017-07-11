@@ -3,11 +3,15 @@ layout: post
 permalink: /building-an-html5-responsive-menu-with-media-queries-javascript/
 title: Building an HTML5 responsive menu with media queries and JavaScript
 path: 2013-03-12-building-an-html5-responsive-menu-with-media-queries-javascript.md
-tags:
-- Library
-- HTML5
-- JavaScript
+tag: html5
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 ### Responsive menus
 

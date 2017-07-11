@@ -3,12 +3,15 @@ layout: post
 permalink: /dynamic-controllers-in-directives-with-the-undocumented-name-property/
 title: Dynamic Controllers in Directives with the undocumented "name" property
 path: 2015-12-10-dynamic-controllers-in-directives-with-the-undocumented-name-property.md
-tags:
-- Dynamic Controllers
-- Controllers
-- Performance
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Assigning Controllers to Angular Directives is the norm when building out components. But what if you wanted to dynamically assign a Controller to the same Directive and template? There are reasons for using this technique (though uncommon), and the undocumented `name` property bound to each Directive's definition Object can allow us to do exactly that.
 

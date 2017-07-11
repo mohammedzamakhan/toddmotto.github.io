@@ -3,33 +3,19 @@ layout: post
 permalink: /angular-1-5-lifecycle-hooks
 title: Lifecycle hooks in Angular 1.5
 path: 2016-06-03-lifecycle-hooks.md
-tags:
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Lifecycle hooks are simply functions that get called at specific points of a component's life in our Angular apps. They landed in AngularJS 1.5 and are to be used alongside the [.component() method](/exploring-the-angular-1-5-component-method/), and have slowly evolved over the last few versions to include some more powerful (and Angular v2+ inspired) hooks. Let's explore in-depth how we can actually use them, the roles they play and why you should use them - this is especially important with a component architecture based app.
 
 I've spent some time [polyfilling the `.component()` method](https://github.com/toddmotto/angular-component) and all the lifecycle hooks back to Angular v1.3.0+, so it's been a massive insight as to how we actually use these hooks and their roles in components. Let's dive in.
-
-### Table of contents
-
-- <a href="#oninit">$onInit</a>
-  - <a href="#using-oninit">Using $onInit</a>
-  - <a href="#oninit--require">$onInit + "require"</a>
-  - <a href="#real-world-example">Real world $onInit + "require"</a>
-- <a href="#postlink">$postLink</a>
-  - <a href="#using-postlink">Using $postLink</a>
-  - <a href="#real-world-postlink">Real world $postLink</a>
-  - <a href="#what-postlink-is-not">What $postLink is not</a>
-- <a href="#onchanges">$onChanges</a>
-  - <a href="#what-calls-onchanges">What calls $onChanges?</a>
-  - <a href="#using-onchanges">Using $onChanges</a>
-  - <a href="#cloning-change-hashes-for-immutable-bindings">Cloning "change" hashes for "immutable" bindings</a>
-  - <a href="#one-way-dataflow--events">One-way dataflow + events</a>
-  - <a href="#is-two-way-binding-through--syntax-dead">Is two-way binding through "=" syntax dead?</a>
-  - <a href="#using-isfirstchange">Using isFirstChange()</a>
-- <a href="#ondestroy">$onDestroy</a>
-  - <a href="#using-ondestroy">Using $onDestroy</a>
 
 ### $onInit
 

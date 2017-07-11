@@ -3,11 +3,15 @@ layout: post
 permalink: /es6-arrow-functions-syntaxes-and-lexical-scoping/
 title: ES6 arrow functions, syntax and lexical scoping
 path: 2015-04-14-es6-arrow-functions-syntaxes-and-lexical-scoping.md
-tags:
-- Arrow functions
-- ES6
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 ES2015 (ES6) introduces a really nice feature that punches above its weight in terms of simplicity to integrate versus time saving and feature output. This feature is the arrow function.
 

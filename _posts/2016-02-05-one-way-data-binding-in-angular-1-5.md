@@ -3,9 +3,15 @@ layout: post
 permalink: /one-way-data-binding-in-angular-1-5/
 title: One-way data-binding in Angular 1.5
 path: 2016-02-05-one-way-data-binding-in-angular-1-5.md
-tags:
-- Angular 2
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Angular is known for its powerful two-way data-binding, but with the new release of AngularJS 1.5, we've got one-way data binding (one-directional) binding capabilities inside our Components and Directives. Woohoo! Let's explore to see what it does, and doesn't, give us to develop with.
 

@@ -3,14 +3,20 @@ layout: post
 permalink: /creating-your-first-angular-2-component
 title: Creating your first Angular 2+ component
 path: 2016-03-17-creating-an-angular-2-component.md
-tags:
-- Angular 2
+tag: angular
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 This is a beginner level tutorial to ease you into Angular (v2+), although there are many resources online to creating components, these articles exist as part of a series. This article will guide you through creating your first Angular component.
 
 ### Series
-
+{:.no_toc}
 1. [Bootstrapping your first Angular app](/bootstrap-angular-2-hello-world)
 2. Creating your first Angular component
 3. [Passing data into Angular components with @Input](/passing-data-angular-2-components-input)

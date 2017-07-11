@@ -3,12 +3,15 @@ layout: post
 permalink: /a-better-way-to-scope-angular-extend-no-more-vm-this/
 title: A better way to $scope&#44; angular.extend&#44; no more &ldquo;vm &#61; this&rdquo;
 path: 2015-04-20-a-better-way-to-scope-angular-extend-no-more-vm-this.md
-tags:
-- Scope
-- this
-- JavaScript
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 The evolution of Angular Controllers has changed over the last year. As of now, most of us are working with the most recent addition to "Controller" syntax with the `controllerAs` style (doing away with binding directly to `$scope`).
 

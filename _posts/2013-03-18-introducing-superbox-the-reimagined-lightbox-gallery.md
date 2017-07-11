@@ -3,11 +3,15 @@ layout: post
 permalink: /introducing-superbox-the-reimagined-lightbox-gallery/
 title: Introducing SuperBox the re-imagined lightbox gallery
 path: 2013-03-18-introducing-superbox-the-reimagined-lightbox-gallery.md
-tags:
-- Library
-- jQuery
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 SuperBox is a new jQuery plugin I've been composing over the last few days. SuperBox takes the whole 'image' and 'lightbox' one step further, reducing the JavaScript and image load dependence to make lightboxing a thing of the past! Using HTML5 data-* attributes, responsive layouts and jQuery, here's SuperBox.
 

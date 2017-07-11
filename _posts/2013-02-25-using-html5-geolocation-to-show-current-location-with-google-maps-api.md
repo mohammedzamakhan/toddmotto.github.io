@@ -3,11 +3,15 @@ layout: post
 permalink: /using-html5-geolocation-to-show-current-location-with-google-maps-api/
 title: Using HTML5 Geolocation to show current location with Google Maps API
 path: 2013-02-25-using-html5-geolocation-to-show-current-location-with-google-maps-api.md
-tags:
-- HTML5
-- Geolocation
-- JavaScript
+tag: html5
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Geolocation is one of the best new HTML5 APIs, so let's see what we can do with it. In a nutshell, Geolocation allows you to give your current location information to the browser. Google use Geolocation a lot, especially for things like Google Maps, you're bound to have seen the popups 'This page would like to use your current location'. If so, you've experienced HTML5 Geolocation.
 

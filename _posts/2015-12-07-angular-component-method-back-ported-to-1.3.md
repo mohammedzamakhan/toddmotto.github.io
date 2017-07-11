@@ -3,13 +3,15 @@ layout: post
 permalink: /angular-component-method-back-ported-to-1.3/
 title: Angular component() method back-ported to 1.3+
 path: 2015-12-07-angular-component-method-back-ported-to-1.3.md
-tags:
-- New features
-- Performance
-- Components
-- Directives
-- Angular
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 AngularJS 1.5 is soon to release the `component()` method which [I wrote about last month](/exploring-the-angular-1-5-component-method). I decided to back-port the functionality from the new feature so anyone running AngularJS 1.3 and above can start using `component()` right now. It's 100% ported from the upcoming 1.5 release so the API is identical.
 

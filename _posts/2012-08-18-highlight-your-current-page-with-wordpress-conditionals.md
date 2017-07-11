@@ -5,12 +5,14 @@ layout: post
 permalink: /highlight-your-current-page-with-wordpress-conditionals/
 disqus: http://www.toddmotto.com/highlight-your-current-page-with-wordpress-conditionals
 path: 2012-08-18-highlight-your-current-page-with-wordpress-conditionals.md
-tags:
-- WordPress
-- Library
-- jQuery
-- JavaScript
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Here’s a quick overview on how to highlight your current page in the nav using WordPress PHP Conditional tags. It’s dead easy, and if you prefer hand-coding your navigation, then this is definitely for you. You can use the PHP Conditional tags for a vast amount of other things, and they’re one of the most powerful WordPress functions. Check the [Codex][1] for a more comprehensive overview.
 

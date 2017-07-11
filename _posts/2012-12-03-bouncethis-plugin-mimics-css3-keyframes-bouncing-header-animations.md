@@ -5,13 +5,15 @@ layout: post
 permalink: /bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations/
 disqus: http://www.toddmotto.com/bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations
 path: 2012-12-03-bouncethis-plugin-mimics-css3-keyframes-bouncing-header-animations.md
-tags:
-- CSS3
-- HTML5
-- Library
-- jQuery
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 We all love those slick animated drop-down headers that gracefully drop into the page on-load. This is usually done via some CSS3 keyframes code, but here’s the jQuery version. Here I introduce bounceThis plugin, the cross-browser compatible, super slick and sharp bouncing headers CSS3 keyframes alternative. Who says your client using Internet Explorer can’t see their kick-ass new header?
 

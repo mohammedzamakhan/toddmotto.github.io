@@ -4,14 +4,15 @@ permalink: /progressively-enhancing-html5-forms-creating-a-required-attribute-fa
 title: Progressively enhancing HTML5 forms, creating a required attribute fallback with jQuery
 external: http://tech.pro/tutorial/1318/progressively-enhancing-html5-forms-creating-a--required--attribute-fallback-with-jquery
 path: 2013-05-20-progressively-enhancing-html5-forms-creating-a-required-attribute-fallback-with-jquery.md
-tags:
-- jQuery
-- Forms
-- HTML5
-- JavaScript
+tag: html5
 ---
 
-Note: this article first featured on [Tech.Pro](//tech.pro/tutorial/1318/progressively-enhancing-html5-forms-creating-a--required--attribute-fallback-with-jquery), please check out the full article there!
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 HTML5 required attributes are a fantastic addition to the HTML5 spec, they save a lot of time when working on client-side form validation and enhance the user's experience. The HTML5 required attribute provides us with full client-side 'required' checking and validation, which is easy to add to several types of form elements.
 

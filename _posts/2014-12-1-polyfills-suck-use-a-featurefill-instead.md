@@ -3,10 +3,15 @@ layout: post
 permalink: /polyfills-suck-use-a-featurefill-instead/
 title: Polyfills suck&#44; use a featurefill instead
 path: 2014-12-1-polyfills-suck-use-a-featurefill-instead.md
-tags:
-- Polyfills
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 I'm going to dub this a featurefill as the post title suggests, but it's more a feature-detect-closure-binding-smart-polyfill-api-checker-reusable-function-awesomeness.
 

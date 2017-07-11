@@ -3,10 +3,15 @@ layout: post
 permalink: /walkthrough-to-migrate-an-angular-1-component-to-angular-2/
 title: Walkthrough to upgrade an Angular 1.x component to Angular 2
 path: 2015-10-27-walkthrough-to-upgrade-an-angular-1-component-to-angular-2.md
-tags:
-- Components
-- Angular 2
+tag: angular
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 In this article we're going to look at upgrading your first AngularJS (1.x) component, a simple todo app, across to Angular (v2+) code. We'll compare the API differences, templating syntaxes and hopefully it'll shed some light on upgrading to Angular, and well as making it appear less daunting.
 

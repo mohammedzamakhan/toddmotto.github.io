@@ -3,11 +3,15 @@ layout: post
 permalink: /web-components-concepts-shadow-dom-imports-templates-custom-elements/
 title: Web Components and concepts&#44; ShadowDOM&#44; imports&#44; templates&#44; custom elements
 path: 2014-07-02-web-components-concepts-shadow-dom-imports-templates-custom-elements.md
-tags:
-- Web Components
-- HTML5
-- JavaScript
+tag: html5
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Web Components, the future of the web, inspired from attending [Google I/O](https://twitter.com/toddmotto/status/482624009553465344) I decided to pick up Web Components and actually build something. Since learning the basics around a year ago, it's changed and advanced a lot! Thought I'd write a post on it and share [my first web component](//github.com/toddmotto/fluidvids-polymer) yesterday (built with Polymer).
 

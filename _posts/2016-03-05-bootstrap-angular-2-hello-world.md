@@ -3,14 +3,20 @@ layout: post
 permalink: /bootstrap-angular-2-hello-world
 title: Bootstrapping your first Angular 2+ app
 path: 2016-03-05-bootstrap-angular-2-hello-world.md
-tags:
-- Angular 2
+tag: angular
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 In this series of four Angular (v2+) posts, we'll explore how to bootstrap an Angular app, create a component, pass data into a component and pass new data out of a component using events.
 
 ### Series
-
+{:.no_toc}
 1. Bootstrapping your first Angular app
 2. [Creating your first Angular component](/creating-your-first-angular-2-component)
 3. [Passing data into Angular components with @Input](/passing-data-angular-2-components-input)

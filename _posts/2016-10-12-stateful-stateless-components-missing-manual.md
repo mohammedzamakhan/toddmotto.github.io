@@ -3,28 +3,17 @@ layout: post
 permalink: /stateful-stateless-components
 title: Stateful and stateless components, the missing manual
 path: 2016-10-12-stateful-stateless-components-missing-manual.md
+tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 The goals of this article are to define what stateful and stateless components are, otherwise known as smart and dumb - or container and presentational components. For the purposes of the article, we'll be using Angular 2 Components to explain the stateful/stateless concepts. Bear in mind these concepts are not at all limited to Angular, and live in other libs/frameworks such as React.
-
-### Table of contents
-
-- <a href="#terminology">Terminology</a>
-  - <a href="#stateful">Stateful</a>
-  - <a href="#stateless">Stateless</a>
-  - <a href="#components">Components</a>
-- <a href="#impure-versus-pure-functions">Impure versus Pure functions</a>
-  - <a href="#impure-functions-stateful">Impure functions (stateful)</a>
-  - <a href="#pure-functions-stateless">Pure functions (stateless)</a>
-- <a href="#stateful-components">Stateful components</a>
-  - <a href="#stateful-todo-component">Stateful Todo component</a>
-- <a href="#stateless-components">Stateless components</a>
-  - <a href="#stateless-todoform-component">Stateless TodoForm component</a>
-  - <a href="#stateless-todolist-component">Stateless TodoList component</a>
-  - <a href="#final-code">Final code</a>
-- <a href="#angular-1x-version">AngularJS 1.x version?</a>
-  - <a href="#final-code">Final code</a>
-- <a href="#further-reading">Further reading</a>
 
 ### Terminology
 

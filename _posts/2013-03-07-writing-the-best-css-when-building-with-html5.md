@@ -3,11 +3,15 @@ layout: post
 permalink: /writing-the-best-css-when-building-with-html5/
 title: Writing the best CSS when building with HTML5
 path: 2013-03-07-writing-the-best-css-when-building-with-html5.md
-tags:
-- CSS3
-- HTML5
-- Opinion
+tag: html5
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 ### Becoming HTML agnostic
 

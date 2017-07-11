@@ -3,11 +3,15 @@ layout: post
 permalink: /understanding-javascript-types-and-reliable-type-checking/
 title: Understanding JavaScript types and reliable type checking
 path: 2014-06-02-understanding-javascript-types-and-reliable-type-checking.md
-tags:
-- Scope
-- JavaScript
-- this
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Type checking in JavaScript can often be a pain, especially for new JS developers. I want to show you how to reliably check types in JS and understand them a little more. This post digs through Objects, Primitives, shadow objects/coercion, the `typeof` operator and how we can reliably get a "real" JavaScript type.
 

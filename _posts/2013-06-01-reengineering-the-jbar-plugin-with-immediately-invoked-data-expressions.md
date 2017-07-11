@@ -3,10 +3,15 @@ layout: post
 permalink: /reengineering-the-jbar-plugin-with-immediately-invoked-data-expressions/
 title: Re-engineering the jBar plugin with Immediately-Invoked-Data-Expressions
 path: 2013-06-01-reengineering-the-jbar-plugin-with-immediately-invoked-data-expressions.md
-tags:
-- Library
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Earlier this week [I wrote about IIDE](//toddmotto.com/iide-immediate-invoked-data-expressions-data-init-and-using-html5-to-call-your-javascript/jquery/), Immediately-Invoked-Data-Expressions. Not an official term as such but an insight into the explanation of what our code is actually doing when utilising HTML5 advancements in plugin logic. IIDE was about getting smarter, using JSON for data-binding and bringing JavaScript and HTML5 closer to work harder for an enhanced 'view' approach. I've re-engineered my most popular plugin, the jBar into IIDE format and I'm going to share with you the process.
 

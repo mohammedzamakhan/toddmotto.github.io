@@ -3,12 +3,15 @@ layout: post
 permalink: /everything-about-custom-filters-in-angular-js/
 title: Everything about custom filters in AngularJS
 path: 2014-05-28-everything-about-custom-filters-in-angular-js.md
-tags:
-- Filters
-- Performance
-- Angular
-- JavaScript
+tag: angularjs
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Angular filters are one of the toughest concepts to work with. They're a little misunderstood and it actually hurt my brain whilst learning them. Filters are insanely great, they're very powerful for transforming our data _so_ easily into reusable and scalable little chunks.
 

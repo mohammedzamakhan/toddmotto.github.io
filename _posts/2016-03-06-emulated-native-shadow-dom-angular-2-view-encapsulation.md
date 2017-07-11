@@ -3,9 +3,15 @@ layout: post
 permalink: /emulated-native-shadow-dom-angular-2-view-encapsulation
 title: Emulated or Native Shadow DOM in Angular 2 with ViewEncapsulation
 path: 2016-03-06-emulated-native-shadow-dom-angular-2-view-encapsulation.md
-tags:
-- Angular 2
+tag: angular
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 Shadow DOM has long been a talking point on the web, and the [Polymer project](//www.polymer-project.org/1.0) pushes the proof of concept quite nicely, however, adoption of "raw" Web Components (Shadow DOM is part of the spec) is low. Instead, frameworks have provided "better" ways to achieve results and develop applications.
 

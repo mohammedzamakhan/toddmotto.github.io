@@ -3,11 +3,15 @@ layout: post
 permalink: /ditch-the-array-foreach-call-nodelist-hack/
 title: Ditch the [].forEach.call(NodeList) hack
 path: 2014-02-23-ditch-the-array-foreach-call-nodelist-hack.md
-tags:
-- NodeList
-- Opinion
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 I've got to admit before we go any further, I used to use this technique. It looked edgy and cool and I was doing ECMA5 hacks, but after a while and writing better JavaScript, it turned out this technique causes nothing but headaches and needless hipster-like code, of which I'm going to pour my thoughts out on why I now hate seeing this technique (hack) in people's code.
 

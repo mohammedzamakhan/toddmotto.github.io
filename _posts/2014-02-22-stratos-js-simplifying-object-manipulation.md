@@ -3,13 +3,15 @@ layout: post
 permalink: /stratos-js-simplifying-object-manipulation/
 title: Stratos.js simplifying Object manipulation
 path: 2014-02-22-stratos-js-simplifying-object-manipulation.md
-tags:
-- Library
-- Objects
-- Loops
-- Performance
-- JavaScript
+tag: js
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 JavaScript Objects are usually the driving force behind applications I develop, specifically JSON which gets sent back and forth from the server as acts as the main method of comms.
 
