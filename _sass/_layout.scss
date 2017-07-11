@@ -162,10 +162,7 @@ a {
         color: #fff; }
       @media screen and (max-width: 850px) {
         .card__content table {
-          margin: 40px -40px; } }
-      @media screen and (max-width: 500px) {
-        .card__content table {
-          padding: 24px -24px; } }
+          margin: 40px 0; } }
       .card__content table td {
         padding: 8px 25px;
         line-height: 24px;

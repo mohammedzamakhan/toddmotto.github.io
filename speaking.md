@@ -44,7 +44,7 @@ Upcoming events I'll be speaking at.
 <div class="speaking__list">
   <ul>
     <li>
-      <a href="https://angularcamp.org">AngularCamp</a>, Barcelona (Spain), <span>06-07.07.2017</span>
+      No speaking engagements booked yet
     </li>
   </ul>
 </div>
@@ -55,6 +55,9 @@ Events I've spoken at. Check my [YouTube Channel](https://www.youtube.com/channe
 
 <div class="speaking__list">
   <ul>
+    <li>
+      <a href="https://angularcamp.org">AngularCamp</a>, Barcelona (Spain), <span>06-07.07.2017</span>
+    </li>
     <li>
       <a href="https://www.ng-conf.org/workshops/">ng-conf</a> (workshop), Salt Lake City (Utah, USA), <span>03.04.2017</span>
     </li>
