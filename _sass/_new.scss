@@ -43,6 +43,10 @@
   a {
     display: block;
     color: #545e6f;
+    transition: all .2s ease;
+    &:hover {
+      color: lighten(#545e6f, 25%);
+    }
   }
   p {
     margin: 0;
