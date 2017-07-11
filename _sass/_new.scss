@@ -59,6 +59,13 @@
  */
 .nav {
   font-family: 'tt-medium';
+  &__external {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 15px;
+    opacity: .2;
+  }
   &__link {
     position: relative;
     color: #fff;
@@ -69,9 +76,6 @@
     font-size: 16px;
     transition: all .2s ease;
     background: #3a4250;
-    &--break {
-      border-top: 1px solid rgba(255,255,255,.1);
-    }
     &--active {
       background: darken(#3a4250, 4%);
     }
