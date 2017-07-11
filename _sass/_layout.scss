@@ -176,6 +176,12 @@ a {
   padding: 24px 64px 32px;
   cursor: pointer;
   position: relative;
+  &__award {
+    width: 20px;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+    display: inline-block;
+  }
 }
   @media screen and (max-width: 850px) {
     .courses {
@@ -211,11 +217,9 @@ a {
   .courses__box {
     width: 250px; }
   .courses p {
-    font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0;
     color: #fff;
-    color: rgba(255,255,255,.9);
   }
   .courses button {
     background-image: url(/img/ua/arrow-right--white.png);
