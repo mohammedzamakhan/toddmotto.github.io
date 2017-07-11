@@ -173,8 +173,8 @@
       padding: 4px 15px;
       &:before {
         position: absolute;
-        top: 4px;
-        left: -12px;
+        top: 5px;
+        left: -14px;
         content: '';
         background: url(../img/icons/link.svg) no-repeat 0 0;
         background-size: contain;
@@ -195,6 +195,56 @@
     transition: all .2s ease;
     &:hover {
       color: lighten(#3f4754, 25%);
+    }
+  }
+}
+
+.featured {
+  background: #3a4250;
+  padding: 25px 0;
+  margin: 25px 0;
+  border-radius: 4px;
+  text-align: center;
+  p {
+    margin: 0;
+    color: #fff !important;
+  }
+  &__latest {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 11px !important;
+  }
+  &__text {
+    display: block;
+    color: #fff;
+    padding: 0 25px;
+    margin: 0 0 15px;
+  }
+  &__name {
+    font-family: 'tt-medium';
+    font-size: 18px !important;
+  }
+  img {
+    margin: 20px 0;
+    width: 100%;
+  }
+  &__btn {
+    background: #24b373;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    line-height: 1;
+    text-align: center;
+    padding: 14px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'tt-medium';
+    cursor: pointer;
+    &:hover {
+      color: #fff;
     }
   }
 }

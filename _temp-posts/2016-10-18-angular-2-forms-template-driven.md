@@ -7,21 +7,14 @@ tags:
 - Angular 2
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Angular (v2+) presents two different methods for creating forms, template-driven (what we were used to in AngularJS 1.x), or reactive. We're going to explore the absolute fundamentals of the template-driven Angular forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
-
-### Table of contents
-
-- <a href="#high-level-terminology">High-level terminology</a>
-  - <a href="#template-driven">Template-driven</a>
-- <a href="#form-base-and-interface">Form base and interface</a>
-- <a href="#ngmodule-and-template-driven-forms">ngModule and template-driven forms</a>
-- <a href="#template-driven-approach">Template-driven approach</a>
-  - <a href="#binding-ngform-and-ngmodel">Binding ngForm and ngModel</a>
-  - <a href="#ngmodel-ngmodel-and-ngmodel">ngModel, [ngModel] and [(ngModel)]</a>
-  - <a href="#ngmodels-and-ngmodelgroup">ngModels and ngModelGroup</a>
-  - <a href="#template-driven-submit">Template-driven submit</a>
-  - <a href="#template-driven-error-validation">Template-driven error validation</a>
-- <a href="#final-code">Final code</a>
 
 ### High-level terminology
 

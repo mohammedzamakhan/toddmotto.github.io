@@ -41,20 +41,26 @@ layout: default
     </header>
       {{ content }}
     </div>
+
     <div class="post__sidebar">
       {% include components/notify.html sidebar=true %}
-      <script async src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
-      <div class="share">
-        <div class="addthis_sharing_toolbox"></div>
+      {% include components/featured-course.html %}
+      <div>
+        <script async src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
       </div>
-      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-567a0f80a03a6fbe" async></script>
     </div>
+
   </section>
 </article>
 
 {% include courses-alt.html %}
+<div class="share">
+  <div class="addthis_sharing_toolbox"></div>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-567a0f80a03a6fbe" async></script>
 
 <div class="post__ending">
+  
   <!--<div class="author">
     <div class="author__content">
       <div class="author__pic">
