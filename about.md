@@ -4,15 +4,15 @@ layout: page
 class: about
 ---
 
+<div class="about__talk">
+  <img src="img/about.jpg">
+</div>
+
 I'm Todd, a 26 year old front-end engineer from England, UK. I run [Ultimate Angular](//ultimateangular.com) (which just won "Best Angular product for Education" award!), teaching developers and teams how to become Angular experts through online courses.
 
 Ultimate Angular focuses on the Angular 1.x and Angular 2 ecosystem, to get you from zero to hero in a few lunch breaks. I'm also a [Developer Expert](//developers.google.com/experts/people/todd-motto) at Google, [conference speaker](//speakerdeck.com/toddmotto) and [open source](//github.com/toddmotto) lover.
 
 I've been fortunate enough to travel the world speaking and teaching Angular and JavaScript. I've taught workshops for Google, Virgin Media, Salesforce, General Assembly employees and many more.
-
-<div class="about__talk">
-  <img src="img/about.jpg">
-</div>
 
 Co-created [Conditionizr](http://conditionizr.com) (.NET Magazine's Open Source Project of the Year finalist), partnered with Intel and Rolling Stone to bring an HTML5 experience to life. Many other brands have recognised and used/shared my ideas/code: Rolling Stone, Intel, Adobe, NASA, HTML5 Hub, AppendTo, Google, Esquire, Microsoft/MSDN, Wired, Huffington Post, KitKat, Smashing Magazine, Net Magazine, TechPro.
 

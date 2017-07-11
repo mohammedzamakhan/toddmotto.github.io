@@ -16,6 +16,8 @@ For the purposes of this article, we'll be focusing on some of Angular's reactiv
 
 ### Table of contents
 
+<div markdown="0" class="toc">
+
 - [Component architecture](#component-architecture)
 - [Container / presentational splits](#container--presentational-splits)
 - [The Container](#the-container)
@@ -29,6 +31,8 @@ For the purposes of this article, we'll be focusing on some of Angular's reactiv
   - [Pizza button component](#pizza-button-component)
   - [Pizza list component](#pizza-list-component)
 - [Conclusion](#conclusion)
+
+</div>
 
 ### Component architecture
 

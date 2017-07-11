@@ -16,6 +16,17 @@ layout: default
           </div>
           <div class="post-card__meta">
             <div class="post-card__tag">
+              <img src="{{ site.baseurl }}/img/tags/time.svg" alt="">
+            </div>
+            {% assign words = content | strip_html | number_of_words %}
+            {% if words < 360 %}
+              1 min read
+            {% else %}
+              {{ words | divided_by:180 }} mins read
+            {% endif %}
+          </div>
+          <div class="post-card__meta">
+            <div class="post-card__tag">
               <img src="{{ site.baseurl }}/img/icons/github-dark.svg" alt="">
             </div>
             {% if page.path %}
@@ -31,77 +42,39 @@ layout: default
       {{ content }}
     </div>
     <div class="post__sidebar">
-      <!--<div class="post__sidebar-wrap">
-        <div class="post-card__meta">
-          <div class="post-card__tag">
-            <img src="{{ site.baseurl }}/img/icons/github-dark.svg" alt="">
-          </div>
-          {% if page.path %}
-          <a class="post-card-edit" href="//github.com/toddmotto/toddmotto.github.io/blob/master/{{ page.path }}">
-            Edit this post
-          </a>
-          {% endif %}
-        </div>
-      </div>-->
-      {% include components/notify.html condensed=true %}
+      {% include components/notify.html sidebar=true %}
       <script async src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=toddmottocom" id="_carbonads_js"></script>
       <div class="share">
         <div class="addthis_sharing_toolbox"></div>
       </div>
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-567a0f80a03a6fbe" async></script>
     </div>
   </section>
 </article>
 
-<div class="author">
-  <div class="author__content">
-    <div class="author__pic">
-      <img src="{{ site.baseurl }}/img/todd.jpg" alt="Todd Motto">
-    </div>
-    <div class="author__bio">
-      <p>
-        I'm Todd, I teach the world Angular through <a href="https://ultimateangular.com">@UltimateAngular</a>.
-        Conference speaker and <a href="//developers.google.com/experts/people/todd-motto">Developer Expert</a> at Google.
-      </p>
-      <a href="https://twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true"></a>
-    </div>
-  </div>
-</div>
+{% include courses-alt.html %}
 
-{% include courses.html position="bottom" %}
-
-<div class="signup">
-  <div id="mc_embed_signup">
-    <form action="//toddmotto.us12.list-manage.com/subscribe/post?u=fb4d73e892f0d123a57dbd8bc&amp;id=0653182c3c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-      <h3 class="signup__title">Never miss an article</h3>
-      <p class="signup__sub">
-        All the awesomeness straight to your inbox. <br>
-        Plus exclusive discounts coupons for courses or workshop training.
-      </p>
-      <div class="mc-field-group">
-        <input type="email" placeholder="Email address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+<div class="post__ending">
+  <div class="author">
+    <div class="author__content">
+      <div class="author__pic">
+        <img src="{{ site.baseurl }}/img/todd.jpg" alt="Todd Motto">
       </div>
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
+      <div class="author__bio">
+        <p>
+          I'm Todd, I teach Angular to developers and teams worldwide through <a href="https://ultimateangular.com">Ultimate Angular</a>.
+          Conference speaker and <a href="//developers.google.com/experts/people/todd-motto">Developer Expert</a> at Google.
+        </p>
+        <a href="https://twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true"></a>
       </div>
-      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="b_fb4d73e892f0d123a57dbd8bc_0653182c3c" tabindex="-1" value=""></div>
-        <div class="clear">
-        <button type="submit" name="subscribe" id="mc-embedded-subscribe">
-          Sign up
-          <img src="{{ site.baseurl }}/img/icons/next.svg" alt="">
-        </button>
-        </div>
-      </div>
-    </form>
+    </div>
+    {% include components/notify.html %}
   </div>
 </div>
 
 <div class="disqus">
   <div id="disqus_thread"></div>
 </div>
-<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-567a0f80a03a6fbe" async></script>
 <script>
   var disqus_url = ({%if page.disqus %}'{{ page.disqus }}'{%else %}'http://toddmotto.com{{ page.url }}'{% endif %}).replace(/\/$/, '');
   var disqus_title = '{{ page.title }}';

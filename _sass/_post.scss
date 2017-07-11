@@ -57,7 +57,7 @@
 .linkjuice {
       color: #545e6f;
       &:hover {
-        color: $brand;
+        color: lighten(#545e6f, 15%)
       }
       position: relative;
       &-icon {
@@ -146,6 +146,10 @@
 
 // Post
 .post {
+
+  &__ending {
+    display: flex;
+  }
   
   &__sidebar {
     position: absolute;
@@ -178,7 +182,7 @@
       @media screen and (max-width: 850px) {
         font-size: 14px;
       }
-      color: #272E39;
+      color: #3a4250;
       > a {
         font-family: $font--open-sans--semi;
         color: $green;
@@ -243,7 +247,7 @@
 
     h2,
     h3 {
-      border-top: 1px solid #f3f3f3;
+      border-top: 1px solid #e6edfb;
       padding-top: 47px;
       margin-bottom: 40px;
     }
@@ -301,7 +305,7 @@
     padding: 0 10px;
     &__divider {
       height: 1px;
-      background-color: #f3f3f3;
+      background-color: #e6edfb;
       width: 100%;
       margin-top: -10px;
       margin-bottom: 39px;
@@ -359,19 +363,13 @@
  * AUTHOR
  */
 .author {
-  border-top: 1px solid #f1f1f1;
+  border-top: 1px solid #d9e1ef;
   padding: 32px 64px;
-  display: table;
+  display: flex;
+  align-items: center;
   color: #21242c;
-  background: #fff;
-  margin: 80px -64px 0 -64px;
-  @media screen and (max-width: 850px) {
-    margin: 48px -40px 0 -40px;
-  }
-  @media screen and (max-width: 500px) {
-    margin: 32px -24px 0 -24px;
-    text-align: center;
-  }
+  background: #f7f8fb;
+  margin: 0;
   &__content {
     position: relative;
   }
@@ -418,7 +416,7 @@
   margin: 0 -64px;
   background: #fff;
   color: #3a4250;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #d9e1ef;
   text-align: center;
   @media screen and (max-width: 850px) {
     padding: 30px 40px;
