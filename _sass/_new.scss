@@ -10,15 +10,19 @@
     border-right: 0;
   }
   &-edit {
-    color: #545e6f;
+    color: #8598b9 !important;
+  }
+  &__container {
+    margin: 20px 0 0;
+    display: flex;
   }
   &__meta {
     font-size: 14px;
     height: 32px;
     color: #8598b9;
     position: relative;
-    padding: 0 0 0 45px;
-    margin: 5px 0;
+    padding: 0 0 0 40px;
+    margin: 5px 20px 5px 0;
     display: flex;
     align-items: center;
   }
@@ -158,4 +162,8 @@
       position: static !important;
     }
   }
+}
+
+.bio {
+
 }

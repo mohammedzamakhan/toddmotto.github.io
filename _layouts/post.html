@@ -7,12 +7,24 @@ layout: default
     <header class="post__header">
       <h1 class="alpha post__title" itemprop="name headline">
         {{ page.title }}
-        <div class="post-card__meta">
+        <div class="post-card__container">
+          <div class="post-card__meta">
             <div class="post-card__tag">
               <img src="{{ site.baseurl }}/img/tags/{% if page.tag %}{{ page.tag }}{% else %}tag{% endif %}.svg" alt="">
             </div>
             {{ page.date | date: "%b %-d, %Y" }}
           </div>
+          <div class="post-card__meta">
+            <div class="post-card__tag">
+              <img src="{{ site.baseurl }}/img/icons/github-dark.svg" alt="">
+            </div>
+            {% if page.path %}
+            <a class="post-card-edit" href="//github.com/toddmotto/toddmotto.github.io/blob/master/{{ page.path }}">
+              Edit post
+            </a>
+            {% endif %}
+          </div>
+        </div>
       </h1>
       <div class="post__meta__divider"></div>
     </header>
