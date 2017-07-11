@@ -66,6 +66,43 @@ layout: default
 {% include courses-alt.html %}
 
 <div class="post__ending">
+
+  {% if page.previous.url %}
+    <div class="post-card">
+      <a href="{{ page.previous.url | prepend: site.baseurl }}" class="post-card__content" title="Read {{ page.previous.title }}">
+        <div class="post-card__meta">
+          <div class="post-card__tag">
+            <img src="{{ site.baseurl }}/img/tags/{% if page.previous.tag %}{{ page.previous.tag }}{% else %}tag{% endif %}.svg" alt="">
+          </div>
+          {{ page.previous.date | date: "%b %-d, %Y" }}
+        </div>
+        <h2 class="post-card__title">
+          {{ page.previous.title }}
+        </h2>
+        <p>
+          {{ page.previous.content | markdownify | strip_html | truncatewords: 15 }}
+        </p>
+      </a>
+    </div>
+  {% endif %}
+  {% if page.next.url %}
+    <div class="post-card">
+      <a href="{{ page.next.url | prepend: site.baseurl }}" class="post-card__content" title="Read {{ page.next.title }}">
+        <div class="post-card__meta">
+          <div class="post-card__tag">
+            <img src="{{ site.baseurl }}/img/tags/{% if page.next.tag %}{{ page.next.tag }}{% else %}tag{% endif %}.svg" alt="">
+          </div>
+          {{ page.next.date | date: "%b %-d, %Y" }}
+        </div>
+        <h2 class="post-card__title">
+          {{ page.next.title }}
+        </h2>
+        <p>
+          {{ page.next.content | markdownify | strip_html | truncatewords: 15 }}
+        </p>
+      </a>
+    </div>
+  {% endif %}
   
   <!--<div class="author">
     <div class="author__content">
