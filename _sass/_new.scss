@@ -255,3 +255,16 @@
     }
   }
 }
+
+.share {
+  background: #f7f8fb;
+  border: 1px solid darken(#f7f8fb, 5%);
+  border-radius: 4px;
+  padding: 55px 50px;
+  margin: 50px 0 0;
+  &__title {
+    font-size: 26px;
+    margin: 0;
+    color: #545e6f;
+  }
+}
