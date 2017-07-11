@@ -548,6 +548,7 @@ table {
     right: 0;
     max-height: 200px;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
     .search ul li a {

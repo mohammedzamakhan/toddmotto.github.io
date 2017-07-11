@@ -20,11 +20,11 @@
     display: block;
     opacity: .3;
     padding-right: 10px;
-    @media only screen and (max-width: 500px) {
-      padding-right: 4px;
-    }
-    font-size: 65%;
     top: 4px;
+    font-size: 65%;
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
     h3 & {
       top: 8px;
       @media only screen and (max-width: 500px) {
@@ -140,11 +140,14 @@
 
   &.single {
     margin: 0 50px;
+    @media screen and (max-width: 500px) {
+      margin: 0 15px;
+    }
     p {
       font-size: 18px;
       line-height: 1.4;
       @media screen and (max-width: 850px) {
-        font-size: 14px;
+        font-size: 16px;
       }
       color: #3a4250;
       > a {
@@ -164,13 +167,8 @@
       border-left: 4px solid $green;
       position: relative;
       text-align: left;
-      @media only screen and (max-width: 860px) {
-        margin-left: -40px;
-        margin-right: -40px;
-      }
       @media only screen and (max-width: 500px) {
-        margin-left: -24px;
-        margin-right: -24px;
+        
       }
       code {
         color: #6947a0;

@@ -67,6 +67,7 @@
     margin: 35px 0;
     height: 30px;
     text-align: center;
+    overflow: hidden;
     @media screen and (max-width: 850px) {
       display: none;
     }
@@ -78,6 +79,9 @@
     right: 30px;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
     a {
       margin: 0 10px 0 0;
       width: 18px;
