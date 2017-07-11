@@ -69,6 +69,9 @@
     font-size: 16px;
     transition: all .2s ease;
     background: #3a4250;
+    &--break {
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
     &--active {
       background: darken(#3a4250, 4%);
     }
@@ -93,7 +96,7 @@
   text-align: center;
   &.signup-form--sidebar {
     border-radius: 4px;
-    margin-bottom: 25px;
+    margin: 25px 0;
   }
   &__title {
     margin: 0;
@@ -202,7 +205,7 @@
 .featured {
   background: #3a4250;
   padding: 25px 0;
-  margin: 25px 0;
+  margin: 0 0 25px;
   border-radius: 4px;
   text-align: center;
   p {
@@ -236,7 +239,8 @@
     line-height: 1;
     text-align: center;
     padding: 14px 30px;
-    font-size: 15px;
+    margin: 10px 0 0;
+    font-size: 17px;
     font-weight: 600;
     border-radius: 4px;
     display: inline-block;
