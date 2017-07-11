@@ -6,30 +6,22 @@ path: 2016-12-20-typescript-the-missing-introduction.md
 tag: typescript
 ---
 
-**The following is a guest post by James Henry ([@MrJamesHenry][6389d359]). I am a member of the ESLint Core Team, and a TypeScript evangelist. I am working with Todd on [UltimateAngular](https://ultimateangular.com/courses) to bring you more award-winning Angular and TypeScript courses.**
+The following is a guest post by James Henry ([@MrJamesHenry][6389d359]). I am a member of the ESLint Core Team, and a TypeScript evangelist. I am working with Todd on [UltimateAngular](https://ultimateangular.com/courses) to bring you more award-winning Angular and TypeScript courses.
 
   [6389d359]: https://twitter.com/MrJamesHenry "@MrJamesHenry"
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 > The purpose of this article is to offer an introduction to how we can think about TypeScript, and its role in supercharging our **JavaScript** development.
 > <br><br>
 > We will also try and come up with our own reasonable definitions for a lot of the buzzwords surrounding types and compilation.
 
 There is huge amount of great stuff in the TypeScript project that we won't be able to cover within the scope of this blog post. Please read the [official documentation](http://www.typescriptlang.org/docs) to learn more, and check out the [TypeScript courses over on UltimateAngular](https://ultimateangular.com/courses#typescript) to go from total beginner to TypeScript Pro!
-
-### Table of contents
-
-- <a href="#background">Background</a>
-- <a href="#getting-to-grips-with-the-buzzwords">Getting to grips with the buzzwords</a>
-  - <a href="#javascript---interpreted-or-compiled">JavaScript - interpreted or compiled?</a>
-  - <a href="#run-time-vs-compile-time">Run Time vs Compile Time</a>
-  - <a href="#the-typescript-compiler">The TypeScript Compiler</a>
-  - <a href="#dynamic-vs-static-typing">Dynamic vs Static Typing</a>
-- <a href="#typescripts-role-in-our-javascript-workflow">TypeScript's role in our JavaScript workflow</a>
-  - <a href="#our-source-file-is-our-document-typescript-is-our-spell-check">Our source file is our document, TypeScript is our Spell Check</a>
-- <a href="#typescript-is-a-tool-which-enables-other-tools">TypeScript is a tool which enables other tools</a>
-  - <a href="#what-is-an-abstract-syntax-tree-ast">What is an Abstract Syntax Tree (AST)?</a>
-  - <a href="#example-renaming-symbols-in-vs-code">Example: Renaming symbols in VS Code</a>
-- <a href="#summary">Summary</a>
 
 ### Background
 

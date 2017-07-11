@@ -6,26 +6,14 @@ path: 2016-10-19-angular-2-forms-reactive.md
 tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Angular (v2+) presents two different methods for creating forms, template-driven (what we were used to in AngularJS 1.x), or reactive. We're going to explore the absolute fundamentals of the reactive Angular forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
-
-### Table of contents
-
-- <a href="#high-level-terminology">High-level terminology</a>
-  - <a href="#reactive">Reactive</a>
-  - <a href="#template-driven-forms">Template-driven forms</a>
-- <a href="#form-base-and-interface">Form base and interface</a>
-- <a href="#ngmodule-and-reactive-forms">ngModule and reactive forms</a>
-- <a href="#reactive-approach">Reactive approach</a>
-  - <a href="#formcontrol-and-formgroup">FormControl and FormGroup</a>
-  - <a href="#implementing-our-formgroup-model">Implementing our FormGroup model</a>
-  - <a href="#binding-our-formgroup-model">Binding our FormGroup model</a>
-- <a href="#reactive-submit">Reactive submit</a>
-- <a href="#reactive-error-validation">Reactive error validation</a>
-- <a href="#code-so-far">Code so far</a>
-- <a href="#simplifying-with-formbuilder">Simplifying with FormBuilder</a>
-- <a href="#final-code">Final code</a>
-  - <a href="#formgroup-and-formcontrol-code">FormGroup and FormControl code</a>
-  - <a href="#formbuilder-code">FormBuilder code</a>
 
 ### High-level terminology
 

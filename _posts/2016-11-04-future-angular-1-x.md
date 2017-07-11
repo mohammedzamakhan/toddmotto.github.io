@@ -6,6 +6,13 @@ path: 2016-11-04-future-angular-1-x.md
 tag: angularjs
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Angular 2 is upon us, and with the new approach the Angular team are taking with semantic versioning (SemVer), Angular 3 will shortly be upon us. Then Angular 4, 5, 6 or whatever the future holds at that point in the distant future. Where does this leave the majority of web applications, years worth of software investment, developer skills and future migration?
 
 If you're building with Angular 1.x, I want to lay down some thoughts, approaches, considerations on what to do now, as well as some background on Angular 2, any future migration and ideas. If you're running an engineering team, and are stuck on what's next - I'm hoping this will help answer questions I frequently get asked.

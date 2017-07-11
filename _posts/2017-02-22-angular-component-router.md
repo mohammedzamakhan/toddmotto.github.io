@@ -6,28 +6,16 @@ path: 2017-02-22-angular-component-router.md
 tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Angular's router acts as the main hub of any application, it loads the relevant components relevant to the route requested, as well as dealing with fetching the relevant data for that particular route. This allows us to control different routes, data and the components that render the data (as well as many additional features).
  
 So let's explore some of the main building blocks for the Angular router, following the table of contents below.
-
-### Table of contents
-
-- [Installing the router](#installing-the-router)
-  - [Base href](#base-href)
-- [Using the router](#using-the-router)
-  - [RouterModule.forRoot](#routermoduleforroot)
-  - [RouterModule.forChild](#routermoduleforchild)
-- [Configuring a route](#configuring-a-route)
-- [Displaying routes](#displaying-routes)
-- [Further configuration](#further-configuration)
-  - [Dynamic routes](#dynamic-routes)
-  - [Child routes](#child-routes)
-  - [Component-less routes](#component-less-routes)
-  - [loadChildren](#loadchildren)
-- [Router directives](#router-directives)
-  - [routerLink](#routerlink)
-  - [routerLinkActive](#routerlinkactive)
-- [Router API](#router-api)
 
 ### Installing the router
 

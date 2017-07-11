@@ -22,7 +22,7 @@ layout: default
             {% if words < 360 %}
               1 min read
             {% else %}
-              {{ words | divided_by:180 }} mins read
+              {{ words | divided_by:200 }} mins read
             {% endif %}
           </div>
           <div class="post-card__meta">
@@ -55,7 +55,7 @@ layout: default
 {% include courses-alt.html %}
 
 <div class="post__ending">
-  <div class="author">
+  <!--<div class="author">
     <div class="author__content">
       <div class="author__pic">
         <img src="{{ site.baseurl }}/img/todd.jpg" alt="Todd Motto">
@@ -67,7 +67,7 @@ layout: default
         </p>
         <a href="https://twitter.com/toddmotto" class="twitter-follow-button" data-show-count="true"></a>
       </div>
-    </div>
+    </div>-->
     {% include components/notify.html %}
   </div>
 </div>

@@ -4,7 +4,17 @@ permalink: /rxjs-observables-observers-operators
 title: "RxJS: Observables, observers and operators introduction"
 path: 2017-05-17-rxjs-observables-observers-operators.md
 tag: rxjs
+tags:
+  - rxjs
+  - observables
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 RxJS is an incredible tool for reactive programming, and today we're going to dive a little deeper into what Observables and observers are - as well as learn how to create our own operators.
 

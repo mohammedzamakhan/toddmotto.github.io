@@ -4,7 +4,17 @@ permalink: /building-tesla-range-calculator-angular-2-reactive-forms
 title: Building Tesla&#39;s battery range calculator with Angular 2 reactive forms
 path: 2016-12-13-building-tesla-range-calculator-angular-2-reactive-forms.md
 tag: angular
+tags:
+  - rxjs
+  - observables
 ---
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 In this epic tutorial, we're going to build some advanced Angular (v2+) components that rebuild [Tesla's battery range calculator](https://tesla.com/en_GB/models#battery-options) and then compile it to [AoT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) and deploy on GitHub pages. We'll be using the [reactive forms](/angular-2-forms-reactive) API as well and building custom form controls and use some stateful and stateless component practices, as well as change detection strategies.
 
@@ -17,36 +27,6 @@ This is the final project `gif` of what we're about to build:
 We'll be building the above app step by step, so you can follow along with the tutorial.
 
 > Straight to the source code? [Go here](https://github.com/toddmotto/angular-tesla-range-calculator)!
-
-### Table of contents
-
-- <a href="#setup-and-angular-cli">Setup and Angular CLI</a>
-  - <a href="#new-github-repo">New GitHub repo</a>
-  - <a href="#new-cli-project">CLI installation</a>
-  - <a href="#serving-the-project">Serving the project</a>
-- <a href="#project-imagesassets">Project images/assets</a>
-- <a href="#root-and-sub-modules">Root and sub-modules</a>
-  - <a href="#root-ngmodule">Root @NgModule</a>
-  - <a href="#tesla-sub-module">Tesla Sub-module</a>
-- <a href="#injectable-data-service">Injectable data service</a>
-- <a href="#container-and-presentational-components">Container and presentational components</a>
-  - <a href="#formgroup-setup">FormGroup setup</a>
-  - <a href="#wiring-into-the-app-component">Wiring into the app component</a>
-- <a href="#car-component">Car component</a>
-  - <a href="#rendering-the-car">Rendering the car</a>
-- <a href="#stats-component">Stats component</a>
-  - <a href="#stats-and-datastructure-models">Stats and datastructure models</a>
-  - <a href="#private-stats-calculation">Private stats calculation</a>
-- <a href="#re-usable-counter-component">Re-usable counter component</a>
-  - <a href="#counter-and-controlvalueaccessor">Counter and ControlValueAccessor</a>
-  - <a href="#displaying-the-counters">Displaying the counters</a>
-- <a href="#aircon-and-heating-controls">Aircon and Heating controls</a>
-  - <a href="#conditional-airconheating-limits">Conditional aircon/heating limits</a>
-- <a href="#wheel-size-component">Wheel size component</a>
-- <a href="#formgroup-valuechange-subscription">FormGroup valueChange subscription</a>
-- <a href="#deploying-with-ahead-of-time-compilation">Deploying with Ahead-of-Time compilation</a>
-  - <a href="#deploying-to-github-pages">Deploying to GitHub pages</a>
-  - <a href="#source-code">Source code</a>
 
 ### Setup and Angular CLI
 

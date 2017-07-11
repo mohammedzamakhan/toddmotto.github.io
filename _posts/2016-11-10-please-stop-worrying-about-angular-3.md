@@ -6,6 +6,15 @@ path: 2016-11-10-please-stop-worrying-about-angular-3.md
 tag: angular
 ---
 
+> Please note: since writing this article Angular adopted SemVer and Angular 3 was skipped to Angular 4 to allow all modules to align with the same version number (the router was one major version ahead)
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Another Angular version planned already? Whaaaat?
 
 Didn't Angular 2 just ship? Why Angular 3? What? Why?

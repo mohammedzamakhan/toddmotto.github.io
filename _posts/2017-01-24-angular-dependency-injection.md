@@ -6,24 +6,14 @@ path: 2017-01-24-angular-dependency-injection.md
 tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Providers in Angular are key to how we develop our applications, and injecting dependencies can be done in various ways. In this post, we're going to debunk some terminology behind the `@Inject()` and `@Injectable()` decorators and explore the use cases for them. Then, we'll dive into understanding tokens, providers and take a look behind the scenes at how Angular actually fetches and creates our dependencies, as well as some Ahead-of-Time source code explanations.
-
-### Table of contents
-
-- <a href="#injecting-providers">Injecting Providers</a>
-  - <a href="#a-new-dependency-injection-system">A new dependency injection system</a>
-  - <a href="#inject">@Inject()</a>
-  - <a href="#injectable">@Injectable()</a>
-- <a href="#tokens-and-dependency-injection">Tokens and Dependency Injection</a>
-  - <a href="#registering-a-provider">Registering a provider</a>
-  - <a href="#overriding-providers">Overriding providers</a>
-- <a href="#understanding-injectors">Understanding Injectors</a>
-  - <a href="#pre-compiled-code">Pre-compiled Code</a>
-  - <a href="#appmoduleinjector">AppModuleInjector</a>
-  - <a href="#appmoduleinjector-properties">AppModuleInjector properties</a>
-  - <a href="#module-imports">Module imports</a>
-  - <a href="#dependency-injection">Dependency Injection</a>
-- <a href="#closing-thoughts">Closing Thoughts</a>
 
 ### Injecting providers
 

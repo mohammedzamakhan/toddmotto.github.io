@@ -6,6 +6,13 @@ path: 2017-03-13-angular-dynamic-components.md
 tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 In this post we're going to explore the creation of dynamic components alongside a Reactive Form setup. If you're new to Reactive Forms, check out one of my [previous posts](/angular-2-forms-reactive) before diving in!
 
 This is what we'll be building with fully dynamic components (yes it's not the most complex of forms, but we're diving into the concept of how to dynamically render form components based off a configuration object):
@@ -15,25 +22,6 @@ This is what we'll be building with fully dynamic components (yes it's not the m
 Dynamic components are useful when we want to generate components on the fly, for example we could assume a server response tells us to display a particular view and/or message, and handling this with built-in structural directives (such as a big `ngIf` tree) is not really the best approach - we can do better!
 
 Another powerful use case is having a form driven by configuration. This allows us to develop a generic form component, with the child nodes being generated from a descriptor. Let's go ahead and see how this would be done, whilst harnessing the power of Angular's `ReactiveFormsModule` to create awesome forms.
-
-### Table of contents
-
-- [Component Anatomy](#component-anatomy)
-  - [The Wrapper](#the-wrapper)
-  - [The View](#the-view)
-- [Instantiating components](#instantiating-components)
-  - [Component Factories and the HostView](#component-factories-and-the-hostview)
-- [Creating a dynamic form](#creating-a-dynamic-form)
-  - [DynamicFormModule](#dynamicformmodule)
-  - [The main container](#the-main-container)
-  - [Using the dynamic form](#using-the-dynamic-form)
-  - [Input field](#input-field)
-  - [Select field](#select-field)
-  - [Button](#button)
-  - [DynamicField](#dynamicfield)
-  - [Looping through the fields](#looping-through-the-fields)
-- [Submitting the form](#submitting-the-form)
-- [Conclusion](#conclusion)
 
 ### Component Anatomy
 

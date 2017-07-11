@@ -6,6 +6,13 @@ path: 2016-11-17-dynamic-page-titles-angular-2-router-events.md
 tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Updating page titles in AngularJS (1.x) was a little problematic and typically was done via a global `$rootScope` property that listened for route change events to fetch the current route and map across a static page title. In Angular (v2+), the solution is far easier as it provides a single API, however we can actually tie this API into route change events to dynamically update the page titles.
 
 ### Title Service

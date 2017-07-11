@@ -6,6 +6,13 @@ path: 2017-01-26-angular-decorators.md
 tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Decorators are a core concept when developing with Angular (versions 2 and above). There's also an official [TC39 proposal](https://github.com/tc39/proposal-decorators), currently at Stage-2, so expect decorators to become a core language feature soon in JavaScript as well.
 
 Back to Angular, the internal codebase uses decorators extensively and in this post we’re going to look at the different types of decorators, the code they compile to and how they work.
@@ -13,22 +20,6 @@ Back to Angular, the internal codebase uses decorators extensively and in this p
 When I was first introduced to TypeScript and decorators, I wondered why we needed them at all, but once you dig a little deeper you can understand the benefits to creating decorators (not only for use in Angular).
 
 AngularJS didn't use decorators, opting for a different registration method - such as defining a component for example with the `.component()` method. So why has Angular chose to use them? Let's explore.
-
-### Table of contents
-
-- <a href="#angular-decorators">Angular Decorators</a>
-  - <a href="#class-decorators">Class Decorators</a>
-  - <a href="#property-decorators">Property Decorators</a>
-  - <a href="#method-decorators">Method Decorators</a>
-  - <a href="#parameter-decorators">Parameter Decorators</a>
-- <a href="#creating-a-decorator">Creating a decorator</a>
-  - <a href="#decorator-functions">Decorator Functions</a>
-  - <a href="#passing-data-to-a-decorator">Passing data to a decorator</a>
-- <a href="#what-angular-decorators-actually-do">What Angular decorators actually do</a>
-  - <a href="#storing-metadata">Storing metadata</a>
-  - <a href="#chaining-decorators">Chaining decorators</a>
-- <a href="#how-decorators-are-applied">How decorators are applied</a>
-- <a href="#summary">Summary</a>
 
 ### Angular Decorators
 

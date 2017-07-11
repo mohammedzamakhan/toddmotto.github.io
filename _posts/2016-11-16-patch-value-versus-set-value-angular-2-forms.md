@@ -6,6 +6,13 @@ path: 2016-11-16-patch-value-versus-set-value-angular-2-forms.md
 tag: angular
 ---
 
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
+
 Setting model values in Angular (v2+) can be done in a few different ways, however with [reactive forms](/angular-2-forms-reactive) things are extremely easy to do with the new form APIs. In this post we'll dig a little deeper as to the differences between `patchValue` and `setValue` in Angular forms.
 
 ### Reactive Form Setup
