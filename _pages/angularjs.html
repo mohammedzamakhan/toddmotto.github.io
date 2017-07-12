@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: /categories/angularjs
+---
+
+{% 
+	include components/category-title.html 
+	category="AngularJS" 
+	icon="angularjs"
+	text="All articles on AngularJS (1.x), beginner and advanced posts"
+%}
+
+<div class="posts">
+	{% for post in site.posts %}
+		{% if post.tag == 'angularjs' %}
+			{% include components/post-card.html %}
+		{% endif %}
+  {% endfor %}
+  {% include components/notify.html %}
+</div>

@@ -2,6 +2,7 @@
 title: About
 layout: page
 class: about
+permalink: /about
 ---
 
 <div class="about__talk">

@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: /categories/rxjs
+---
+
+{% 
+	include components/category-title.html 
+	category="RxJS" 
+	icon="rxjs"
+	text="All articles on RxJS, Reactive Extensions for JavaScript"
+%}
+
+<div class="posts">
+	{% for post in site.posts %}
+		{% if post.tag == 'rxjs' %}
+			{% include components/post-card.html %}
+		{% endif %}
+  {% endfor %}
+  {% include components/notify.html %}
+</div>

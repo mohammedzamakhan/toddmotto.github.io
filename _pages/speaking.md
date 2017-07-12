@@ -2,6 +2,7 @@
 title: Speaking
 layout: page
 class: speaking
+permalink: /speaking
 ---
 
 I regularly speak at conferences in Europe and America, if you'd like me to join yours, please email me, todd@toddmotto.com and we can discuss further.

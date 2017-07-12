@@ -4,9 +4,6 @@ permalink: /rxjs-observables-observers-operators
 title: "RxJS: Observables, observers and operators introduction"
 path: 2017-05-17-rxjs-observables-observers-operators.md
 tag: rxjs
-tags:
-  - rxjs
-  - observables
 ---
 
 <div class="toc" markdown="1">

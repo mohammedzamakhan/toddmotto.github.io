@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: /categories/javascript
+---
+
+{% 
+	include components/category-title.html 
+	category="JavaScript" 
+	icon="js"
+	text="All articles on JavaScript, ES6 and tips and tricks"
+%}
+
+<div class="posts">
+	{% for post in site.posts %}
+		{% if post.tag == 'js' %}
+			{% include components/post-card.html %}
+		{% endif %}
+  {% endfor %}
+  {% include components/notify.html %}
+</div>
