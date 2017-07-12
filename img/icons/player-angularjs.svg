@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="205.947px" height="128.66px" viewBox="0.803 0.34 205.947 128.66" enable-background="new 0.803 0.34 205.947 128.66"
+	 xml:space="preserve">
+<title>Group</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Group">
+		<g id="player-angularjs">
+			<rect id="Rectangle-path" x="0.803" y="0.34" fill="#E8ECF7" width="206.242" height="128.908"/>
+			<rect id="Rectangle-path_1_" x="0.75" y="97.34" fill="#3A4250" width="206.491" height="31.996"/>
+			<path id="Shape" fill="#2A303D" d="M195.006,115.477H36.318c-1.42,0-2.568-1.148-2.568-2.568s1.148-2.568,2.568-2.568h158.688
+				c1.42,0,2.568,1.148,2.568,2.568S196.426,115.477,195.006,115.477z"/>
+			<path id="Shape_1_" fill="#C3002F" d="M69.321,110.34H36.318c-1.42,0-2.568,1.148-2.568,2.568s1.148,2.568,2.568,2.568h33.003
+				V110.34z"/>
+			<path id="Shape_2_" fill="#FFFFFF" d="M69.318,123.883c-1.42,0-2.568-1.148-2.568-2.568v-15.406c0-1.42,1.148-2.568,2.568-2.568
+				s2.568,1.148,2.568,2.568v15.406C71.886,122.734,70.738,123.883,69.318,123.883z"/>
+			<g id="ic_play_arrow_white_24px" transform="translate(7.246094, 100.736816)">
+				<polygon id="Shape_3_" fill="#FFFFFF" points="7.402,5.123 7.402,18.513 17.924,11.818 				"/>
+				<polygon id="Shape_4_" fill="none" points="-0.25,0.339 22.707,0.339 22.707,23.296 -0.25,23.296 				"/>
+			</g>
+		</g>
+		<g id="angular-1" transform="translate(68.000000, 9.000000)">
+			<polygon id="Shape_5_" fill="#B2B2B2" points="34.641,0.34 -0.25,12.619 5.263,58.328 34.676,74.496 64.242,58.111 
+				69.754,12.401 			"/>
+			<polygon id="Shape_6_" fill="#B52E31" points="66.274,15.043 34.56,4.228 34.56,70.635 61.139,55.925 			"/>
+			<polygon id="Shape_7_" fill="#E23237" points="3.667,15.238 8.391,56.121 34.56,70.633 34.56,4.227 			"/>
+			<path id="Shape_8_" fill="#F2F2F2" d="M41.912,37.258l-7.294-15.231l-6.421,15.231L41.912,37.258L41.912,37.258z M44.691,43.662
+				H25.359l-4.326,10.819l-8.045,0.148L34.56,6.639l22.324,47.989h-7.456L44.691,43.662z"/>
+			<polygon id="Shape_9_" fill="#B2B2B2" points="34.56,6.64 34.617,22.026 41.903,37.269 34.576,37.269 34.56,43.652 
+				44.691,43.662 49.428,54.63 57.125,54.773 			"/>
+		</g>
+	</g>
+</g>
+</svg>

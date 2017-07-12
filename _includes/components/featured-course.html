@@ -1,15 +1,41 @@
 <div class="featured">
-  <p class="featured__latest">latest course</p>
-  <p class="featured__name">
-    Angular Fundamentals
+  <p class="featured__latest">
+    {% if page.tag == 'angularjs' %}
+    Modern AngularJS
+    {% else %}
+    Latest course
+    {% endif %}
   </p>
-  <a href="//ultimateangular.com/angular-fundamentals" target="_blank">
-    <img src="{{ site.baseurl }}/img/icons/player.svg" alt="Angular Fundamentals online course">
+  <p class="featured__name">
+    {% if page.tag == 'angularjs' %}
+    AngularJS Pro
+    {% else %}
+    Angular Fundamentals
+    {% endif %}
+  </p>
+  {% if page.tag == 'angularjs' %}
+  <a href="//ultimateangular.com/angularjs-pro" target="_blank">
+    <img src="{{ site.baseurl }}/img/icons/player-angularjs.svg" alt="AngularJS Pro online course">
   </a>
+  {% else %}
+  <a href="//ultimateangular.com/angular-fundamentals" target="_blank">
+    <img src="{{ site.baseurl }}/img/icons/player-angular.svg" alt="Angular Fundamentals online course">
+  </a>
+  {% endif %}
   <span class="featured__text">
-    Learn Angular at your own pace online with me and my award-winning courses.
+    {% if page.tag == 'angularjs' %}
+    AngularJS 1.5+, latest component features, advanced concepts to master AngularJS.
+    {% else %}
+    Angular v4+ award-winning courses, learn at your own pace online with me.
+    {% endif %}
   </span>
+  {% if page.tag == 'angularjs' %}
+  <a href="//ultimateangular.com/angularjs-pro" target="_blank" class="featured__btn">
+    Free preview
+  </a>
+  {% else %}
   <a href="//ultimateangular.com/angular-fundamentals" target="_blank" class="featured__btn">
     Free preview
   </a>
+  {% endif %}
 </div>
