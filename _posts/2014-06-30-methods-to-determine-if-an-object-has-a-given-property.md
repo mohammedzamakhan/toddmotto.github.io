@@ -6,14 +6,14 @@ path: 2014-06-30-methods-to-determine-if-an-object-has-a-given-property.md
 tag: js
 ---
 
+There are multiple ways to detect whether an Object has a property. You'd think it'd be as easy as `myObject.hasOwnProperty('prop');` - but no, there are a few different ways with their own problems and gotchas. Let's look at the few ways to check property existence, concepts that confuse JavaScript developers, prototype chain lookups and problems JavaScript might provide us.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-There are multiple ways to detect whether an Object has a property. You'd think it'd be as easy as `myObject.hasOwnProperty('prop');` - but no, there are a few different ways with their own problems and gotchas. Let's look at the few ways to check property existence, concepts that confuse JavaScript developers, prototype chain lookups and problems JavaScript might provide us.
 
 ### Double bang !! property lookup
 We've all seen it, probably in something such as Modernizr for simple feature detection, the infamous `!!` amongst our JS. Important note before we begin this one, it doesn't actually check if an Object has a property "as such", it checks the _value_ of the Object property. Which means if the property value is false, or the object property doesn't even exist, they give the same `falsy` result - which can be really bad if you use it without knowing what it does and its limitations.

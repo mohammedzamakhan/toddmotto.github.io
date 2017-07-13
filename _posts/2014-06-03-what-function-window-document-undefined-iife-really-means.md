@@ -6,6 +6,8 @@ path: 2014-06-03-what-function-window-document-undefined-iife-really-means.md
 tag: js
 ---
 
+In this post, we're going to explore what the title suggests, and offer explanations as to what this self invoked function setup gives us.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}

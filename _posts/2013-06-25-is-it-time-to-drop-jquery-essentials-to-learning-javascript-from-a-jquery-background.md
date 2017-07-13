@@ -6,14 +6,14 @@ path: 2013-06-25-is-it-time-to-drop-jquery-essentials-to-learning-javascript-fro
 tag: js
 ---
 
+jQuery has been a godsend to pretty much all of us front-end developers since its release, its intuitive methods, easy functions make light work of JavaScript's loosely typed language. JavaScript is hard, it's hard to get into, it's much harder than jQuery. But the time is nearly here, going native is going to be the future of front-end - HTML5.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-jQuery has been a godsend to pretty much all of us front-end developers since its release, its intuitive methods, easy functions make light work of JavaScript's loosely typed language. JavaScript is hard, it's hard to get into, it's much harder than jQuery. But the time is nearly here, going native is going to be the future of front-end - HTML5.
 
 HTML5 doesn't just mean a few extra HTML elements, if you're putting down on your CV/Resume that you know HTML5 because you've used the new elements, then think again! HTML5 covers such a mass of technology, and also alongside it comes ECMAScript 5, the future of JavaScript. Combining HTML5 APIs, of which most require JavaScript, we need to adopt a more native structure of working as each day jQuery becomes less important, and here's why.
 

@@ -6,14 +6,14 @@ path: 2016-10-26-reactive-formgroup-validation-angular-2.md
 tag: angular
 ---
 
+Validation in Angular (v2+), various approaches, various APIs to use. We're going to use `AbstractControl` to learn how to validate a particular `FormGroup`. I covered `FormGroup`, `FormControl` and `FormBuilder` in my previous [reactives form](/angular-2-forms-reactive) fundamentals article - which I'd recommend checking out before this one if you're new to Angular forms.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Validation in Angular (v2+), various approaches, various APIs to use. We're going to use `AbstractControl` to learn how to validate a particular `FormGroup`. I covered `FormGroup`, `FormControl` and `FormBuilder` in my previous [reactives form](/angular-2-forms-reactive) fundamentals article - which I'd recommend checking out before this one if you're new to Angular forms.
 
 ### What is a FormGroup?
 

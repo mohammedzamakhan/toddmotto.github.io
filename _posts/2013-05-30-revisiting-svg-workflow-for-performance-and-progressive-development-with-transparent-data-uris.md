@@ -6,14 +6,14 @@ path: 2013-05-30-revisiting-svg-workflow-for-performance-and-progressive-develop
 tag: js
 ---
 
+A few months ago I covered a range of [SVG techniques](//toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script) that proved to be a great progression for developers looking to 'get into' SVG development. For those who are new to web development or SVG in general, give it a good read and then drop back to this article to help take you to the next phase.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-A few months ago I covered a range of [SVG techniques](//toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script) that proved to be a great progression for developers looking to 'get into' SVG development. For those who are new to web development or SVG in general, give it a good read and then drop back to this article to help take you to the next phase.
 
 This article sums up my SVG and HTML5 workflow stemming from my previous article, and how it's evolved over the last few months to improve furthermore in terms of speed, reliability and new advances in techniques and thinking.
 

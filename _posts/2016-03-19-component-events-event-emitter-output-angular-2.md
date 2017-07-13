@@ -6,14 +6,14 @@ path: 2016-03-19-component-events-event-emitter-output-angular-2.md
 tag: angular
 ---
 
+Angular components have a far better way of notifying parent components that something has changed, via events. There's no longer two-way data binding in Angular in the same way we knew it in AngularJS, it's designed around a uni-directional data flow system that adopts a much more reasonable approach to application development.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Angular components have a far better way of notifying parent components that something has changed, via events. There's no longer two-way data binding in Angular in the same way we knew it in AngularJS, it's designed around a uni-directional data flow system that adopts a much more reasonable approach to application development.
 
 Let's finalise the basics of parent-child and child-parent communication by introducing `EventEmitter` and `@Output`.
 

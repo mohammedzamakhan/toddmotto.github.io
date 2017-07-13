@@ -1,5 +1,5 @@
 ---
-title: Overriding the Default Text Selection Colour
+title: Using CSS3 text-selection to override default highlight colour
 author: Todd Motto
 layout: post
 permalink: /overriding-the-default-text-selection-colour/
@@ -8,6 +8,8 @@ path: 2012-04-09-overriding-the-default-text-selection-colour.md
 tag: css3
 ---
 
+Add something different to your website by overriding the default text selection colour (boring blue and no text styling) when highlighting words/images on your website. Check out the demo below by highlighting the paragraphs, and add the code to your own website. 
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
@@ -15,9 +17,7 @@ tag: css3
 {:toc}
 </div>
 
-Add something different to your website by overriding the default text selection colour (boring blue and no text styling) when highlighting words/images on your website. Check out the demo below by highlighting the paragraphs, and add the code to your own website. 
-
-Note: Will not work in IE6, IE7, IE8, but you’re good on Safari/Chrome (WebKit), Mozilla FireFox (Gecko) and IE9.
+> Note: Will not work in IE6-8, but you’re good on Safari/Chrome (WebKit), Mozilla FireFox (Gecko) and IE9+
 
 Here’s the code to add to your CSS to implement your default text selection colour.
 

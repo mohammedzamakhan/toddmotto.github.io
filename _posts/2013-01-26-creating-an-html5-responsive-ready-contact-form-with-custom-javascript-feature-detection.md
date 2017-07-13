@@ -8,14 +8,14 @@ path: 2013-01-26-creating-an-html5-responsive-ready-contact-form-with-custom-jav
 tag: html5
 ---
 
+Forms are often one of the last quick-finishes to a website, so here’s a great boilerplate to get you kick-started on a standards-compliant, HTML5, CSS3, responsive-ready form with custom JavaScript feature detections.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Forms are often one of the last quick-finishes to a website, so here’s a great boilerplate to get you kick-started on a standards-compliant, HTML5, CSS3, responsive-ready form with custom JavaScript feature detections.
 
 HTML5 brings many great features that we can start using now, and many of them lie within forms and inputs. Some HTML5 enhancements often require fallbacks for our projects, through polyfills or fallbacks. In this tutorial, we’ll create a contact form that will include the following features:
 

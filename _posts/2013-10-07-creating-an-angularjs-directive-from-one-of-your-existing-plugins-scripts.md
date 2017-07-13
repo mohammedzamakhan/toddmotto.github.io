@@ -6,14 +6,14 @@ path: 2013-10-07-creating-an-angularjs-directive-from-one-of-your-existing-plugi
 tag: angularjs
 ---
 
+Writing scripts for your websites or web apps is often a simple process, you write your script, concatenate the file into your main scripts file and it gets pushed into the DOM. Not much to it, but when it comes to AngularJS, they believe in something slightly different...
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Writing scripts for your websites or web apps is often a simple process, you write your script, concatenate the file into your main scripts file and it gets pushed into the DOM. Not much to it, but when it comes to AngularJS, they believe in something slightly different...
 
 No _DOM manipulation_ should be carried out inside a Controller, the Controller is where most of your magic happens, a communications channel between your Model data and the browser. It can be tempting to simply whack in an existing script in there (as it'll work just fine), but this goes against Angular's principles.
 

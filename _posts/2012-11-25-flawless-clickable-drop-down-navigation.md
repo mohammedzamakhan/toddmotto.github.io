@@ -8,14 +8,14 @@ path: 2012-11-25-flawless-clickable-drop-down-navigation.md
 tag: js
 ---
 
+In this tutorial I’ll show you how to create a superb clickable drop-down navigation, using jQuery and of course complete with CSS fallbacks. These types of drop-downs are great for Web Apps, websites and backends which you don’t want to implement a hover-only system.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-In this tutorial I’ll show you how to create a superb clickable drop-down navigation, using jQuery and of course complete with CSS fallbacks. These types of drop-downs are great for Web Apps, websites and backends which you don’t want to implement a hover-only system.
 
 It’s all about the user experience and journey around the site. Here I’ll show you how to create a really smart clickable drop-down navigation, in which you can click any negative space to close it again.
 

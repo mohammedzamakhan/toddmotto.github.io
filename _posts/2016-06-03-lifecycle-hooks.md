@@ -6,14 +6,14 @@ path: 2016-06-03-lifecycle-hooks.md
 tag: angularjs
 ---
 
+Lifecycle hooks are simply functions that get called at specific points of a component's life in our Angular apps. They landed in AngularJS 1.5 and are to be used alongside the [.component() method](/exploring-the-angular-1-5-component-method/), and have slowly evolved over the last few versions to include some more powerful (and Angular v2+ inspired) hooks. Let's explore in-depth how we can actually use them, the roles they play and why you should use them - this is especially important with a component architecture based app.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Lifecycle hooks are simply functions that get called at specific points of a component's life in our Angular apps. They landed in AngularJS 1.5 and are to be used alongside the [.component() method](/exploring-the-angular-1-5-component-method/), and have slowly evolved over the last few versions to include some more powerful (and Angular v2+ inspired) hooks. Let's explore in-depth how we can actually use them, the roles they play and why you should use them - this is especially important with a component architecture based app.
 
 I've spent some time [polyfilling the `.component()` method](https://github.com/toddmotto/angular-component) and all the lifecycle hooks back to Angular v1.3.0+, so it's been a massive insight as to how we actually use these hooks and their roles in components. Let's dive in.
 

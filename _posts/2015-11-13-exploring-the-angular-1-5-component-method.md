@@ -6,16 +6,16 @@ path: 2015-11-13-exploring-the-angular-1-5-component-method.md
 tag: angularjs
 ---
 
+AngularJS 1.5 introduced the `.component()` helper method, which is much simpler than the `.directive()` definition and advocates best practices and common default behaviours. Using `.component()` will allow developers to write in an Angular (v2+) style as well, which will in turn make upgrading to Angular an easier feat.
+
+Let's compare the differences in syntax and the super neat abstraction that `.component()` gives us over using the `.directive()` method.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-AngularJS 1.5 introduced the `.component()` helper method, which is much simpler than the `.directive()` definition and advocates best practices and common default behaviours. Using `.component()` will allow developers to write in an Angular (v2+) style as well, which will in turn make upgrading to Angular an easier feat.
-
-Let's compare the differences in syntax and the super neat abstraction that `.component()` gives us over using the `.directive()` method.
 
 > Build an AngularJS 1.5 component architecture app, end-to-end with Firebase. Check out my [Angular 1.x Pro](https://ultimateangular.com/courses/#angular-1) course.
 

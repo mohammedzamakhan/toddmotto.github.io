@@ -6,14 +6,14 @@ path: 2013-07-27-using-grunt-and-chrome-workspaces-for-in-browser-development.md
 tag: js
 ---
 
+After some great interest in why I [ditched Sublime Text 2](//twitter.com/toddmotto/status/360672131710844929) for the day to fully code inside Google Chrome, here's the promised screencast on how to do it yourself.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-After some great interest in why I [ditched Sublime Text 2](//twitter.com/toddmotto/status/360672131710844929) for the day to fully code inside Google Chrome, here's the promised screencast on how to do it yourself.
 
 I'm using Sass/SCSS (.scss) and JavaScript, both of which compile, concat + minify and livereload the browser, ice cool. In the video I'm using Grunt and Chrome's Workspaces to manage all of this, enjoy!
 

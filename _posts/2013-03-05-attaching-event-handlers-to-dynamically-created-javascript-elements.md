@@ -6,14 +6,14 @@ path: 2013-03-05-attaching-event-handlers-to-dynamically-created-javascript-elem
 tag: js
 ---
 
+When working with JavaScript, you can sometimes need to create new elements on-the-fly, and from that, you'll need to do something with that new element. It might be a click, which more often than not will need to execute a function.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-When working with JavaScript, you can sometimes need to create new elements on-the-fly, and from that, you'll need to do something with that new element. It might be a click, which more often than not will need to execute a function.
 
 The problem with dynamically created elements, is that they aren't born with the same event handlers as the existing elements. Let's say we have a list of items that you could click on to toggle/add a class name, when a new element is created and appended to that same list - it won't work - the event handler attachment is missing. This tutorial is going to cover a pure JavaScript way of dynamically attaching event handlers to newly created elements, so they merge in seamlessly with your other elements.
 

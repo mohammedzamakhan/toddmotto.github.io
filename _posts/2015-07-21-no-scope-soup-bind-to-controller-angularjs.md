@@ -6,14 +6,14 @@ path: 2015-07-21-no-scope-soup-bind-to-controller-angularjs.md
 tag: angularjs
 ---
 
+Namespacing, code consistency and proper design patterns _really_ matter in software engineering, and Angular addresses a lot of issues we face as front-end engineers really nicely.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Namespacing, code consistency and proper design patterns _really_ matter in software engineering, and Angular addresses a lot of issues we face as front-end engineers really nicely.
 
 I'd like to show you some techniques using the `bindToController` property on Directives that will help clean up your DOM-Controller namespacing, help keep code consistent, and help follow an even better design pattern when constructing Controller Objects and inheriting data from elsewhere.
 

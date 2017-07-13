@@ -6,16 +6,16 @@ path: 2015-12-15-use-controller-filters-to-prevent-digest-performance-issues.md
 tag: angularjs
 ---
 
+Filters in Angular massively contribute to slow performance, so let's adopt a sensible way of doing things, which may take you an additional ten minute to code, but will dramatically enhance your application's performance.
+
+Let's look at how removing filters in the DOM actually impacts our `$digest` cycles.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Filters in Angular massively contribute to slow performance, so let's adopt a sensible way of doing things, which may take you an additional ten minute to code, but will dramatically enhance your application's performance.
-
-Let's look at how removing filters in the DOM actually impacts our `$digest` cycles.
 
 ### What's a DOM filter?
 

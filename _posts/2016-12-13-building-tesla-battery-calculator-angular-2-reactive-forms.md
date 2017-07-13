@@ -9,14 +9,14 @@ tags:
   - observables
 ---
 
+In this epic tutorial, we're going to build some advanced Angular (v2+) components that rebuild [Tesla's battery range calculator](https://tesla.com/en_GB/models#battery-options) and then compile it to [AoT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) and deploy on GitHub pages. We'll be using the [reactive forms](/angular-2-forms-reactive) API as well and building custom form controls and use some stateful and stateless component practices, as well as change detection strategies.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-In this epic tutorial, we're going to build some advanced Angular (v2+) components that rebuild [Tesla's battery range calculator](https://tesla.com/en_GB/models#battery-options) and then compile it to [AoT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html) and deploy on GitHub pages. We'll be using the [reactive forms](/angular-2-forms-reactive) API as well and building custom form controls and use some stateful and stateless component practices, as well as change detection strategies.
 
 This is the final project `gif` of what we're about to build:
 

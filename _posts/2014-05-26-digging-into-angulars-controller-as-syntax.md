@@ -6,14 +6,14 @@ path: 2014-05-26-digging-into-angulars-controller-as-syntax.md
 tag: angularjs
 ---
 
+AngularJS Controllers have recently gone under some changes (version 1.2 to be precise). What this means for scopes, Controllers and Angular development is some very subtle but powerful changes. One of those changes I believe is improved architecture, clearer scoping and smarter Controllers.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-AngularJS Controllers have recently gone under some changes (version 1.2 to be precise). What this means for scopes, Controllers and Angular development is some very subtle but powerful changes. One of those changes I believe is improved architecture, clearer scoping and smarter Controllers.
 
 Controllers as we know them are class-like Objects that drive Model and View changes, but they all seem to revolve around this mystical `$scope` Object. Angular Controllers have been pushed to change the way `$scope` is declared, with many developers suggesting using the `this` keyword instead of `$scope`.
 

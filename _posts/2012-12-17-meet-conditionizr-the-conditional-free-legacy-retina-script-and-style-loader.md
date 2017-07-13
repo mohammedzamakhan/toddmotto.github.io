@@ -8,16 +8,16 @@ path: 2012-12-17-meet-conditionizr-the-conditional-free-legacy-retina-script-and
 tag: js
 ---
 
+After much debate about a way forward past conditional statements, retina detection, and legacy content serving, [Mark Goodyear][1] and I have been working hard on a proposed solution: Conditionizr.
+
+ [1]: //twitter.com/markgdyr
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-After much debate about a way forward past conditional statements, retina detection, and legacy content serving, [Mark Goodyear][1] and I have been working hard on a proposed solution: Conditionizr.
-
- [1]: //twitter.com/markgdyr
 
 Conditionizr is a clever tool for front-end development that detects the end-users browser and pixel ratio, allowing you to serve specific conditional JavaScript and CSS files they need.
 

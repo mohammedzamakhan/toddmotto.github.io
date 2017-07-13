@@ -6,14 +6,14 @@ path: 2013-10-24-conditionizr-reloaded-what-every-developer-has-been-waiting-for
 tag: js
 ---
 
+Wouldn't it be ideal to target any browser, mobile browser, mobile device, touch device, screen resolution, operating system and conditionally load assets or tweak your code based on any environments? In a perfect world, Conditionizr wouldn't be needed, but it's here to save your ass...
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Wouldn't it be ideal to target any browser, mobile browser, mobile device, touch device, screen resolution, operating system and conditionally load assets or tweak your code based on any environments? In a perfect world, Conditionizr wouldn't be needed, but it's here to save your ass...
 
 You can also write logic for different environments using callbacks and simple expressions, or even dynamically load polyfills to rid messy conditional statements. You can also add your own tests to target any other environments/devices you're working on. Keep reading, and open your eyes to Conditionizr v4. It includes a full API rewrite, public API modules and is just 1kb in size (66% reduction). It ships with 5 incredibly fast APIs that make development life seamless.
 

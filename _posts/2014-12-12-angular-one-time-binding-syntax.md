@@ -6,14 +6,14 @@ path: 2014-12-12-angular-one-time-binding-syntax.md
 tag: angularjs
 ---
 
+Angular 1.3 shipped with an awesome new performance enhancing feature - one-time binding. What does this mean for us Angular developers and the performance of our apps? A lot! For us developers, adoption is really simple, and the performance gains for our apps are huge.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Angular 1.3 shipped with an awesome new performance enhancing feature - one-time binding. What does this mean for us Angular developers and the performance of our apps? A lot! For us developers, adoption is really simple, and the performance gains for our apps are huge.
 
 Let's look at the problem really quick, starting with the `$digest` cycle. The `$digest` cycle is essentially a loop through all our bindings which checks for changes in our data and re-renders any value changes. As our apps scale, binding counts increase and our `$digest` loop's size increases. This hurts our performance when we have a large volume of bindings per application view. So what can we do to optimise this?
 

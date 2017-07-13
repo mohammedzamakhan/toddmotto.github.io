@@ -8,14 +8,14 @@ path: 2012-06-04-create-a-simple-jquery-hover-call-to-action-box.md
 tag: js
 ---
 
+Here’s a quick and easy tutorial on how to create a small call to action box using two images, some CSS and jQuery. Article includes a free download for implementation on your own website.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Here’s a quick and easy tutorial on how to create a small call to action box using two images, some CSS and jQuery. Article includes a free download for implementation on your own website.
 
 <div class="download-box">
   <a href="//toddmotto.com/labs/hover-box" onclick="_gaq.push(['_trackEvent', 'Click', 'jQuery Hover Box Demo', 'jQuery Hover Demo Button']);">Demo</a>

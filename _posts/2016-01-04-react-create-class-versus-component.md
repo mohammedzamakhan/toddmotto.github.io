@@ -6,14 +6,14 @@ path: 2016-01-04-react-create-class-versus-component.md
 tag: react
 ---
 
+Two ways to do the same thing. Almost. React traditionally provided the `React.createClass` method to create component classes, and released a small syntax sugar update to allow for better use with ES6 modules by `extends React.Component`, which extends the `Component` class instead of calling `createClass`.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Two ways to do the same thing. Almost. React traditionally provided the `React.createClass` method to create component classes, and released a small syntax sugar update to allow for better use with ES6 modules by `extends React.Component`, which extends the `Component` class instead of calling `createClass`.
 
 These differences are subtle in places, but have quite a few interesting differences worth exploring, which will allow you to make the best decision for which is best for you.
 

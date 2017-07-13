@@ -6,16 +6,16 @@ path: 2017-05-17-rxjs-observables-observers-operators.md
 tag: rxjs
 ---
 
+RxJS is an incredible tool for reactive programming, and today we're going to dive a little deeper into what Observables and observers are - as well as learn how to create our own operators.
+
+If you've used RxJS before and want to understand some of the inner workings and internals to "how" Observables work, as well as the operators, then this post is for you.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-RxJS is an incredible tool for reactive programming, and today we're going to dive a little deeper into what Observables and observers are - as well as learn how to create our own operators.
-
-If you've used RxJS before and want to understand some of the inner workings and internals to "how" Observables work, as well as the operators, then this post is for you.
 
 ### What is an Observable?
 

@@ -6,14 +6,14 @@ path: 2014-07-11-angular-js-dependency-injection-annotation-process.md
 tag: angularjs
 ---
 
+For those familiar with Angular's dependency injection (DI), this post will dive into some of the "under the hood" methods that power the DI process. For those who aren't familiar with the concept, DI is a way of asking for necessary dependencies instead of passing them. We merely tell a method, function, object what dependencies we want - and tucked away we get our dependencies given to us.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-For those familiar with Angular's dependency injection (DI), this post will dive into some of the "under the hood" methods that power the DI process. For those who aren't familiar with the concept, DI is a way of asking for necessary dependencies instead of passing them. We merely tell a method, function, object what dependencies we want - and tucked away we get our dependencies given to us.
 
 So, how does this work in AngularJS?
 

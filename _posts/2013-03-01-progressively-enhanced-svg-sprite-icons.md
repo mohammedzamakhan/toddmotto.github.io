@@ -6,14 +6,14 @@ path: 2013-03-01-progressively-enhanced-svg-sprite-icons.md
 tag: js
 ---
 
+You may remember a while back, I coded up some nice CSS3 social media icons, to which I have had to remove from my website due to the fact I cannot run PHP on this Jekyll server, or even wanted to quickly convert them to HTML. Time would be better spent taking action into enhancing those icons, and creating some much better ones with better practices, with performance and retina displays in mind.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-You may remember a while back, I coded up some nice CSS3 social media icons, to which I have had to remove from my website due to the fact I cannot run PHP on this Jekyll server, or even wanted to quickly convert them to HTML. Time would be better spent taking action into enhancing those icons, and creating some much better ones with better practices, with performance and retina displays in mind.
 
 Here's what I've learned since creating those previous icons:
 <ul class="post-list">

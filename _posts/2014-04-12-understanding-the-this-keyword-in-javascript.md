@@ -6,14 +6,14 @@ path: 2014-04-12-understanding-the-this-keyword-in-javascript.md
 tag: js
 ---
 
+It's probably safe to say that the `this` keyword is one of the most misunderstood parts of JavaScript. Admittedly, I used to throw the `this` keyword around until my script worked and it confused the hell out of me (and still confuses many other JS developers). It wasn't until I learned about lexical scope, how functions are invoked, scope context, and a few context changing methods that I really understood it.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-It's probably safe to say that the `this` keyword is one of the most misunderstood parts of JavaScript. Admittedly, I used to throw the `this` keyword around until my script worked and it confused the hell out of me (and still confuses many other JS developers). It wasn't until I learned about lexical scope, how functions are invoked, scope context, and a few context changing methods that I really understood it.
 
 Before you dive into this article, here's a few very important points to takeaway and remember about the `this` keyword:
 

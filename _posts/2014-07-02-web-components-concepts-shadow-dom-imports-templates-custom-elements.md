@@ -6,14 +6,14 @@ path: 2014-07-02-web-components-concepts-shadow-dom-imports-templates-custom-ele
 tag: html5
 ---
 
+Web Components, the future of the web, inspired from attending [Google I/O](https://twitter.com/toddmotto/status/482624009553465344) I decided to pick up Web Components and actually build something. Since learning the basics around a year ago, it's changed and advanced a lot! Thought I'd write a post on it and share [my first web component](//github.com/toddmotto/fluidvids-polymer) yesterday (built with Polymer).
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Web Components, the future of the web, inspired from attending [Google I/O](https://twitter.com/toddmotto/status/482624009553465344) I decided to pick up Web Components and actually build something. Since learning the basics around a year ago, it's changed and advanced a lot! Thought I'd write a post on it and share [my first web component](//github.com/toddmotto/fluidvids-polymer) yesterday (built with Polymer).
 
 Before I get into Polymer, we'll look at Web Components in this post, what it means for the web and how it completely changes things and our outlook on building for the web platform from today.
 

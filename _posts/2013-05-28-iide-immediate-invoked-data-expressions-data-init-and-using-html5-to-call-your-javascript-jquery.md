@@ -6,14 +6,14 @@ path: 2013-05-28-iide-immediate-invoked-data-expressions-data-init-and-using-htm
 tag: js
 ---
 
+There's something that's been at the back of my mind ever since I've started writing JavaScript and jQuery, and I think I've finally got it down on paper - so I'm going to introduce a new method of writing your JavaScript which utilises some HTML5 technology.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-There's something that's been at the back of my mind ever since I've started writing JavaScript and jQuery, and I think I've finally got it down on paper - so I'm going to introduce a new method of writing your JavaScript which utilises some HTML5 technology.
 
 Firstly, I've been writing a lot about HTML5 data-&#42; attributes recently, and with good reason. They're definitely the future of HTML, and with data-binding, HTML templating and some incredible advances announced at this year's Google I/O, it's all come together for me to start a new method of writing, configuring and executing JavaScript.
 

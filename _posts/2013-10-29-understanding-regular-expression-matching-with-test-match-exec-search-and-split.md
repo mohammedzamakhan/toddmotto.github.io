@@ -6,14 +6,14 @@ path: 2013-10-29-understanding-regular-expression-matching-with-test-match-exec-
 tag: js
 ---
 
+Regular Expressions, often noted as RegEx or RegExp, are seen and used pretty much everywhere in JavaScript. I use them all the time and you've probably seen them out in the wild too. When you first stumble(d) across a RegExp, you probably thought the person had fallen asleep on their keyboard and pushed to production, they look crazy at first, but they are a must have in your developer toolkit.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Regular Expressions, often noted as RegEx or RegExp, are seen and used pretty much everywhere in JavaScript. I use them all the time and you've probably seen them out in the wild too. When you first stumble(d) across a RegExp, you probably thought the person had fallen asleep on their keyboard and pushed to production, they look crazy at first, but they are a must have in your developer toolkit.
 
 Here's an example of a RegExp that's intended to blow your mind if you've never seen one, if you've seen one, you may proceed:
 

@@ -6,16 +6,16 @@ path: 2015-12-14-directive-to-directive-communication-with-require.md
 tag: angularjs
 ---
 
+Communication between Directives can be done in various ways. When dealing with Directives that have a hierarchical relationship we can use Directive Controllers to talk between them.
+
+In this article we'll build a `tabs` Directive that uses another Directive to add the tabs, using the `require` property of a Directive's definition Object.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Communication between Directives can be done in various ways. When dealing with Directives that have a hierarchical relationship we can use Directive Controllers to talk between them.
-
-In this article we'll build a `tabs` Directive that uses another Directive to add the tabs, using the `require` property of a Directive's definition Object.
 
 First let's define the HTML:
 

@@ -6,13 +6,6 @@ path: 2017-01-26-angular-decorators.md
 tag: angular
 ---
 
-<div class="toc" markdown="1">
-<span class="gamma">Table of contents</span>
-{:.no_toc}
-* TOC
-{:toc}
-</div>
-
 Decorators are a core concept when developing with Angular (versions 2 and above). There's also an official [TC39 proposal](https://github.com/tc39/proposal-decorators), currently at Stage-2, so expect decorators to become a core language feature soon in JavaScript as well.
 
 Back to Angular, the internal codebase uses decorators extensively and in this post we’re going to look at the different types of decorators, the code they compile to and how they work.
@@ -20,6 +13,13 @@ Back to Angular, the internal codebase uses decorators extensively and in this p
 When I was first introduced to TypeScript and decorators, I wondered why we needed them at all, but once you dig a little deeper you can understand the benefits to creating decorators (not only for use in Angular).
 
 AngularJS didn't use decorators, opting for a different registration method - such as defining a component for example with the `.component()` method. So why has Angular chose to use them? Let's explore.
+
+<div class="toc" markdown="1">
+<span class="gamma">Table of contents</span>
+{:.no_toc}
+* TOC
+{:toc}
+</div>
 
 ### Angular Decorators
 

@@ -6,14 +6,14 @@ path: 2013-09-15-fireshell-fiercely-quick-front-end-boilerplate-and-workflows.md
 tag: js
 ---
 
+Built for the modern developer. For teams and the individual, encouraging a better workflow. JavaScript task running, build processes, autominification and file concatenation, wrapped with an enhanced HTML5 boilerplated framework.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Built for the modern developer. For teams and the individual, encouraging a better workflow. JavaScript task running, build processes, autominification and file concatenation, wrapped with an enhanced HTML5 boilerplated framework.
 
 FireShell is something I've been working on over the last few weeks, but is the result of years worth of experience and wanting to enhance the workflow for teams and front-end development. FireShell is one little package that does exactly this.
 

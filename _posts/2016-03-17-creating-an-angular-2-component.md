@@ -6,14 +6,14 @@ path: 2016-03-17-creating-an-angular-2-component.md
 tag: angular
 ---
 
+This is a beginner level tutorial to ease you into Angular (v2+), although there are many resources online to creating components, these articles exist as part of a series. This article will guide you through creating your first Angular component.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-This is a beginner level tutorial to ease you into Angular (v2+), although there are many resources online to creating components, these articles exist as part of a series. This article will guide you through creating your first Angular component.
 
 ### Series
 {:.no_toc}

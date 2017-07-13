@@ -6,6 +6,8 @@ path: 2013-03-07-writing-the-best-css-when-building-with-html5.md
 tag: html5
 ---
 
+Let's become HTML agnostic. HTML agnostic means to use as little HTML in your CSS (or none). The key factor here is to _avoid_ becoming markup reliant and _avoid_ declaring qualified names (the element name).
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
@@ -13,9 +15,7 @@ tag: html5
 {:toc}
 </div>
 
-### Becoming HTML agnostic
-
-HTML agnostic means to use as little HTML in your CSS (or none). The key factor here is to _avoid_ becoming markup reliant and _avoid_ declaring qualified names (the element name). Let's take a basic structure for an unordered list navigation:
+Let's take a basic structure for an unordered list navigation:
 
 {% highlight html %}
 <ul>

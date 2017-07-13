@@ -6,14 +6,14 @@ path: 2016-03-05-bootstrap-angular-2-hello-world.md
 tag: angular
 ---
 
+In this series of four Angular (v2+) posts, we'll explore how to bootstrap an Angular app, create a component, pass data into a component and pass new data out of a component using events.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-In this series of four Angular (v2+) posts, we'll explore how to bootstrap an Angular app, create a component, pass data into a component and pass new data out of a component using events.
 
 ### Series
 {:.no_toc}

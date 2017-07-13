@@ -6,16 +6,16 @@ path: 2015-12-14-resolve-promises-in-angular-routes.md
 tag: angularjs
 ---
 
+Phase 1 of our Angular careers involved `$http` inside a Controller. Phase 2 involved abstracting into a Service and calling the Service inside a Controller. Phase 3 is the `resolve` property.
+
+Let's take a look what `resolve` gives us.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Phase 1 of our Angular careers involved `$http` inside a Controller. Phase 2 involved abstracting into a Service and calling the Service inside a Controller. Phase 3 is the `resolve` property.
-
-Let's take a look what `resolve` gives us.
 
 ### Phase 1: $http inside Controllers
 

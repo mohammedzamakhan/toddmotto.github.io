@@ -8,6 +8,8 @@ path: 2012-11-25-flawless-clickable-drop-down-navigation.md
 tag: js
 ---
 
+SVGs (Scalable Vector Graphics) are the future graphics format of the web, they offer resolution-independent, fully scalable and crystal clear graphics. SVGs use XML to define paths and shapes, to create our graphic. Moving past JPG and PNG, SVG is the answer to Retina (HiDPI) displays, they even look better on standard display.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
@@ -15,9 +17,7 @@ tag: js
 {:toc}
 </div>
 
-SVGs (Scalable Vector Graphics) are the future graphics format of the web, they offer resolution-independent, fully scalable and crystal clear graphics. SVGs use XML to define paths and shapes, to create our graphic. Moving past JPG and PNG, SVG is the answer to Retina (HiDPI) displays, they even look better on standard display.
-
-#### Hint: SVG detection and workflow has been revised (30.05.2013) recently to an even better solution, which takes performance and consistency into account, please read about it [here](//toddmotto.com/revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris/).
+> Hint: SVG detection and workflow has been revised (30.05.2013) recently to an even better solution, which takes performance and consistency into account, please read about it [here](//toddmotto.com/revisiting-svg-workflow-for-performance-and-progressive-development-with-transparent-data-uris/).
 
 This tutorial explains how we can link an SVG through an image element, providing PNG fallbacks with Modernizr and jQuery/JavaScript supports.
 

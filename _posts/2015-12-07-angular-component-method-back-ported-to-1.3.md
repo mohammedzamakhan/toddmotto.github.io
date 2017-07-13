@@ -6,6 +6,8 @@ path: 2015-12-07-angular-component-method-back-ported-to-1.3.md
 tag: angularjs
 ---
 
+AngularJS 1.5 is soon to release the `component()` method which [I wrote about last month](/exploring-the-angular-1-5-component-method). I decided to back-port the functionality from the new feature so anyone running AngularJS 1.3 and above can start using `component()` right now. It's 100% ported from the upcoming 1.5 release so the API is identical.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
@@ -13,9 +15,7 @@ tag: angularjs
 {:toc}
 </div>
 
-AngularJS 1.5 is soon to release the `component()` method which [I wrote about last month](/exploring-the-angular-1-5-component-method). I decided to back-port the functionality from the new feature so anyone running AngularJS 1.3 and above can start using `component()` right now. It's 100% ported from the upcoming 1.5 release so the API is identical.
-
-Grab the [source code here](https://github.com/toddmotto/angular-component) and use `component()` today.
+> Grab the [source code here](https://github.com/toddmotto/angular-component) and use `component()` today.
 
 Here's a live example running `component()` with AngularJS 1.3.0:
 

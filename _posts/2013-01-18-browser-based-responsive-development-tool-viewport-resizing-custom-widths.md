@@ -8,16 +8,16 @@ path: 2013-01-18-browser-based-responsive-development-tool-viewport-resizing-cus
 tag: js
 ---
 
+Designing in the browser is increasingly popular, especially with responsive websites. Having a reliable and simple viewport resizer is key to any responsive developer’s workflow. From the popularity of my [jResize plugin][1], I’ve created an enhanced, browser-based version that requires no downloading or installations.
+
+ [1]: //www.toddmotto.com/jresize-plugin-for-one-window-responsive-development
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Designing in the browser is increasingly popular, especially with responsive websites. Having a reliable and simple viewport resizer is key to any responsive developer’s workflow. From the popularity of my [jResize plugin][1], I’ve created an enhanced, browser-based version that requires no downloading or installations.
-
- [1]: //www.toddmotto.com/jresize-plugin-for-one-window-responsive-development
 
 Just load your website up, add any custom widths you wish to use, or use the ones I’ve included, which are an array of popular viewport widths, and get developing.
 

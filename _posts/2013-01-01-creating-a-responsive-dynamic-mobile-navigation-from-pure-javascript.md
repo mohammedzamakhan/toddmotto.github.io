@@ -8,14 +8,14 @@ path: 2013-01-01-creating-a-responsive-dynamic-mobile-navigation-from-pure-javas
 tag: js
 ---
 
+Here’s how to create a select menu from an existing menu using JavaScript. The select menu will be comprised of an existing menu, which dynamically creates a select menu and populates it with menu items.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Here’s how to create a select menu from an existing menu using JavaScript. The select menu will be comprised of an existing menu, which dynamically creates a select menu and populates it with menu items.
 
 A lot of people are using [Chris Coyier’s example][1], which relies on jQuery and doesn’t work so great if you’ve got multiple levels of nested menus. The CSS-Tricks example ignores their hierarchical value and simply appends the lower menu items to the select navigation as another option. From a usability perspective this isn’t the best approach as all items appear to have the same priority.
 

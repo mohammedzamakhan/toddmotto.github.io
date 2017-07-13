@@ -6,16 +6,16 @@ path: 2017-02-01-angular-ngfor.md
 tag: angular
 ---
 
+Angular `ngFor` is a built-in Directive that allows us to iterate over a collection. This collection is typically an array, however can be "array-like". To demonstrate this, we'll be using `Rx.Observable.of()` to initialise our collection with an Observable instead of a static array.
+
+We'll also be exploring some other under-the-hood properties of `ngFor`, as well as looking at how Angular expands our `ngFor` to a `<ng-template>` element and composes our view.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Angular `ngFor` is a built-in Directive that allows us to iterate over a collection. This collection is typically an array, however can be "array-like". To demonstrate this, we'll be using `Rx.Observable.of()` to initialise our collection with an Observable instead of a static array.
-
-We'll also be exploring some other under-the-hood properties of `ngFor`, as well as looking at how Angular expands our `ngFor` to a `<ng-template>` element and composes our view.
 
 > Note: In Angular v4 `<template>` has been deprecated in favour of `<ng-template>` and will be removed in v5. In Angular v2.x releases `<template>` is still valid.
 

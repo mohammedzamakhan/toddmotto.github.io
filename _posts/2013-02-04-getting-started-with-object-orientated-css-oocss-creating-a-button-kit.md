@@ -8,14 +8,14 @@ path: 2013-02-04-getting-started-with-object-orientated-css-oocss-creating-a-but
 tag: css3
 ---
 
+Object-Orientated CSS, or OOCSS to the masses, is a method of structuring your CSS and HTML classes in a specific way. The purpose of OOCSS is to make code more easily usable, and more importantly – reusable. It can help trim down your stylesheets and you start to think about the object you’re creating and not just the  elements inside. This theory (done right) makes your stylesheet more efficient.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Object-Orientated CSS, or OOCSS to the masses, is a method of structuring your CSS and HTML classes in a specific way. The purpose of OOCSS is to make code more easily usable, and more importantly – reusable. It can help trim down your stylesheets and you start to think about the object you’re creating and not just the  elements inside. This theory (done right) makes your stylesheet more efficient.
 
 By writing this post, I do not promote the use of OOCSS for every project, or completely side with it’s lack of HTML class semantics, though one thing’s for sure, it’s awesome.
 

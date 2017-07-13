@@ -6,14 +6,14 @@ path: 2013-12-09-a-comprehensive-dive-into-nodelists-arrays-converting-nodelists
 tag: js
 ---
 
+Manipulating the DOM is JavaScript's role when developing websites and applications, and we do this by grabbing collections of elements called NodeLists. NodeLists are captured using a selector of some kind (jQuery or native JS), but do you really understand NodeLists and their differences from an Array collection of DOM nodes? This post is here to clear a few things up and hopefully answer some questions.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Manipulating the DOM is JavaScript's role when developing websites and applications, and we do this by grabbing collections of elements called NodeLists. NodeLists are captured using a selector of some kind (jQuery or native JS), but do you really understand NodeLists and their differences from an Array collection of DOM nodes? This post is here to clear a few things up and hopefully answer some questions.
 
 If you're a jQuery user, you're probably used to doing this:
 

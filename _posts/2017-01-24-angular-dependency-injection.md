@@ -6,14 +6,14 @@ path: 2017-01-24-angular-dependency-injection.md
 tag: angular
 ---
 
+Providers in Angular are key to how we develop our applications, and injecting dependencies can be done in various ways. In this post, we're going to debunk some terminology behind the `@Inject()` and `@Injectable()` decorators and explore the use cases for them. Then, we'll dive into understanding tokens, providers and take a look behind the scenes at how Angular actually fetches and creates our dependencies, as well as some Ahead-of-Time source code explanations.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Providers in Angular are key to how we develop our applications, and injecting dependencies can be done in various ways. In this post, we're going to debunk some terminology behind the `@Inject()` and `@Injectable()` decorators and explore the use cases for them. Then, we'll dive into understanding tokens, providers and take a look behind the scenes at how Angular actually fetches and creates our dependencies, as well as some Ahead-of-Time source code explanations.
 
 ### Injecting providers
 

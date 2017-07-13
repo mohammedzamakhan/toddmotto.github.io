@@ -6,7 +6,9 @@ path: 2013-10-02-ultimate-guide-to-learning-angular-js-in-one-day.md
 tag: angularjs
 ---
 
-<h5>Mastered this? Try my <a href="//toddmotto.com/opinionated-angular-js-styleguide-for-teams" style="text-decoration: underline;">Opinionated AngularJS styleguide for teams</a></h5>
+Angular is a client-side MVC/MVVM framework built in JavaScript, essential for modern single page web applications (and even websites). This post is a full end to end crash course from my experiences, advice and best practices I've picked up from using it.
+
+> Mastered this? Try my [Opinionated AngularJS styleguide for teams](https://toddmotto.com/opinionated-angular-js-styleguide-for-teams)
 
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
@@ -14,9 +16,6 @@ tag: angularjs
 * TOC
 {:toc}
 </div>
-
-### What is AngularJS?
-Angular is a client-side MVC/MVVM framework built in JavaScript, essential for modern single page web applications (and even websites). This post is a full end to end crash course from my experiences, advice and best practices I've picked up from using it.
 
 ### Terminology
 Angular has an initial short learning curve, you'll find it's up and down after mastering the basics. It's mainly getting to grips with the terminology and "thinking MVC". MVC stands for _Model-View-Controller_. Here are the higher level and essential APIs that Angular comes with, and some terminology.

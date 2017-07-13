@@ -6,18 +6,18 @@ path: 2015-10-18-moving-from-ng-model-parsers-to-ng-model-validates-ng-messages.
 tag: angularjs
 ---
 
+Implementing custom Model validation is typically done by extending the built-in `$error` Object bound to AngularJS form models, such as a simple `<input>`.
+
+Prior to Angular 1.3, custom validation was done by injecting a function into the `ngModel.$parsers` Array pipeline and manually setting validation states using `$setValidity` to tell Angular whether your custom validation logic passed. For example you'd set `$setValidity('visa', true);` if the Model value matched a Visa credit card expression format.
+
+In Angular 1.3+, we have the `$validators` pipeline, which requires no manual setting of validation states, and is also just an Object that we can add properties to, which is much nicer than pushing a function into an Array.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Implementing custom Model validation is typically done by extending the built-in `$error` Object bound to AngularJS form models, such as a simple `<input>`.
-
-Prior to Angular 1.3, custom validation was done by injecting a function into the `ngModel.$parsers` Array pipeline and manually setting validation states using `$setValidity` to tell Angular whether your custom validation logic passed. For example you'd set `$setValidity('visa', true);` if the Model value matched a Visa credit card expression format.
-
-In Angular 1.3+, we have the `$validators` pipeline, which requires no manual setting of validation states, and is also just an Object that we can add properties to, which is much nicer than pushing a function into an Array.
 
 Let's take a look at the old school way of doing things and how we can shift into using `ngModel.$validators`.
 

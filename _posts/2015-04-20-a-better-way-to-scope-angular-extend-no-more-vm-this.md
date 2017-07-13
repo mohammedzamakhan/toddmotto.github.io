@@ -6,16 +6,16 @@ path: 2015-04-20-a-better-way-to-scope-angular-extend-no-more-vm-this.md
 tag: angularjs
 ---
 
+The evolution of Angular Controllers has changed over the last year. As of now, most of us are working with the most recent addition to "Controller" syntax with the `controllerAs` style (doing away with binding directly to `$scope`).
+
+There have been many style opinions around this, of which I've adopted myself, primarily the `var vm = this;` declaration at the top of Controllers. Of recent months, I've been doing away with using `vm` inside the actual JavaScript Controller, and steering towards plain JavaScript variables and functions, and binding those I need out as some kind of "exports".
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-The evolution of Angular Controllers has changed over the last year. As of now, most of us are working with the most recent addition to "Controller" syntax with the `controllerAs` style (doing away with binding directly to `$scope`).
-
-There have been many style opinions around this, of which I've adopted myself, primarily the `var vm = this;` declaration at the top of Controllers. Of recent months, I've been doing away with using `vm` inside the actual JavaScript Controller, and steering towards plain JavaScript variables and functions, and binding those I need out as some kind of "exports".
 
 To get a feel of what I was previously working from, let's start from the `var vm = this;` days.
 

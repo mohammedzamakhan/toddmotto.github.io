@@ -6,14 +6,14 @@ path: 2016-03-18-passing-data-angular-2-components-input.md
 tag: angular
 ---
 
+In a component-driven application architecture we typically use [stateful and stateless](/stateful-stateless-components) components. A key concept is having some form of "stateful" component that delegates down into a "stateless" child, or children, component(s).
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-In a component-driven application architecture we typically use [stateful and stateless](/stateful-stateless-components) components. A key concept is having some form of "stateful" component that delegates down into a "stateless" child, or children, component(s).
 
 We do this through something called property binding in Angular, which we learned about in the previous article when we bound to an `<input>` element to display a count. To bind data to Angular components, we need to create a custom property bind, which is done via "input" binding to pass data from one component to another (typically parent to child).
 

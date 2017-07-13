@@ -6,14 +6,14 @@ path: 2015-10-24-super-fast-angular-ng-model-options-limit-digest-cycles.md
 tag: angularjs
 ---
 
+The `$digest` cycle is the critical entity for keeping our Angular applications fast: the faster the cycle, the faster the two-way data binding. JavaScript has a single thread of execution, which means if our `$digest` cycle is packed full of data to be dirty-checked, the user is going to see lag in the UI whilst (for instance) typing inside an `<input>`.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-The `$digest` cycle is the critical entity for keeping our Angular applications fast: the faster the cycle, the faster the two-way data binding. JavaScript has a single thread of execution, which means if our `$digest` cycle is packed full of data to be dirty-checked, the user is going to see lag in the UI whilst (for instance) typing inside an `<input>`.
 
 `$digest` cycles run from internal Angular events (yes and `$scope.$apply()`) built into their Directives, such as `ng-click`, `ng-change` and so on. When something triggers these internal events, such as a `keypress` that triggers an `<input>` with `ng-model` bound to it, Angular will run the `$digest` loop to see if anything has changed. If something has changed, Angular will update the bound JavaScript Model. If something in the Model changes, Angular will run the `$digest` again to update the View. Basics of "dirty-checking" - simple.
 

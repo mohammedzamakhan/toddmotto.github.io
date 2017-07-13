@@ -6,14 +6,14 @@ path: 2014-03-31-writing-a-standalone-ajax-xhr-javascript-micro-library.md
 tag: js
 ---
 
+Whether you're working with websites or applications, you're bound to have faced a task dealing with Ajax requests, whether it be getting a new document's content or fetching updated JSON data. You're bound to have also used some form of library to gloss over the mess of an implementation XHR is.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Whether you're working with websites or applications, you're bound to have faced a task dealing with Ajax requests, whether it be getting a new document's content or fetching updated JSON data. You're bound to have also used some form of library to gloss over the mess of an implementation XHR is.
 
 There are a tonne of libraries, and a few decent XHR modules that allow you to make simple XHRs. Working with AngularJS daily I love the syntax for working with XHR, over their `$http` method:
 

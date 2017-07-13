@@ -6,16 +6,16 @@ path: 2013-04-19-data-js-selectors-enhancing-html5-development-by-separating-css
 tag: html5
 ---
 
+I've started introducing a new concept into my JavaScript workflow and I really think it's worth sharing:
+
+_Change your HTML/CSS all you like without changing a single line of JavaScript._
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-I've started introducing a new concept into my JavaScript workflow and I really think it's worth sharing:
-
-_Change your HTML/CSS all you like without changing a single line of JavaScript._
 
 It's based around how CSS documents came into play, the concept behind CSS, and how we separate style from HTML elements. CSS documents were created to give reference to HTML, to target them and apply styles to them. This is generally done with classes and/or IDs, which meant you could change your entire stylesheet without changing any HTML, giving the site an entirely new look at the switch of a CSS document.
 

@@ -7,14 +7,14 @@ path: 2013-05-20-progressively-enhancing-html5-forms-creating-a-required-attribu
 tag: html5
 ---
 
+HTML5 required attributes are a fantastic addition to the HTML5 spec, they save a lot of time when working on client-side form validation and enhance the user's experience. The HTML5 required attribute provides us with full client-side 'required' checking and validation, which is easy to add to several types of form elements.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-HTML5 required attributes are a fantastic addition to the HTML5 spec, they save a lot of time when working on client-side form validation and enhance the user's experience. The HTML5 required attribute provides us with full client-side 'required' checking and validation, which is easy to add to several types of form elements.
 
 <div class="download-box">
   <a href="//toddmotto.com/labs/required-fallback" onclick="_gaq.push(['_trackEvent', 'Click', 'Demo Required Fallback, 'Required Fallback Demo']);">Demo</a>

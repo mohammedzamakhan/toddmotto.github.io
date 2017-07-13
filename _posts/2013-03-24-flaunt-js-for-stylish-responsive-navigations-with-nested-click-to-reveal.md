@@ -6,14 +6,14 @@ path: 2013-03-24-flaunt-js-for-stylish-responsive-navigations-with-nested-click-
 tag: js
 ---
 
+Flaunt.js is a jQuery script that allows you to create a responsive, nested navigation out the box. Flaunt was built to overcome responsive design challenges which faced a huge percentage of websites. This challenge was to show nested navigation items on click-demand, without the event taking you through to the page you've pressed...
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Flaunt.js is a jQuery script that allows you to create a responsive, nested navigation out the box. Flaunt was built to overcome responsive design challenges which faced a huge percentage of websites. This challenge was to show nested navigation items on click-demand, without the event taking you through to the page you've pressed...
 
 For instance, let's say 'Services' is a top level menu item, and the nested navigation are the list of services, once clicked on the 'Services' tab, this will then direct you to 'services.php' won't it. But how does someone visit an individual services page when the nested items are hidden, on a _touch_ device? They can't rely on :hover pseudo selectors for this - so let's look at what Flaunt does.
 

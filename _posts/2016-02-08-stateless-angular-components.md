@@ -6,14 +6,14 @@ path: 2016-02-08-stateless-angular-components.md
 tag: angularjs
 ---
 
+There were a tonne of interesting changes happening in the `beta` and release candidate phases of AngularJS 1.5, one of them was the introduction of the [Component method](/exploring-the-angular-1-5-component-method), which saw [one-way bindings](/one-way-data-binding-in-angular-1-5) also introduced. We've also got the power to create stateless components.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-There were a tonne of interesting changes happening in the `beta` and release candidate phases of AngularJS 1.5, one of them was the introduction of the [Component method](/exploring-the-angular-1-5-component-method), which saw [one-way bindings](/one-way-data-binding-in-angular-1-5) also introduced. We've also got the power to create stateless components.
 
 ### What is a stateless component?
 

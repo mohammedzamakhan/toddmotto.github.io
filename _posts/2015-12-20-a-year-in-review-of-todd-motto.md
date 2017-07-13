@@ -5,14 +5,14 @@ title: A year in review of toddmotto​.com
 path: 2015-12-20-a-year-in-review-of-todd-motto.md
 ---
 
+2015 was a crazy year for me, a lot happened and much of it is down to this blog and you as a wonderful reader/sharer of my content. I've grown immensely professionally, in my writing capabilities, ability to articulate things in an easy-to-read fashion so you readers can learn in the best way I can attempt to teach you. I've also spoken at a lot more conferences, meetups, and my blog and feedback has really helped me learn new things, dive more in-depth into technology and provide a lot more business value to companies I worked and work for.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-2015 was a crazy year for me, a lot happened and much of it is down to this blog and you as a wonderful reader/sharer of my content. I've grown immensely professionally, in my writing capabilities, ability to articulate things in an easy-to-read fashion so you readers can learn in the best way I can attempt to teach you. I've also spoken at a lot more conferences, meetups, and my blog and feedback has really helped me learn new things, dive more in-depth into technology and provide a lot more business value to companies I worked and work for.
 
 ### Thank you
 

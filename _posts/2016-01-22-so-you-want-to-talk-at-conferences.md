@@ -5,14 +5,14 @@ title: So you want to talk at conferences? This is what it&#39;s like.
 path: 2016-01-22-so-you-want-to-talk-at-conferences.md
 ---
 
+Talking at conferences looks like an absolute breeze, but is it? No. It's stressful, nerving, requires a lot of planning and sometimes things go wrong. Here's some thoughts and feelings for those wanting to see what it's actually like to speak from my perspective.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Talking at conferences looks like an absolute breeze, but is it? No. It's stressful, nerving, requires a lot of planning and sometimes things go wrong. Here's some thoughts and feelings for those wanting to see what it's actually like to speak from my perspective.
 
 ### First talk
 

@@ -6,14 +6,14 @@ path: 2014-02-22-stratos-js-simplifying-object-manipulation.md
 tag: js
 ---
 
+JavaScript Objects are usually the driving force behind applications I develop, specifically JSON which gets sent back and forth from the server as acts as the main method of comms.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-JavaScript Objects are usually the driving force behind applications I develop, specifically JSON which gets sent back and forth from the server as acts as the main method of comms.
 
 To save time rewriting the same (or similar) logic over and over again when dealing with our data (typically as part of a Model/View) - wouldn't it be great to use _one_ module to encapsulate the trickier object manipulation stuff and make developing the core of the application easier? It would also be great to bulletproof the object manipulation process, reducing object tasks, limit debugging, promote code reuse and even save a tonne of KB! Yes. So I built Stratos.js, a standalone 1KB module! It also comes fully equipped with unit tests for each method.
 

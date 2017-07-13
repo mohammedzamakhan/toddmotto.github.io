@@ -6,6 +6,8 @@ path: 2014-01-19-avoiding-anonymous-javascript-functions.md
 tag: js
 ---
 
+Anonymous functions, the art of the callback. I'm going to propose that you never write a callback again using an anonymous function, and I'll sell you the idea now.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
@@ -13,7 +15,7 @@ tag: js
 {:toc}
 </div>
 
-Anonymous functions, the art of the callback. I'm going to propose that you never write a callback again using an anonymous function, and I'll sell you the idea now. Firstly, what is an anonymous function? Something like this:
+Firstly, what is an anonymous function? Something like this:
 
 {% highlight javascript %}
 document.querySelector('.menu').addEventListener('click', function (event) {

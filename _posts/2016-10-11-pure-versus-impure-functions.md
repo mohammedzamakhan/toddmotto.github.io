@@ -6,6 +6,9 @@ path: 2016-10-11-pure-versus-impure-functions.md
 tag: js
 ---
 
+
+Understanding pure and impure functions is a simple transition into cleaner, more role-based and testable code. In this post we'll explore pure and impure functions by looking at a simple Body Mass Index (BMI) calculator that estimates your "healthy weight" by some simple input factors of height and weight. BMI isn't considered the most reliable tool for checking your weight, but that's not the point of this article ;)
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
@@ -13,9 +16,7 @@ tag: js
 {:toc}
 </div>
 
-Understanding pure and impure functions is a simple transition into cleaner, more role-based and testable code. In this post we'll explore pure and impure functions by looking at a simple Body Mass Index (BMI) calculator that estimates your "healthy weight" by some simple input factors of height and weight. BMI isn't considered the most reliable tool for checking your weight, but that's not the point of this article ;)
-
-Note: if you're not familiar with `kg` and `cm` units, use something like `70` for `kg` and `180` for `cm` to try it out.
+> Note: if you're not familiar with `kg` and `cm` units, use something like `70` for `kg` and `180` for `cm` to try it out.
 
 ### Terminology
 

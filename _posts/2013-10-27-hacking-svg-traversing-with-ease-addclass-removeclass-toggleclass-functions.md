@@ -10,14 +10,14 @@ tag: js
 
 ----
 
+I encountered how painful traversing inline SVG can be when working on a recent project, simple DOM APIs such as adding, removing and toggling classes just aren't there, or supported by tools such as jQuery (yes, I even tried jQuery).
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-I encountered how painful traversing inline SVG can be when working on a recent project, simple DOM APIs such as adding, removing and toggling classes just aren't there, or supported by tools such as jQuery (yes, I even tried jQuery).
 
 Inline SVG is SVG in the DOM, rendered from its XML. Here's a quick look at example inline SVG which would sit anywhere in the DOM:
 

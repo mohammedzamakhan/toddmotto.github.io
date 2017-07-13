@@ -6,16 +6,14 @@ path: 2013-03-12-building-an-html5-responsive-menu-with-media-queries-javascript
 tag: html5
 ---
 
+Responsive navigation menus come in all different shapes and sizes, you might recall my post on [creating a dynamic select menu](http://toddmotto.com/creating-a-responsive-dynamic-mobile-navigation-from-pure-javascript/) from an existing menu, which is one method. So let's visit another. The 'in-page' navigation.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-### Responsive menus
-
-Responsive navigation menus come in all different shapes and sizes, you might recall my post on [creating a dynamic select menu](http://toddmotto.com/creating-a-responsive-dynamic-mobile-navigation-from-pure-javascript/) from an existing menu, which is one method. So let's visit another. The 'in-page' navigation.
 
 Edit: If you're looking for an even better responsive navigation that supports nested menus, check out my [Flaunt JS script](http://toddmotto.com/flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal).
 

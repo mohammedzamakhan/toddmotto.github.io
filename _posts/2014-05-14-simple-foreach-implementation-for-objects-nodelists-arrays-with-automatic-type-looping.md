@@ -6,14 +6,14 @@ path: 2014-05-14-simple-foreach-implementation-for-objects-nodelists-arrays-with
 tag: js
 ---
 
+Looping Objects is easy. Looping Arrays is also easy. Looping NodeLists is easy. They can be a little repetitive though and often take time to construct each loop and pass in the index, property, element or whatever...
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Looping Objects is easy. Looping Arrays is also easy. Looping NodeLists is easy. They can be a little repetitive though and often take time to construct each loop and pass in the index, property, element or whatever...
 
 There is no "standard" way of iterating over everything. We can use `Array.prototype.forEach` to loop over Arrays (or the regular `for` loop), a `for in` loop for Objects, and a regular `for` loop again for NodeLists or HTML collections. No, you're not going to use that `forEach.call(NodeList)` [hack](//toddmotto.com/ditch-the-array-foreach-call-nodelist-hack).
 

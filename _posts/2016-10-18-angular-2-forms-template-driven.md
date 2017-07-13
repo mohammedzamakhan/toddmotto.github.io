@@ -6,14 +6,14 @@ path: 2016-10-18-angular-2-forms-template-driven.md
 tag: angular
 ---
 
+Angular (v2+) presents two different methods for creating forms, template-driven (what we were used to in AngularJS 1.x), or reactive. We're going to explore the absolute fundamentals of the template-driven Angular forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Angular (v2+) presents two different methods for creating forms, template-driven (what we were used to in AngularJS 1.x), or reactive. We're going to explore the absolute fundamentals of the template-driven Angular forms, covering `ngForm`, `ngModel`, `ngModelGroup`, submit events, validation and error messages.
 
 ### High-level terminology
 

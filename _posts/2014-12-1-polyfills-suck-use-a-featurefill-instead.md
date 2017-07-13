@@ -6,14 +6,14 @@ path: 2014-12-1-polyfills-suck-use-a-featurefill-instead.md
 tag: js
 ---
 
+I'm going to dub this a featurefill as the post title suggests, but it's more a feature-detect-closure-binding-smart-polyfill-api-checker-reusable-function-awesomeness.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-I'm going to dub this a featurefill as the post title suggests, but it's more a feature-detect-closure-binding-smart-polyfill-api-checker-reusable-function-awesomeness.
 
 So, what's the deal?... I'm a huge fan of polyfilling behaviour for older browsers that don't support specific APIs, such as `Function.prototype.bind` or `Array.prototype.forEach`. Typically, we'd drop these polyfills into our apps like so:
 

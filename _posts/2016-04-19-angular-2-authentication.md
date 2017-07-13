@@ -6,14 +6,14 @@ path: 2016-04-19-angular-2-authentication.md
 tag: angular
 ---
 
+If you've needed to add authentication to an AngularJS (1.x) app, you'll have likely have had some fun and perhaps been lost at where to start. Traditional methods of session and cookie-based auth are challenging for full-on single page apps regardless of the framework or strategy you choose, so I've usually used [JSON Web Tokens JWT](https://jwt.io/introduction) for stateless authentication instead. Even when using JWTs though, there's still a lot that needs to be kept in check. Things like hiding and showing various parts of the UI based on the user's authentication state, attaching the JWT as an `Authorization` header in HTTP requests, and redirecting to the login route when a request gets rejected as being invalid.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-If you've needed to add authentication to an AngularJS (1.x) app, you'll have likely have had some fun and perhaps been lost at where to start. Traditional methods of session and cookie-based auth are challenging for full-on single page apps regardless of the framework or strategy you choose, so I've usually used [JSON Web Tokens JWT](https://jwt.io/introduction) for stateless authentication instead. Even when using JWTs though, there's still a lot that needs to be kept in check. Things like hiding and showing various parts of the UI based on the user's authentication state, attaching the JWT as an `Authorization` header in HTTP requests, and redirecting to the login route when a request gets rejected as being invalid.
 
 When it comes to adding authentication to an Angular (v2+) app, we still need to think about these things, but the approach is a little different. To start, we no longer have the concept of HTTP interceptors in Angular, like we did in AngularJS, which means we need some other way of binding the user's JWT to requests.
 

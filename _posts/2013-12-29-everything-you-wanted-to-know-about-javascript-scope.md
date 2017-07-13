@@ -6,6 +6,8 @@ path: 2013-12-29-everything-you-wanted-to-know-about-javascript-scope.md
 tag: js
 ---
 
+The JavaScript language has a few concepts of "scope", none of which are straightforward or easy to understand as a new JavaScript developer (and even some experienced JavaScript developers). This post is aimed at those wanting to learn about the many depths of JavaScript after hearing words such as `scope`, `closure`, `this`, `namespace`, `function scope`, `global scope`, `lexical scope` and `public/private scope`.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
@@ -13,7 +15,7 @@ tag: js
 {:toc}
 </div>
 
-The JavaScript language has a few concepts of "scope", none of which are straightforward or easy to understand as a new JavaScript developer (and even some experienced JavaScript developers). This post is aimed at those wanting to learn about the many depths of JavaScript after hearing words such as `scope`, `closure`, `this`, `namespace`, `function scope`, `global scope`, `lexical scope` and `public/private scope`. Hopefully by reading this post you'll know the answers to:
+Hopefully by reading this post you'll know the answers to:
 
 - What is Scope?
 - What is Global/Local Scope?

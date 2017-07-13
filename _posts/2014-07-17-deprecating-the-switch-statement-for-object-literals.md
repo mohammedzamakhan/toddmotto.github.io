@@ -6,14 +6,14 @@ path: 2014-07-17-deprecating-the-switch-statement-for-object-literals.md
 tag: js
 ---
 
+In many programming languages, the `switch` statement exists - but should it any longer? If you're a JavaScript programmer, you're often jumping in and out of Objects, creating, instantiating and manipulating them. Objects are really flexible, they're at the heart of pretty much everything in JavaScript, and using them instead of the `switch` statement has been something I've been doing lately.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-In many programming languages, the `switch` statement exists - but should it any longer? If you're a JavaScript programmer, you're often jumping in and out of Objects, creating, instantiating and manipulating them. Objects are really flexible, they're at the heart of pretty much everything in JavaScript, and using them instead of the `switch` statement has been something I've been doing lately.
 
 ### What is the switch statement?
 If you've not used `switch` before or are a little unsure what it does, let's walk through it. What `switch` does is take input and provide an output, such as code being run.

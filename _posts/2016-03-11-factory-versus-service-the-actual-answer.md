@@ -6,14 +6,14 @@ path: 2016-03-11-factory-versus-service-the-actual-answer.md
 tag: angularjs
 ---
 
+I was giving a workshop earlier this week, and as the workshop came to a close and people were leaving, an attendee asked if I could explain the difference between a factory and service. Everyone seemed to pause and stop packing up their things, and sat back down to listen to the additional 15 minute showdown on the API differences. So in my words this the answer to `.factory()` and `.service()`.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-I was giving a workshop earlier this week, and as the workshop came to a close and people were leaving, an attendee asked if I could explain the difference between a factory and service. Everyone seemed to pause and stop packing up their things, and sat back down to listen to the additional 15 minute showdown on the API differences. So in my words this the answer to `.factory()` and `.service()`.
 
 So, you may be thinking once again we know the answer already to this, however the masses of answers online simply show how you can do the same thing with `.factory()` and `.service()`, without explaining what you can do with the APIs. They also paste in the same code snippet from the Angular source saying that a Factory is just a Service and Service is just a Factory but there's one line of code different and so on, this is meaningless to teaching the developer how to actually use the APIs - so let's give them a little perspective that answer questions I've been asked online and in person.
 

@@ -8,14 +8,14 @@ path: 2013-01-22-fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js
 tag: js
 ---
 
+One of the major drawbacks to responsive design is managing external plugins/resources, such as YouTube and Vimeo videos – which we can embed into our sites using an iframe. This is where we lose control. Working with iframes is sometimes tricky, especially with video and maintaining aspect ratios. There are some CSS hacks we can do to attempt making iframe videos responsive, but to no success.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-One of the major drawbacks to responsive design is managing external plugins/resources, such as YouTube and Vimeo videos – which we can embed into our sites using an iframe. This is where we lose control. Working with iframes is sometimes tricky, especially with video and maintaining aspect ratios. There are some CSS hacks we can do to attempt making iframe videos responsive, but to no success.
 
 Better attempts have been made, jQuery plugins, scripts. Some work great, but some warrant further action. Until recent, I’ve been using [FitVids.js][1], from Paravel and Chris Coyier, which is a nifty plugin. But that’s exactly what I don’t want. More plugins. Scripts are by far more effective, and let’s face it, there’s no point using a plugin for responsive videos – why would you want to target a container and choose which videos are responsive? It’s responsive or not, all or nothing.
 

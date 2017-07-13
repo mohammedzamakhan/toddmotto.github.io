@@ -6,14 +6,14 @@ path: 2014-06-17-minimal-angular-module-syntax-approach-using-an-iife.md
 tag: angularjs
 ---
 
+Since day one using Angular, I've always debated on _how_ I should be extending modules. This post talks through some common Angular patterns, from variable to chaining and a variant.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Since day one using Angular, I've always debated on _how_ I should be extending modules. This post talks through some common Angular patterns, from variable to chaining and a variant.
 
 The options are via a variable, such as `var myApp = angular.module('myApp', []);`, or using the "getter" method of the module from Angular via `angular.module('myApp')` and chaining our methods. I've decided on the latter, but with a nice twist to smarten up our JavaScript inside Angular using an IIFE and minimising Angular footprint.
 

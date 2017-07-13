@@ -8,14 +8,14 @@ path: 2012-09-05-html5-and-jquery-super-simple-drop-down-nav.md
 tag: js
 ---
 
+How hard is it to find a decent and lightweight navigation that actually works and is easy to implement? The web presents us thousands of options, but often the most simple are the best. It can take time to create your own, especially under deadlines, or alternatively you could chance a plugin.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-How hard is it to find a decent and lightweight navigation that actually works and is easy to implement? The web presents us thousands of options, but often the most simple are the best. It can take time to create your own, especially under deadlines, or alternatively you could chance a plugin.
 
 Here’s a bare-bones, efficient way to create a super simple HTML5 navigation with jQuery drop down. The navigation supports fallbacks as well for users with JavaScript disabled, which is something that a lot of people disregard/forget about when building a navigation. Be progressive, build a solution for all systems and add advanced functionality for those that enable/support it, don’t drop functionality for legacy browsers.
 

@@ -6,16 +6,17 @@ path: 2017-03-06-constructor-ngoninit.md
 tag: angular
 ---
 
+
+Angular has [many lifecycle hooks](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html), as well as a `constructor`. In this post, we'll quickly cover the differences between the `ngOnInit` lifecycle hook which has been the source of some confusion for those getting started with Angular.
+
+So, why do we need the `ngOnInit` lifecycle hook when we've got the `constructor` available?
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-Angular has [many lifecycle hooks](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html), as well as a `constructor`. In this post, we'll quickly cover the differences between the `ngOnInit` lifecycle hook which has been the source of some confusion for those getting started with Angular.
-
-So, why do we need the `ngOnInit` lifecycle hook when we've got the `constructor` available?
 
 ### What's the difference?
 

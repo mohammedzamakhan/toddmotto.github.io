@@ -6,14 +6,14 @@ path: 2013-05-20-simple-html5-data-attribute-jquery-tabs-markup-free-and-relativ
 tag: html5
 ---
 
+One of my favourite additions to the HTML5 spec is data-&#42; attributes, they're useful for such an array of things. I love integrating them into jQuery/JavaScript and seeing what difference to HTML they make.
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-One of my favourite additions to the HTML5 spec is data-&#42; attributes, they're useful for such an array of things. I love integrating them into jQuery/JavaScript and seeing what difference to HTML they make.
 
 Two things have inspired this post to create some mega simple tabbed content UI components, the first - Twitter Bootstrap. Twitter Bootstrap is used by so many people, but I really have no use for it other than pinching one of two of the jQuery plugins whilst working in development. The second reason for creating this is [AngularJS](//angularjs.org) from Google - a super intelligent web application framework that I am learning more and more of.
 

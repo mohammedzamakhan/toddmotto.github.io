@@ -6,14 +6,14 @@ path: 2016-08-15-promises-angular-q.md
 tag: angularjs
 ---
 
+You've seen `$q`, maybe used it, but haven't uncovered some of the awesome features `$q` provides, such as `$q.all()` and `$q.race()`. This article dives into ES2015 Promise API and how it maps across to `$q` for AngularJS. This post is all about `$q`... enjoy!
+
 <div class="toc" markdown="1">
 <span class="gamma">Table of contents</span>
 {:.no_toc}
 * TOC
 {:toc}
 </div>
-
-You've seen `$q`, maybe used it, but haven't uncovered some of the awesome features `$q` provides, such as `$q.all()` and `$q.race()`. This article dives into ES2015 Promise API and how it maps across to `$q` for AngularJS. This post is all about `$q`... enjoy!
 
 ### What is a Promise?
 
