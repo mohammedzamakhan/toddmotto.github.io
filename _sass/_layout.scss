@@ -145,7 +145,14 @@ a {
   margin: 0 auto;
   background: #fff;}
   .card__content {
-    padding: 0; }
+    margin: 200px 0 0;
+    position: relative;
+    z-index: 9998;
+    background: #fff;
+    @media screen and (max-width: 850px) {
+      margin: 0;
+    }
+  }
     // @media screen and (max-width: 850px) {
     //   .card__content {
     //     padding: 0 40px 40px 40px; } }
@@ -176,6 +183,17 @@ a {
   padding: 24px 64px 32px;
   cursor: pointer;
   position: relative;
+  &--top {
+    z-index: 9998;
+    position: fixed;
+    top: 70px;
+    left: 250px;
+    right: 0;
+    @media screen and (max-width: 850px) {
+      position: static;
+      width: 100%;
+    }
+  }
   &__award {
     width: 20px;
     vertical-align: middle;
