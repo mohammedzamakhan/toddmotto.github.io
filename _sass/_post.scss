@@ -405,4 +405,7 @@
 
 .disqus {
   padding: 64px 50px;
+  position: relative;
+  z-index: 9998;
+  background: #fff;
 }
