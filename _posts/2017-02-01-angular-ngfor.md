@@ -525,7 +525,7 @@ for (let i = 0, ilen = this._viewContainer.length; i < ilen; i++) {
 
 > You can dig through the directive source code in more detail [here](https://github.com/angular/angular/blob/d4d3782d455a484e8aa26ec9a57ee2b4727bc1da/modules/%40angular/common/src/directives/ng_for.ts).
 
-This is how we can then access the `index` and `context` like this:
+This is how we can then access the `index` and `count` like this:
 
 ```html
 <ul>
