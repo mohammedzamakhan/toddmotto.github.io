@@ -15,27 +15,6 @@ Angular filters are one of the toughest concepts to work with. They're a little 
 {:toc}
 </div>
 
-<div class="airpairme">
- <a href="http://airpair.me/toddmotto?utm_source=expert&utm_medium=homepage&utm_content=button&utm_campaign=airpairme">
-  <img src="http://www.airpair.com/images/me.png" />
- </a>
- <p>For live <a href="http://www.airpair.com/angularjs" style="color:#CE5424">AngularJS help</a> on AirPair</p>
- <style>
-  .airpairme > a {
-   width:100%;
-   display:block;
-   padding:10px 0;
-   margin: 10px 0;
-   background:#fff;
-   text-align:center;
-   border:1px solid #d3d3d3;
-   border-radius:5px;
-  }
-  .airpairme > a:hover { background: #f9f9f9 }
-  .airpairme p { font:11px arial;text-align:center;margin:0;padding:3px 0 0 6px }
- </style>
-</div>
-
 I think it's best to understand what we even want to learn. To do that, we need to understand what filters really are and how we use them. For me, there are _four_ *types* of filters. Yes, four, but there of course can be other variants. Let's rattle through them:
 
 ### Filter 1: Static (single) use filter
