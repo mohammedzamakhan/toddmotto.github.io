@@ -187,7 +187,7 @@ Let's finish this off by taking a look at the `ngrx/effects` side of this logic.
 
 ### Effects
 
-The effect for this simply listens for the `COURSES_GET` action, and once invoked will his the `.getCourses()` method on my `CoursesService`
+The effect for this simply listens for the `COURSES_GET` action, and once invoked will hit the `.getCourses()` method on my `CoursesService`
 
 ```js
 @Injectable()
