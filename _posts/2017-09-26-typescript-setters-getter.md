@@ -203,7 +203,7 @@ Interestingly enough, with TypeScript and Angular's decorators we can combine th
 export class DateComponent {
   private _dateObject: Date;
 
-  @Input() set date(date: Date) {
+  @Input() set date(date: number) {
     // assuming `date` is something like 1506439684321
     this._dateObject = new Date(date);
   }
