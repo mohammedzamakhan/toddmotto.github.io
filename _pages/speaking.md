@@ -45,7 +45,10 @@ Upcoming events I'll be speaking at.
 <div class="speaking__list">
   <ul>
     <li>
-      No speaking engagements booked yet
+      <a href="http://ng-poland.pl">NgPoland</a>, Warsaw (Poland), <span>21.11.2017</span>
+    </li>
+    <li>
+      <a href="https://www.angularconnect.com">[workshop] AngularConnect</a>, London (England), <span>7.11.2017</span>
     </li>
   </ul>
 </div>
