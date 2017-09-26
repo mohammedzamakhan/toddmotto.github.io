@@ -84,6 +84,8 @@ var Element = (function() {
 })();
 ```
 
+> The underscore (`_class`) prefix is a naming convention typically used to denote a private field.
+
 Why a private property? We don't want to access this directly, however we do want to potentially mutate it's value under-the-hood. Let's finish this off to get it fully working:
 
 ```js
