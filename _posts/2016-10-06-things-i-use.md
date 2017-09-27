@@ -28,41 +28,62 @@ VSCode `settings.json` config:
 
 {% highlight json %}
 {
+  "workbench.welcome.enabled": false,
+  "terminal.integrated.shell.osx": "/bin/zsh",
   "window.zoomLevel": 1,
   "editor.fontFamily": "Operator Mono",
-  "editor.fontSize": 14,
+  "editor.fontSize": 12,
   "editor.fontWeight": "100",
   "editor.tabSize": 2,
   "editor.cursorBlinking": "smooth",
   "typescript.check.tscVersion": false,
   "explorer.openEditors.visible": 0,
+  "editor.quickSuggestions": true,
+  "editor.suggestOnTriggerCharacters": true,
   "files.exclude": {
     "**/.awcache": true,
+    "**/.vscode": true,
     "**/node_modules": true,
     "**/.gitignore": true,
-    "**/.editorconfig": true,
+    "**/.editorconfig": true
   },
+  "editor.renderIndentGuides": false,
+  "editor.minimap.enabled": false,
+  "editor.tabCompletion": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.projectDetection.autoReload": true,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 80,
+  "prettier.trailingComma": "es5",
+  "editor.formatOnSave": true,
+  "html.format.enable": false,
+  "workbench.startupEditor": "newUntitledFile"
 }
+
 {% endhighlight %}
 
-* I use the VSCode integrated terminal over iTerm now.
+* I use VSCode's integrated terminal over iTerm now.
 * For Git stuff I use [SourceTree](https://www.sourcetreeapp.com/) because I suck at command-line Git :)
 
-That's literally it, I'm all for keeping it simple.
+That's about it, I'm all for keeping it simple.
 
 ### Conference slides
 
-* I used to use [Deckset App](http://www.decksetapp.com/) for all my slides
-* Now I use, likely indefinitely, [Spectacle Boilerplate](https://github.com/FormidableLabs/spectacle-boilerplate) to create all my slides in React/JSX
+* [Spectacle Boilerplate](https://github.com/FormidableLabs/spectacle-boilerplate) to create all my slides in React/JSX
 * Alongside Spectacle Boilerplate I run [Spectacle Codeslide](https://github.com/thejameskyle/spectacle-code-slide) for interactive code walkthroughs
 
 ### Desk and computer
 
-* Laptops/Desktops: MacBook Pro 15" retina x 2, MacBook 12", iMac 27" (I use only one MacBook with an external monitor)
+* Desk: [VariDesk Standing Desk](https://www.varidesk.com/products/full-standing-desk-pro-desk?o=Size:60+inch;Color:Black) standing desk (huge workflow/comfort changer)
+* Chair: [Humanscale Freedom](https://uk.humanscale.com/products/product.cfm?group=FreedomTaskChairWithHeadrest)
+* Laptops/Desktops: MacBook Pro 15" touchbar (primary machine), MacBook Pro 15" retina x2, MacBook 12", iMac 27" (I use only one MacBook with an external monitor)
 * Monitor: [34" curved LG](https://www.amazon.co.uk/dp/B01BFH1AIM/ref=pe_385721_137066351_TE_dp_1) 21:9 ultrawide (this has completely changed my working style, 100% recommend)
-* Dock: I do own a [Henge Dock](https://www.hengedocks.com/) but it sucks and I never use it
-* Sound system: [Bose 50](https://www.amazon.co.uk/dp/B00UF6XF2E/ref=pe_1909131_77697001_tnp_email_TE_AMZLdp_1) multimedia system on my desk, remote working noise #ftw
-* Desk: [VariDesk Pro 54](http://uk.varidesk.com/en-gb/product/pro-desk-54) standing desk (huge workflow/comfort changer)
+* Apple Time Capsule for backups
+* Sound system: [Bose 50](https://www.amazon.co.uk/dp/B00UF6XF2E/ref=pe_1909131_77697001_tnp_email_TE_AMZLdp_1)
 
 ### Screencasts
 
