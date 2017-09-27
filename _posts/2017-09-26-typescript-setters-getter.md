@@ -148,7 +148,7 @@ We could add this to `get` or `set`, depending what you want to do. Above, I'm u
 
 There are lots of possibilities for use cases, parsing date objects, checking lengths of arrays, if properties exist on an object you passed through, and so forth.
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/toddmotto/vw8gn76m/embedded/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/toddmotto/vw8gn76m/embedded/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### With TypeScript
 
