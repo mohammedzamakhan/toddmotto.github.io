@@ -18,6 +18,7 @@ const siteRoot = '_site';
 const jekyllLogger = buffer => {
   buffer.toString().split(/\n/).forEach((message) => util.log(`Jekyll: ${message}`));
 };
+const isWin = /^win/.test(process.platform);
 
 const banner = (
   `/*! toddmotto.com | Todd Motto (c) ${new Date().getFullYear()} */\n`
@@ -49,7 +50,7 @@ gulp.task('scripts', ['clean'], () => {
 });
 
 gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['serve', '--watch', '--incremental', '--drafts']);
+  const jekyll = child.spawn(isWin ? 'jekyll.bat' : 'jekyll', ['serve', '--watch', '--incremental', '--drafts']);
   jekyll.stdout.on('data', jekyllLogger);
   jekyll.stderr.on('data', jekyllLogger);
 });
