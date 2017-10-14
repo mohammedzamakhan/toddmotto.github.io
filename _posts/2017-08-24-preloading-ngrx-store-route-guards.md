@@ -78,19 +78,21 @@ export class CoursesGuard implements CanActivate {
       // the .do() operator allows for a side effect, at this
       // point, I'm checking if the courses property exists on my 
       // Store slice of state
-      .do((data: any) => {
-        // if there are no courses, dispatch an action to hit the backend
-        if (!data.courses.length) {
-          this.store.dispatch(new Courses.CoursesGet());
-        }
-      })
-      // filter out data.courses, no length === empty!
-      .filter((data: any) => data.courses.length)
-      // which if empty, we will never .take()
-      // this is the same as .first() which will only
-      // take 1 value from the Observable then complete
-      // which does our unsubscribing, technically.
-      .take(1);
+      .pipe(
+        tap((data: any) => {
+          // if there are no courses, dispatch an action to hit the backend
+          if (!data.courses.length) {
+            this.store.dispatch(new Courses.CoursesGet());
+          }
+        }),
+        // filter out data.courses, no length === empty!
+        filter((data: any) => data.courses.length),
+        // which if empty, we will never .take()
+        // this is the same as .first() which will only
+        // take 1 value from the Observable then complete
+        // which does our unsubscribing, technically.
+        take(1)
+      );
   }
 
   // our guard that gets called each time we 
@@ -98,10 +100,12 @@ export class CoursesGuard implements CanActivate {
   canActivate(): Observable<boolean> {
     // return our Observable stream from above
     return this.getFromStoreOrAPI()
-      // if it was successful, we can return Observable.of(true)
-      .switchMap(() => of(true))
-      // otherwise, something went wrong
-      .catch(() => of(false));
+      .pipe(
+        // if it was successful, we can return Observable.of(true)
+        switchMap(() => of(true)),
+        // otherwise, something went wrong
+        catchError(() => of(false))
+      );
   }
 }
 ```
@@ -119,6 +123,7 @@ import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
+import { take, switchMap, tap, catchError } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
 
 import { CoursesState, getCoursesState } from '../store/reducers/';
@@ -131,19 +136,23 @@ export class CoursesGuard implements CanActivate {
   getFromStoreOrAPI(): Observable<any> {
     return this.store
       .select(getCoursesState)
-      .do((data: any) => {
-        if (!data.courses.length) {
-          this.store.dispatch(new Courses.CoursesGet());
-        }
-      })
-      .filter((data: any) => data.courses.length)
-      .take(1);
+      .pipe(
+        tap((data: any) => {
+          if (!data.courses.length) {
+            this.store.dispatch(new Courses.CoursesGet());
+          }
+        }),
+        filter((data: any) => data.courses.length),
+        take(1)
+      );
   }
 
   canActivate(): Observable<boolean> {
     return this.getFromStoreOrAPI()
-      .switchMap(() => of(true))
-      .catch(() => of(false));
+      .pipe(
+        switchMap(() => of(true)),
+        catchError(() => of(false))
+      );
   }
 }
 ```
@@ -206,12 +215,14 @@ export class CoursesEffects {
     .exhaustMap(() =>
       this.coursesService
         .getCourses()
-        .map(courses => new Courses.CoursesGetSuccess({ courses }))
-        .catch(error => of(new Courses.CoursesGetFailure(error)))
+        .pipe(
+          map(courses => new Courses.CoursesGetSuccess({ courses })),
+          catchError(error => of(new Courses.CoursesGetFailure(error)))
+        );
     );
 
   // ...
 }
 ```
 
-Once that's been 200 ok'd from the backend, the `.map()` then invokes a new action, passing in the payload - which then merges the new state in my reducer.
+Once that's been 200 ok'd from the backend, the `map()` then invokes a new action, passing in the payload - which then merges the new state in my reducer.
